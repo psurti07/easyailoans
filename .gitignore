@@ -1,0 +1,50 @@
+# Laravel
+/vendor
+/node_modules
+/public/storage
+/storage/*.key
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+/storage/logs
+*.log
+
+# Cache & compiled files
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+
+# Laravel IDE helper
+/_ide_helper.php
+/.phpstorm.meta.php
+
+# PHPUnit
+/.phpunit.result.cache
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# NPM / Yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Mix / Vite
+/public/hot
+/public/build
+/public/mix-manifest.json
+
+# Coverage
+/coverage
+
+# Temporary files
+*.tmp
+*.bak
