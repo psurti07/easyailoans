@@ -10,7 +10,7 @@
         .bank-crousel{
             display:block!important;
         }
-        .radio:checked{ background: #16b85c; border-color: #16b85c; }
+        .radio:checked{ background: #0e5281; border-color: #0e5281; }
         .owl-carousel .owl-item img{
             width: 100%!important;
         }
@@ -35,7 +35,7 @@
     <section id="hero-201" class="bg--white-100 bg--fixed hero-section">
         <div class="container">
             <div class="row d-flex align-items-center">
-                <div class="col-md-6 col-lg-6">
+                <!-- <div class="col-md-6 col-lg-6">
                     <div class="mt-30 mb-20">
                         <h1 class="s-50 mb-20">Get Instant <span class="color--green-500">Cash</span></h1>
                         <h3 class="s-24 mb-20">Up to <span class="color--green-500">₹15 Lakhs</span> in 24 Hours</h3>
@@ -99,9 +99,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="col-md-6 col-lg-6 self-apply-form">
+                <div class="col-md-6 col-lg-6 align-items-center m-auto self-apply-form">
                     <div id="hero-8-form" class="border border-primary r-06">
                         <h4 class="s-20 w-700 mb-2">Apply in <span class="color--green-500">5 Minutes</span></h4>
                         <p class="s-16">Get instant pre-approved offers.</p>
@@ -165,7 +165,7 @@
                                 <div class="col-md-12"><span class="text-danger" id="usererrormsg"></span></div>
                             </div>
                            
-                            <p class="mb-0 s-14 text-start text-dark">By submitting, you agree to Kredittap's <a href="{{ route('front.terms.conditions') }}"  target="_blank"class="text-dark text-decoration-none">Terms of Use</a> and <a href="{{ route('front.privacy.policy') }}" class="text-dark text-decoration-none" target="_blank">Privacy Policy</a>, and consent to receive promotional and informational messages via email, call, or SMS.</p>
+                            <p class="mb-0 s-14 text-start text-dark">By submitting, you agree to EasyAILoans's <a href="{{ route('front.terms.conditions') }}"  target="_blank"class="text-dark text-decoration-none">Terms of Use</a> and <a href="{{ route('front.privacy.policy') }}" class="text-dark text-decoration-none" target="_blank">Privacy Policy</a>, and consent to receive promotional and informational messages via email, call, or SMS.</p>
                         </form>
                     </div>
                 </div>
@@ -202,13 +202,13 @@
     </section>
     <!-- Affiliate NBFCs section ends -->
 
-    <!-- why Kredittap section starts -->
+    <!-- why EasyAILoans section starts -->
     <section id="features-6" class="pt-60 pb-20 features-section division">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-9">
                     <div class="section-title mb-50">
-                        <h2 class="s-28">Why <span class="color--green-500">Kredittap</span></h2>
+                        <h2 class="s-28">Why <span class="color--green-500">EasyAILoans</span></h2>
                         <p class="s-16 color--grey">Here's what sets us apart.</p>
                     </div>
                 </div>
@@ -216,7 +216,7 @@
             <div class="fbox-wrapper text-center">
                 <div class="row gx-3 gy-2 row-cols-1 row-cols-md-2 row-cols-lg-4">
                     <div class="col">
-                        <div class="fbox-8 fbox--hover fb-1 r-12">
+                        <div class="fbox-8 fbox--hover fb-1 r-12 border">
                             <div class="fbox-ico ico-50">
                                 <div class="shape-ico color--theme">
                                     <span class="flaticon-layers-1"></span>
@@ -229,7 +229,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="fbox-8 fbox--hover fb-2 r-12">
+                        <div class="fbox-8 fbox--hover fb-2 r-12 border">
                             <div class="fbox-ico ico-50">
                                 <div class="shape-ico color--theme">
                                     <span class="flaticon-computer-1"></span>
@@ -242,7 +242,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="fbox-8 fbox--hover fb-2 r-12">
+                        <div class="fbox-8 fbox--hover fb-2 r-12 border">
                             <div class="fbox-ico ico-50">
                                 <div class="shape-ico color--theme">
                                     <span class="flaticon-click-1"></span>
@@ -255,7 +255,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="fbox-8 fbox--hover fb-3 r-12">
+                        <div class="fbox-8 fbox--hover fb-3 r-12 border">
                             <div class="fbox-ico ico-50">
                                 <div class="shape-ico color--theme">
                                     <span class="flaticon-tech-support"></span>
@@ -271,7 +271,7 @@
             </div>
         </div>
     </section>
-    <!-- why Kredittap section ends -->
+    <!-- why EasyAILoans section ends -->
 
     <!-- Testimonioals section starts -->
     <section id="reviews-1" class="py-80 shape--06 reviews-section">
@@ -302,10 +302,10 @@
                     <div class="form-holder">
                         <div class="contact-form-notice">
                             <p class="s-14">
-                                <strong>Disclosure:</strong> Loan Tenure ranges from minimum 6 months to maximum of 72 months with Annual Interest Rates ranging between 11% - 35%. Processing fee up to 2%. For Example: Taking in consideration a personal loan of Rs.1,00,000 availed at 11%* interest rate for a tenure of 6* years with 2%* processing fee, the APR will be 11.75%*. Kredittap is not a direct lender itself. Instead we provide consultation services to help users connect with right NBFCs for loan approval. *T&C Apply. All these numbers are tentative/indicative, the final loan specifics may vary depending upon the customer profile and NBFCs’ criteria, rules & regulations, and terms & conditions.
+                                <strong>Disclosure:</strong> Loan Tenure ranges from minimum 6 months to maximum of 72 months with Annual Interest Rates ranging between 11% - 35%. Processing fee up to 2%. For Example: Taking in consideration a personal loan of Rs.1,00,000 availed at 11%* interest rate for a tenure of 6* years with 2%* processing fee, the APR will be 11.75%*. EasyAILoans is not a direct lender itself. Instead we provide consultation services to help users connect with right NBFCs for loan approval. *T&C Apply. All these numbers are tentative/indicative, the final loan specifics may vary depending upon the customer profile and NBFCs’ criteria, rules & regulations, and terms & conditions.
                             </p>
                             <p class="s-14">
-                                <strong>Disclaimer:</strong> Kredittap is a loan service aggregator and is authorised to provide services on behalf of its Lending Partners.
+                                <strong>Disclaimer:</strong> EasyAILoans is a loan service aggregator and is authorised to provide services on behalf of its Lending Partners.
                             </p>
                             <p class="s-14">
                                 <strong>Important Note:</strong> BE AWARE! We ask our customers to make payments ONLY on our website https://kredittap.com and NOT through any other source, directly or indirectly. Thanks!

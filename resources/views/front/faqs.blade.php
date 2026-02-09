@@ -92,7 +92,7 @@
                                         <div class="accordion-panel-item">
                                             <div class="faqs-2-answer">
                                                 <p>
-                                                    You can simply write to us at <a href="mailto:info@kredittap.com" class="text-decoration-none">info@kredittap.com</a> – our cheered up team is always eager to help you out.
+                                                    You can simply write to us at <a href="mailto:info@EasyAILoans.com" class="text-decoration-none">info@EasyAILoans.com</a> – our cheered up team is always eager to help you out.
                                                 </p>
                                             </div>
                                         </div>
@@ -182,7 +182,7 @@
                                 </li>
                                 <li class="accordion-item">
                                     <div class="accordion-thumb">
-                                        <h6 class="w-600">What is Kredittap’s Loan Self-Apply facility?</h6>
+                                        <h6 class="w-600">What is EasyAILoans’s Loan Self-Apply facility?</h6>
                                     </div>
                                     <div class="accordion-panel">
                                         <div class="accordion-panel-item mb-35">

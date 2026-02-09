@@ -25,7 +25,7 @@
     <section id="hero-201" class="bg--white-100 bg--fixed hero-section">
         <div class="container">
             <div class="row d-flex align-items-center">
-                <div class="col-md-6 col-lg-6">
+                <!-- <div class="col-md-6 col-lg-6">
                    <div class="fbox-8 border-grey-1 fb-3 r-12">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
@@ -38,9 +38,9 @@
                             <p class="s-18">Take a step closer towards your financial dream with a 100% online loan process.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="col-md-6 col-lg-6 self-apply-form">
+                <div class="col-md-6 col-lg-6 align-items-center m-auto self-apply-form">
                     <div id="hero-8-form" class="border border-primary r-06">
                         <h5 class="fw-bolder s-16">Enter Following Details</h5>
                         <p class="mb-30 color--grey">Kindly enter your details for personalized offers.</p>

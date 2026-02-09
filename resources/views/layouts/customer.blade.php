@@ -38,7 +38,7 @@
             <div class="aside-secondary d-flex flex-column align-items-lg-center flex-row-auto">
                 <div class="aside-logo d-none d-lg-flex flex-column align-items-center flex-column-auto py-10" id="kt_aside_logo">
                     <a href="{{ route('customer.dashboard') }}">
-                        <img alt="Logo" src="{{ asset('front/images/logo/apple-touch-icon-50x50.png') }}" class="h-50px"/>
+                        <img alt="Logo" src="{{ asset('front/images/logo/apple-touch-icon.png') }}" class="h-50px"/>
                     </a>
                 </div>
                 @include('partials.customer.navigation')
@@ -79,7 +79,7 @@
                         </div>
                         @if(request()->segment(2) == 'loan-details' )
                         <div class="page-title d-flex flex-column align-items-end justify-content-center flex-wrap me-lg-2 pb-5 pb-lg-0">
-                            <a href="{{ route('customer.download.report') }}" class="btn btn-sm btn-primary me-2" id="kt_user_follow_button">
+                            <a href="{{ route('customer.download.report') }}" class="btn btn-sm btn-success me-2" id="kt_user_follow_button">
                                 <i class="ki-duotone ki-file fs-3"><span class="path1"></span><span class="path2"></span></i>
                                 <span class="indicator-label">Download Report</span>
                             </a>
@@ -98,10 +98,10 @@
             </div>
             @yield('content')
 
-            <div class="footer py-4 d-flex flex-lg-column bg-primary" id="kt_footer">
+            <div class="footer py-4 d-flex flex-lg-column bg-success" id="kt_footer">
                 <div class=" container-xxl">
-                    <div class="text-dark text-center">
-                        <span class="fw-semibold">{{ date('Y') }} &copy;</span> <a href="{{ route('front.home') }}" target="_blank" class="text-dark text-hover-success fw-semibold fs-6">{{ env('COMPANY_NAME') }}</a>
+                    <div class="text-white text-center">
+                        <span class="fw-semibold">{{ date('Y') }} &copy;</span> <a href="{{ route('front.home') }}" target="_blank" class="text-white text-hover-success fw-semibold fs-6">{{ env('COMPANY_NAME') }}</a>
                         <span class="fw-semibold">All Rights Reserved.</span>
                     </div>
                 </div>

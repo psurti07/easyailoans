@@ -1,6 +1,6 @@
 <!-- Testimonials carousel start  -->
-<div class="owl-carousel owl-theme testimonials-carousel">
-    <div class="review-1 border r-08">
+<div class="owl-carousel owl-theme reviews-1-wrapper">
+    <div class="review-1 bg--white-100 block-shadow r-08">
         <div class="review-txt pt-30">
             <p class="p-md"><i>"I was so surprised with the service quickness! Self apply is really the best feature here"</i></p>
             <div class="author-data clearfix">
@@ -20,7 +20,7 @@
             </div>
         </div>
     </div>
-    <div class="review-1 border r-08">
+    <div class="review-1 bg--white-100 block-shadow r-08">
         <div class="review-txt pt-30">
             <p class="p-md"><i>“Impressed with the loan consultation service! They truly give the best solutions...”</i></p>
             <div class="author-data clearfix">
@@ -40,7 +40,7 @@
             </div>
         </div>
     </div>
-    <div class="review-1 border r-08">
+    <div class="review-1 bg--white-100 block-shadow r-08">
         <div class="review-txt pt-30">
             <p class="p-md"><i>"Just extraordinary…it’s so good to receive the loan applying link within few minutes only"</i></p>
             <div class="author-data clearfix">
@@ -60,9 +60,9 @@
             </div>
         </div>
     </div>
-    <div class="review-1 border r-08">
+    <div class="review-1 bg--white-100 block-shadow r-08">
         <div class="review-txt pt-30">
-            <p class="p-md"><i>"Well done Kredittap team, your guidance really makes a big difference. Also services are superb"</i></p>
+            <p class="p-md"><i>"Well done EasyAILoans team, your guidance really makes a big difference. Also services are superb"</i></p>
             <div class="author-data clearfix">
                 <div class="review-avatar">
                     <img src="{{ asset('front/images/logo/apple-touch-icon.png') }}" alt="review-avatar" width="auto">
@@ -80,7 +80,7 @@
             </div>
         </div>
     </div>
-    <div class="review-1 border r-08">
+    <div class="review-1 bg--white-100 block-shadow r-08">
         <div class="review-txt pt-30">
             <p class="p-md"><i>“Quick. Professional. Humble – that’s how I define this team. Thanks guys, you’re the best”</i></p>
             <div class="author-data clearfix">
@@ -100,9 +100,9 @@
             </div>
         </div>
     </div>
-    <div class="review-1 border r-08">
+    <div class="review-1 bg--white-100 block-shadow r-08">
         <div class="review-txt pt-30">
-            <p class="p-md"><i>“It just went beyond my expectations. It’s so easy to get effective loan consultation with Kredittap”</i></p>
+            <p class="p-md"><i>“It just went beyond my expectations. It’s so easy to get effective loan consultation with EasyAILoans”</i></p>
             <div class="author-data clearfix">
                 <div class="review-avatar">
                     <img src="{{ asset('front/images/logo/apple-touch-icon.png') }}" alt="review-avatar" width="auto">

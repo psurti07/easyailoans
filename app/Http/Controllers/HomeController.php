@@ -125,15 +125,15 @@ class HomeController extends Controller
         if($result){
            try {
                 $maildata = array(
-                    'fullname' => "Kredittap HR",
-                    'email' => "hr@kredittap.com"
+                    'fullname' => "EasyAILoans HR",
+                    'email' => "hr@EasyAILoans.com"
                 );
                 $maildata2 = array(
                     'fullname' => $input['firstname'].' '.$input['lastname'],
                     'email' => $input['email']
                 );
                 $subject = 'Career Form Submission';
-                $subject2 = 'Welcome to Kredittap';
+                $subject2 = 'Welcome to EasyAILoans';
                 $message1 = view('mail.applyCareerHR',[
                     'name' => $input['firstname'].' '.$input['lastname'],
                     'email' => $input['email'],
@@ -276,7 +276,7 @@ class HomeController extends Controller
         ];
     
         /* send email in brevo */
-        $res = sendBrevoHtmlMail2($mailData, 'Congratulations! Payment Successful for Kredittap’s Self-Apply Plan.', $sendGreetings, 3, $attachments);
+        $res = sendBrevoHtmlMail2($mailData, 'Congratulations! Payment Successful for EasyAILoans’s Self-Apply Plan.', $sendGreetings, 3, $attachments);
 
         dd($res);
     }

@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Log;
 if(!function_exists('homeMeta')){
     function homeMeta(){
         $meta = [
-            'keywords' => 'instant online personal loans in India, low-interest personal loans with fast approval, quick loan application process, minimal documentation loans, personalized loan solutions, Kredittap loans',
+            'keywords' => 'instant online personal loans in India, low-interest personal loans with fast approval, quick loan application process, minimal documentation loans, personalized loan solutions, EasyAILoans loans',
             'title' => 'Instant Online Personal Loans With Low Interest Rates And Fast Approvals',
             'description' => 'Apply for instant online personal loans at low interest rates. Experience quick approvals, minimal documentation, and personalized loan solutions tailored to your financial needs.'
         ];
@@ -18,9 +18,9 @@ if(!function_exists('homeMeta')){
 if(!function_exists('privacyPolicyMeta')){
     function privacyPolicyMeta(){
         $meta = [
-            'keywords' => 'privacy policy, data protection, personal information security, Kredittap, data privacy, information security',
-            'title' => 'Privacy Policy - How We Protect Your Data | Kredittap',
-            'description' => 'Review Kredittap`s privacy policy to understand how we protect your personal information. Your data security and privacy are our top priorities.'
+            'keywords' => 'privacy policy, data protection, personal information security, EasyAILoans, data privacy, information security',
+            'title' => 'Privacy Policy - How We Protect Your Data | EasyAILoans',
+            'description' => 'Review EasyAILoans`s privacy policy to understand how we protect your personal information. Your data security and privacy are our top priorities.'
         ];
         return $meta;
     }
@@ -30,9 +30,9 @@ if(!function_exists('privacyPolicyMeta')){
 if(!function_exists('termsConditionsMeta')){
     function termsConditionsMeta(){
         $meta = [
-            'keywords' => 'terms and conditions, loan services terms, legal terms, Kredittap, service usage, loan application terms',
-            'title' => 'Terms and Conditions for Using Kredittap Services',
-            'description' => 'Read the terms and conditions for using Kredittap`s personal loan services. Ensure you understand the legal aspects before applying for a loan.'
+            'keywords' => 'terms and conditions, loan services terms, legal terms, EasyAILoans, service usage, loan application terms',
+            'title' => 'Terms and Conditions for Using EasyAILoans Services',
+            'description' => 'Read the terms and conditions for using EasyAILoans`s personal loan services. Ensure you understand the legal aspects before applying for a loan.'
         ];
         return $meta;
     }
@@ -42,9 +42,9 @@ if(!function_exists('termsConditionsMeta')){
 if(!function_exists('refundPolicyMeta')){
     function refundPolicyMeta(){
         $meta = [
-            'keywords' => 'refund policy, loan application refund, refund conditions, loan services, customer support, Kredittap',
-            'title' => 'Refund Policy for Loan Application Services | Kredittap',
-            'description' => 'Review Kredittap`s refund policy for loan application services. Understand the conditions under which refunds may be processed. Customer satisfaction is our priority.'
+            'keywords' => 'refund policy, loan application refund, refund conditions, loan services, customer support, EasyAILoans',
+            'title' => 'Refund Policy for Loan Application Services | EasyAILoans',
+            'description' => 'Review EasyAILoans`s refund policy for loan application services. Understand the conditions under which refunds may be processed. Customer satisfaction is our priority.'
         ];
         return $meta;
     }
@@ -54,9 +54,9 @@ if(!function_exists('refundPolicyMeta')){
 if(!function_exists('disclaimerMeta')){
     function disclaimerMeta(){
         $meta = [
-            'keywords' => 'legal disclaimer, personal loans information, loan terms, financial services, Kredittap, liability, legal notice',
-            'title' => 'Legal Disclaimer for Personal Loans Information | Kredittap',
-            'description' => 'Read the legal disclaimer for information provided on personal loans and financial services by Kredittap. Ensure you understand the terms before proceeding.'
+            'keywords' => 'legal disclaimer, personal loans information, loan terms, financial services, EasyAILoans, liability, legal notice',
+            'title' => 'Legal Disclaimer for Personal Loans Information | EasyAILoans',
+            'description' => 'Read the legal disclaimer for information provided on personal loans and financial services by EasyAILoans. Ensure you understand the terms before proceeding.'
         ];
         return $meta;
     }
@@ -67,8 +67,8 @@ if(!function_exists('raiseRequestMeta')){
     function raiseRequestMeta(){
         $meta = [
             'keywords' => 'raise a request for personal loan assistance, personal loan inquiry form, personal loan request submission, personal loan customer support request, apply for personal loan online, personal loan assistance request, how to raise a request for a loan, submit personal loan request India, loan request support team, loan inquiry assistance',
-            'title' => 'Raise a Request for Personal Loan Assistance | Kredittap',
-            'description' => 'Submit your personal loan inquiry with Kredittap and get quick assistance. Our team helps you find the best loan options tailored to your financial needs.'
+            'title' => 'Raise a Request for Personal Loan Assistance | EasyAILoans',
+            'description' => 'Submit your personal loan inquiry with EasyAILoans and get quick assistance. Our team helps you find the best loan options tailored to your financial needs.'
         ];
         return $meta;
     }
@@ -80,7 +80,7 @@ if(!function_exists('creditScoreMeta')){
         $meta = [
             'keywords' => 'Free CIBIL score check online, Instant credit score check without affecting credit, Check CIBIL score for free, Online CIBIL score checker, Free credit score report India, How to improve CIBIL score, Understand CIBIL score range, Importance of credit score in India, Free CIBIL score analysis tool, Easy way to check CIBIL score, Benefits of maintaining a good credit score, Credit score monitoring services, Free credit report generator, CIBIL score check for loan eligibility, Impact of credit score on personal loans',
             'title' => 'Free CIBIL Score Check Online | Instant Credit Score Report',
-            'description' => 'Check your CIBIL score for free with Kredittap`s online tool. Get your instant credit score report and learn how to improve your score for better loan eligibility.'
+            'description' => 'Check your CIBIL score for free with EasyAILoans`s online tool. Get your instant credit score report and learn how to improve your score for better loan eligibility.'
         ];
         return $meta;
     }
@@ -90,8 +90,8 @@ if(!function_exists('creditScoreMeta')){
 if(!function_exists('faqsMeta')){
     function faqsMeta(){
         $meta = [
-            'keywords' => 'FAQs on CIBIL score, Free credit score check FAQs, How to improve CIBIL score, What is a good CIBIL score, CIBIL score check process, Free CIBIL score checker FAQs, Kredittap credit score FAQs, Importance of credit score, Online CIBIL score check guide, Does checking credit score affect CIBIL score, CIBIL score for loan approval, CIBIL score improvement tips, Credit report FAQs, Impact of CIBIL score on loans, CIBIL score for credit card eligibility',
-            'title' => 'FAQs on CIBIL Score Check | Kredittap Free Credit Score Checker',
+            'keywords' => 'FAQs on CIBIL score, Free credit score check FAQs, How to improve CIBIL score, What is a good CIBIL score, CIBIL score check process, Free CIBIL score checker FAQs, EasyAILoans credit score FAQs, Importance of credit score, Online CIBIL score check guide, Does checking credit score affect CIBIL score, CIBIL score for loan approval, CIBIL score improvement tips, Credit report FAQs, Impact of CIBIL score on loans, CIBIL score for credit card eligibility',
+            'title' => 'FAQs on CIBIL Score Check | EasyAILoans Free Credit Score Checker',
             'description' => 'Find answers to frequently asked questions about checking your CIBIL score, improving your credit score, and understanding credit reports.'
         ];
         return $meta;
@@ -102,9 +102,9 @@ if(!function_exists('faqsMeta')){
 if(!function_exists('serviceMeta')){
     function serviceMeta(){
         $meta = [
-            'keywords' => 'personal loan services with fast approval, flexible loan options in India, Kredittap loan services, online loan application India, personal loan options, apply for a loan online',
+            'keywords' => 'personal loan services with fast approval, flexible loan options in India, EasyAILoans loan services, online loan application India, personal loan options, apply for a loan online',
             'title' => 'Explore Our Personal Loan Services - Fast Approval and Flexible Options',
-            'description' => 'Kredittap offers a variety of personal loan services with fast approval and flexible repayment options. Find the right loan to meet your financial needs and apply online easily.'
+            'description' => 'EasyAILoans offers a variety of personal loan services with fast approval and flexible repayment options. Find the right loan to meet your financial needs and apply online easily.'
         ];
         return $meta;
     }
@@ -114,9 +114,9 @@ if(!function_exists('serviceMeta')){
 if(!function_exists('contactUsMeta')){
     function contactUsMeta(){
         $meta = [
-            'keywords' => 'Contact Kredittap, General inquiries contact, Kredittap support, Contact us for assistance, Kredittap contact details, Customer service Kredittap, Contact form Kredittap, Kredittap help and support, Get in touch with Kredittap, Kredittap inquiry form, General support contact page',
-            'title' => 'Contact Us | Get in Touch with Kredittap',
-            'description' => 'Get in touch with Kredittap for any inquiries, support, or assistance. Whether it`s about services, partnerships, or general queries, we`re here to help!'
+            'keywords' => 'Contact EasyAILoans, General inquiries contact, EasyAILoans support, Contact us for assistance, EasyAILoans contact details, Customer service EasyAILoans, Contact form EasyAILoans, EasyAILoans help and support, Get in touch with EasyAILoans, EasyAILoans inquiry form, General support contact page',
+            'title' => 'Contact Us | Get in Touch with EasyAILoans',
+            'description' => 'Get in touch with EasyAILoans for any inquiries, support, or assistance. Whether it`s about services, partnerships, or general queries, we`re here to help!'
         ];
         return $meta;
     }
@@ -126,9 +126,9 @@ if(!function_exists('contactUsMeta')){
 if(!function_exists('careerMeta')){
     function careerMeta(){
         $meta = [
-            'keywords' => 'career opportunities, job openings, work at Kredittap, personal loan provider jobs, join our team, job applications',
-            'title' => 'Career Opportunities at Kredittap - Join Our Team',
-            'description' => 'Explore exciting career opportunities at Kredittap. Join our team and grow with a leading personal loan provider in India. Apply now to be part of our success story.'
+            'keywords' => 'career opportunities, job openings, work at EasyAILoans, personal loan provider jobs, join our team, job applications',
+            'title' => 'Career Opportunities at EasyAILoans - Join Our Team',
+            'description' => 'Explore exciting career opportunities at EasyAILoans. Join our team and grow with a leading personal loan provider in India. Apply now to be part of our success story.'
         ];
         return $meta;
     }
@@ -138,9 +138,9 @@ if(!function_exists('careerMeta')){
 if(!function_exists('companyMeta')){
     function companyMeta(){
         $meta = [
-            'keywords' => 'about Kredittap, personal loans, company information, loan provider India, mission and vision, financial services',
-            'title' => 'About Kredittap - Your Loan Partner in India',
-            'description' => 'Learn more about Kredittap, your trusted partner in providing personal loans in India. Discover our mission, vision, and values in the financial sector.'
+            'keywords' => 'about EasyAILoans, personal loans, company information, loan provider India, mission and vision, financial services',
+            'title' => 'About EasyAILoans - Your Loan Partner in India',
+            'description' => 'Learn more about EasyAILoans, your trusted partner in providing personal loans in India. Discover our mission, vision, and values in the financial sector.'
         ];
         return $meta;
     }
@@ -150,9 +150,9 @@ if(!function_exists('companyMeta')){
 if(!function_exists('emiCalcMeta')){
     function emiCalcMeta(){
         $meta = [
-            'keywords' => 'EMI calculator for personal loans in India, estimate loan payments online, monthly EMI calculation, personal loan repayment planning, Kredittap EMI tool',
+            'keywords' => 'EMI calculator for personal loans in India, estimate loan payments online, monthly EMI calculation, personal loan repayment planning, EasyAILoans EMI tool',
             'title' => 'EMI Calculator for Personal Loans - Calculate Your Monthly EMI',
-            'description' => 'Use Kredittap`s EMI calculator to estimate your monthly loan payments. Plan your finances better with accurate EMI calculations for personal loans.'
+            'description' => 'Use EasyAILoans`s EMI calculator to estimate your monthly loan payments. Plan your finances better with accurate EMI calculations for personal loans.'
         ];
         return $meta;
     }
@@ -162,9 +162,9 @@ if(!function_exists('emiCalcMeta')){
 if(!function_exists('selfApplyMeta')){
     function selfApplyMeta(){
         $meta = [
-            'keywords' => 'apply for a personal loan online, easy loan application process, fast personal loan approval, Kredittap online loan application, hassle-free loan application',
+            'keywords' => 'apply for a personal loan online, easy loan application process, fast personal loan approval, EasyAILoans online loan application, hassle-free loan application',
             'title' => 'Apply for a Personal Loan Online - Fast and Easy Application Process',
-            'description' => 'Easily apply for a personal loan online through Kredittap`s quick and hassle-free application process with minimal documentation and fast approval.',
+            'description' => 'Easily apply for a personal loan online through EasyAILoans`s quick and hassle-free application process with minimal documentation and fast approval.',
             'robots' => 'follow, index,  max-snippet:-1, max-video-preview:-1, max-image-preview:large'
         ];
         return $meta;
@@ -175,9 +175,9 @@ if(!function_exists('selfApplyMeta')){
 if(!function_exists('customerAuth')){
     function customerAuth(){
         $meta = [
-            'keywords' => 'personal loan, loan login, login page, customer login, Kredittap login, personal loan login, Kredittap customer login, track personal loan status, loan account access, login to loan account, personal loan customer login at Kredittap, how to access personal loan details via Kredittap login, secure customer login for personal loan applications, manage personal loan account on Kredittap',
-            'title' => 'Kredittap Customer Login - Access Your Account',
-            'description' => 'Login to your Kredittap account to manage personal loan details, track applications, and check loan status securely and quickly.',
+            'keywords' => 'personal loan, loan login, login page, customer login, EasyAILoans login, personal loan login, EasyAILoans customer login, track personal loan status, loan account access, login to loan account, personal loan customer login at EasyAILoans, how to access personal loan details via EasyAILoans login, secure customer login for personal loan applications, manage personal loan account on EasyAILoans',
+            'title' => 'EasyAILoans Customer Login - Access Your Account',
+            'description' => 'Login to your EasyAILoans account to manage personal loan details, track applications, and check loan status securely and quickly.',
             'robots' => 'follow, index,  max-snippet:-1, max-video-preview:-1, max-image-preview:large'
         ];
         return $meta;
@@ -666,8 +666,8 @@ if(!function_exists('travel')){
     function travel()
     {
         $meta = [
-            'keywords' => 'Get Small Personal Loan Online – Instant Approval | Kredittap',
-            'title' => 'Instant Travel Loan Online – Finance Your Trip | Kredittap',
+            'keywords' => 'Get Small Personal Loan Online – Instant Approval | EasyAILoans',
+            'title' => 'Instant Travel Loan Online – Finance Your Trip | EasyAILoans',
             'description' => 'Get an instant travel loan with easy EMIs and low interest. Finance your dream vacation with quick approval, minimal paperwork & fast disbursal.',
         ];
         return $meta;
@@ -679,7 +679,7 @@ if(!function_exists('smallPersonalLoan')){
     {
         $meta = [
             'keywords' => 'small personal loan, instant small loan, ₹5000 loan, low amount loan, quick personal loan, mini personal loan, fast approval loan India',
-            'title' => 'Get Small Personal Loan Online – Instant Approval | Kredittap',
+            'title' => 'Get Small Personal Loan Online – Instant Approval | EasyAILoans',
             'description' => 'Apply for a small personal loan from ₹5,000 to ₹1,00,000 with quick approval, low interest rates & flexible EMIs. Instant disbursal with minimal documents.',
         ];
         return $meta;
@@ -689,9 +689,9 @@ if(!function_exists('aadhaar')){
     function aadhaar()
     {
         $meta = [
-            'keywords' => 'loan on Aadhaar card, Aadhaar card loan, personal loan with Aadhaar, Aadhaar based loan, instant Aadhaar loan, Kredittap Aadhaar loan',
-            'title' => 'Get Instant Loan on Aadhaar Card – Paperless Process | Kredittap',
-            'description' => 'Apply for a personal loan using only your Aadhaar Card. No physical documents required. 100% online and fast approval via Kredittap. Check eligibility now!',
+            'keywords' => 'loan on Aadhaar card, Aadhaar card loan, personal loan with Aadhaar, Aadhaar based loan, instant Aadhaar loan, EasyAILoans Aadhaar loan',
+            'title' => 'Get Instant Loan on Aadhaar Card – Paperless Process | EasyAILoans',
+            'description' => 'Apply for a personal loan using only your Aadhaar Card. No physical documents required. 100% online and fast approval via EasyAILoans. Check eligibility now!',
         ];
         return $meta;
     }
@@ -700,9 +700,9 @@ if(!function_exists('wedding')){
     function wedding()
     {
         $meta = [
-            'keywords' => 'loan for wedding, wedding loan India, marriage loan, personal loan for marriage, instant wedding loan, Kredittap wedding loan',
-            'title' => 'Wedding Loan – Instant Personal Loan for Marriage | Kredittap',
-            'description' => 'Apply for a wedding loan online with Kredittap. Get funds instantly for marriage expenses with flexible EMIs & quick approval. No collateral needed!'
+            'keywords' => 'loan for wedding, wedding loan India, marriage loan, personal loan for marriage, instant wedding loan, EasyAILoans wedding loan',
+            'title' => 'Wedding Loan – Instant Personal Loan for Marriage | EasyAILoans',
+            'description' => 'Apply for a wedding loan online with EasyAILoans. Get funds instantly for marriage expenses with flexible EMIs & quick approval. No collateral needed!'
         ];
         return $meta;
     }
@@ -711,9 +711,9 @@ if(!function_exists('doctors')){
     function doctors()
     {
         $meta = [
-            'keywords' => 'loan for doctors, personal loan for doctors, doctor loan India, clinic loan, loan for medical professionals, Kredittap doctor loan',
-            'title' => 'Personal Loan for Doctors – Instant Approval | Kredittap',
-            'description' => 'Get personal loan for doctors with quick approval, minimal documents, and low interest rates. Ideal for clinic setup or medical equipment. Apply via Kredittap now!',
+            'keywords' => 'loan for doctors, personal loan for doctors, doctor loan India, clinic loan, loan for medical professionals, EasyAILoans doctor loan',
+            'title' => 'Personal Loan for Doctors – Instant Approval | EasyAILoans',
+            'description' => 'Get personal loan for doctors with quick approval, minimal documents, and low interest rates. Ideal for clinic setup or medical equipment. Apply via EasyAILoans now!',
         ];
         return $meta;
     }
@@ -722,9 +722,9 @@ if(!function_exists('insurance')){
     function insurance()
     {
         $meta = [
-            'keywords' => 'loan for insurance, insurance premium loan, personal loan for insurance, loan to pay insurance, insurance loan India, Kredittap insurance loan',
-            'title' => 'Loan for Insurance Premium Payment – Instant Approval | Kredittap',
-            'description' => 'Need funds to pay your insurance premium? Get an instant personal loan for insurance with low interest and fast processing via Kredittap. Apply today!',
+            'keywords' => 'loan for insurance, insurance premium loan, personal loan for insurance, loan to pay insurance, insurance loan India, EasyAILoans insurance loan',
+            'title' => 'Loan for Insurance Premium Payment – Instant Approval | EasyAILoans',
+            'description' => 'Need funds to pay your insurance premium? Get an instant personal loan for insurance with low interest and fast processing via EasyAILoans. Apply today!',
         ];
         return $meta;
     }
@@ -734,9 +734,9 @@ if(!function_exists('cibilDefaulters')){
     function cibilDefaulters()
     {
         $meta = [
-            'keywords' => 'loan for CIBIL defaulters, bad credit loan India, Kredittap CIBIL loan, personal loan low CIBIL score, loan for low credit score, unsecured loan with bad credit',
-            'title' => 'Loan for CIBIL Defaulters in India – Apply with Low Credit Score | Kredittap',
-            'description' => 'Struggling with a low CIBIL score? Kredittap helps you get a personal loan even if you`re a CIBIL defaulter. Quick approval, easy process. Apply now!',
+            'keywords' => 'loan for CIBIL defaulters, bad credit loan India, EasyAILoans CIBIL loan, personal loan low CIBIL score, loan for low credit score, unsecured loan with bad credit',
+            'title' => 'Loan for CIBIL Defaulters in India – Apply with Low Credit Score | EasyAILoans',
+            'description' => 'Struggling with a low CIBIL score? EasyAILoans helps you get a personal loan even if you`re a CIBIL defaulter. Quick approval, easy process. Apply now!',
         ];
         return $meta;
     }
@@ -746,9 +746,9 @@ if(!function_exists('construction')){
     function construction()
     {
         $meta = [
-            'keywords' => 'loan for home construction, home construction loan India, Kredittap construction loan, personal loan for house construction, building loan approval',
-            'title' => 'Home Construction Loan – Build Your Dream House with Kredittap',
-            'description' => 'Looking to build your home? Get a personal loan for home construction at low interest rates and fast approval. Apply for a construction loan with Kredittap today!',
+            'keywords' => 'loan for home construction, home construction loan India, EasyAILoans construction loan, personal loan for house construction, building loan approval',
+            'title' => 'Home Construction Loan – Build Your Dream House with EasyAILoans',
+            'description' => 'Looking to build your home? Get a personal loan for home construction at low interest rates and fast approval. Apply for a construction loan with EasyAILoans today!',
         ];
         return $meta;
     }
@@ -758,9 +758,9 @@ if(!function_exists('lowCreditScore')){
     function lowCreditScore()
     {
         $meta = [
-            'keywords' => 'loan with low credit score, Kredittap poor credit loan, bad credit personal loan India, unsecured loan low score, loan approval low CIBIL',
-            'title' => 'Personal Loan with Low Credit Score – Easy Approval | Kredittap',
-            'description' => 'Worried about a low credit score? Kredittap offers personal loans for individuals with low CIBIL scores. Get fast approval and flexible repayment options.',
+            'keywords' => 'loan with low credit score, EasyAILoans poor credit loan, bad credit personal loan India, unsecured loan low score, loan approval low CIBIL',
+            'title' => 'Personal Loan with Low Credit Score – Easy Approval | EasyAILoans',
+            'description' => 'Worried about a low credit score? EasyAILoans offers personal loans for individuals with low CIBIL scores. Get fast approval and flexible repayment options.',
         ];
         return $meta;
     }
@@ -771,7 +771,7 @@ if(!function_exists('sitemapMeta')){
     {
         $meta = [
             'keywords' => 'sitemap',
-            'title' => 'Sitemap | Kredittap',
+            'title' => 'Sitemap | EasyAILoans',
             'description' => 'sitemap',
         ];
         return $meta;

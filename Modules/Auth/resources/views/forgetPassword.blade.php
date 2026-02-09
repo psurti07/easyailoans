@@ -54,7 +54,7 @@
         <div id="login" class="bg--fixed login-1 login-section division">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
-                    <div class="col-md-6 col-lg-6">	
+                    <div class="col-md-6 col-lg-6 align-items-center m-auto">	
                         <div class="register-page-form">
                             <!-- TITLE -->
                             <div class="col-md-12">
@@ -87,13 +87,13 @@
                         </div>	
                     </div>	
 
-                    <div class="col-md-6 col-lg-6 col-12">
+                    <!-- <div class="col-md-6 col-lg-6 col-12">
                         <div class="d-flex justify-content-center align-items-start">
                             <div class="img-block">
                                 <img src="{{ asset('front/images/Login-page-1.png') }}" alt="login now" class="img-fluid">
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>	  <!-- End row -->	
             </div> <!-- End container -->		
         </div>	<!-- END LOGIN PAGE -->

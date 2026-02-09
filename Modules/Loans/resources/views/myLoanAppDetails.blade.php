@@ -104,7 +104,7 @@
                             <div class="d-flex flex-stack">
                                 <div class="text-gray-700 fw-semibold fs-6 me-2">Agent Name</div>
                                 <div class="d-flex align-items-senter">
-                                    <span class="text-gray-900 fw-bolder fs-6">{{ $agentDetails->fullname ?? 'Kredittap Support' }}</span>
+                                    <span class="text-gray-900 fw-bolder fs-6">{{ $agentDetails->fullname ?? 'EasyAILoans Support' }}</span>
                                 </div>
                             </div>
                             <div class="separator separator-dashed my-3"></div>
@@ -118,7 +118,7 @@
                             <div class="d-flex flex-stack">
                                 <div class="text-gray-700 fw-semibold fs-6 me-2">Agent Email Id</div>
                                 <div class="d-flex align-items-senter">
-                                    <span class="text-gray-900 fw-bolder fs-6">{{ $agentDetails->emailid ?? 'support@kredittap.com' }}</span>
+                                    <span class="text-gray-900 fw-bolder fs-6">{{ $agentDetails->emailid ?? 'support@EasyAILoans.com' }}</span>
                                 </div>
                             </div>
                             <div class="separator separator-dashed my-3"></div>
@@ -177,7 +177,7 @@
                         <div class="d-flex flex-stack flex-grow-1 ">
                         <div class=" fw-semibold">
                             <h4 class="text-gray-900 fw-bold">Raise a Request</h4>
-                            <div class="fs-6 text-gray-700 ">If you have any concern, please <a class="text-primary fw-bold" href="{{ route('customer.support') }}">Raise a Request</a>.</div>
+                            <div class="fs-6 text-gray-700 ">If you have any concern, please <a class="text-success fw-bold" href="{{ route('customer.support') }}">Raise a Request</a>.</div>
                         </div>
                     </div>
                 </div>

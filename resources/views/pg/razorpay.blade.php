@@ -43,7 +43,7 @@
           "amount": amount * 100,
           "currency": "INR",
           "order_id": orderid,
-          "name": "Kredittap",
+          "name": "EasyAILoans",
           "image": "https://kredittap.com/assets/images/logo/favicon.ico",
           "description": description,
           "prefill": {

@@ -93,7 +93,7 @@
                                 </div>
                             </div>
                         </form>
-                        <p class="p-sm mt-3 mb-0">By submitting the form & proceeding, you agree to the <a href="{{ route('front.terms.conditions') }}" target="_blank" class="text-dark text-decoration-none">Terms</a>  and <a href="{{ route('front.privacy.policy') }}" target="_blank" class="text-dark text-decoration-none"> Privacy Policy</a> of Kredittap.</p>
+                        <p class="p-sm mt-3 mb-0">By submitting the form & proceeding, you agree to the <a href="{{ route('front.terms.conditions') }}" target="_blank" class="text-dark text-decoration-none">Terms</a>  and <a href="{{ route('front.privacy.policy') }}" target="_blank" class="text-dark text-decoration-none"> Privacy Policy</a> of EasyAILoans.</p>
                     </div>
                 </div>
             </div>

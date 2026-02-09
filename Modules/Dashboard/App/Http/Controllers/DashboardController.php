@@ -383,7 +383,7 @@ class DashboardController extends Controller
                     $invoiceData = view('mail.invoice', $invAttach)->render();
                     Log::info($invoiceData);
                     $pdf = Pdf::loadHTML($invoiceData)->setPaper('A4', 'portrait')->output();
-                    sendBrevoHtmlMail2($mailData, 'Congratulations! Successful Plan Renewal for Kredittap.', $sendGreetings, 3, $pdf);
+                    sendBrevoHtmlMail2($mailData, 'Congratulations! Successful Plan Renewal for EasyAILoans.', $sendGreetings, 3, $pdf);
                     return redirect("customer/dashboard")->with('success', 'Your plan has been successfully renewed!');
                 } else {
                     Log::info('response code not success');

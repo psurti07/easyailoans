@@ -6,9 +6,9 @@ use Illuminate\Support\Facades\Log;
 if(!function_exists('surat')){
     function surat(){
         $meta = [
-            "title" => "Personal Loan in Surat – Instant Approval | Kredittap",
-            "description" => "Apply for a personal loan in Surat with Kredittap. Get quick approval, minimal documents & best interest rates from top NBFCs. Check eligibility now!",
-            "keywords" =>  "personal loan in Surat, Surat personal loan, instant personal loan Surat, personal loan NBFC Surat, low interest loan in Surat, Kredittap loan Surat"
+            "title" => "Personal Loan in Surat – Instant Approval | EasyAILoans",
+            "description" => "Apply for a personal loan in Surat with EasyAILoans. Get quick approval, minimal documents & best interest rates from top NBFCs. Check eligibility now!",
+            "keywords" =>  "personal loan in Surat, Surat personal loan, instant personal loan Surat, personal loan NBFC Surat, low interest loan in Surat, EasyAILoans loan Surat"
         ];
         return $meta;
     }

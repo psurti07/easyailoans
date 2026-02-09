@@ -112,7 +112,7 @@ dwIDAQAB
             /* store all request in $inputs variable */
             $inputs = $request->all();
             if (Cookie::has('user_mobile') && Cookie::get('user_mobile') != $inputs['mobile']) {
-                $keysToKeep = ['XSRF-TOKEN', 'kredittap_session', 'utm_campaign', 'utm_medium', 'utm_source'];
+                $keysToKeep = ['XSRF-TOKEN', 'easyailoans_session', 'utm_campaign', 'utm_medium', 'utm_source'];
                 foreach (Cookie::get() as $key => $value) {
                     if (!in_array($key, $keysToKeep)) {
                         Cookie::queue(Cookie::forget($key));
@@ -793,7 +793,7 @@ dwIDAQAB
                     );
                     $invoiceData = view('mail.invoice', $invAttach)->render();
                     $pdf = Pdf::loadHTML($invoiceData)->setPaper('A4', 'portrait')->output();
-                    sendBrevoHtmlMail2($mailData, 'Congratulations! Payment Successful for Kredittap’s Self-Apply Plan.', $sendGreetings, 3, $pdf);
+                    sendBrevoHtmlMail2($mailData, 'Congratulations! Payment Successful for EasyAILoans Self-Apply Plan.', $sendGreetings, 3, $pdf);
                     if ($response2 > 0) {
                         $redRoute = 'self-apply/paymentSuccess'; // Row was updated
                     } else {

@@ -58,7 +58,7 @@
                         
                         <!--begin::Labels-->
                          <div class="mt-10"> 
-                            <a href="{{ route('customer.invoice') }}" target="_blank" class="btn btn-sm btn-primary">Download Invoice</a>
+                            <a href="{{ route('customer.invoice') }}" target="_blank" class="btn btn-sm btn-success">Download Invoice</a>
                         </div>                 
                         <!--end::Labels-->   
                     </div>  

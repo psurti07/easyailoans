@@ -81,7 +81,7 @@
             <div class="fbox-wrapper text-center">
                 <div class="row gx-3 gy-2 row-cols-1 row-cols-md-2 row-cols-lg-4">
                     <div class="col">
-                        <div class="fbox-8 fbox--hover fb-1 r-12">
+                        <div class="fbox-8 fbox--hover fb-1 r-12 border">
                             <div class="fbox-ico ico-50">
                                 <div class="shape-ico color--theme">
                                     <span class="flaticon-layers-1"></span>
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="fbox-8 fbox--hover fb-2 r-12">
+                        <div class="fbox-8 fbox--hover fb-2 r-12 border">
                             <div class="fbox-ico ico-50">
                                 <div class="shape-ico color--theme">
                                     <span class="flaticon-computer-1"></span>
@@ -107,7 +107,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="fbox-8 fbox--hover fb-2 r-12">
+                        <div class="fbox-8 fbox--hover fb-2 r-12 border">
                             <div class="fbox-ico ico-50">
                                 <div class="shape-ico color--theme">
                                     <span class="flaticon-click-1"></span>
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="fbox-8 fbox--hover fb-3 r-12">
+                        <div class="fbox-8 fbox--hover fb-3 r-12 border">
                             <div class="fbox-ico ico-50">
                                 <div class="shape-ico color--theme">
                                     <span class="flaticon-tech-support"></span>
@@ -147,12 +147,12 @@
                         <div id="sb-5-1" class="text-center">
                             <div class="statistic-block">
                                 <div class="statistic-digit">
-                                    <h2 class="s-30 w-700 mb-10">
+                                    <h2 class="s-30 w-700 mb-10 text-white">
                                         <span class="count-element">4</span>.<span class="count-element">5</span>k
                                     </h2>
                                 </div>
                                 <div class="statistic-txt">
-                                    <h5 class="s-16 w-500">Customers Served</h5>
+                                    <h5 class="s-16 w-500 text-white">Customers Served</h5>
                                 </div>
                             </div>
                         </div>
@@ -161,12 +161,12 @@
                         <div id="sb-5-3" class="text-center">
                             <div class="statistic-block">
                                 <div class="statistic-digit">
-                                    <h2 class="s-30 w-700 mb-10">
+                                    <h2 class="s-30 w-700 mb-10 text-white">
                                         <span class="count-element">10</span>+
                                     </h2>
                                 </div>
                                 <div class="statistic-txt">
-                                    <h5 class="s-16 w-500">NBFC Partners</h5>
+                                    <h5 class="s-16 w-500 text-white">NBFC Partners</h5>
                                 </div>
                             </div>
                         </div>
@@ -175,12 +175,12 @@
                         <div id="sb-5-2" class="text-center">
                             <div class="statistic-block">
                                 <div class="statistic-digit">
-                                    <h2 class="s-30 w-700 mb-10">
+                                    <h2 class="s-30 w-700 mb-10 text-white">
                                         <span class="count-element">12</span>+
                                     </h2>
                                 </div>
                                 <div class="statistic-txt">
-                                    <h5 class="s-16 w-500">Workforce</h5>
+                                    <h5 class="s-16 w-500 text-white">Workforce</h5>
                                 </div>
                             </div>
                         </div>
@@ -189,12 +189,12 @@
                         <div id="sb-5-4" class="text-center">
                             <div class="statistic-block">
                                 <div class="statistic-digit">
-                                    <h2 class="s-30 w-700 mb-10">
+                                    <h2 class="s-30 w-700 mb-10 text-white">
                                         <span class="count-element">100</span>%
                                     </h2>
                                 </div>
                                 <div class="statistic-txt">
-                                    <h5 class="s-16 w-500">Digital Process</h5>
+                                    <h5 class="s-16 w-500 text-white">Digital Process</h5>
                                 </div>
                             </div>
                         </div>
@@ -262,8 +262,8 @@
 
             <div class="fbox-wrapper text-center">
                 <div class="row g-4 row-cols-1 row-cols-md-3 row-cols-lg-3">
-                    <div class="col">
-                        <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12">
+                    <div class="col d-flex">
+                        <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12 h-100 w-100">
                             <div class="fbox-ico ico-50">
                                 <div class="shape-ico color--theme">
                                     <span class="flaticon-mobile-search"></span>
@@ -275,8 +275,8 @@
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12">
+                    <div class="col d-flex">
+                        <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12 h-100 w-100">
                             <div class="fbox-ico ico-50">
                                 <div class="shape-ico color--theme">
                                     <span class="flaticon-computer"></span>
@@ -288,8 +288,8 @@
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12">
+                    <div class="col d-flex">
+                        <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12 h-100 w-100">
                             <div class="fbox-ico ico-50">
                                 <div class="shape-ico color--theme">
                                     <span class="flaticon-credit-card"></span>
@@ -301,8 +301,8 @@
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12">
+                    <div class="col d-flex">
+                        <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12 h-100 w-100">
                             <div class="fbox-ico ico-50">
                                 <div class="shape-ico color--theme">
                                     <span class="flaticon-time"></span>
@@ -314,8 +314,8 @@
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12">
+                    <div class="col d-flex">
+                        <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12 h-100 w-100">
                             <div class="fbox-ico ico-50">
                                 <div class="shape-ico color--theme">
                                     <span class="flaticon-check-1"></span>
@@ -327,8 +327,8 @@
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12">
+                    <div class="col d-flex">
+                        <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12 h-100 w-100">
                             <div class="fbox-ico ico-50">
                                 <div class="shape-ico color--theme">
                                     <span class="flaticon-profits"></span>
@@ -629,7 +629,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col">
                     <!-- Testimonials carousel start  -->
                     @include('partials.front.testimonials')
                     <!-- Testimonials carousel end  -->
@@ -691,7 +691,7 @@
 
                 <div class="col-md-6 py-md-0 py-4">
                     <div class="h-100">
-                        <div class="card shadow border-primary h-100">
+                        <div class="card shadow border h-100">
                             <div class="card-body">
                                 <p class="w-400 mb-20">
                                     Fill out the form below and you'll hear from us soon.
