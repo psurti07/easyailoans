@@ -18,9 +18,9 @@
                 height: 100%;
                 background-repeat: repeat;
                 background-position: center top;
-                background-image: url(https://kredittap.com/assets/images/mail-bgm.png);
+                background-image: url(https://easyailoans.com/assets/images/mail-bgm.png);
                 background-color: #f9f9f9;
-                " background="https://kredittap.com/front/images/bg-01.webp">
+                " background="https://easyailoans.com/front/images/bg-01.webp">
         <tbody>
         <tr>
             <td class="es-m-margin" valign="top" style="padding: 0; margin: 0;">
@@ -60,9 +60,9 @@
                                                                 class="es-m-txt-c"
                                                                 style="padding: 0; margin: 0; padding-top: 5px; font-size: 0;">
                                                                 <a target="_blank"
-                                                                   href="https://kredittap.com/"
+                                                                   href="https://easyailoans.com/"
                                                                    style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: underline; color: #000f26; font-size: 14px;">
-                                                                    <img src="https://kredittap.com/front/images/logo/logo.png"
+                                                                    <img src="https://easyailoans.com/front/images/logo/logo.png"
                                                                          alt="EasyAILoans"
                                                                          style="display: block; border: 0; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic;"
                                                                          width="190"
@@ -110,9 +110,9 @@
                                                         <tbody>
                                                         <tr>
                                                             <td align="center"
-                                                                style="padding: 20px; margin: 0; line-height: 2rem;    background-color: #e9f8f2;border-top-right-radius:12px;border-top-left-radius:12px;">
+                                                                style="padding: 20px; margin: 0; line-height: 2rem;    background-color: #b4c7d5;border-top-right-radius:12px;border-top-left-radius:12px;">
                                                                 <p
-                                                                    style="font-size:2.2rem;color:#1e7a35;font-weight:600">
+                                                                    style="font-size:2.2rem;color:#0e5281;font-weight:600">
                                                                     Congratulations !
                                                                 </p>
                                                             </td>
@@ -121,7 +121,7 @@
                                                             <td align="left"
                                                                 style="padding: 20px; margin: 0; line-height: 2rem;">
                                                                 <p><strong>
-                                                                        🎉 Thank You for choosing Kredittap!
+                                                                        🎉 Thank You for choosing EasyAILoans!
                                                                     </strong>
                                                                 </p>
                                                                 <p>👋 Hi {{ $fullname }}, Your loan application has been successfully submitted. Our company executive will contact you in 24 to 48 hours! 🏆
@@ -193,25 +193,25 @@
                                                                                                 ">
                                                                     <a target="_blank"
                                                                        style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;"
-                                                                       href="https://kredittap.com/privacy-policy">
+                                                                       href="https://easyailoans.com/privacy-policy">
                                                                         Privacy Policy
                                                                     </a>
                                                                     &nbsp; | &nbsp;
                                                                     <a target="_blank"
                                                                        style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;"
-                                                                       href="https://kredittap.com/terms-and-conditions">
+                                                                       href="https://easyailoans.com/terms-and-conditions">
                                                                         Terms &amp; Conditions
                                                                     </a>
                                                                     &nbsp; | &nbsp;
                                                                     <a target="_blank"
                                                                        style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;"
-                                                                       href="https://kredittap.com/raise-request">
+                                                                       href="https://easyailoans.com/raise-request">
                                                                         Raise a request
                                                                     </a>
                                                                     &nbsp; | &nbsp;
                                                                     <a target="_blank"
                                                                        style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;"
-                                                                       href="https://kredittap.com">
+                                                                       href="https://easyailoans.com">
                                                                         Visit Website
                                                                     </a>
                                                                 </p>
@@ -258,7 +258,7 @@
                                                                         {{ str_ireplace(' ','-',env('COMPANY_MOBILE')) }}
                                                                     </a>
                                                                     | Email:
-                                                                    <a href="mailto:info@kredittap.com"
+                                                                    <a href="mailto:info@easyailoans.com"
                                                                        style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;">
                                                                         {{ env('INFO_EMAIL') }}
                                                                     </a>
@@ -279,7 +279,7 @@
                                                                             valign="top"
                                                                             style="padding: 0; margin: 0; padding-right: 10px;">
                                                                             <a target="_blank"
-                                                                               href="https://twitter.com/Kredittap"
+                                                                               href="https://twitter.com/easyailoans"
                                                                                style="
                                                                                                                 -webkit-text-size-adjust: none;
                                                                                                                 -ms-text-size-adjust: none;
@@ -307,7 +307,7 @@
                                                                             valign="top"
                                                                             style="padding: 0; margin: 0; padding-right: 10px;">
                                                                             <a target="_blank"
-                                                                               href="https://in.pinterest.com/kredittap/"
+                                                                               href="https://in.pinterest.com/easyailoans/"
                                                                                style="
                                                                                                                 -webkit-text-size-adjust: none;
                                                                                                                 -ms-text-size-adjust: none;
@@ -339,7 +339,7 @@
                                                                             valign="top"
                                                                             style="padding: 0; margin: 0; padding-right:10px">
                                                                             <a target="_blank"
-                                                                               href="http://www.youtube.com/@Kredittap"
+                                                                               href="http://www.youtube.com/@easyailoans"
                                                                                style="
                                                                                                                 -webkit-text-size-adjust: none;
                                                                                                                 -ms-text-size-adjust: none;
@@ -372,7 +372,7 @@
                                                                             valign="top"
                                                                             style="padding: 0; margin: 0;padding-right:10px">
                                                                             <a target="_blank"
-                                                                               href="https://www.facebook.com/@Kredittap.in"
+                                                                               href="https://www.facebook.com/@easyailoans.in"
                                                                                style="
                                                                                                                 -webkit-text-size-adjust: none;
                                                                                                                 -ms-text-size-adjust: none;
@@ -404,7 +404,7 @@
                                                                             valign="top"
                                                                             style="padding: 0; margin: 0;">
                                                                             <a target="_blank"
-                                                                               href="https://www.instagram.com/kredittap/"
+                                                                               href="https://www.instagram.com/easyailoans/"
                                                                                style="
                                                                                                                 -webkit-text-size-adjust: none;
                                                                                                                 -ms-text-size-adjust: none;

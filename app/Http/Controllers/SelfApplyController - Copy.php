@@ -1182,7 +1182,7 @@ class SelfApplyController extends Controller
 						'zip' => $userData->pincode,
 						'orderid' => $orderId,
 						'odamount' => $orderData->orderamount,
-						'sourceurl' => 'https://kredittap.com/self-apply/paymentSuccess'
+						'sourceurl' => 'https://easyailoans.com/self-apply/paymentSuccess'
 					);
 				
     				if ($fbleads) {
@@ -1394,7 +1394,7 @@ class SelfApplyController extends Controller
             $offerId = $record->id;
             //Log::info('offerId - '.$offerId);
             $orderId = number_format(microtime(true) * 1000, 0, '.', '');
-            $returnUrl = 'https://kredittap.com/api/self-apply/prime-offer-response';
+            $returnUrl = 'https://easyailoans.com/api/self-apply/prime-offer-response';
 
             if (env('LYRA_MODE') == "PROD") {
                 $curlurl = "https://api.in.lyra.com/pg/rest/v1/charge";
@@ -1612,7 +1612,7 @@ class SelfApplyController extends Controller
 
             $orderId = number_format(microtime(true) * 1000, 0, '.', '');
             $encData = null;
-            $returnUrl = 'https://kredittap.com/api/self-apply/mega-offer-response';
+            $returnUrl = 'https://easyailoans.com/api/self-apply/mega-offer-response';
 
             if (env('SABPAISA_MODE') == "PROD") {
                 $curlurl = "https://securepay.sabpaisa.in/SabPaisa/sabPaisaInit?v=1";
@@ -1896,7 +1896,7 @@ class SelfApplyController extends Controller
             //Log::info('Offer data - '. $offerId);
             $orderId = number_format(microtime(true) * 1000, 0, '.', '');
             $encData = null;
-            $returnUrl = 'https://kredittap.com/api/self-apply/premium-offer-response';
+            $returnUrl = 'https://easyailoans.com/api/self-apply/premium-offer-response';
 
             /* cipherPay PG starts */
             $refId = rand(1000, 9999);
@@ -1905,7 +1905,7 @@ class SelfApplyController extends Controller
                 "url" => "payin/dynamic-qr",
                 "parameter" => [
                     //'receiver_vpa' => "cpy.kredbaz@fin",
-                    'receiver_vpa' => "cpy.kredittap@finobank",
+                    'receiver_vpa' => "cpy.easyailoans@finobank",
                     'amount' => round($grandAmount), // amount
                     'remarks' => "Dynamic QR", // remarks
                     'refid' => 'KRED'.$refId, //refrence id
@@ -2079,7 +2079,7 @@ class SelfApplyController extends Controller
             //Log::info('Offer data - '. $offerId);
             $orderId = 'KRBZVGP'.number_format(microtime(true) * 1000, 0, '.', '');
             $encData = null;
-            $returnUrl = 'https://kredittap.com/api/self-apply/premium-offer-response';
+            $returnUrl = 'https://easyailoans.com/api/self-apply/premium-offer-response';
 
             /* veegah PG starts */
             
@@ -2353,7 +2353,7 @@ class SelfApplyController extends Controller
             Session::save();
             Cache::put('user_password', $password, $this->lifetime);
             //Log::info('order ID - ' .$orderid);
-            $returnUrl = 'https://kredittap.com/api/self-apply/star-offer-response';
+            $returnUrl = 'https://easyailoans.com/api/self-apply/star-offer-response';
             $callbackUrl = route('self.apply.callbackUrl');
 
             if (env('PHONEPE_ENV') == "PRODUCTION") {
@@ -2554,7 +2554,7 @@ class SelfApplyController extends Controller
 
             $orderid = "APLive" . number_format(microtime(true) * 1000, 0, '.', '');
             $url = "https://payments.airpay.co.in/pay/index.php";
-            $returnUrl = 'https://kredittap.com/airpay-response';
+            $returnUrl = 'https://easyailoans.com/airpay-response';
 
             $hiddenmod = "";
 

@@ -224,7 +224,7 @@
                             </p>
                             
                             <p class="s-14">
-                                <strong>Important Note:</strong> BE AWARE! We ask our customers to make payments ONLY on our website https://kredittap.com and NOT through any other source, directly or indirectly. Thanks!
+                                <strong>Important Note:</strong> BE AWARE! We ask our customers to make payments ONLY on our website https://easyailoans.com and NOT through any other source, directly or indirectly. Thanks!
                             </p>
                         </div>
                     </div>

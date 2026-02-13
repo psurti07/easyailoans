@@ -837,7 +837,7 @@ dwIDAQAB
 
             Log::info('Offer data - '. $offerId);
             $orderId = number_format(microtime(true) * 1000, 0, '.', '');
-            $returnUrl = 'https://kredittap.com/api/self-apply/offer-1-response';
+            $returnUrl = 'https://easyaIloans.com/api/self-apply/offer-1-response';
 
             if (env('LYRA_MODE') == "PROD") {
                 $curlurl = "https://api.in.lyra.com/pg/rest/v1/charge";
@@ -1029,7 +1029,7 @@ dwIDAQAB
             Log::info('Offer data - '. $offerId);
             $orderId = number_format(microtime(true) * 1000, 0, '.', '');
             $encData = null;
-            $returnUrl = 'https://kredittap.com/api/self-apply/offer-2-response';
+            $returnUrl = 'https://easyaIloans.com/api/self-apply/offer-2-response';
 
             if (env('SABPAISA_MODE') == "PROD") {
                 $curlurl = "https://securepay.sabpaisa.in/SabPaisa/sabPaisaInit?v=1";
@@ -1297,7 +1297,7 @@ dwIDAQAB
             //Log::info('Offer data - '. $offerId);
             $orderId = number_format(microtime(true) * 1000, 0, '.', '');
             $encData = null;
-            $returnUrl = 'https://kredittap.com/api/loan-agent/offer-3-response';
+            $returnUrl = 'https://easyaIloans.com/api/loan-agent/offer-3-response';
 
             /* cipherPay PG starts */
             $refId = rand(1000,9999);
@@ -1306,7 +1306,7 @@ dwIDAQAB
                 "url" => "payin/dynamic-qr",
                 "parameter" => [
                     //'receiver_vpa' => "cpy.kredbaz@fin",
-                    'receiver_vpa' => "cpy.kredittap@finobank",
+                    'receiver_vpa' => "cpy.easyaIloans@finobank",
                     'amount' => round($grandAmount), // amount
                     'remarks' => "Dynamic QR", // remarks
                     'refid' => $refId, //refrence id

@@ -18,9 +18,9 @@
                 height: 100%;
                 background-repeat: repeat;
                 background-position: center top;
-                background-image: url(https://kredittap.com/assets/images/mail-bgm.png);
+                background-image: url(https://easyailoans.com/assets/images/mail-bgm.png);
                 background-color: #f9f9f9;
-                " background="https://kredittap.com/front/images/bg-01.webp">
+                " background="https://easyailoans.com/front/images/bg-01.webp">
                 <tbody>
                     <tr>
                         <td class="es-m-margin" valign="top" style="padding: 0; margin: 0;">
@@ -60,9 +60,9 @@
                                                                                             class="es-m-txt-c"
                                                                                             style="padding: 0; margin: 0; padding-top: 5px; font-size: 0;">
                                                                                             <a target="_blank"
-                                                                                                href="https://kredittap.com/"
+                                                                                                href="https://easyailoans.com/"
                                                                                                 style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: underline; color: #000f26; font-size: 14px;">
-                                                                                            <img src="https://kredittap.com/front/images/logo/logo.png"
+                                                                                            <img src="https://easyailoans.com/front/images/logo/logo.png"
                                                                                                 alt="EasyAILoans"
                                                                                                 style="display: block; border: 0; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic;"
                                                                                                 width="190"
@@ -110,9 +110,9 @@
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td align="center"
-                                                                                            style="padding: 20px; margin: 0; line-height: 2rem;    background-color: #e9f8f2;border-top-right-radius:12px;border-top-left-radius:12px;">
+                                                                                            style="padding: 20px; margin: 0; line-height: 2rem;    background-color: #b4c7d5;border-top-right-radius:12px;border-top-left-radius:12px;">
                                                                                             <p
-                                                                                                style="font-size:2.2rem;color:#1e7a35;font-weight:600">
+                                                                                                style="font-size:2.2rem;color:#0e5281;font-weight:600">
                                                                                                 Congratulations! 
                                                                                             </p>
                                                                                         </td>
@@ -154,23 +154,23 @@
                                                             style="padding: 0; margin: 0; padding-top: 10px; padding-bottom: 10px;">
                                                             <table cellpadding="0" cellspacing="0" class="es-left"
                                                                 align="left"
-                                                                style="mso-table-lspace: 0;mso-table-rspace: 0;border-collapse: collapse;border-spacing: 0;float: left;background-color: #e9f8f2;border: 1px solid #1ebc62;  border-radius: 12px; display: block;">
+                                                                style="mso-table-lspace: 0;mso-table-rspace: 0;border-collapse: collapse;border-spacing: 0;float: left;background-color: #b4c7d5;border: 1px solid #0e5281;  border-radius: 12px; display: block;">
                                                                 <tbody>
                                                                     <tr>
                                                                         <td class="es-m-p20b" align="left"
                                                                             style="padding: 0; margin: 0; width: 600px;">
-                                                                            <h3 style="text-align:center; color: #1e7a35;">
+                                                                            <h3 style="text-align:center; color: #0e5281;">
                                                                                 Order Details
                                                                             </h3>
                                                                             <hr>
                                                                             <table cellpadding="0" cellspacing="0"
                                                                                 width="100%" bgcolor="#ffffff"
-                                                                                style="mso-table-lspace: 0;mso-table-rspace: 0;border-collapse: separate;border-spacing: 0; border-radius: 15px;/* border: 1px solid #1ebc62; */ background-color: transparent;"
+                                                                                style="mso-table-lspace: 0;mso-table-rspace: 0;border-collapse: separate;border-spacing: 0; border-radius: 15px;/* border: 1px solid #0e5281; */ background-color: transparent;"
                                                                                 role="presentation">
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td
-                                                                                            style="padding:0  20px; margin: 0; line-height: 1.5rem;background-color: #e9f8f2; color:#000;font-size:16px; border-radius: 12px;">
+                                                                                            style="padding:0  20px; margin: 0; line-height: 1.5rem;background-color: #b4c7d5; color:#000;font-size:16px; border-radius: 12px;">
                                                                                             <p style="margin: 0;">Full Name :<span></span>
                                                                                             <h5 style="margin:0;">{{ $fullname }}</h5>
                                                                                             </p>
@@ -182,7 +182,7 @@
                                                                                             </p>
                                                                                         </td>
                                                                                         <td align="left"
-                                                                                            style="padding:0 20px; margin: 0; line-height: 1.5rem;background-color: #e9f8f2;  color:#000;font-size:16px;border-radius: 12px;">
+                                                                                            style="padding:0 20px; margin: 0; line-height: 1.5rem;background-color: #b4c7d5;  color:#000;font-size:16px;border-radius: 12px;">
                                                                                             <p style="margin: 0;">Mobile :
                                                                                             <h5 style="margin: 0;">+91&nbsp;{{ $mobile }}</h5>
                                                                                             </p>
@@ -236,7 +236,7 @@
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td align="left"
-                                                                                            style="padding: 20px; margin: 0; line-height: 1.5rem;background-color: #e9f8f2; border-radius:12px;color:#000;font-size:16px">
+                                                                                            style="padding: 20px; margin: 0; line-height: 1.5rem;background-color: #b4c7d5; border-radius:12px;color:#000;font-size:16px">
                                                                                             <p>
                                                                                                 Your Loan Consultation Details :
                                                                                             </p>
@@ -291,7 +291,7 @@
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td align="left"
-                                                                                            style="padding: 20px; margin: 0; line-height: 1.5rem;background-color: #e9f8f2; border-radius:12px;color:#000;font-size:16px">
+                                                                                            style="padding: 20px; margin: 0; line-height: 1.5rem;background-color: #b4c7d5; border-radius:12px;color:#000;font-size:16px">
                                                                                             <p>As per the details you provided, we’ve found the perfect loan offers! Please access your Loan Login links to quickly apply for the loan that suits you best:</p>
                                                                                             <p><strong>Customer Portal Credentials</strong></p>
                                                                                             <p>Mobile : <strong>{{ $mobile
@@ -301,7 +301,7 @@
                                                                                                 $password }}</strong>
                                                                                             </p>
                                                                                             <p>Please visit Your Personalised Portal and login with your credentials:</p>
-                                                                                            <a href="https://kredittap.com/customer/login"
+                                                                                            <a href="https://easyailoans.com/customer/login"
                                                                                                 style="display:inline-block;background:#2c2c2c;color:#fff;font-family:Ubuntu,Helvetica,Arial,sans-serif,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;line-height:17.5px;margin:0;text-decoration:none;text-transform:none;padding:9px 26px 9px 26px; margin:auto; display:block; width: fit-content; mso-padding-alt:0;border-radius:10px"
                                                                                                 target="_blank"><span><strong><span
                                                                                                 style="font-family:Poppins,sans-serif;font-size:14px">Click
@@ -373,25 +373,25 @@
                                                                                                 ">
                                                                                                 <a target="_blank"
                                                                                                     style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;"
-                                                                                                    href="https://kredittap.com/privacy-policy">
+                                                                                                    href="https://easyailoans.com/privacy-policy">
                                                                                                 Privacy Policy
                                                                                                 </a>
                                                                                                 &nbsp; | &nbsp;
                                                                                                 <a target="_blank"
                                                                                                     style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;"
-                                                                                                    href="https://kredittap.com/terms-and-conditions">
+                                                                                                    href="https://easyailoans.com/terms-and-conditions">
                                                                                                 Terms &amp; Conditions
                                                                                                 </a>
                                                                                                 &nbsp; | &nbsp;
                                                                                                 <a target="_blank"
                                                                                                     style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;"
-                                                                                                    href="https://kredittap.com/raise-request">
+                                                                                                    href="https://easyailoans.com/raise-request">
                                                                                                 Raise a request
                                                                                                 </a>
                                                                                                 &nbsp; | &nbsp;
                                                                                                 <a target="_blank"
                                                                                                     style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;"
-                                                                                                    href="https://kredittap.com">
+                                                                                                    href="https://easyailoans.com">
                                                                                                 Visit Website
                                                                                                 </a>
                                                                                             </p>
@@ -438,7 +438,7 @@
                                                                                                 {{ str_ireplace(' ','-',env('COMPANY_MOBILE')) }}
                                                                                                 </a>
                                                                                                 | Email:
-                                                                                                <a href="mailto:info@kredittap.com"
+                                                                                                <a href="mailto:info@easyailoans.com"
                                                                                                     style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;">
                                                                                                 {{ env('INFO_EMAIL') }}
                                                                                                 </a>
@@ -459,7 +459,7 @@
                                                                                                             valign="top"
                                                                                                             style="padding: 0; margin: 0; padding-right: 10px;">
                                                                                                             <a target="_blank"
-                                                                                                                href="https://twitter.com/Kredittap"
+                                                                                                                href="https://twitter.com/easyailoans"
                                                                                                                 style="
                                                                                                                 -webkit-text-size-adjust: none;
                                                                                                                 -ms-text-size-adjust: none;
@@ -487,7 +487,7 @@
                                                                                                             valign="top"
                                                                                                             style="padding: 0; margin: 0; padding-right: 10px;">
                                                                                                             <a target="_blank"
-                                                                                                                href="https://in.pinterest.com/kredittap/"
+                                                                                                                href="https://in.pinterest.com/easyailoans/"
                                                                                                                 style="
                                                                                                                 -webkit-text-size-adjust: none;
                                                                                                                 -ms-text-size-adjust: none;
@@ -519,7 +519,7 @@
                                                                                                             valign="top"
                                                                                                             style="padding: 0; margin: 0; padding-right:10px">
                                                                                                             <a target="_blank"
-                                                                                                                href="http://www.youtube.com/@Kredittap"
+                                                                                                                href="http://www.youtube.com/@easyailoans"
                                                                                                                 style="
                                                                                                                 -webkit-text-size-adjust: none;
                                                                                                                 -ms-text-size-adjust: none;
@@ -552,7 +552,7 @@
                                                                                                             valign="top"
                                                                                                             style="padding: 0; margin: 0;padding-right:10px">
                                                                                                             <a target="_blank"
-                                                                                                                href="https://www.facebook.com/@Kredittap.in"
+                                                                                                                href="https://www.facebook.com/@easyailoans.in"
                                                                                                                 style="
                                                                                                                 -webkit-text-size-adjust: none;
                                                                                                                 -ms-text-size-adjust: none;
@@ -584,7 +584,7 @@
                                                                                                             valign="top"
                                                                                                             style="padding: 0; margin: 0;">
                                                                                                             <a target="_blank"
-                                                                                                                href="https://www.instagram.com/kredittap/"
+                                                                                                                href="https://www.instagram.com/easyailoans/"
                                                                                                                 style="
                                                                                                                 -webkit-text-size-adjust: none;
                                                                                                                 -ms-text-size-adjust: none;

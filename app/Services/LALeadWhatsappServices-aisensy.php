@@ -74,7 +74,7 @@ class LALeadWhatsappServices
                         					"url" => $aisensy->media_url,
                         					"filename" => $aisensy->media_filename
                         				),
-                        				"userName" => 'Kredittap Admin',
+                        				"userName" => 'EasyAILoans Admin',
                         				"tags" => array("Hire_RM"),
                         				"attributes" => array(
                         					"EligibleAmount" => strval($eligibilityAmt)

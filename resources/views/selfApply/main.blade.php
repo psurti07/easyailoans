@@ -308,7 +308,7 @@
                                 <strong>Disclaimer:</strong> EasyAILoans is a loan service aggregator and is authorised to provide services on behalf of its Lending Partners.
                             </p>
                             <p class="s-14">
-                                <strong>Important Note:</strong> BE AWARE! We ask our customers to make payments ONLY on our website https://kredittap.com and NOT through any other source, directly or indirectly. Thanks!
+                                <strong>Important Note:</strong> BE AWARE! We ask our customers to make payments ONLY on our website https://easyailoans.com and NOT through any other source, directly or indirectly. Thanks!
                             </p>
                             <p class="s-14">
                                 <strong>Registered Office Address:</strong> {{ env('COMPANY_ADDRESS') }} <br/> Mobile: {{ env('COMPANY_MOBILE') }} | Email: {{ env('INFO_EMAIL') }}

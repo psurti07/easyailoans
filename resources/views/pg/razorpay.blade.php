@@ -44,7 +44,7 @@
           "currency": "INR",
           "order_id": orderid,
           "name": "EasyAILoans",
-          "image": "https://kredittap.com/assets/images/logo/favicon.ico",
+          "image": "https://easyailoans.com/assets/images/logo/favicon.ico",
           "description": description,
           "prefill": {
             "name": fullname,
