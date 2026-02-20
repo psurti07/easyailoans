@@ -206,7 +206,7 @@
                 }
             });
             /* get postal data like city and state */
-            /*$('#pincode').on('input', function() {
+            $('#pincode').on('input', function() {
                 var pincode = $(this).val();
 
                 // Only make request if pincode is of 6 digits
@@ -241,7 +241,7 @@
                     $('#city').val('');
                     $('#state').val('');
                 }
-            });*/
+            });
         })
     </script>
 @endpush

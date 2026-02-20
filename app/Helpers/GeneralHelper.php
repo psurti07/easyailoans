@@ -171,15 +171,26 @@ if(!function_exists('formatePriceIndia')) {
 
 if (!function_exists('getPostalDetailsByPincode')) {
     function getPostalDetailsByPincode($pincode) {
-        $api_url = "https://api.postalpincode.in/pincode/395007";
+       $curl = curl_init(); 
+        curl_setopt_array($curl, [ 
+            CURLOPT_URL => 'https://geoloc.in/api/pincode',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => json_encode(['pincode' => $pincode]),
+            CURLOPT_HTTPHEADER => [
+                'Content-Type: application/json',
+                'Authorization: Bearer '.env('GEOLOC_KEY')
+            ],
+        ]);
+        $response = curl_exec($curl);
+        curl_close($curl);
        
-        $response = Http::get($api_url);
-        $data = json_decode($response, true);
-        dd($data);
-        if ($data[0]['Status'] == "Success") {
+        $data = json_decode($response);
+        
+        if ($data->status == "success") {
             return [
-                'city' => $data[0]['PostOffice'][0]['District'],
-                'state' => $data[0]['PostOffice'][0]['State']
+                'city' => $data->data[0]->cityname,
+                'state' => $data->data[0]->statename
             ];
         } else {
             return ['error' => 'Invalid Pincode'];
