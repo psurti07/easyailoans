@@ -484,7 +484,7 @@ if (!function_exists('handleFileUpload')) {
 if(!function_exists('sendBrevoHtmlMail')){
     function sendBrevoHtmlMail($maildata, $subject = '', $message = '', $sendmail = '', $attachmentPath = ''){
         $data['sender']['name'] = env('APP_NAME');
-        $data["sender"]["email"] = 'info@easyailoans.com';
+        $data["sender"]["email"] = 'info@ailoans.com';
 
         $user_res["name"] = $maildata["fullname"];
         $user_res["email"] = $maildata["email"];
@@ -539,7 +539,7 @@ if(!function_exists('sendBrevoHtmlMail')){
 if(!function_exists('sendBrevoHtmlMail2')){
     function sendBrevoHtmlMail2($maildata, $subject = '', $message = '', $sendmail = '', $attachments = []){
         $data['sender']['name'] = env('APP_NAME');
-        $data["sender"]["email"] = 'info@easyailoans.com';
+        $data["sender"]["email"] = 'info@ailoans.com';
 
         $user_res["name"] = $maildata["fullname"];
         $user_res["email"] = $maildata["email"];

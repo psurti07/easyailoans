@@ -92,7 +92,7 @@
                                         <div class="accordion-panel-item">
                                             <div class="faqs-2-answer">
                                                 <p>
-                                                    You can simply write to us at <a href="mailto:info@EasyAILoans.com" class="text-decoration-none">info@EasyAILoans.com</a> – our cheered up team is always eager to help you out.
+                                                    You can simply write to us at <a href="mailto:info@ailoans.com" class="text-decoration-none">info@ailoans.com</a> – our cheered up team is always eager to help you out.
                                                 </p>
                                             </div>
                                         </div>

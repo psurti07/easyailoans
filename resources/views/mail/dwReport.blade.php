@@ -88,9 +88,9 @@
                                                                             class="es-m-txt-c"
                                                                             style="padding: 0; margin: 0; padding-top: 5px; font-size: 0;">
                                                                             <a target="_blank"
-                                                                                href="https://easyailoans.com/"
+                                                                                href="https://easyailoans.com/uat/"
                                                                                 style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: underline; color: #000f26; font-size: 14px;">
-                                                                            <img src="https://easyailoans.com/front/images/logo/logo.png"
+                                                                            <img src="https://easyailoans.com/uat/front/images/logo/logo.png"
                                                                                 alt="EasyAILoans"
                                                                                 style="display: block; border: 0; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic;"
                                                                                 width="190"
@@ -216,7 +216,7 @@
                                                                                             <tr>
                                                                                                 <td><h5 style="margin:0">{{ $agent->fullname ?? 'EasyAILoans Support' }}</h5></td>
                                                                                                 <td><h5 style="margin:0">+91 {{ $agent->mobile ?? '97242 06519' }}</h5></td>
-                                                                                                <td><h5 style="margin:0">{{ $agent->emailid ?? 'info@easyailoans.com' }}</h5></td>
+                                                                                                <td><h5 style="margin:0">{{ $agent->emailid ?? 'info@ailoans.com' }}</h5></td>
                                                                                             </tr>
                                                                                         </table>
                                                                                     </td>

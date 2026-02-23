@@ -837,7 +837,7 @@ dwIDAQAB
 
             Log::info('Offer data - '. $offerId);
             $orderId = number_format(microtime(true) * 1000, 0, '.', '');
-            $returnUrl = 'https://easyaIloans.com/api/self-apply/offer-1-response';
+            $returnUrl = 'api/self-apply/offer-1-response';
 
             if (env('LYRA_MODE') == "PROD") {
                 $curlurl = "https://api.in.lyra.com/pg/rest/v1/charge";
@@ -1029,7 +1029,7 @@ dwIDAQAB
             Log::info('Offer data - '. $offerId);
             $orderId = number_format(microtime(true) * 1000, 0, '.', '');
             $encData = null;
-            $returnUrl = 'https://easyaIloans.com/api/self-apply/offer-2-response';
+            $returnUrl = 'api/self-apply/offer-2-response';
 
             if (env('SABPAISA_MODE') == "PROD") {
                 $curlurl = "https://securepay.sabpaisa.in/SabPaisa/sabPaisaInit?v=1";
@@ -1297,7 +1297,7 @@ dwIDAQAB
             //Log::info('Offer data - '. $offerId);
             $orderId = number_format(microtime(true) * 1000, 0, '.', '');
             $encData = null;
-            $returnUrl = 'https://easyaIloans.com/api/loan-agent/offer-3-response';
+            $returnUrl = 'api/loan-agent/offer-3-response';
 
             /* cipherPay PG starts */
             $refId = rand(1000,9999);

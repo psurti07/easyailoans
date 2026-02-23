@@ -179,7 +179,8 @@ class DashboardController extends Controller
                 }
             }
             $orderId = "ZPLAT" . number_format(microtime(true) * 1000, 0, '.', '');
-            $returnUrl = "https://easyailoans.com/api/customer/plan-upgrade";
+            // $returnUrl = "https://easyailoans.com/api/customer/plan-upgrade";
+            $returnUrl = route('api.customer.upgradePlan');
             
             /*zaakpay code starts*/
             if (env('ZAAKPAY_ENV') == "PRODUCTION") {

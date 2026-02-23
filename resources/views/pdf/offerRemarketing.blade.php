@@ -112,8 +112,8 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td class="es-m-txt-c" style="padding: 0; margin: 0; padding-top: 5px; font-size: 0;">
-                                                                        <a target="_blank" href="https://easyailoans.com/" style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: underline; color: #000f26; font-size: 14px;">
-                                                                            <img src="https://easyailoans.com/front/images/logo/logo.png" alt="EasyAILoans" style="display: block; border: 0; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic;" width="190" title="EasyAILoans">
+                                                                        <a target="_blank" href="https://easyailoans.com/uat/" style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: underline; color: #000f26; font-size: 14px;">
+                                                                            <img src="https://easyailoans.com/uat/front/images/logo/logo.png" alt="EasyAILoans" style="display: block; border: 0; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic;" width="190" title="EasyAILoans">
                                                                         </a>
                                                                     </td>
                                                                 </tr>
@@ -360,7 +360,7 @@
                                                                                                 margin-top: 25px;
                                                                                                 display: block;
                                                                                             ">
-                                                                                        <a href="{{ $userData->acc_type==1?'https://easyailoans.com/self-apply':'https://easyailoans.com/loan-agent' }}" style="
+                                                                                        <a href="{{ $userData->acc_type==1?'https://easyailoans.com/uat/self-apply':'https://easyailoans.com/uat/loan-agent' }}" style="
                                                                                                     background-color: #1ebc62;
                                                                                                     color: #fff;
                                                                                                     font-family: Poppins, sans-serif;
@@ -458,7 +458,7 @@
                                                                                             <a target="_blank" style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;" href="tel:09724206519">
                                                                                                 {{ str_ireplace(' ','-',env('COMPANY_MOBILE')) }}
                                                                                                 </a> | Email:
-                                                                                            <a href="mailto:info@easyailoans.com" style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;">
+                                                                                            <a href="mailto:info@ailoans.com" style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;">
                                                                                                 {{ env('INFO_EMAIL') }}
                                                                                                 </a>
                                                                                         </p>

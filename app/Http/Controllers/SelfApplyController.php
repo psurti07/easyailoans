@@ -1183,7 +1183,8 @@ class SelfApplyController extends Controller
 						'zip' => $userData->pincode,
 						'orderid' => $orderId,
 						'odamount' => $orderData->orderamount,
-						'sourceurl' => 'https://easyailoans.com/self-apply/paymentSuccess'
+						// 'sourceurl' => 'https://easyailoans.com/self-apply/paymentSuccess'
+						'sourceurl' => route('payment.success'),
 					);
 				
     				if ($fbleads) {
@@ -1399,8 +1400,9 @@ class SelfApplyController extends Controller
             $offerId = $record->id;
             //Log::info('offerId - '.$offerId);
             $orderId = number_format(microtime(true) * 1000, 0, '.', '');
-            $returnUrl = 'https://easyailoans.com/api/self-apply/prime-offer-response';
-
+            // $returnUrl = 'https://easyailoans.com/api/self-apply/prime-offer-response';
+            $returnUrl = route('api.self.apply.prime-offer-response');
+            
             if (env('LYRA_MODE') == "PROD") {
                 $curlurl = "https://api.in.lyra.com/pg/rest/v1/charge";
             } else {
@@ -1619,7 +1621,8 @@ class SelfApplyController extends Controller
 
             $orderId = number_format(microtime(true) * 1000, 0, '.', '');
             $encData = null;
-            $returnUrl = 'https://easyailoans.com/api/self-apply/mega-offer-response';
+            // $returnUrl = 'https://easyailoans.com/api/self-apply/mega-offer-response';
+            $returnUrl = route('api.self.apply.mega-offer-response');
 
             if (env('SABPAISA_MODE') == "PROD") {
                 $curlurl = "https://securepay.sabpaisa.in/SabPaisa/sabPaisaInit?v=1";
@@ -1903,7 +1906,8 @@ class SelfApplyController extends Controller
             //Log::info('Offer data - '. $offerId);
             $orderId = number_format(microtime(true) * 1000, 0, '.', '');
             $encData = null;
-            $returnUrl = 'https://easyailoans.com/api/self-apply/premium-offer-response';
+            // $returnUrl = 'https://easyailoans.com/api/self-apply/premium-offer-response';
+            $returnUrl = route('api.self.apply.premium-offer-response');
 
             /* cipherPay PG starts */
             $refId = rand(1000, 9999);
@@ -2086,7 +2090,8 @@ class SelfApplyController extends Controller
             //Log::info('Offer data - '. $offerId);
             $orderId = 'KRBZVGP'.number_format(microtime(true) * 1000, 0, '.', '');
             $encData = null;
-            $returnUrl = 'https://easyailoans.com/api/self-apply/premium-offer-response';
+            // $returnUrl = 'https://easyailoans.com/api/self-apply/premium-offer-response';
+            $returnUrl = route('api.self.apply.premium-offer-response');
 
             /* veegah PG starts */
             
@@ -2361,7 +2366,9 @@ class SelfApplyController extends Controller
             Cache::put('user_password', $password, $this->lifetime);
             //Log::info('order ID - ' .$orderid);
 
-            $returnUrl = 'https://easyailoans.com/api/self-apply/star-offer-response';
+            // $returnUrl = 'https://easyailoans.com/api/self-apply/star-offer-response';
+            $returnUrl = route('api.self.apply.offer4Response')
+;
 
             if (env('LYRA_MODE') == "PROD") {
                 $curlurl = "https://api.in.lyra.com/pg/rest/v1/charge";
