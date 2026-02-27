@@ -10,21 +10,21 @@
 @endpush
 @section('content')
 <!-- main section starts -->
-<section id="hero-7" class="hero-section bg--green-100">
+<section id="hero-7" class="hero-section bg--green-100 pb-0">
     <div class="hero-overlay">
         <div class="container">
             <div class="row d-flex align-items-center">
                 <div class="col-md-6 col-lg-6 col-12">
-                    <div class="hero-7-txt mb-30">
+                    <div class="hero-7-txt mb-50">
                         <h1 class="s-40 w-700">We Build a Path that Leads <span class="color--green-500">You to Success!</span></h1>
                         <p class="mb-20">Set out to achieve your financial goals with professional advice from some of the most intelligent minds in the industry.</p>
                         <a href="{{ route('self.apply.main') }}" class="btn r-04 btn--theme hover--tra-black last-link">Self Apply</a>
                         <a href="{{ route('loan.agent.main') }}" class="btn r-04 btn--theme hover--tra-black last-link">Hire an Agent</a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-12">
+                <div class="col-md-6 col-lg-6 col-12 ">
                     <div class="hero-7-img home-img d-flex justify-content-center align-items-start">
-                        <img src="{{ asset('front/images/home-section.webp') }}" alt="easyailoans" width="auto" height="auto">
+                        <img src="{{ asset('front/images/home-section.png') }}" alt="easyailoans" width="auto" height="auto">
                     </div>
                 </div>
             </div>
@@ -246,51 +246,54 @@
                 </div>
             </div>
         </div>
-        <div class="row fbox-wrapper text-center align-items-center g-4">
-            <div class="col-12 col-lg-6">
-                <div class="img-block left-column">
-                    <img class="img-fluid light-theme-img"
-                        src="{{ asset('front/images/Easy-Self-Apply-ai.png') }}"
-                        alt="feature-image">
+        <div class="col-12 col-lg-10 align-items-center m-auto">
+            <div class="row fbox-wrapper text-center align-items-center m-auto border border--grey shadow rounded-3 mb-4">
+                <div class="col-12 col-lg-6 order-2 order-lg-1">
+                    <div class="img-block right-column text-center">
+                        <img class="img-fluid light-theme-img"
+                            src="{{ asset('front/images/Easy-Self-Apply-ai.png') }}"
+                            alt="feature-image">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 order-1 order-lg-2">
+                    <div class="txt-block right-column">
+                        <h3 class="s-22 w-700 mb-2">Quick Self-Apply</h3>
+                        <p class="mb-2">
+                            Sit back and relax! Allow our dedicated expert loan agent to handle
+                            the entire loan process on your behalf and increase your chances of approval.
+                        </p>
+                        <a href="{{ route('self.apply.main') }}"
+                            class="btn r-04 btn--theme hover--tra-black">
+                            Apply Now
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-6">
-                <div class="txt-block right-column text-start">
-                    <h3 class="s-22 w-700 mb-2">Quick Self-Apply</h3>
-                    <p class="mb-2">
-                        Sit back and relax! Allow our dedicated expert loan agent to handle
-                        the entire loan process on your behalf and increase your chances of approval.
-                    </p>
-                    <a href="{{ route('self.apply.main') }}"
-                        class="btn r-04 btn--theme hover--tra-black">
-                        Apply Now
-                    </a>
+
+            <div class="row fbox-wrapper text-center align-items-center m-auto border border--grey shadow rounded-3">
+                <div class="col-12 col-lg-6 order-2 order-lg-1">
+                    <div class="txt-block left-column">
+                        <h3 class="s-22 w-700 mb-2">Hire Loan Agent</h3>
+                        <p class="mb-2">
+                            Get instant access to the top-quality digital loan consultation,
+                            login links, and exclusive personalized loan offer from our trusted NBFC partners.
+                        </p>
+                        <a href="{{ route('loan.agent.main') }}"
+                            class="btn r-04 btn--theme hover--tra-black">
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 order-1 order-lg-2">
+                    <div class="img-block right-column text-center">
+                        <img class="img-fluid light-theme-img"
+                            src="{{ asset('front/images/Hire-Loan-Agent-ai.png') }}"
+                            alt="feature-image">
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="row fbox-wrapper text-center align-items-center g-4">
-            <div class="col-12 col-lg-6 order-2 order-lg-1">
-                <div class="txt-block right-column text-start">
-                    <h3 class="s-22 w-700 mb-2">Hire Loan Agent</h3>
-                    <p class="mb-2">
-                        Get instant access to the top-quality digital loan consultation,
-                        login links, and exclusive personalized loan offer from our trusted NBFC partners.
-                    </p>
-                    <a href="{{ route('loan.agent.main') }}"
-                        class="btn r-04 btn--theme hover--tra-black">
-                        Apply Now
-                    </a>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6 order-1 order-lg-2">
-                <div class="img-block left-column">
-                    <img class="img-fluid light-theme-img"
-                        src="{{ asset('front/images/Hire-Loan-Agent-ai.png') }}"
-                        alt="feature-image">
-                </div>
-            </div>
-        </div>
 
     </div>
 </section>

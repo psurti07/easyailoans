@@ -64,7 +64,7 @@
                                         <div class="accordion-panel-item">
                                             <div class="faqs-2-answer">
                                                 <p>
-                                                    NBFCs stands for Non-Banking Financial Companies providing financial and lending services. Kredit Bazar is a direct selling agent with multiple NBFCs.
+                                                    NBFCs stands for Non-Banking Financial Companies providing financial and lending services. EasyAILoans is a direct selling agent with multiple NBFCs.
                                                 </p>
                                             </div>
                                         </div>
@@ -86,7 +86,7 @@
                                 </li>
                                 <li class="accordion-item mb-10">
                                     <div class="accordion-thumb">
-                                        <h6 class="w-600">How can I reach out to the Kredit Bazar team?</h6>
+                                        <h6 class="w-600">How can I reach out to the EasyAILoans team?</h6>
                                     </div>
                                     <div class="accordion-panel">
                                         <div class="accordion-panel-item">
