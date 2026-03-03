@@ -10,26 +10,28 @@
 @endpush
 @section('content')
 <!-- main section starts -->
-<section id="hero-7" class="hero-section bg--green-100 pb-0">
-    <div class="hero-overlay">
-        <div class="container">
-            <div class="row d-flex align-items-center">
-                <div class="col-md-6 col-lg-6 col-12">
-                    <div class="hero-7-txt mb-50">
+<section id="hero-7" class="hero-section bg--green-100 bg--scroll">
+    <!-- <div class="hero-overlay"> -->
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-6 col-lg-6 col-12">
+                <div class="hero-7-txt">
+                    <div class=" mt-lg-5 mb-lg-5">
                         <h1 class="s-40 w-700">We Build a Path that Leads <span class="color--green-500">You to Success!</span></h1>
                         <p class="mb-20">Set out to achieve your financial goals with professional advice from some of the most intelligent minds in the industry.</p>
                         <a href="{{ route('self.apply.main') }}" class="btn r-04 btn--theme hover--tra-black last-link">Self Apply</a>
                         <a href="{{ route('loan.agent.main') }}" class="btn r-04 btn--theme hover--tra-black last-link">Hire an Agent</a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-12 ">
-                    <div class="hero-7-img home-img d-flex justify-content-center align-items-start">
-                        <img src="{{ asset('front/images/home-section.png') }}" alt="easyailoans" width="auto" height="auto">
-                    </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-12 ">
+                <div class="hero-7-img d-flex justify-content-center align-items-start">
+                    <img src="{{ asset('front/images/home-section.png') }}" alt="easyailoans" class="img-fluid p-0">
                 </div>
             </div>
         </div>
     </div>
+    <!-- </div> -->
 </section>
 <!-- main section ends -->
 
@@ -63,7 +65,7 @@
 </section>
 <!-- Our Partners section end  -->
 
-<section class="py-80 ct-02 content-section division bg--white-400" id="company">
+<section class="py-80 ct-02 content-section division bg--green-100" id="company">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-9">
@@ -300,7 +302,7 @@
 <!-- Products Intro section ends -->
 
 <!-- Quick and swift steps section starts -->
-<section id="features-2" class="py-80 bg--white-400 features-section division">
+<section id="features-2" class="py-80 bg--green-100 features-section division">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-9">
@@ -661,7 +663,7 @@
 <!-- Testimonioals section ends -->
 
 <!-- Contact Start -->
-<section id="contact" class="py-80 bg--white-400">
+<section id="contact" class="py-80 bg--green-100">
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-6 md-mb-50">

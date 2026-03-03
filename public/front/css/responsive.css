@@ -7049,9 +7049,9 @@
   /*------------------------------------------*/
 
   /* Header Logo */
-  .wsmobileheader .smllogo { display: block; margin-top: 10px; padding-left: 16px; }
+  .wsmobileheader .smllogo { display: block; margin-top: 25px; padding-left: 16px; }
   .blog-header .wsmobileheader .smllogo { margin-top: 29px; }
-  .smllogo img { width: auto; max-width: inherit; max-height: 60px; }
+  .smllogo img { width: auto; max-width: inherit; }
   .blog-header .smllogo img { max-height: 60px; }
 
   .wsmenu > .wsmenu-list { width: 290px; margin-right: -290px; }
@@ -7181,7 +7181,7 @@
   .hero-6-img { margin: 35px 1% 0; }
 
   /* HERO-7 */
-  #hero-7 { padding-top: 70px; padding-bottom: 80px; }
+  #hero-7 { padding-top: 70px; padding-bottom: 0px; }
   .hero-7-txt h2 { padding: 0 4%; }
   #hero-7 .quick-form { margin-left: 3%; margin-right: 3%; }
   .hero-7-img { margin-top: 35px; }
