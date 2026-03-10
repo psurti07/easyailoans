@@ -2,13 +2,13 @@
 <div class="owl-carousel owl-theme reviews-1-wrapper">
     <div class="review-1 bg--white-100 block-shadow r-08">
         <div class="review-txt pt-30">
-            <p class="p-md"><i>"I was so surprised with the service quickness! Self apply is really the best feature here"</i></p>
+            <p class="p-md"><i>"I used the <strong>Hire Loan Agent</strong> option on Easy AI Loans and it made the whole process very smooth. The loan expert helped me step by step and handled the bank coordination. It saved me a lot of time and effort."</i></p>
             <div class="author-data clearfix">
                 <div class="review-avatar">
                     <img src="{{ asset('front/images/logo/apple-touch-icon.png') }}" alt="review-avatar" width="auto">
                 </div>
                 <div class="review-author">
-                    <h4 class="s-16 w-600">Kanishka Tiwari</h4>
+                    <h4 class="s-16 w-600">Rohit Singh</h4>
                     <div class="star-rating ico-15">
                         <span class="flaticon-star"></span>
                         <span class="flaticon-star"></span>
@@ -22,13 +22,13 @@
     </div>
     <div class="review-1 bg--white-100 block-shadow r-08">
         <div class="review-txt pt-30">
-            <p class="p-md"><i>“Impressed with the loan consultation service! They truly give the best solutions...”</i></p>
+            <p class="p-md"><i>“The <strong>Self Apply feature</strong> is very useful. I could directly access loan application links and compare options from different NBFCs. The process was simple and completely online”</i></p>
             <div class="author-data clearfix">
                 <div class="review-avatar">
                     <img src="{{ asset('front/images/logo/apple-touch-icon.png') }}" alt="review-avatar" width="auto">
                 </div>
                 <div class="review-author">
-                    <h4 class="s-16 w-600">Kaushik Shah</h4>
+                    <h4 class="s-16 w-600">Priya Mehta </h4>
                     <div class="star-rating ico-15">
                         <span class="flaticon-star"></span>
                         <span class="flaticon-star"></span>
@@ -42,13 +42,13 @@
     </div>
     <div class="review-1 bg--white-100 block-shadow r-08">
         <div class="review-txt pt-30">
-            <p class="p-md"><i>"Just extraordinary…it’s so good to receive the loan applying link within few minutes only"</i></p>
+            <p class="p-md"><i>"I initially tried applying myself but then chose the <strong>Hire Loan Agent</strong> service. The dedicated agent explained the documentation clearly and helped manage the entire process."</i></p>
             <div class="author-data clearfix">
                 <div class="review-avatar">
                     <img src="{{ asset('front/images/logo/apple-touch-icon.png') }}" alt="review-avatar" width="auto">
                 </div>
                 <div class="review-author">
-                    <h4 class="s-16 w-600">Shrijita Deb</h4>
+                    <h4 class="s-16 w-600">Amit Verma</h4>
                     <div class="star-rating ico-15">
                         <span class="flaticon-star"></span>
                         <span class="flaticon-star"></span>
@@ -62,13 +62,13 @@
     </div>
     <div class="review-1 bg--white-100 block-shadow r-08">
         <div class="review-txt pt-30">
-            <p class="p-md"><i>"Well done EasyAILoans team, your guidance really makes a big difference. Also services are superb"</i></p>
+            <p class="p-md"><i>"The <strong>Self Apply</strong> option is perfect if you want to manage everything yourself. I liked that Easy AI Loans provided professional consultation and direct links to apply with lenders."</i></p>
             <div class="author-data clearfix">
                 <div class="review-avatar">
                     <img src="{{ asset('front/images/logo/apple-touch-icon.png') }}" alt="review-avatar" width="auto">
                 </div>
                 <div class="review-author">
-                    <h4 class="s-16 w-600">Mukesh Sharma</h4>
+                    <h4 class="s-16 w-600">Sneha Patel</h4>
                     <div class="star-rating ico-15">
                         <span class="flaticon-star"></span>
                         <span class="flaticon-star"></span>
@@ -82,13 +82,13 @@
     </div>
     <div class="review-1 bg--white-100 block-shadow r-08">
         <div class="review-txt pt-30">
-            <p class="p-md"><i>“Quick. Professional. Humble – that’s how I define this team. Thanks guys, you’re the best”</i></p>
+            <p class="p-md"><i>“The <strong>Hire Loan Agent</strong> feature is very helpful for people who are not familiar with loan processes. The expert assisted me from application to bank verification.”</i></p>
             <div class="author-data clearfix">
                 <div class="review-avatar">
                     <img src="{{ asset('front/images/logo/apple-touch-icon.png') }}" alt="review-avatar" width="auto">
                 </div>
                 <div class="review-author">
-                    <h4 class="s-16 w-600">Naina Kumari</h4>
+                    <h4 class="s-16 w-600">Rahul Kumar</h4>
                     <div class="star-rating ico-15">
                         <span class="flaticon-star"></span>
                         <span class="flaticon-star"></span>
@@ -102,13 +102,13 @@
     </div>
     <div class="review-1 bg--white-100 block-shadow r-08">
         <div class="review-txt pt-30">
-            <p class="p-md"><i>“It just went beyond my expectations. It’s so easy to get effective loan consultation with EasyAILoans”</i></p>
+            <p class="p-md"><i>“I liked the flexibility Easy AI Loans gives. You can either <strong>apply yourself</strong> or <strong> hire an expert agent</strong>. I used the self apply option and the process was quick and transparent.”</i></p>
             <div class="author-data clearfix">
                 <div class="review-avatar">
                     <img src="{{ asset('front/images/logo/apple-touch-icon.png') }}" alt="review-avatar" width="auto">
                 </div>
                 <div class="review-author">
-                    <h4 class="s-16 w-600">Shirish Shah</h4>
+                    <h4 class="s-16 w-600">Neha Kapoor</h4>
                     <div class="star-rating ico-15">
                         <span class="flaticon-star"></span>
                         <span class="flaticon-star"></span>

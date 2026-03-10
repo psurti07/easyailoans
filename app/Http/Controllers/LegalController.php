@@ -9,47 +9,57 @@ use App\Models\SupportRequests;
 
 class LegalController extends Controller
 {
-    public function privacyPolicy(){
+    public function privacyPolicy()
+    {
         $meta = privacyPolicyMeta();
         $mainTitle = 'Privacy Policy';
-        $description = InfoPages::select('content')->where('slug','privacy-policy')->first()->content;
-        return view('front.legalPages',compact('meta','description', 'mainTitle'));
+        $subTitle = '';
+        $description = InfoPages::select('content')->where('slug', 'privacy-policy')->first()->content;
+        return view('front.legalPages', compact('meta', 'description', 'mainTitle', 'subTitle'));
     }
 
-    public function termsConditions(){
+    public function termsConditions()
+    {
         $meta = termsConditionsMeta();
         $mainTitle = 'Terms & Conditions';
-        $description = InfoPages::select('content')->where('slug','terms-conditions')->first()->content;
-        return view('front.legalPages',compact('meta','description', 'mainTitle'));
+        $subTitle = '';
+        $description = InfoPages::select('content')->where('slug', 'terms-conditions')->first()->content;
+        return view('front.legalPages', compact('meta', 'description', 'mainTitle', 'subTitle'));
     }
 
-    public function refundPolicy(){
+    public function refundPolicy()
+    {
         $meta = refundPolicyMeta();
         $mainTitle = 'Cancellation & Refund Policy';
-        $description = InfoPages::select('content')->where('slug','refund-policy')->first()->content;
-        return view('front.legalPages',compact('meta','description', 'mainTitle'));
+        $subTitle = 'Thank you for choosing our platform. We value the opportunity to assist you and aim to maintain transparency regarding cancellations and refunds.';
+        $description = InfoPages::select('content')->where('slug', 'refund-policy')->first()->content;
+        return view('front.legalPages', compact('meta', 'description', 'mainTitle', 'subTitle'));
     }
 
-    public function disclaimer(){
+    public function disclaimer()
+    {
         $meta = disclaimerMeta();
         $mainTitle = 'Disclaimer';
-        $description = InfoPages::select('content')->where('slug','disclaimer')->first()->content;
-        return view('front.legalPages',compact('meta','description', 'mainTitle'));
+        $subTitle = '';
+        $description = InfoPages::select('content')->where('slug', 'disclaimer')->first()->content;
+        return view('front.legalPages', compact('meta', 'description', 'mainTitle', 'subTitle'));
     }
 
-    public function raiseRequest(){
+    public function raiseRequest()
+    {
         $meta = raiseRequestMeta();
-        return view('front.raiseRequest',compact('meta'));
+        return view('front.raiseRequest', compact('meta'));
     }
 
-    public function requestRaisedPost(Request $request){
+    public function requestRaisedPost(Request $request)
+    {
         $inputs = $request->all();
         $request->validate([
             'usertype' => 'required',
             'firstname' => 'required',
             'lastname' => 'required',
             'email' => 'required|email',
-            'mobile' => ['required','numeric', 'regex:/^[6-9]\d{9}$/'],
+            'mobile' => ['required', 'numeric', 'regex:/^[6-9]\d{9}$/'],
             'issuetype' => 'required',
             'message' => 'required'
         ]);
@@ -68,18 +78,18 @@ class LegalController extends Controller
         ];
 
         $result = SupportRequests::create($newInputs);
-        
-        if($result){
+
+        if ($result) {
             /* send ticket message starts */
-            $msg = DB::table('sms_list')->where('type',3)->where('slug','ticket_raised')->first()->message;
-            if($msg!='#'){
-                $msg = str_ireplace('{#varticket#}',$request->input('ticketno'),$msg);
-                $senderId = DB::table('info_pages')->where('slug','common-senderid')->first()->content;
+            $msg = DB::table('sms_list')->where('type', 3)->where('slug', 'ticket_raised')->first()->message;
+            if ($msg != '#') {
+                $msg = str_ireplace('{#varticket#}', $request->input('ticketno'), $msg);
+                $senderId = DB::table('info_pages')->where('slug', 'common-senderid')->first()->content;
                 sendDynamicSMS($senderId, $msg, $request->input('mobile'), 'self');
             }
             /* send ticket message ends */
-            
-            $message = 'Your request ticket has been raised in our system with the Ticket Id: '.$request->input("ticketno").'. We will contact you within 24-48 hours for a follow-up.';
+
+            $message = 'Your request ticket has been raised in our system with the Ticket Id: ' . $request->input("ticketno") . '. We will contact you within 24-48 hours for a follow-up.';
             return response()->json(array('type' => 'SUCCESS', 'message' => $message, 'data' => $result));
         } else {
             return response()->json(array('type' => 'ERROR', 'message' => 'Oops! Something went wrong.', 'data' => []));

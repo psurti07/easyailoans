@@ -36,7 +36,7 @@
     <div class="container">
         <div class="row justify-content-center">
             
-            <div class="col-md-6 col-lg-6 col-sm-12">
+            <div class="col-md-6 col-lg-6 col-sm-12 align-items-center justify-content-center m-auto">
                 <div id="contacts" class="contacts-section division">
                     <div class="card">
                         <div class="card-body">
@@ -136,7 +136,7 @@
             <div class="col-md-6 col-lg-6 col-sm-12">
                 <div class="faqs-section">
                     <div class="faqs-3-questions">
-                        <h4 class="mb-20">Common <span class="color--green-500">FAQs</span></h4>
+                        <h4 class="mb-20 text-center">Frequently Asked Questions</h4>
                         <div class="accordion-wrapper">
                             {!! raiseRequestFaqs() !!}
                         </div>
