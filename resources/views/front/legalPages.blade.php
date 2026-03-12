@@ -7,7 +7,7 @@
 <section id="privacy-page" class="gr--white pt-150 pb-100 division">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="inner-page-title mb-40">
+            <div class="inner-page-title mb-20">
                 <h2 class="s-28">{{ $mainTitle }}</h2>
                 <p class="s-16 color--grey">{{ $subTitle }}</p>
             </div>
