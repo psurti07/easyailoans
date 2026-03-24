@@ -22,9 +22,9 @@
                     <div class="txt-block left-column">
                         <span class="section-id"></span>
                         <h2 class="w-700">Raise a <span class="color--green-500">Request</span></h2>
-                        <p class="p-md w-400">
+                        <!-- <p class="p-md w-400">
                             Have a query? Raise a request with EasyAILoans and get quick assistance for all your loan needs.
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </div>
