@@ -38,7 +38,6 @@ use Illuminate\Support\Facades\Cache;
 use Carbon\Carbon;
 use App\Http\Controllers\CipherPayController as CipherPay;
 use Illuminate\Validation\Rule;
-use Razorpay\Api\Api;
 
 class LoanAgentController extends Controller
 {
@@ -53,7 +52,7 @@ class LoanAgentController extends Controller
     {
         $meta = selfApplyMeta();
         cookieHelper($request, $this->lifetime);
-        if ($request->has('utm_referral')) {
+        if($request->has('utm_referral')){
             session()->forget('utm_referral');
             Cookie::queue('utm_referral', $request->input('utm_referral'), $this->lifetime, '/', null, false, true, false, 'lax');
             request()->session()->put('utm_referral', $request->input('utm_referral'));
@@ -169,7 +168,8 @@ class LoanAgentController extends Controller
                         'message' => 'You\'ve reached your OTP limit. Contact customer support to proceed.',
                         'data' => []
                     ]);
-                } else {
+                }
+                else {
 
                     $generatedOtp = generateOtp($inputs['mobile'], $inputs['acc_type']);
 
@@ -251,7 +251,7 @@ class LoanAgentController extends Controller
     public function loanDetailStore(Request $request)
     {
         $inputs = $request->all();
-
+        
         $request->validate([
             'monthly_income' => 'required',
         ]);
@@ -266,10 +266,10 @@ class LoanAgentController extends Controller
                     'process_step' => 2,
                     'acc_type' => Cookie::get('acc_type')
                 ]);
-                if (Cookie::has('utm_referral') || session()->has('utm_referral')) {
-                    $referral = DB::table('user_registrations')->where('refcode', request()->session()->get('utm_referral'))->select('id')->first();
+                if(Cookie::has('utm_referral') || session()->has('utm_referral')){
+                    $referral = DB::table('user_registrations')->where('refcode',request()->session()->get('utm_referral'))->select('id')->first();
                     $referralId = $referral->id ?? 0;
-
+                    
                     $userTree = DB::table('user_tree')->insertGetId([
                         'rec_date' => now(),
                         'refferaltype' => 1,
@@ -287,14 +287,14 @@ class LoanAgentController extends Controller
                     'source_id' => Cookie::get('sourceId'),
                     'client_ip' => $request->ip()
                 ]);
-
+                
                 /* fb start code */
-                $fbid = DB::table('fb_ads_entry')->insertGetId([
-                    'rec_date' => now(),
-                    'userid' => $userid,
-                    'fbclid' => Cookie::get('sourceId')
-                ]);
-                /* fb ends code */
+            	$fbid = DB::table('fb_ads_entry')->insertGetId([
+			        'rec_date' => now(),
+					'userid' => $userid,
+					'fbclid' => Cookie::get('sourceId')
+		        ]);
+    			/* fb ends code */
                 //Cookie::queue('loan_type',$request->input('loan_amount') > 500000 ? 1 : 1,$this->lifetime,'/',null,false,true,false,'lax');
                 // Insert record into the loan_applications table using the userID from the user_registrations table
                 $applyid = DB::table('loan_applications')->insertGetId([
@@ -345,11 +345,11 @@ class LoanAgentController extends Controller
     /* postal details */
     public function postalDetails(Request $request)
     {
-        try {
+        try{
             $promise = getPostalDetailsByPincode($request->input('pincode'));
             return response()->json(['status' => 'success', 'district' => $promise['city'], 'state' => $promise['state'],]);
-        } catch (\Exception $e) {
-            return response()->json(['status' => 'false', 'district' => '', 'state' => '', 'message' => 'Invalid Pincode']);
+        } catch(\Exception $e){
+            return response()->json(['status' => 'false', 'district' => '', 'state' => '','message'=>'Invalid Pincode']);
         }
     }
 
@@ -385,7 +385,7 @@ class LoanAgentController extends Controller
             if ($result) {
                 Cookie::queue('process_step', 3, $this->lifetime, '/', null, false, true, false, 'lax');
                 Cookie::queue('email', strtolower($request->input('email')), $this->lifetime, '/', null, false, true, false, 'lax');
-                Cookie::queue('fullname', ucfirst(trim($request->input('firstname'))) . ' ' . ucfirst(trim($request->input('lastname'))), $this->lifetime, '/', null, false, true, false, 'lax');
+                Cookie::queue('fullname', ucfirst(trim($request->input('firstname'))) . ' ' . ucfirst(trim($request->input('lastname'))),$this->lifetime,'/', null, false, true, false, 'lax');
                 return response()->json(['type' => 'SUCCESS', 'message' => 'Personal details saved successfully!', 'data' => '']);
             } else {
                 return response()->json(['type' => 'ERROR', 'message' => 'Oops! Something went wrong.', 'data' => '']);
@@ -399,13 +399,12 @@ class LoanAgentController extends Controller
     }
 
     /* get offers step 3 */
-    public function getOffers()
-    {
+    public function getOffers(){
         $meta = selfApplyMeta();
-        if (Cookie::get('isVerified') === null && Cookie::get('isUser') === null) {
+        if(Cookie::get('isVerified') === null && Cookie::get('isUser') === null){
             return redirect()->route('loan.agent.main');
         } else {
-            if (Cookie::get('process_step') == 3) {
+            if(Cookie::get('process_step') == 3){
                 $eligibilityAmt = calEligiblity(Cookie::get('monthly_income'), Cookie::get('current_emi'), ((Cookie::get('loan_type') == 2) ? 11.5 : 12.5), Cookie::get('loan_amount'));
                 $record = DB::table('user_offers')->where('userid', Cookie::get('userid'))->first();
                 $offersData = $record ? $record->offerdata : null;
@@ -428,7 +427,7 @@ class LoanAgentController extends Controller
                     $offersData = json_decode($offersData, true);
                 }
 
-                return view('loanAgent.getOffers', compact('meta', 'offersData'));
+                return view('loanAgent.getOffers',compact('meta','offersData'));
             } else {
                 $returnUrl = loanagenturl(Cookie::get('process_step'));
                 return redirect()->route($returnUrl);
@@ -437,17 +436,16 @@ class LoanAgentController extends Controller
     }
 
     /* buy now */
-    public function buyNow()
-    {
+    public function buyNow(){
         $meta = selfApplyMeta();
         $eligibilityAmt = calEligiblity(Cookie::get('monthly_income'), Cookie::get('current_emi'), ((Cookie::get('loan_type') == 2) ? 11.5 : 12.5), Cookie::get('loan_amount'));
         $encUserId = customEncrypt(Cookie::get('userid'));
 
         /* send get offer message starts */
-        $msg = DB::table('sms_list')->where('type', 2)->where('slug', 'get_offer')->first()->message;
-        if ($msg != '#') {
-            $msg = str_ireplace('{#varamount#}', $eligibilityAmt, $msg);
-            $senderId = DB::table('info_pages')->where('slug', 'la-senderid')->first()->content;
+        $msg = DB::table('sms_list')->where('type',2)->where('slug','get_offer')->first()->message;
+        if($msg!='#'){
+            $msg = str_ireplace('{#varamount#}',$eligibilityAmt,$msg);
+            $senderId = DB::table('info_pages')->where('slug','la-senderid')->first()->content;
             sendDynamicSMS($senderId, $msg, Cookie::get('user_mobile'), 'hire');
         }
         /* send get offer message ends */
@@ -476,58 +474,56 @@ class LoanAgentController extends Controller
         //Log::info('hire agent event track - '. json_encode($data3));
         $restrack2 = event_track($data3);
         //Log::info('hire agent event track - '. json_encode($restrack2));
-
-        $configs = DB::table('interakt_settings')->where('product', 'LA')->where('type', 'getoffer')->first();
+        
+        $configs = DB::table('interakt_settings')->where('product','LA')->where('type','getoffer')->first();
         $data4 = array(
-            "fullPhoneNumber" => '+91' . Cookie::get('user_mobile'),
-            "callbackData" => "some text here",
-            "type" => "Template",
-            "template" => array(
-                "name" => $configs->template_name,
-                "languageCode" => "en",
-                "headerValues" => array(
-                    $configs->img_url
-                ),
-                "bodyValues" => array(
-                    Cookie::get('fullname'),
-                    $eligibilityAmt
-                ),
-            )
-        );
-        $restrack3 = interakt_message('hire', $data4, $configs->api_key);
+			"fullPhoneNumber" => '+91'.Cookie::get('user_mobile'),
+			"callbackData"=> "some text here",
+			"type"=> "Template",
+			"template"=> array(
+					"name"=> $configs->template_name,
+					"languageCode"=> "en",
+					"headerValues"=> array(
+						$configs->img_url
+					),
+					"bodyValues"=> array(
+						Cookie::get('fullname'), $eligibilityAmt
+					),
+				)
+		);
+		$restrack3 = interakt_message('hire', $data4, $configs->api_key);
         /* interakt code ends here */
         /* aisensy code starts */
-        $aisensy = DB::table('aisensy_settings')->where('type', 'getoffer')->where('product', 'LA')->first();
-
+        $aisensy = DB::table('aisensy_settings')->where('type','getoffer')->where('product','LA')->first();
+            
         $data1 = array(
-            "apiKey" => $aisensy->api_key,
-            "campaignName" => $aisensy->campaign_name,
-            "destination" => "+91" . Cookie::get('user_mobile'),
-            "media" => array(
-                "url" => $aisensy->media_url,
-                "filename" => $aisensy->media_filename
-            ),
-            "userName" => Cookie::get('fullname'),
-            "tags" => array("Hire_RM"),
-            "attributes" => array(
-                "EligibleAmount" => strval($eligibilityAmt)
-            ),
-            "templateParams" => array('$Name', '$EligibleAmount'),
-        );
-        $response = aisensy_track($data1);
+			"apiKey" => $aisensy->api_key,
+			"campaignName" => $aisensy->campaign_name,
+			"destination" => "+91".Cookie::get('user_mobile'),
+			"media" => array(
+				"url" => $aisensy->media_url,
+				"filename" => $aisensy->media_filename
+			),
+			"userName" => Cookie::get('fullname'),
+			"tags" => array("Hire_RM"),
+			"attributes" => array(
+				"EligibleAmount" => strval($eligibilityAmt)
+			),
+			"templateParams" => array('$Name', '$EligibleAmount'),
+		);
+		$response = aisensy_track($data1);
         /* aisensy code ends */
         $record = DB::table('user_offers')->where('userid', Cookie::get('userid'))->first();
         $offersData = $record ? $record->offerdata : null;
         UserRegistration::where('id', Cookie::get('userid'))->update(['update_date' => now(), 'process_step' => 4]);
         $selfApply = Product::where('productslug', 'self-apply')->first();
         $hireAgent = Product::where('productslug', 'hire-loan-agent')->first();
-        return view('loanAgent.buyNow', compact('meta', 'hireAgent', 'selfApply', 'eligibilityAmt', 'offersData'));
+        return view('loanAgent.buyNow', compact('meta','hireAgent','selfApply','eligibilityAmt','offersData'));
     }
 
     /* checkout the data */
-    public function checkout(Request $request)
-    {
-        try {
+    public function checkout(Request $request){
+        try{
             $inputs = $request->all();
             $loanAppUpdates = array(
                 'rec_date' => date('Y-m-d H:i:s'),
@@ -537,7 +533,7 @@ class LoanAgentController extends Controller
             $res1 = LoanApplications::where('id', Cookie::get('applyid'))->update($loanAppUpdates);
             $productslug = 'hire-loan-agent';
             $entryfor = 12;
-            $productData = Product::where('productslug', $productslug)->first();
+            $productData = Product::where('productslug',$productslug)->first();
             $amount = ($productData->inOffer == 1) ? $productData->offeramount : $productData->amount;
             $grandAmount = $amount + ($amount * 0.18);
 
@@ -549,57 +545,111 @@ class LoanAgentController extends Controller
                     break; // Exit the loop once a match is found
                 }
             }
+            //$orderid = "ZPLive" . number_format(microtime(true) * 1000, 0, '.', '');
+            $orderid = "PPLive" . number_format(microtime(true) * 1000, 0, '.', '');
+            $returnUrl = route('api.loan.agent.buy.digital.agent.plan');
+            $callbackUrl = route('loan.agent.callbackUrl');
 
-            $returnUrl = $inputs['plan'] == 2 ? route('api.loan.agent.buy.digital.agent.plan') : route('api.self.apply.buy.digital.plan');
+            /* if (env('PHONEPE_ENV') == "PRODUCTION") {
+                $curlurl = 'https://api.phonepe.com/apis/hermes/pg/v1/pay';
+            } else {
+                $curlurl = 'https://api-preprod.phonepe.com/apis/hermes/pg/v1/pay';
+            }
 
-            $api = new Api(env('RAZOR_KEY_ID'), env('RAZOR_KEY_SECRET'));
-
-            $order = $api->order->create([
-                'receipt' => 'RAZ_' . time(),
-                'amount' => $grandAmount * 100,
-                'currency' => 'INR'
-            ]);
-
-            $orderid = $order['id'];
-
-            Razorpayentry::create([
+            //Log::info($curlurl);
+            $phonePeData = array(
                 'rec_date' => now(),
-                'entryfor' => $entryfor,
+                'entryfor' => 12,
+                'userid' => Cookie::get('userid'),
+                'orderid' => $orderid,
+                'orderamount' => $grandAmount,
+                'ordernote' => $productData->productname
+            );
+            
+            $res2 = PhonrPeEntry::create($phonePeData);
+            $dataRes = array(
+                "merchantId" => env('PHONEPE_MERCHANT_ID'),
+                "merchantTransactionId" => strval($orderid),
+                "merchantUserId" => strval(Cookie::get('userid')),
+                "amount" => $grandAmount * 100,
+                "redirectUrl" => $returnUrl,
+                "redirectMode" => "POST",
+                "callbackUrl" => $callbackUrl,
+                "mobileNumber" => strval(Cookie::get('user_mobile')),
+                "paymentInstrument" => array(
+                    "type" => "PAY_PAGE"
+                )
+            );
+            
+            $payUrl = getPhonePePaymentUrl($curlurl, env('PHONEPE_SALT_KEY'), env('PHONEPE_SALT_INDEX'), $dataRes);
+            if ($payUrl) {
+                if ($payUrl->data->instrumentResponse->redirectInfo->url) {
+                    header("location:" . $payUrl->data->instrumentResponse->redirectInfo->url);
+                    die;
+                } else {
+                    return redirect("loan.agent.main");
+                }
+            } else {
+                return redirect("loan.agent.main");
+            }*/
+            
+            if (env('ZAAKPAY_ENV') == "PRODUCTION") {
+                $curlurl = "https://api.zaakpay.com/api/paymentTransact/V8";
+            } else {
+                $curlurl = "https://zaakstaging.zaakpay.com/api/paymentTransact/V8";
+            }
+
+            $firstname = (Cookie::get('fullname') != "") ? Cookie::get('fullname') : Cookie::get('email');
+            //Log::info($curlurl);
+            $zaakpayPostData = array(
+                "merchantIdentifier" => env('ZAAKPAY_MERCHANT_IDENTIFIER'),
+                "orderId" => $orderid,
+                "returnUrl" => $returnUrl,
+                "currency" => 'INR',
+                "amount" => $grandAmount * 100,
+                "buyerEmail" => Cookie::get('email'),
+                "buyerFirstName" => $firstname,
+                "buyerPhoneNumber" => Cookie::get('user_mobile'),
+                "buyerCountry" => 'India',
+                "productDescription" => $productData->productname,
+            );
+            //Log::info('zaakpay data - '. json_encode($zaakpayPostData));
+            ksort($zaakpayPostData);
+            $checksumData = "";
+            foreach ($zaakpayPostData as $key => $value) {
+                $checksumData .= $key . '=' . $value . '&';
+            }
+
+            $checksum = hash_hmac('sha256', $checksumData, env('ZAAKPAY_SECRET_KEY'));
+
+            $zaakPayData = array(
+                'rec_date' => now(),
+                'entryfor' => $entryfor, // 11 - selfapply, 12 - loanagent
                 'userid' => Cookie::get('userid'),
                 'orderid' => $orderid,
                 'orderamount' => $grandAmount,
                 'ordernote' => $productData->productname,
-            ]);
-
-            return view('pg.razorpay', [
-                'order_id' => $orderid,
-                'amount' => $grandAmount * 100,
-                'name' => Cookie::get('fullname'),
-                'email' => Cookie::get('email'),
-                'mobile' => Cookie::get('user_mobile'),
-                'plan' => $inputs['plan'],
-                'returnUrl' => $returnUrl
-            ]);
-        } catch (\Exception $e) {
+            );
+            $response = ZaakpayEntry::create($zaakPayData);
+            return View('pg.zaakpay-checkout',compact('zaakpayPostData','checksum','curlurl'));
+        } catch(\Exception $e){
             Log::error('loan agent checkout method error occured: ' . $e->getMessage());
             return redirect('/error')->with('error', 'Oops! Something went wrong.');
         }
     }
 
     /* callback url ofd loan agent */
-    public function callbackUrl()
-    {
+    public function callbackUrl(){
         dd('Callback function call.Go Back and make further process');
     }
 
-    public function buyDigitalPlan_phonepe(Request $request)
-    {
+    public function buyDigitalPlan_phonepe(Request $request){
         try {
             $grandtotal = $netamount = $cgstamount = $sgstamount = $igstamount = 0;
             $meta = selfApplyMeta();
-
-            Session::put('orderid', $request->input('transactionId'));
-
+            
+            Session::put('orderid',$request->input('transactionId'));
+            
             $password = trim(random_code(6));
             Session::put('user_password', $password);
             if (!$request->has(['code', 'transactionId', 'providerReferenceId'])) {
@@ -609,7 +659,7 @@ class LoanAgentController extends Controller
 
             $txStatus = $request->input('code');
             Session::put('responsecode', $txStatus);
-
+            
             $transactionId = $request->input('transactionId');
             $referenceId = $request->input('providerReferenceId');
 
@@ -618,7 +668,7 @@ class LoanAgentController extends Controller
                 'referenceid' => $referenceId,
                 'txstatus' => $txStatus
             );
-
+            
             $response1 = PhonrPeEntry::where('id', $paymentData->id)->update($phonepedata);
             $userData = $query = LoanApplications::select(
                 'user_registrations.id as userid',
@@ -650,7 +700,7 @@ class LoanAgentController extends Controller
                     $cardno = random_code_num(16);
                     $productslug = "hire-loan-agent";
                     $invprefix = "LA_";
-                    $productData = Product::where('productslug', $productslug)->first();
+                    $productData = Product::where('productslug',$productslug)->first();
                     $netamount = ($productData->inOffer == 1) ? $productData->offeramount : $productData->amount;
 
                     if ($userData->state == 'Gujarat') {
@@ -673,14 +723,14 @@ class LoanAgentController extends Controller
                         'isDelete' => 0
                     );
                     $existingMembership = MembershipOrder::where('userid', $userData->userid)
-                        ->where('paymentid', $transactionId)
-                        ->first();
+                    ->where('paymentid', $transactionId)
+                    ->first();
                     $membershipId = $existingMembership ? $existingMembership->id : 0;
-
+            
                     if (!$existingMembership) {
                         $membershipId = MembershipOrder::create($membershipData)->id;
                     }
-
+            
                     $passwordkey = Hash::make($password);
                     $refcode = strtolower(substr(str_replace(" ", "", $userData->fullname), 0, 3));
                     $refcode .= substr($userData->mobile, -4);
@@ -694,15 +744,15 @@ class LoanAgentController extends Controller
                         'isUser' => 2,
                         'acc_type' => 2
                     );
-                    $response2 =  UserRegistration::where('id', $userData->userid)->update($regData);
-
+                    $response2 =  UserRegistration::where('id',$userData->userid)->update($regData);
+            
                     $invoiceNo = SiteOption::where('option_key', 'newinvoiceno')
                         ->select('option_value')
                         ->first();
 
                     $existingInvoice = Invoice::where('userid', $userData->userid)
-                        ->where('cardid', $membershipId)
-                        ->first();
+                    ->where('cardid', $membershipId)
+                    ->first();
 
                     $invData3 = array(
                         'rec_date' => $membershipData['rec_date'],
@@ -729,17 +779,17 @@ class LoanAgentController extends Controller
                             );
                             $updateInvoiceNo = SiteOption::where('option_key', 'newinvoiceno')->update($invNoData);
                             DB::commit();
-                        } catch (\Exception $e) {
+                        } catch(\Exception $e){
                             DB::rollBack();
                             Log::error('Invoice creation failed', ['error' => $e->getMessage()]);
                         }
                     }
-
+            
                     $staffID = assignAgent();
-                    UserRegistration::where('id', $userData->userid)->update(['staff_id' => $staffID->id, 'process_step' => 5]);
+                    UserRegistration::where('id', $userData->userid)->update(['staff_id' => $staffID->id,'process_step' => 5]);
 
                     $mailData = array(
-                        'fullname' => $userData->first_name . ' ' . $userData->last_name,
+                        'fullname' => $userData->first_name.' '.$userData->last_name,
                         'mobile' => $userData->mobile,
                         'email' => $userData->email,
                         'password' => $password,
@@ -750,11 +800,10 @@ class LoanAgentController extends Controller
                         'agentName' => $staffID->fullname,
                         'agentMobile' => $staffID->mobile
                     );
-                    $sendGreetings = view('mail.welcomeGreetingsla', $mailData)->render();
-                    $invAttach = array_merge(
-                        $invData3,
+                    $sendGreetings = view('mail.welcomeGreetingsla',$mailData)->render();
+                    $invAttach = array_merge($invData3,
                         [
-                            'fullname' => $userData->first_name . ' ' . $userData->last_name,
+                            'fullname' => $userData->first_name.' '.$userData->last_name,
                             'city' => $userData->city,
                             'mobile' => $userData->mobile,
                             'email' => $userData->email,
@@ -783,40 +832,40 @@ class LoanAgentController extends Controller
 
                     /* send email in brevo */
                     sendBrevoHtmlMail2($mailData, 'Congratulations! Payment for EasyAILoans Hire Agent plan has been successful.', $sendGreetings, 3, $attachments);
-
+                    
                     DB::table('application_remarks')->updateOrInsert([
                         'service' => 5,
                         'subject' => 9,
                         'application_id' => $userData->id,
-                    ], [
+                        ],[
                         'rec_date' => now(),
                         'entry_at' => now(),
                         'notes' => '',
                         'staff_id' => 5
                     ]);
-
+                
                     if ($response2 > 0) {
                         $remote_data = array(
-                            'company_code' => 'KRDTP9702',
-                            'company_local_ip' => '190.92.174.183',
-                            'product_code' => 'HIRE AGENT',
-                            'customer_name' => $userData->first_name . ' ' . $userData->last_name,
-                            'customer_email' => $userData->email,
-                            'customer_mobile' => $userData->mobile,
-                            'userid' => $userData->userid,
-                            'card_number' => $cardno,
-                            'rec_date' => now()->setTimezone(config('app.timezone'))->format('Y-m-d H:i:s'),
-                            'inv_prefix' => $invprefix,
-                            'inv_number' => $invoiceNo->option_value,
-                            'inv_date' => now()->setTimezone(config('app.timezone'))->format('Y-m-d'),
-                            'inv_price' => $netamount,
-                            'inv_cgst' => $cgstamount,
-                            'inv_sgst' => $sgstamount,
-                            'inv_igst' => $igstamount,
-                            'inv_grandtotal' => $grandtotal,
-                        );
+    						'company_code' => 'KRDTP9702',
+    						'company_local_ip' => '190.92.174.183',
+    						'product_code' => 'HIRE AGENT',
+    						'customer_name' => $userData->first_name.' '.$userData->last_name,
+    						'customer_email' => $userData->email,
+    						'customer_mobile' => $userData->mobile,
+    						'userid' => $userData->userid,
+    						'card_number' => $cardno,
+    						'rec_date' => now()->setTimezone(config('app.timezone'))->format('Y-m-d H:i:s'),
+    						'inv_prefix' => $invprefix,
+    						'inv_number' => $invoiceNo->option_value,
+    						'inv_date' => now()->setTimezone(config('app.timezone'))->format('Y-m-d'),
+    						'inv_price' => $netamount,
+    						'inv_cgst' => $cgstamount,
+    						'inv_sgst' => $sgstamount,
+    						'inv_igst' => $igstamount,
+    						'inv_grandtotal' => $grandtotal,
+    					);
                         $api_response = sendOrderData(json_encode($remote_data));
-
+                        
                         $redRoute = 'loan-agent/paymentSuccess'; // Row was updated
                     } else {
                         $redRoute = 'loan-agent/paymentFailed'; // No rows were updated
@@ -830,267 +879,308 @@ class LoanAgentController extends Controller
             } else {
                 return redirect("loan-agent/paymentFailed");
             }
-        } catch (\Exception $e) {
+        } catch(\Exception $e){
             Log::info($e->getMessage());
             return redirect("loan-agent/paymentFailed");
         }
     }
 
     /* buyDigitalPlan function handle */
-    public function buyDigitalPlan(Request $request)
-    {
-        try {
+    public function buyDigitalPlan(Request $request){
+        try{
+            // Log::info('request data - '.json_encode($request->all()));
             $grandtotal = $netamount = $cgstamount = $sgstamount = $igstamount = 0;
             $meta = selfApplyMeta();
 
             $password = trim(random_code(6));
             Session::put('user_password', $password);
-
-           $orderId = $request->razorpay_order_id;
+            
+            $orderId = $request->input('orderId');
             Session::put('orderid', $orderId);
-
+            
             $responseCode = $request->input('responseCode');
             Session::put('responsecode', $responseCode);
-
+            
             $orderAmount = $request->input('amount') / 100;
-            $txnId = $request->razorpay_payment_id;
-            $paymentMode = 'razorpay';
+            $txnId = $request->input('pgTransId');
+            $paymentMode = $request->input('paymentMode');
+            $recd_checksum = $request->input('checksum');
 
-           $paymentData = Razorpayentry::where('orderid', $orderId)->first();
+            //Log::info($request->all());
+            $checksum = $checksumData = '';
 
-            Razorpayentry::where('id', $paymentData->id)->update([
-                'rec_date' => now(),
-                'orderamount' => $orderAmount,
-                'txstatus' => $responseCode,
-                'referenceid' => $txnId,
-                'paymentmode' => $paymentMode
-            ]);
+            $checksumsequence = array(
+                "amount",
+                "bank",
+                "bankid",
+                "cardId",
+                "cardScheme",
+                "cardToken",
+                "cardhashid",
+                "doRedirect",
+                "orderId",
+                "paymentMethod",
+                "paymentMode",
+                "responseCode",
+                "responseDescription",
+                "productDescription",
+                "product1Description",
+                "product2Description",
+                "product3Description",
+                "product4Description",
+                "pgTransId",
+                "pgTransTime"
+            );
 
-            $userData = $query = LoanApplications::select(
-                'user_registrations.id as userid',
-                'user_registrations.first_name',
-                'user_registrations.last_name',
-                'user_registrations.mobile',
-                'user_registrations.email',
-                'user_registrations.city',
-                'user_registrations.state',
-                'user_registrations.isUser',
-                'user_registrations.acc_type',
-                'user_registrations.process_step',
-                'loan_applications.id',
-                'loan_applications.loan_type',
-                'loan_applications.loan_amount',
-                'loan_applications.monthly_income',
-                'loan_applications.currentemi'
-            )
-                ->join('user_registrations', 'user_registrations.id', '=', 'loan_applications.userid')
-                ->where('user_registrations.id', $paymentData->userid)
-                ->where('user_registrations.isDelete', 0)
-                ->first();
-            Cookie::queue('applyid', $userData->id, $this->lifetime, '/', null, false, true, false, 'lax');
+            foreach ($checksumsequence as $seqvalue) {
+                if (array_key_exists($seqvalue, $request->all())) {
+                    $checksumData .= $seqvalue;
+                    $checksumData .= "=";
+                    $checksumData .= $request->input($seqvalue);
+                    $checksumData .= "&";
+                }
+            }
+            
+            $checksum = hash_hmac('sha256', $checksumData, env('ZAAKPAY_SECRET_KEY'));
+            
+            /*if ($checksum == $recd_checksum) {*/
+                $paymentData = ZaakpayEntry::where('orderid',$orderId)->first();
 
-            if ($responseCode == 100) {
-                $cardno = random_code_num(16);
-                $membershipData = array(
+                //Log::info('paymentData - '.json_encode($paymentData));
+
+                $zaakPayData = array(
                     'rec_date' => now(),
-                    'userid' => $userData->userid,
-                    'registration_date' => now(),
-                    'expiry_date' => date('Y-m-d', strtotime('+9 months')),
-                    'card_number' => $cardno,
-                    'amount' => $orderAmount,
-                    'paymentid' => $txnId,
-                    'isActive' => 1,
-                    'isDelete' => 0
+                    'orderamount' => $orderAmount,
+                    'statuscode' => $responseCode,
+                    'transactionid' => $txnId,
+                    'paymentmode' => $paymentMode
                 );
+                //Log::info('zaakPayData - '. json_encode($zaakPayData));
+                $response1 = ZaakpayEntry::where('id',$paymentData->id)->update($zaakPayData);
+                $userData = $query = LoanApplications::select(
+                    'user_registrations.id as userid',
+                    'user_registrations.first_name',
+                    'user_registrations.last_name',
+                    'user_registrations.mobile',
+                    'user_registrations.email',
+                    'user_registrations.city',
+                    'user_registrations.state',
+                    'user_registrations.isUser',
+                    'user_registrations.acc_type',
+                    'user_registrations.process_step',
+                    'loan_applications.id',
+                    'loan_applications.loan_type',
+                    'loan_applications.loan_amount',
+                    'loan_applications.monthly_income',
+                    'loan_applications.currentemi'
+                )
+                    ->join('user_registrations', 'user_registrations.id', '=', 'loan_applications.userid')
+                    ->where('user_registrations.id', $paymentData->userid)
+                    ->where('user_registrations.isDelete', 0)
+                    ->first();
+                Cookie::queue('applyid', $userData->id, $this->lifetime, '/', null, false, true, false, 'lax');
 
-                //Log::info('membership data - '. json_encode($membershipData));
-                $existingMembership = MembershipOrder::where('userid', $userData->userid)
+                if ($responseCode == 100) {
+                    $cardno = random_code_num(16);
+                    $membershipData = array(
+                        'rec_date' => now(),
+                        'userid' => $userData->userid,
+                        'registration_date' => now(),
+                        'expiry_date' => date('Y-m-d', strtotime('+9 months')),
+                        'card_number' => $cardno,
+                        'amount' => $orderAmount,
+                        'paymentid' => $txnId,
+                        'isActive' => 1,
+                        'isDelete' => 0
+                    );
+
+                    //Log::info('membership data - '. json_encode($membershipData));
+                    $existingMembership = MembershipOrder::where('userid', $userData->userid)
                     ->where('paymentid', $txnId)
                     ->first();
-                $membershipId = $existingMembership ? $existingMembership->id : 0;
+                    $membershipId = $existingMembership ? $existingMembership->id : 0;
+            
+                    if (!$existingMembership) {
+                        $membershipId = MembershipOrder::create($membershipData)->id;
+                    }
 
-                if (!$existingMembership) {
-                    $membershipId = MembershipOrder::create($membershipData)->id;
-                }
+                    //Log::info('passsword user - ' . Cache::get('user_password'));
+                    
+                    $passwordkey = Hash::make($password);
+                    $refcode = strtolower(substr(str_replace(" ", "", $userData->fullname), 0, 3));
+                    $refcode .= substr($userData->mobile, -4);
 
-                //Log::info('passsword user - ' . Cache::get('user_password'));
+                    $regData = array(
+                        'rec_date' => now(),
+                        'update_date' => now(),
+                        'password' => $passwordkey,
+                        'refcode' => $refcode,
+                        'process_step' => 5,
+                        'isUser' => 2,
+                        'acc_type' => 2
+                    );
+                    //Log::info('reg data'. json_encode($regData));
+                    $response2 =  UserRegistration::where('id',$userData->userid)->update($regData);
 
-                $passwordkey = Hash::make($password);
-                $refcode = strtolower(substr(str_replace(" ", "", $userData->first_name), 0, 3));
-                $refcode .= substr($userData->mobile, -4);
-
-                $regData = array(
-                    'rec_date' => now(),
-                    'update_date' => now(),
-                    'password' => $passwordkey,
-                    'refcode' => $refcode,
-                    'process_step' => 5,
-                    'isUser' => 2,
-                    'acc_type' => 2
-                );
-                //Log::info('reg data'. json_encode($regData));
-                $response2 =  UserRegistration::where('id', $userData->userid)->update($regData);
-
-                /*if ($userData->acc_type == 2) {*/
-                $productslug = "hire-loan-agent";
-                //$invfor = 2;
-                $invprefix = "LA_";
-                /*} else {
+                    /*if ($userData->acc_type == 2) {*/
+                        $productslug = "hire-loan-agent";
+                        //$invfor = 2;
+                        $invprefix = "LA_";
+                    /*} else {
                         $productslug = "self-apply";
                         //$invfor = 1;
                         $invprefix = "SA_";
                     }*/
-                /*Log::info('product Slug - '. $productslug);
+                    /*Log::info('product Slug - '. $productslug);
                     Log::info('invfor - '. $invfor);
                     Log::info('invprefix - '. $invprefix);*/
-                $productData = Product::where('productslug', $productslug)->first();
-                $netamount = ($productData->inOffer == 1) ? $productData->offeramount : $productData->amount;
+                    $productData = Product::where('productslug',$productslug)->first();
+                    $netamount = ($productData->inOffer == 1) ? $productData->offeramount : $productData->amount;
 
-                if ($userData->state == 'Gujarat') {
-                    $cgstamount = $netamount * 0.09;
-                    $sgstamount = $netamount * 0.09;
-                } else {
-                    $igstamount = $netamount * 0.18;
-                }
-                $grandtotal = $netamount + $cgstamount + $sgstamount + $igstamount;
-                $invoiceNo = SiteOption::where('option_key', 'newinvoiceno')
-                    ->select('option_value')
-                    ->first();
+                    if ($userData->state == 'Gujarat') {
+                        $cgstamount = $netamount * 0.09;
+                        $sgstamount = $netamount * 0.09;
+                    } else {
+                        $igstamount = $netamount * 0.18;
+                    }
+                    $grandtotal = $netamount + $cgstamount + $sgstamount + $igstamount;
+                    $invoiceNo = SiteOption::where('option_key', 'newinvoiceno')
+                        ->select('option_value')
+                        ->first();
 
-                $existingInvoice = Invoice::where('userid', $userData->userid)
+                    $existingInvoice = Invoice::where('userid', $userData->userid)
                     ->where('cardid', $membershipId)
                     //->where('inv_number', $invoiceNo->option_value)
                     ->first();
 
-                $invData3 = array(
-                    'rec_date' => $membershipData['rec_date'],
-                    'userid' => $userData->userid,
-                    'cardid' => $membershipId,
-                    // 'inv_for' => $invfor,
-                    'inv_prefix' => $invprefix,
-                    'inv_number' => $invoiceNo->option_value,
-                    'inv_date' => $membershipData['registration_date'],
-                    'inv_price' => $netamount,
-                    'inv_cgst' => $cgstamount,
-                    'inv_sgst' => $sgstamount,
-                    'inv_igst' => $igstamount,
-                    'inv_grandtotal' => $grandtotal,
-                    'isdelete' => 0
-                );
-                if (!$existingInvoice) {
-                    DB::beginTransaction();
-                    try {
-                        //Log::info('invData - '.json_encode($invData3));
-                        $responseinvoice = Invoice::create($invData3)->id;
-                        $invNoData = array(
-                            'rec_date' => now(),
-                            'option_value' => $invoiceNo->option_value + 1
-                        );
-                        $updateInvoiceNo = SiteOption::where('option_key', 'newinvoiceno')->update($invNoData);
-                        DB::commit();
-                    } catch (\Exception $e) {
-                        DB::rollBack();
-                        Log::error('Invoice creation failed', ['error' => $e->getMessage()]);
-                    }
-                    /*$data4 = array(
-                            'payout' => 0,
-                            'payout_amount' => $netamount * env('CU_PAYOUT_RATIO'),
-                            'order_amount' => $netamount
-                        );*/
-                    $response4 = 'loan-agent/paymentFailed';
-                    /* wp campaign */
-                    /*$user = UserTree::where('subuserid', $userData->userid)
-                            ->orderBy('id', 'desc')
-                            ->first();*/
-
-                    /*if ($user) {
-                            // Update the record where the 'id' matches
-                            $updated = UserTree::where('id', $user->id)->update($data4);
-                        }*/
-
-                    //Log::info('response 4 - '. $response4);
-
-                    $staffID = assignAgent();
-                    UserRegistration::where('id', $userData->userid)->update(['process_step' => 5, 'staff_id' => $staffID->id]);
-
-                    $mailData = array(
-                        'fullname' => $userData->first_name . ' ' . $userData->last_name,
-                        'mobile' => $userData->mobile,
-                        'email' => $userData->email,
-                        'password' => $password,
-                        'order_number' => $invoiceNo->option_value,
-                        'order_date' => date('d-m-Y'),
-                        'order_amount' => $grandtotal,
-                        'transactionId' => $txnId,
-                        'agentName' => $staffID->fullname,
-                        'agentMobile' => $staffID->mobile
-                    );
-                    $sendGreetings = view('mail.welcomeGreetingsla', $mailData)->render();
-                    //Log::info($sendGreetings);
-                    $invAttach = array_merge(
-                        $invData3,
-                        [
-                            'fullname' => $userData->first_name . ' ' . $userData->last_name,
-                            'city' => $userData->city,
-                            'mobile' => $userData->mobile,
-                            'email' => $userData->email,
-                            'acc_type' => $userData->acc_type,
-                            'state' => $userData->state,
-                            'isCustomer' => 0
-                        ],
-                        [
-                            'card_number' => $membershipData['card_number'],
-                            'registration_date' => $membershipData['registration_date'],
-                            'expiry_date' => $membershipData['expiry_date'],
-                            'paymentid' => $membershipData['paymentid'],
-                        ]
-                    );
-                    /* invoice data */
-                    $invoiceData = view('mail.invoice', $invAttach)->render();
-                    $pdf = Pdf::loadHTML($invoiceData)->setPaper('A4', 'portrait')->output();
-                    $base64Pdf = base64_encode($pdf);
-
-                    /* creating attachments array */
-                    $attachments = [
-                        [
-                            'content' => $base64Pdf,
-                            'name' => 'Invoice.pdf'
-                        ]
-                    ];
-
-                    /* send email in brevo */
-                    sendBrevoHtmlMail2($mailData, 'Congratulations! Payment for EasyAILoans Hire Agent plan has been successful.', $sendGreetings, 3, $attachments);
-
-                    $remote_data = array(
-                        'company_code' => 'KRDTP9702',
-                        'company_local_ip' => '190.92.174.183',
-                        'product_code' => 'HIRE AGENT',
-                        'customer_name' => $userData->first_name . ' ' . $userData->last_name,
-                        'customer_email' => $userData->email,
-                        'customer_mobile' => $userData->mobile,
+                    $invData3 = array(
+                        'rec_date' => $membershipData['rec_date'],
                         'userid' => $userData->userid,
-                        'card_number' => $cardno,
-                        'rec_date' => now()->setTimezone(config('app.timezone'))->format('Y-m-d H:i:s'),
+                        'cardid' => $membershipId,
+                        // 'inv_for' => $invfor,
                         'inv_prefix' => $invprefix,
                         'inv_number' => $invoiceNo->option_value,
-                        'inv_date' => now()->setTimezone(config('app.timezone'))->format('Y-m-d'),
+                        'inv_date' => $membershipData['registration_date'],
                         'inv_price' => $netamount,
                         'inv_cgst' => $cgstamount,
                         'inv_sgst' => $sgstamount,
                         'inv_igst' => $igstamount,
                         'inv_grandtotal' => $grandtotal,
+                        'isdelete' => 0
                     );
-                    $api_response = sendOrderData(json_encode($remote_data));
-                }
-                if ($response2 > 0) {
-                    $redRoute = 'loan-agent/paymentSuccess'; // Row was updated
+                    if (!$existingInvoice) {
+                        DB::beginTransaction();
+                        try {
+                            //Log::info('invData - '.json_encode($invData3));
+                            $responseinvoice = Invoice::create($invData3)->id;
+                            $invNoData = array(
+                                'rec_date' => now(),
+                                'option_value' => $invoiceNo->option_value + 1
+                            );
+                            $updateInvoiceNo = SiteOption::where('option_key', 'newinvoiceno')->update($invNoData);
+                            DB::commit();
+                        } catch(\Exception $e){
+                            DB::rollBack();
+                            Log::error('Invoice creation failed', ['error' => $e->getMessage()]);
+                        }
+                        /*$data4 = array(
+                            'payout' => 0,
+                            'payout_amount' => $netamount * env('CU_PAYOUT_RATIO'),
+                            'order_amount' => $netamount
+                        );*/
+                        $response4 = 'loan-agent/paymentFailed';
+                        /* wp campaign */
+                        /*$user = UserTree::where('subuserid', $userData->userid)
+                            ->orderBy('id', 'desc')
+                            ->first();*/
+
+                        /*if ($user) {
+                            // Update the record where the 'id' matches
+                            $updated = UserTree::where('id', $user->id)->update($data4);
+                        }*/
+
+                        //Log::info('response 4 - '. $response4);
+
+                        $staffID = assignAgent();
+                        UserRegistration::where('id', $userData->userid)->update(['process_step' => 5, 'staff_id' => $staffID->id]);
+
+                        $mailData = array(
+                            'fullname' => $userData->first_name.' '.$userData->last_name,
+                            'mobile' => $userData->mobile,
+                            'email' => $userData->email,
+                            'password' => $password,
+                            'order_number' => $invoiceNo->option_value,
+                            'order_date' => date('d-m-Y'),
+                            'order_amount' => $grandtotal,
+                            'transactionId' => $txnId,
+                            'agentName' => $staffID->fullname,
+                            'agentMobile' => $staffID->mobile
+                        );
+                        $sendGreetings = view('mail.welcomeGreetingsla',$mailData)->render();
+                        //Log::info($sendGreetings);
+                        $invAttach = array_merge($invData3,
+                            [
+                                'fullname' => $userData->first_name.' '.$userData->last_name,
+                                'city' => $userData->city,
+                                'mobile' => $userData->mobile,
+                                'email' => $userData->email,
+                                'acc_type' => $userData->acc_type,
+                                'state' => $userData->state,
+                                'isCustomer' => 0
+                            ],
+                            [
+                                'card_number' => $membershipData['card_number'],
+                                'registration_date' => $membershipData['registration_date'],
+                                'expiry_date' => $membershipData['expiry_date'],
+                                'paymentid' => $membershipData['paymentid'],
+                            ]
+                        );
+                        /* invoice data */
+                        $invoiceData = view('mail.invoice', $invAttach)->render();
+                        $pdf = Pdf::loadHTML($invoiceData)->setPaper('A4', 'portrait')->output();
+                        $base64Pdf = base64_encode($pdf);
+
+                        /* creating attachments array */
+                        $attachments = [
+                            [
+                                'content' => $base64Pdf,
+                                'name' => 'Invoice.pdf'
+                            ]
+                        ];
+
+                        /* send email in brevo */
+                        sendBrevoHtmlMail2($mailData, 'Congratulations! Payment for EasyAILoans Hire Agent plan has been successful.', $sendGreetings, 3, $attachments);
+                        
+                        $remote_data = array(
+    						'company_code' => 'KRDTP9702',
+    						'company_local_ip' => '190.92.174.183',
+    						'product_code' => 'HIRE AGENT',
+    						'customer_name' => $userData->first_name.' '.$userData->last_name,
+    						'customer_email' => $userData->email,
+    						'customer_mobile' => $userData->mobile,
+    						'userid' => $userData->userid,
+    						'card_number' => $cardno,
+    						'rec_date' => now()->setTimezone(config('app.timezone'))->format('Y-m-d H:i:s'),
+    						'inv_prefix' => $invprefix,
+    						'inv_number' => $invoiceNo->option_value,
+    						'inv_date' => now()->setTimezone(config('app.timezone'))->format('Y-m-d'),
+    						'inv_price' => $netamount,
+    						'inv_cgst' => $cgstamount,
+    						'inv_sgst' => $sgstamount,
+    						'inv_igst' => $igstamount,
+    						'inv_grandtotal' => $grandtotal,
+    					);
+                        $api_response = sendOrderData(json_encode($remote_data));
+                    }
+                    if ($response2 > 0) {
+                        $redRoute = 'loan-agent/paymentSuccess'; // Row was updated
+                    } else {
+                        $redRoute = 'loan-agent/paymentFailed'; // No rows were updated
+                    }
+                    return redirect($redRoute);
                 } else {
-                    $redRoute = 'loan-agent/paymentFailed'; // No rows were updated
+                    return redirect("loan-agent/paymentFailed");
                 }
-                return redirect($redRoute);
-            } else {
-                return redirect("loan-agent/paymentFailed");
-            }
             /*} else {
                 Log::info('else checksum not matched');
                 //$sent = $this->Site_Digital_Model->sendPaymentFailedGreetings($userdata->mobile, $userdata->email);
@@ -1098,25 +1188,24 @@ class LoanAgentController extends Controller
                 //return redirect("digital/subscriptionorder/" . $key);
                 return redirect("loan-agent/paymentFailed");
             }*/
-        } catch (\Exception $e) {
+        }catch(\Exception $e){
             Log::error('loan agent buydigital checkout method error occured: ' . $e->getMessage());
             return redirect('/error')->with('error', 'Oops! Something went wrong.');
         }
     }
 
     /* paymentSuccess handle function */
-    public function paymentSuccess()
-    {
+    public function paymentSuccess(){
         $meta = selfApplyMeta();
-        try {
+        try{
             $loanType = Cookie::get('loan_type');
             $applyId = Cookie::get('applyid');
             $orderId = Session::get('orderid');
             $responsecode = Session::get('responsecode');
-
+            
             $data = '';
             $orderData = '';
-
+                
             if (isset($loanType, $applyId, $orderId) && $loanType !== null && $applyId !== null && $orderId !== null) {
                 $data = array(
                     'loantype' => $loanType,
@@ -1128,16 +1217,16 @@ class LoanAgentController extends Controller
                 $city = strtolower(preg_replace("/[^a-zA-Z]+/", "", $userData->city));
                 $state = strtolower(getStateAbbreviation($userData->state));
                 //$orderData = orderdata($orderId,'phonepe_entry');
-                $orderData = orderdata($orderId, 'zaakpay_entry');
+                $orderData = orderdata($orderId,'zaakpay_entry');
 
                 $staff = Administrations::where('id', $userData->staff_id)->first();
-
+                
                 if (isset($responsecode) && $responsecode == 100) {
-                    UserRegistration::where('id', $userData->userid)->update(['process_step' => 5]);
-
+                    UserRegistration::where('id', $userData->userid)->update(['process_step'=>5]);
+                    
                     /* application remarks entry start */
                     $existingApplication = DB::table('application_remarks')->where(['service' => 5, 'subject' => 9, 'application_id' => $applyId])->first();
-                    if (!$existingApplication) {
+                    if(!$existingApplication){
                         DB::table('application_remarks')->insert([
                             'rec_date' => now(),
                             'entry_at' => now(),
@@ -1149,55 +1238,55 @@ class LoanAgentController extends Controller
                         ]);
                     }
                     /* application remarks entry ends */
-
+                    
                     /* send payment success message starts */
-                    $msg = DB::table('sms_list')->where('type', 2)->where('slug', 'payment_successful')->first()->message;
-                    if ($msg != '#') {
-                        $senderId = DB::table('info_pages')->where('slug', 'la-senderid')->first()->content;
+                    $msg = DB::table('sms_list')->where('type',2)->where('slug','payment_successful')->first()->message;
+                    if($msg != '#'){
+                        $senderId = DB::table('info_pages')->where('slug','la-senderid')->first()->content;
                         sendDynamicSMS($senderId, $msg, Cookie::get('user_mobile'), 'hire');
                     }
                     /* send payment success message ends */
-
+                    
                     /* fb conversion code starts here */
                     $fbleads = FbAdsEntry::where('userid', $userData->userid)->orderByDesc('id')->limit(1)->first();
-
+                    
                     $fbdata = array(
-                        'type' => 'hire-agent',
-                        'firstname' => $firstname,
-                        'lastname' => $lastname,
-                        'mobile' => "91" . $userData->mobile,
-                        'email' => strtolower($userData->email),
-                        'city' => $city,
-                        /*'dob' => date('Ymd',strtotime($userData->dob)),*/
-                        'state' => $state,
-                        'zip' => $userData->pincode,
-                        'orderid' => $orderId,
-                        'odamount' => $orderData->orderamount,
-                        'sourceurl' => 'https://easyaIloans.com/loan-agent/paymentSuccess'
-                    );
-
-                    if ($fbleads) {
-                        if ($fbleads->fbclid != "") {
-                            $fbclidpl = "fb.0." . round(microtime(true) * 1000) . "." . $fbleads->fbclid;
-                            $fbdata['fbclid'] = $fbclidpl;
-                        } else {
-                            $fbdata['fbclid'] = '';
-                        }
-                    } else {
-                        $fbdata['fbclid'] = '';
-                    }
-
-                    $fbresponse = fbconversioncurl($fbdata, 11);
-                    $dataleads = array(
-                        'rec_date' => now(),
-                        'send_data' => json_encode($fbdata),
-                        'received_data' => $fbresponse
-                    );
-                    if ($fbleads) {
-                        $fbid = DB::table('fb_ads_entry')->where('id', $fbleads->id)->update($dataleads);
-                    }
+    					'type' => 'hire-agent',
+    					'firstname' => $firstname,
+    					'lastname' => $lastname,
+    					'mobile' => "91" . $userData->mobile,
+    					'email' => strtolower($userData->email),
+    					'city' => $city,
+    					/*'dob' => date('Ymd',strtotime($userData->dob)),*/
+    					'state' => $state,
+    					'zip' => $userData->pincode,
+    					'orderid' => $orderId,
+    					'odamount' => $orderData->orderamount,
+    					'sourceurl' => 'https://easyaIloans.com/loan-agent/paymentSuccess'
+    				);
+    
+    				if ($fbleads) {
+    				    if($fbleads->fbclid != ""){
+        					$fbclidpl = "fb.0." . round(microtime(true) * 1000) . "." . $fbleads->fbclid;
+        					$fbdata['fbclid'] = $fbclidpl;
+    				    }else{
+    			            $fbdata['fbclid'] = '';
+    				    }
+    				} else {
+    					$fbdata['fbclid'] = '';
+    				}
+    
+    				$fbresponse = fbconversioncurl($fbdata, 11);
+                	$dataleads = array(
+    					'rec_date' => now(),
+    					'send_data' => json_encode($fbdata),
+    					'received_data' => $fbresponse
+    				);
+                	if ($fbleads) {
+    				    $fbid = DB::table('fb_ads_entry')->where('id',$fbleads->id)->update($dataleads);
+                	}
                     /* fb conversion code ends here */
-
+                    
                     /* interakt code starts here */
                     $data2 = array(
                         'phoneNumber' => Cookie::get('user_mobile'),
@@ -1222,10 +1311,11 @@ class LoanAgentController extends Controller
                     $restrack2 = event_track($data3);
 
                     /* interakt code ends here */
+                    
                 }
             }
-            return view('loanAgent.paymentSuccess', compact('data', 'orderData', 'meta'));
-        } catch (\Exception $e) {
+            return view('loanAgent.paymentSuccess',compact('data','orderData','meta'));
+        } catch(\Exception $e){
             Log::error('An error occurred: ' . $e->getMessage());
             dd('catch');
             //return redirect('/loan-agent');
@@ -1233,8 +1323,7 @@ class LoanAgentController extends Controller
     }
 
     /* paymentFailed handle function */
-    public function paymentFailed()
-    {
+    public function paymentFailed(){
         $meta = selfApplyMeta();
         $data3 = array(
             'phoneNumber' => Cookie::get('user_mobile'),
@@ -1242,26 +1331,25 @@ class LoanAgentController extends Controller
             'event' => 'Hire Payment Failed',
         );
         $restrack2 = event_track($data3);
-        Log::info('hire agent event track - ' . json_encode($restrack2));
+        Log::info('hire agent event track - '. json_encode($restrack2));
 
         /* send payment failed message starts */
-        $msg = DB::table('sms_list')->where('type', 2)->where('slug', 'payment_unsuccessful')->first()->message;
-        if ($msg != '#') {
-            $senderId = DB::table('info_pages')->where('slug', 'la-senderid')->first()->content;
+        $msg = DB::table('sms_list')->where('type',2)->where('slug','payment_unsuccessful')->first()->message;
+        if($msg != '#'){
+            $senderId = DB::table('info_pages')->where('slug','la-senderid')->first()->content;
             sendDynamicSMS($senderId, $msg, Cookie::get('user_mobile'), 'hire');
         }
         /* send payment failed message ends */
 
-        return view('loanAgent.paymentFailed', compact('meta'));
+        return view('loanAgent.paymentFailed',compact('meta'));
     }
 
 
-    public function checkUserProcess($inputs)
-    {
+    public function checkUserProcess($inputs){
         /*$regUser = UserRegistration::where('mobile',$inputs['mobile'])->where(['isActive'=>1,'isDelete'=>0])->first();
         if($regUser){*/
-        /* user found in user registration table */
-        /*if($regUser->isUser == 2){
+            /* user found in user registration table */
+            /*if($regUser->isUser == 2){
                 return array('type'=>'SUCCESS','message'=>'You are already a customer.Kindly login your customer portal.','url'=>route('customer.login'));
             } else {
                 return array(
@@ -1280,34 +1368,34 @@ class LoanAgentController extends Controller
                 );
             }*/
         /*} else {*/
-        /* user not found in user registration table */
-        $userDetails = Cardoffer::where('mobile', $inputs['mobile'])->first();
-        if ($userDetails) {
-            /* Data found */
-            if ($userDetails->paymentid != NULL && $userDetails->isActive == 1 && $userDetails->isDelete == 0) {
-                /* User not in lead */
-                if ($userDetails->isCustomer == 1) {
-                    /* check in user registration table */
-                    return array('type' => 'SUCCESS', 'message' => 'You are already a customer. Please login to your customer portal.', 'url' => route('customer.login'));
+            /* user not found in user registration table */
+            $userDetails = Cardoffer::where('mobile',$inputs['mobile'])->first();
+            if($userDetails){
+                /* Data found */
+                if($userDetails->paymentid!=NULL && $userDetails->isActive==1 && $userDetails->isDelete==0){
+                    /* User not in lead */
+                    if($userDetails->isCustomer == 1){
+                        /* check in user registration table */
+                        return array('type'=>'SUCCESS','message'=>'You are already a customer. Please login to your customer portal.','url'=>route('customer.login'));
+                    } else {
+                        /* payment done but not convert as a customer */
+                        return array('type'=>'ERROR','message'=>'The user has not been converted to a customer. Please contact the support team.');
+                    }
                 } else {
-                    /* payment done but not convert as a customer */
-                    return array('type' => 'ERROR', 'message' => 'The user has not been converted to a customer. Please contact the support team.');
+                    /* user in lead */
+                    return FALSE;
                 }
             } else {
-                /* user in lead */
+                /* Data not found */
                 return FALSE;
             }
-        } else {
-            /* Data not found */
-            return FALSE;
-        }
         /*}*/
     }
     /* offer 1 */
     public function offer1()
     {
         $meta = selfApplyMeta();
-        $products = Product::where('productslug', env('LA_OFFER_1'))->first();
+        $products = Product::where('productslug',env('LA_OFFER_1'))->first();
         if ($products->inOffer == 1) {
             $productData = array(
                 'inOffer' => $products->inOffer,
@@ -1325,13 +1413,13 @@ class LoanAgentController extends Controller
                 'payamount' => $products->amount + ($products->amount * 0.18)
             );
         }
-        return view('loanAgent.offers.offer-1', compact('meta', 'productData'));
+        return view('loanAgent.offers.offer-1',compact('meta','productData'));
     }
 
     /* get offer one in this send on payment gateway */
     public function getOffer1(Request $request)
     {
-        try {
+        try{
             $inputs = $request->all();
             $request->validate([
                 'first_name' => 'required',
@@ -1341,16 +1429,16 @@ class LoanAgentController extends Controller
             ]);
             /* first check in user registration */
             $profile = $this->checkUserProcess($inputs);
-            if ($profile) {
+            if($profile){
                 return response()->json($profile);
             } else {
-                $first_name = $inputs['first_name'];
+                $first_name = $inputs ['first_name'];
                 $last_name = $inputs['last_name'];
                 $mobile = $inputs['mobile'];
                 $email = $inputs['email'];
             }
             /* product Data */
-            $products = Product::where('productslug', env('LA_OFFER_1'))->first();
+            $products = Product::where('productslug',env('LA_OFFER_1'))->first();
             //Log::info('products - '.json_encode($products));
             /* set amount of offer */
             $amount = ($products->inOffer == 1) ? $products->offeramount : $products->amount;
@@ -1369,7 +1457,7 @@ class LoanAgentController extends Controller
                 ['mobile' => $mobile], // Search condition
                 [ // Values to update or insert
                     'rec_date' => now(),
-                    'offerpage' => 1, //La offer 1 or great deal offer
+                    'offerpage' => 1,//La offer 1 or great deal offer
                     'first_name' => $first_name,
                     'last_name' => $last_name,
                     'emailid' => $email,
@@ -1389,7 +1477,7 @@ class LoanAgentController extends Controller
             $orderId = number_format(microtime(true) * 1000, 0, '.', '');
             $returnUrl = 'https://easyaIloans.com/api/loan-agent/great-deal-offer-response';
 
-            if (env('SABPAISA_MODE') == "PROD") {
+           if (env('SABPAISA_MODE') == "PROD") {
                 $curlurl = "https://securepay.sabpaisa.in/SabPaisa/sabPaisaInit?v=1";
             } else {
                 $curlurl = "https://stage-securepay.sabpaisa.in/SabPaisa/sabPaisaInit?v=1";
@@ -1410,24 +1498,24 @@ class LoanAgentController extends Controller
 
             $subpaisaData = array(
                 'rec_date' => date('Y-m-d H:i:s'),
-                'entryfor' => 3, //la offer 1 or great deal offer
+                'entryfor' => 3,//la offer 1 or great deal offer
                 'userid' => $offerId,
                 'orderid' => $orderId,
                 'orderamount' => round($grandAmount),
                 'ordernote' => $products->productname
             );
 
-            $response = SubpaisaEntry::insert($subpaisaData);
+           $response = SubpaisaEntry::insert($subpaisaData);
             $html = view('pg.pay', [
                 'data' => $encryptData,
                 'clientCode' => env('SABPAISA_CLIENT_CODE'),
                 'action' => $curlurl
             ])->render();
-
-            return response()->json(array('type' => 'SUCCESS', 'message' => 'Please wait... We are redirecting to the payment page.', 'html' => $html));
-        } catch (ValidationException $e) {
+            
+            return response()->json(array('type'=>'SUCCESS','message'=>'Please wait... We are redirecting to the payment page.','html'=>$html));
+        } catch(ValidationException $e){
             return response()->json(array('type' => 'ERROR', 'errors' => $e->errors()), 422);
-        } catch (\Exception $e) {
+        } catch(\Exception $e){
             Log::info($e->getMessage());
             return response()->json(array('type' => 'ERROR', 'message' => 'Oops! Something went wrong.'));
         }
@@ -1503,10 +1591,11 @@ class LoanAgentController extends Controller
                     $transDate = $fstr;
 
                 if ($token == true) {
+
                 }
             }
             /* update client tax id in subpaisa_entry table */
-            /* Log::info($clientTxnId);
+           /* Log::info($clientTxnId);
             Log::info($paymentMode);
             Log::info($status);
             Log::info($statusCode);*/
@@ -1540,13 +1629,13 @@ class LoanAgentController extends Controller
                         ->first();
 
                     if ($regUser) {
-                        $converted = convertIntoCustomer($cardno, $regUser, $userData, $paymentData->orderamount, $sabpaisaTxnId, 2, 'hire-loan-agent', 'LA_', 1);
+                        $converted = convertIntoCustomer($cardno, $regUser, $userData, $paymentData->orderamount, $sabpaisaTxnId, 2, 'hire-loan-agent', 'LA_',1);
                         if (!$converted) {
                             Log::error("Conversion to customer failed for user: " . $regUser->id);
                             dd('check log');
                         }
                     } else {
-                        $sent = sendPaymentGreetings($userData->first_name . ' ' . $userData->last_name, $userData->mobile, $userData->emailid);
+                        $sent = sendPaymentGreetings($userData->first_name.' '.$userData->last_name, $userData->mobile, $userData->emailid);
                     }
                 }
                 session()->forget(['isMailSend', 'cardno']);
@@ -1554,7 +1643,7 @@ class LoanAgentController extends Controller
                     'meta' => $meta,
                     'response' => TRUE,
                 ]);
-            } else if ($statusCode == '0300') {
+            } else if($statusCode == '0300') {
                 //Log::info('else if');
                 return view('cardoffer-response', [
                     'meta' => $meta,
@@ -1577,10 +1666,9 @@ class LoanAgentController extends Controller
     }
 
     /* offer2 - phonepe */
-    public function offer2()
-    {
+    public function offer2(){
         $meta = selfApplyMeta();
-        $products = Product::where('productslug', env('LA_OFFER_2'))->first();
+        $products = Product::where('productslug',env('LA_OFFER_2'))->first();
         if ($products->inOffer == 1) {
             $productData = array(
                 'inOffer' => $products->inOffer,
@@ -1598,7 +1686,7 @@ class LoanAgentController extends Controller
                 'payamount' => $products->amount + ($products->amount * 0.18)
             );
         }
-        return view('loanAgent.offers.offer-2', compact('meta', 'productData'));
+        return view('loanAgent.offers.offer-2',compact('meta','productData'));
     }
 
     public function getOffer2(Request $request)
@@ -1616,7 +1704,7 @@ class LoanAgentController extends Controller
             if ($profile) {
                 return response()->json($profile);
             } else {
-                $first_name = $inputs['first_name'];
+                $first_name = $inputs ['first_name'];
                 $last_name = $inputs['last_name'];
                 $mobile = $inputs['mobile'];
                 $email = $inputs['email'];
@@ -1642,7 +1730,7 @@ class LoanAgentController extends Controller
                 ['mobile' => $mobile], // Search condition
                 [ // Values to update or insert
                     'rec_date' => now(),
-                    'offerpage' => 2, // la offer 2 or elite offer
+                    'offerpage' => 2,// la offer 2 or elite offer
                     'first_name' => $first_name,
                     'last_name' => $last_name,
                     'emailid' => $email,
@@ -1697,7 +1785,7 @@ class LoanAgentController extends Controller
             $payurl = getlyrapaymenturl($curlurl, $postData);
             $lyraData = array(
                 'rec_date' => date('Y-m-d H:i:s'),
-                'entryfor' => 4, //sa offer 1 or prime offer
+                'entryfor' => 4,//sa offer 1 or prime offer
                 'userid' => $offerId,
                 'orderid' => $orderid,
                 'orderamount' => floor($grandAmount),
@@ -1708,23 +1796,22 @@ class LoanAgentController extends Controller
             $response = LyraEntry::insert(values: $lyraData);
             if ($payurl) {
                 if ($payurl->paymentLink) {
-                    return response()->json(array('type' => 'SUCCESS', 'message' => 'Please wait... We are redirecting to the payment page.', 'url' => $payurl->paymentLink));
+                    return response()->json(array('type'=>'SUCCESS','message'=>'Please wait... We are redirecting to the payment page.','url'=>$payurl->paymentLink));
                 } else {
-                    return response()->json(array('type' => 'ERROR', 'url' => route('loan.agent.offer2')));
+                    return response()->json(array('type'=>'ERROR','url'=>route('loan.agent.offer2')));
                 }
             } else {
-                return response()->json(array('type' => 'ERROR', 'url' => route('loan.agent.offer4')));
+                return response()->json(array('type'=>'ERROR','url'=>route('loan.agent.offer4')));
             }
-        } catch (ValidationException $e) {
+        } catch(ValidationException $e){
             return response()->json(array('type' => 'ERROR', 'errors' => $e->errors()), 422);
-        } catch (\Exception $e) {
+        } catch(\Exception $e){
             Log::info($e->getMessage());
-            return response()->json(['type' => 'ERROR', 'message' => 'Oops! Something went wrong.']);
+            return response()->json(['type'=>'ERROR','message'=>'Oops! Something went wrong.']);
         }
     }
 
-    public function offer2Response(Request $request)
-    {
+    public function offer2Response(Request $request){
         try {
             $inputs = $request->all();
             //Log::info(json_encode($inputs));
@@ -1772,7 +1859,7 @@ class LoanAgentController extends Controller
 
                         if ($regUser) {
                             $cardOffer = Cardoffer::where('id', $paymentData->userid)->first();
-                            $converted = convertIntoCustomer($cardno, $regUser, $cardOffer, $orderAmountInRupees, $txnId, 2, 'hire-loan-agent', 'LA_', 2);
+                            $converted = convertIntoCustomer($cardno, $regUser, $cardOffer, $orderAmountInRupees, $txnId, 2, 'hire-loan-agent', 'LA_',2);
                             if (!$converted) {
                                 Log::error("Conversion to customer failed for user: " . $regUser->id);
                                 dd('check log');
@@ -1788,6 +1875,7 @@ class LoanAgentController extends Controller
                     // Optionally log or send failed payment notification
                     return view('cardoffer-response', compact('meta', 'response'));
                 }
+
             } else {
                 $response = FALSE;
                 return View('cardoffer-response', compact('meta', 'response'));
@@ -1795,14 +1883,14 @@ class LoanAgentController extends Controller
         } catch (\Exception $e) {
             Log::info($e->getMessage());
             dd('Ops! Something went wrong.');
-        }
+        } 
     }
 
     /* load offer 3 - cipherpay*/
     public function offer3_cipherpay()
     {
         $meta = selfApplyMeta();
-        $products = Product::where('productslug', env('LA_OFFER_3'))->first();
+        $products = Product::where('productslug',env('LA_OFFER_3'))->first();
         if ($products->inOffer == 1) {
             $productData = array(
                 'inOffer' => $products->inOffer,
@@ -1820,13 +1908,13 @@ class LoanAgentController extends Controller
                 'payamount' => $products->amount + ($products->amount * 0.18)
             );
         }
-        return view('loanAgent.offers.offer-3', compact('meta', 'productData'));
+        return view('loanAgent.offers.offer-3',compact('meta','productData'));
     }
 
     /* get offer two in this send on payment gateway */
     public function getOffer3_cipherpay(Request $request)
     {
-        try {
+        try{
             $inputs = $request->all();
             $request->validate([
                 'first_name' => 'required',
@@ -1836,16 +1924,16 @@ class LoanAgentController extends Controller
             ]);
             /* first check in user registration */
             $profile = $this->checkUserProcess($inputs);
-            if ($profile) {
+            if($profile){
                 return response()->json($profile);
             } else {
-                $first_name = $inputs['first_name'];
+                $first_name = $inputs ['first_name'];
                 $last_name = $inputs['last_name'];
                 $mobile = $inputs['mobile'];
                 $email = $inputs['email'];
             }
             /* product Data */
-            $products = Product::where('productslug', env('LA_OFFER_3'))->first();
+            $products = Product::where('productslug',env('LA_OFFER_3'))->first();
             //Log::info('products - '.json_encode($products));
             /* set amount of offer */
             $amount = ($products->inOffer == 1) ? $products->offeramount : $products->amount;
@@ -1865,7 +1953,7 @@ class LoanAgentController extends Controller
                 ['mobile' => $mobile], // Search condition
                 [ // Values to update or insert
                     'rec_date' => now(),
-                    'offerpage' => 3, //la offer 3 or ultra saver offer
+                    'offerpage' => 3,//la offer 3 or ultra saver offer
                     'first_name' => $first_name,
                     'last_name' => $last_name,
                     'emailid' => $email,
@@ -1886,7 +1974,7 @@ class LoanAgentController extends Controller
             $returnUrl = 'https://easyailoans.com/api/loan-agent/ultra-saver-offer-response';
 
             /* cipherPay PG starts */
-            $refId = rand(1000, 9999);
+            $refId = rand(1000,9999);
             $request = array(
                 "method" => "POST",
                 "url" => "payin/dynamic-qr",
@@ -1910,64 +1998,63 @@ class LoanAgentController extends Controller
             //Log::info('final Response - ' .json_encode($response));
             /* cipherPay PG ends */
 
-            $cipherPayData = array(
-                'rec_date' => now(),
-                'entryfor' => 5, // la offer 3 or ultra saver offer
-                'userid' => $offerId,
-                'orderid' => $response['data']['txnid'],
-                'orderamount' => round($grandAmount),
-                'ordernote' => $products->productname
-            );
-            //Log::info('Cipher insert - '. json_encode($cipherPayData));
+    		$cipherPayData = array(
+    			'rec_date' => now(),
+    			'entryfor' => 5,// la offer 3 or ultra saver offer
+    			'userid' => $offerId,
+    			'orderid' => $response['data']['txnid'],
+    			'orderamount' => round($grandAmount),
+    			'ordernote' => $products->productname
+    		);
+    		//Log::info('Cipher insert - '. json_encode($cipherPayData));
 
             $res = CipherPayEntry::insert($cipherPayData);
             $html = view('pg.cipherQR', compact('response'))->render();
-            return response()->json(array('type' => 'SUCCESS', 'message' => 'Please wait... We are redirecting to the payment page.', 'html' => $html));
-        } catch (ValidationException $e) {
+            return response()->json(array('type'=>'SUCCESS','message'=>'Please wait... We are redirecting to the payment page.','html'=>$html));
+        } catch(ValidationException $e){
             return response()->json(array('type' => 'ERROR', 'errors' => $e->errors()), 422);
-        } catch (\Exception $e) {
+        } catch(\Exception $e){
             Log::info($e->getMessage());
             return response()->json(array('type' => 'ERROR', 'message' => 'Oops! Something went wrong.'));
         }
     }
 
 
-    public function offer3Response_cipherpay(Request $request)
-    {
-        try {
+    public function offer3Response_cipherpay(Request $request){
+        try{
             $meta = selfApplyMeta();
             $datas = Session::get('cipherResponse');
-            $paymentData = CipherPayEntry::where('orderid', $datas['data']['txnid'])->first();
+            $paymentData = CipherPayEntry::where('orderid',$datas['data']['txnid'])->first();
             //Log::info('cipher table data - '. json_encode($paymentData));
 
             $cipherData = array(
-                'rec_date' => now(),
-                'referenceid' => $datas['data']['upiRefId'],
-                'txstatus' => $datas['data']['status'],
-                'paymentmode' => $datas['data']['remarks'],
-                'ordernote' => $paymentData->ordernote . ' (utr - ' . $datas['data']['utr'] . ')'
-            );
+    			'rec_date' => now(),
+    			'referenceid' => $datas['data']['upiRefId'],
+    			'txstatus' => $datas['data']['status'],
+    			'paymentmode' => $datas['data']['remarks'],
+    			'ordernote' => $paymentData->ordernote.' (utr - '.$datas['data']['utr'].')'
+    		);
 
-            $response1 = CipherPayEntry::where('id', $paymentData->id)->update($cipherData);
+    		$response1 = CipherPayEntry::where('id',$paymentData->id)->update($cipherData);
 
-            $userData = Cardoffer::where('id', $paymentData->userid)->first();
-            $cardno = random_code_num(16);
-            $data = array(
-                'rec_date' => now(),
-                'card_number' => $cardno,
-                'registration_date' => now(),
-                'expiry_date' => date('Y-m-d', strtotime('+9 months')),
-                'paymentid' => $datas['data']['txnid'],
-                'isActive' => 1
-            );
+			$userData = Cardoffer::where('id',$paymentData->userid)->first();
+			$cardno = random_code_num(16);
+			$data = array(
+				'rec_date' => now(),
+				'card_number' => $cardno,
+				'registration_date' => now(),
+				'expiry_date' => date('Y-m-d', strtotime('+9 months')),
+				'paymentid' => $datas['data']['txnid'],
+				'isActive' => 1
+			);
 
-            $response = Cardoffer::where('id', $paymentData->userid)->update($data);
+			$response = Cardoffer::where('id',$paymentData->userid)->update($data);
 
-            $sent = sendPaymentGreetings($userData->first_name . ' ' . $userData->last_name, $userData->mobile, $userData->emailid);
+            $sent = sendPaymentGreetings($userData->first_name.' '.$userData->last_name, $userData->mobile, $userData->emailid);
 
-            return view('cardoffer-response', [
-                'meta' => $meta,
-                'response' => $datas['data']['status'] == 1 ? TRUE : FALSE,
+			 return view('cardoffer-response', [
+			    'meta' => $meta,
+	            'response' => $datas['data']['status'] == 1 ? TRUE : FALSE,
                 /*'clientTxnId' => $datas['data']['txnid'],
                 'amount' => $datas['data']['amount'],
                 'paymentMode' => $datas['data']['remarks'],
@@ -1976,13 +2063,14 @@ class LoanAgentController extends Controller
 	            'payerMobile' => $payerMobile,*/
                 // Add other variables as needed
             ]);
-        } catch (\Exception $e) {
+
+        } catch(\Exception $e){
             Log::info($e->getMessage());
             return redirect()->back();
         }
     }
 
-
+    
     /* offerpage 3 - veegah pay integrate starts */
     public function offer3()
     {
@@ -2007,10 +2095,10 @@ class LoanAgentController extends Controller
         }
         return view('loanAgent.offers.offer-3', compact('meta', 'productData'));
     }
-
+    
     public function getOffer3(Request $request)
     {
-        try {
+        try{
             $inputs = $request->all();
             $request->validate([
                 'first_name' => 'required',
@@ -2020,10 +2108,10 @@ class LoanAgentController extends Controller
             ]);
             /* first check in user registration */
             $profile = $this->checkUserProcess($inputs);
-            if ($profile) {
+            if($profile){
                 return response()->json($profile);
             } else {
-                $first_name = $inputs['first_name'];
+                $first_name = $inputs ['first_name'];
                 $last_name = $inputs['last_name'];
                 $mobile = $inputs['mobile'];
                 $email = $inputs['email'];
@@ -2065,58 +2153,58 @@ class LoanAgentController extends Controller
             $offerId = $record->id;
 
             //Log::info('Offer data - '. $offerId);
-            $orderId = 'KRBZVGP' . number_format(microtime(true) * 1000, 0, '.', '');
+            $orderId = 'KRBZVGP'.number_format(microtime(true) * 1000, 0, '.', '');
             $encData = null;
             $returnUrl = 'https://easyailoans.com/api/loan-agent/ultra-saver-offer-response';
 
             /* veegah PG starts */
-
+            
             $terminalId = env('VEEGAH_TERMINAL_ID');
             $password = env('VEEGAH_TERMINAL_PASSWORD');
             $mkey = env('VEEGAH_MERCHANT_KEY');
-
+            
             // data sequence is - orderId|terminalId|password|merchantKey|amount|currency
-            //$signdata = $orderid."|TER7990817|TER25041201011970543064|f5949cf7946afa557191b8a18504c2a847a6d9ff08c28ec2fd456322889d1451|".$roundamount."|INR";
-            $signdata = $orderId . "|" . $terminalId . "|" . $password . "|" . $mkey . "|" . round($grandAmount) . "|INR";
+    		//$signdata = $orderid."|TER7990817|TER25041201011970543064|f5949cf7946afa557191b8a18504c2a847a6d9ff08c28ec2fd456322889d1451|".$roundamount."|INR";
+    		$signdata = $orderId."|".$terminalId."|".$password."|".$mkey."|".round($grandAmount)."|INR";
             $signature = hash('sha256', $signdata);
-
-            $postdata = array(
-                "referenceId" => $orderId,
-                "terminalId" => $terminalId,
-                "password" => $password,
-                "signature" =>  $signature, //Generated signature
-                "paymentType" => "1",
-                "amount" => round($grandAmount),
-                "currency" => "INR",
-                "order" => array(
-                    "orderId" => $orderId,  // Related orderId
-                    "description" => "Ultra Saver Offer"
+    		
+    		$postdata = array(
+                "referenceId"=> $orderId,
+                "terminalId"=> $terminalId,
+                "password"=> $password,
+                "signature"=>  $signature, //Generated signature
+                "paymentType"=> "1",
+                "amount"=> round($grandAmount),
+                "currency"=> "INR",
+                "order"=> array(
+                    "orderId"=> $orderId,  // Related orderId
+                    "description"=> "Ultra Saver Offer"
                 ),
-                "customer" => array(
-                    "customerEmail" => $email,
-                    "billingAddressStreet" => '',
-                    "billingAddressCity" => "",
-                    "billingAddressState" => "",
-                    "billingAddressPostalCode" => "",
-                    "billingAddressCountry" => "IN"
+                "customer"=> array(
+                    "customerEmail"=> $email,
+                    "billingAddressStreet"=> '',
+                    "billingAddressCity"=> "",
+                    "billingAddressState"=> "",
+                    "billingAddressPostalCode"=> "",
+                    "billingAddressCountry"=> "IN"
                 ),
-                "additionalDetails" => array(
-                    "userData" => "{\"entryone\":\"abc\",\"entrytwo\":\"def\",\"entrythree\":\"xyz\",\"receiptUrl\":\"$returnUrl\"}"
+                "additionalDetails"=> array(
+                    "userData"=> "{\"entryone\":\"abc\",\"entrytwo\":\"def\",\"entrythree\":\"xyz\",\"receiptUrl\":\"$returnUrl\"}"
                 ),
             );
-
-            $veegahData = array(
+    		
+    		$veegahData = array(
                 'rec_date' => now(),
-                'entryfor' => 5, //sa offer 3 or ultra saver offer
+                'entryfor' => 5,//sa offer 3 or ultra saver offer
                 'userid' => $offerId,
                 'orderid' => $orderId,
                 'orderamount' => round($grandAmount),
                 'ordernote' => $products->productname
             );
-
+            
             $res = VeegahEntry::insert($veegahData);
             $prodUrl = "https://test-vegaah.concertosoft.com/vegaahpayments/v2/payments/pay-request";
-            if (env('VEEGAH_PROD')) {
+            if(env('VEEGAH_PROD')){
                 $prodUrl = "https://checkout.vegaah.com/vegaahpayments/v2/payments/pay-request";
             }
             $curl = curl_init();
@@ -2143,32 +2231,31 @@ class LoanAgentController extends Controller
             /* veegah PG ends */
             if ($post_decode_data) {
                 if ($post_decode_data->paymentLink->linkUrl && $post_decode_data->transactionId) {
-                    $redirect_url = $post_decode_data->paymentLink->linkUrl . $post_decode_data->transactionId;
-                    return response()->json(array('type' => 'SUCCESS', 'message' => 'Please wait... We are redirecting to the payment page.', 'url' => $redirect_url));
+                    $redirect_url = $post_decode_data->paymentLink->linkUrl.$post_decode_data->transactionId;
+                    return response()->json(array('type'=>'SUCCESS','message'=>'Please wait... We are redirecting to the payment page.','url'=>$redirect_url));
                 } else {
-                    return response()->json(array('type' => 'ERROR', 'url' => route('loan.agent.offer3')));
+                    return response()->json(array('type'=>'ERROR','url'=>route('loan.agent.offer3')));
                 }
             } else {
-                return response()->json(array('type' => 'ERROR', 'url' => route('loan.agent.offer3')));
+                return response()->json(array('type'=>'ERROR','url'=>route('loan.agent.offer3')));
             }
-        } catch (ValidationException $e) {
+        } catch(ValidationException $e){
             return response()->json(array('type' => 'ERROR', 'errors' => $e->errors()), 422);
-        } catch (\Exception $e) {
+        } catch(\Exception $e){
             Log::info($e->getMessage());
             return response()->json(array('type' => 'ERROR', 'message' => 'Oops! Something went wrong.'));
         }
     }
-
-    public function offer3Response(Request $request)
-    {
-        try {
+    
+    public function offer3Response(Request $request){
+        try{
             $grandtotal = $netamount = $cgstamount = $sgstamount = $igstamount = 0;
             $meta = selfApplyMeta();
-
+            
             $jsonData = file_get_contents("php://input");
             parse_str($jsonData, $parsedData);
             unset($parsedData['termId']);
-
+            
             $decodedData = urldecode($parsedData['data']);
             $decodedData = str_replace(' ', '+', $decodedData);
 
@@ -2178,28 +2265,28 @@ class LoanAgentController extends Controller
             $binaryKey = hex2bin($merKey);
 
             $decryptedData = openssl_decrypt($encryptedResponse, 'AES-256-ECB', $binaryKey, OPENSSL_RAW_DATA);
-
+            
             if ($decryptedData === false) {
-                return view('cardoffer-response', ['meta' => $meta, 'response' => FALSE]);
-            }
+			    return view('cardoffer-response', [ 'meta' => $meta, 'response' => FALSE]);
+			}
 
-            $resultdata = json_decode($decryptedData, true);
-            if ($resultdata === null) {
-                return view('cardoffer-response', ['meta' => $meta, 'response' => FALSE]);
-            }
-
+			$resultdata = json_decode($decryptedData, true);
+			if ($resultdata === null) {
+				return view('cardoffer-response', [ 'meta' => $meta, 'response' => FALSE]);
+			}
+            
             $paymentData = VeegahEntry::where('orderid', $resultdata['orderDetails']['orderId'])->first();
-
+            
             $veegahData = array(
                 'rec_date' => now(),
                 'referenceid' => $resultdata['transactionId'],
-                'txstatus' => $resultdata['result'],
-                'paymentmode' => $resultdata['paymentInstrument']['paymentMethod']
+				'txstatus' => $resultdata['result'],
+				'paymentmode' => $resultdata['paymentInstrument']['paymentMethod']
             );
             $response1 = VeegahEntry::where('id', $paymentData->id)->update($veegahData);
-            $userData = Cardoffer::where('id', $paymentData->userid)->first();
+            $userData = Cardoffer::where('id',$paymentData->userid)->first();
             if ($resultdata['result'] == 'SUCCESS') {
-                $isEntry = Cardoffer::where('paymentid', $resultdata['transactionId'])->where('isDelete', 0)->count();
+				$isEntry = Cardoffer::where('paymentid', $resultdata['transactionId'])->where('isDelete', 0)->count();
                 if ($isEntry == 0) {
                     $cardno = random_code_num(16);
 
@@ -2219,13 +2306,13 @@ class LoanAgentController extends Controller
                             ->first();
 
                         if ($regUser) {
-                            $converted = convertIntoCustomer($cardno, $regUser, $userData, $paymentData->orderamount, $resultdata['transactionId'], 2, 'hire-loan-agent', 'LA_', 5);
+                            $converted = convertIntoCustomer($cardno, $regUser, $userData, $paymentData->orderamount, $resultdata['transactionId'], 2, 'hire-loan-agent', 'LA_',5);
                             if (!$converted) {
                                 Log::error("Conversion to customer failed for user: " . $regUser->id);
                                 dd('check log');
                             }
                         } else {
-                            $sent = sendPaymentGreetings($userData->first_name . ' ' . $userData->last_name, $userData->mobile, $userData->emailid);
+                            $sent = sendPaymentGreetings($userData->first_name.' '.$userData->last_name, $userData->mobile, $userData->emailid);
                         }
                     }
                     session()->forget(['isMailSend', 'cardno']);
@@ -2243,11 +2330,11 @@ class LoanAgentController extends Controller
             } else {
                 //Log::info('PhonePe False');
                 return view('cardoffer-response', [
-                    'meta' => $meta,
-                    'response' => FALSE,
-                ]);
+                        'meta' => $meta,
+                        'response' => FALSE,
+                    ]);
             }
-        } catch (\Exception $e) {
+        } catch(\Exception $e){
             Log::info('An error occured in offer3 response - ' . $e->getMessage());
             dd('Ops! Something went wrong.');
         }
@@ -2255,10 +2342,9 @@ class LoanAgentController extends Controller
     /* offerpage 3 - veegah pay integrate ends */
 
     /* offer4 - phonepe */
-    public function offer4()
-    {
+    public function offer4(){
         $meta = selfApplyMeta();
-        $products = Product::where('productslug', env('LA_OFFER_4'))->first();
+        $products = Product::where('productslug',env('LA_OFFER_4'))->first();
         if ($products->inOffer == 1) {
             $productData = array(
                 'inOffer' => $products->inOffer,
@@ -2276,7 +2362,7 @@ class LoanAgentController extends Controller
                 'payamount' => $products->amount + ($products->amount * 0.18)
             );
         }
-        return view('loanAgent.offers.offer-4', compact('meta', 'productData'));
+        return view('loanAgent.offers.offer-4',compact('meta','productData'));
     }
 
     public function getOffer4(Request $request)
@@ -2291,7 +2377,7 @@ class LoanAgentController extends Controller
             ]);
             /* first check in user registration */
             $profile = $this->checkUserProcess($inputs);
-            if ($profile) {
+            if($profile){
                 return response()->json($profile);
             } else {
                 $buyerFirstName = $inputs['first_name'];
@@ -2303,10 +2389,10 @@ class LoanAgentController extends Controller
             /* product Data */
             $products = Product::where('productslug', env('LA_OFFER_4'))->first();
             // Log::info('products - '.json_encode($products));
-
+            
             /* set amount of offer */
             $amount = ($products->inOffer == 1) ? $products->offeramount : $products->amount;
-            $grandAmount = number_format($amount + ($amount * 0.18), 2);
+            $grandAmount = number_format($amount + ($amount * 0.18),2);
 
             $uatNumbers = explode(',', env('UAT_MOBILE_NUMBERS', '')); // Convert the string into an array
 
@@ -2346,7 +2432,7 @@ class LoanAgentController extends Controller
                 ['mobile' => $buyerPhone], // Search condition
                 [ // Values to update or insert
                     'rec_date' => date('Y-m-d H:i:s'),
-                    'offerpage' => 8, //big offer or LA offer 4
+                    'offerpage' => 8,//big offer or LA offer 4
                     'first_name' => $buyerFirstName,
                     'last_name' => $buyerLastName,
                     'emailid' => $buyerEmail,
@@ -2361,14 +2447,14 @@ class LoanAgentController extends Controller
             /* PAYGIC LOG */
             $paygicData = array(
                 'rec_date'    => now(),
-                'entryfor'    => 10, // la offer 4 or big offer
+                'entryfor'    => 10,// la offer 4 or big offer
                 'userid'      => $record->id,
                 'orderid'     => $orderid,
                 'orderamount' => $grandAmount,
                 'ordernote'   => $taxNote,
                 'referenceid' => null,
                 'txstatus'    => null,
-                'paymentmode' => null
+                'paymentmode'=> null
             );
             $response = PaygicEntry::create($paygicData);
 
@@ -2377,16 +2463,15 @@ class LoanAgentController extends Controller
                 'message' => 'Please wait we are redirecting...',
                 'redirect' => $post_data['data']['payPageUrl'],
             ]);
-        } catch (ValidationException $e) {
+        } catch(ValidationException $e){
             return response()->json(array('type' => 'ERROR', 'errors' => $e->errors()), 422);
-        } catch (\Exception $e) {
+        } catch(\Exception $e){
             Log::info($e->getMessage());
-            return response()->json(['type' => 'ERROR', 'message' => 'Oops! Something went wrong.']);
+            return response()->json(['type'=>'ERROR','message'=>'Oops! Something went wrong.']);
         }
     }
 
-    public function offer4Response(Request $request, $orderId, $token)
-    {
+    public function offer4Response(Request $request, $orderId, $token){
         try {
             //dd($request->all());
             $inputs = $request->all();
@@ -2398,7 +2483,7 @@ class LoanAgentController extends Controller
             $grandtotal = $netamount = $cgstamount = $sgstamount = $igstamount = 0;
             $paymentdata = PaygicEntry::where('orderid', $response_data['data']['merchantReferenceId'])->firstOrFail();
 
-            // Update Paygic log
+             // Update Paygic log
             PaygicEntry::where('id', $paymentdata->id)->update([
                 'rec_date'     => now(),
                 'referenceid'  => $response_data['data']['paygicReferenceId'],
@@ -2407,8 +2492,8 @@ class LoanAgentController extends Controller
             ]);
 
             if ($response_data['txnStatus'] == 'SUCCESS') {
-                $userData = Cardoffer::where('id', $paymentdata->userid)->first();
-                $cardno = random_code_num(16);
+               $userData = Cardoffer::where('id',$paymentdata->userid)->first();
+               $cardno = random_code_num(16);
 
                 $data = array(
                     'rec_date' => date('Y-m-d H:i:s'),
@@ -2421,12 +2506,13 @@ class LoanAgentController extends Controller
 
                 $response = Cardoffer::where('id', $paymentdata->userid)->update($data);
 
-                $sent = sendPaymentGreetings($userData->first_name . ' ' . $userData->last_name, $userData->mobile, $userData->emailid);
+                $sent = sendPaymentGreetings($userData->first_name.' '.$userData->last_name, $userData->mobile, $userData->emailid);
 
                 return view('cardoffer-response', [
                     'meta' => $meta,
                     'response' => TRUE,
                 ]);
+
             } else {
                 return view('cardoffer-response', [
                     'meta' => $meta,
@@ -2436,7 +2522,7 @@ class LoanAgentController extends Controller
         } catch (\Exception $e) {
             Log::info($e->getMessage());
             dd('Ops! Something went wrong.');
-        }
+        } 
     }
 
     public function offer4Response_zaakpay(Request $request)
@@ -2451,7 +2537,7 @@ class LoanAgentController extends Controller
             $txnId = $request->input('pgTransId');
             $paymentMode = $request->input('paymentMode');
             $recd_checksum = $request->input('checksum');
-
+            
             $checksum = $checksumData = '';
             $checksumsequence = array(
                 "amount",
@@ -2504,7 +2590,7 @@ class LoanAgentController extends Controller
                 $response1 = ZaakpayEntry::where('id', $paymentData->id)->update($zaakPayData);
                 if ($responseCode == 100) {
                     $cardno = random_code_num(16);
-                    $userData = Cardoffer::where('id', $paymentData->userid)->first();
+                    $userData = Cardoffer::where('id',$paymentData->userid)->first();
                     $data = array(
                         'rec_date' => now(),
                         'card_number' => $cardno,
@@ -2521,13 +2607,13 @@ class LoanAgentController extends Controller
                             ->first();
 
                         if ($regUser) {
-                            $converted = convertIntoCustomer($cardno, $regUser, $userData, $paymentData->orderamount, $txnId, 2, 'hire-loan-agent', 'LA_', 10);
+                            $converted = convertIntoCustomer($cardno, $regUser, $userData, $paymentData->orderamount, $txnId, 2, 'hire-loan-agent', 'LA_',10);
                             if (!$converted) {
                                 Log::error("Conversion to customer failed for user: " . $regUser->id);
                                 dd('check log');
                             }
                         } else {
-                            $sent = sendPaymentGreetings($userData->first_name . ' ' . $userData->last_name, $userData->mobile, $userData->emailid);
+                            $sent = sendPaymentGreetings($userData->first_name.' '.$userData->last_name, $userData->mobile, $userData->emailid);
                         }
                     }
                     session()->forget(['isMailSend', 'cardno']);
@@ -2542,7 +2628,7 @@ class LoanAgentController extends Controller
                     'response' => FALSE,
                 ]);
             }
-        } catch (\Exception $e) {
+        }catch(\Exception $e){
             Log::info($e->getMessage());
             dd('Ops! Something went wrong.');
         }
@@ -2576,7 +2662,7 @@ class LoanAgentController extends Controller
 
     public function getOffer5(Request $request)
     {
-        try {
+        try{
             $inputs = $request->all();
             $request->validate([
                 'first_name' => 'required',
@@ -2586,7 +2672,7 @@ class LoanAgentController extends Controller
             ]);
             /* first check in user registration */
             $profile = $this->checkUserProcess($inputs);
-            if ($profile) {
+            if($profile){
                 return response()->json($profile);
             } else {
                 $buyerFirstName = $inputs['first_name'];
@@ -2646,7 +2732,7 @@ class LoanAgentController extends Controller
                 ['mobile' => $buyerPhone], // Search condition
                 [ // Values to update or insert
                     'rec_date' => now(),
-                    'offerpage' => 10, //big benefit offer or LA offer 5
+                    'offerpage' => 10,//big benefit offer or LA offer 5
                     'first_name' => $buyerFirstName,
                     'last_name' => $buyerLastName,
                     'emailid' => $buyerEmail,
@@ -2669,19 +2755,18 @@ class LoanAgentController extends Controller
                 'ordernote' => $products->productname,
             );
             $response = AirpayEntry::create($airpayData);
-            $html = view('pg.sendtoairpay', compact('postData', 'url'))->render();
-            return response()->json(['type' => 'SUCCESS', 'message' => 'Please wait... We are redirecting to the payment page.', 'html' => $html]);
-        } catch (ValidationException $e) {
+            $html = view('pg.sendtoairpay',compact('postData','url'))->render();
+            return response()->json(['type'=>'SUCCESS','message'=>'Please wait... We are redirecting to the payment page.','html'=>$html]);
+        } catch(ValidationException $e){
             return response()->json(array('type' => 'ERROR', 'errors' => $e->errors()), 422);
-        } catch (\Exception $e) {
+        } catch(\Exception $e){
             Log::info($e->getMessage());
             return response()->json(array('type' => 'ERROR', 'message' => 'Oops! Something went wrong.'));
         }
     }
 
-    public function offer5Response(Request $request)
-    {
-        try {
+    public function offer5Response(Request $request){
+        try{
             $inputs = $request->all();
             $meta = selfApplyMeta();
 
@@ -2698,11 +2783,12 @@ class LoanAgentController extends Controller
             }
             if (isset($inputs['CUSTOMVAR'])) {
                 $CUSTOMVAR = trim($inputs['CUSTOMVAR']);
+
             } else {
                 $CUSTOMVAR = "";
             }
             if ($TRANSACTIONSTATUS == 200) {
-                $paymentData = AirpayEntry::where('orderid', $TRANSACTIONID)->first();
+                $paymentData = AirpayEntry::where('orderid',$TRANSACTIONID)->first();
 
                 $airpayData = array(
                     'rec_date' => now(),
@@ -2712,8 +2798,8 @@ class LoanAgentController extends Controller
                     'paymentmode' => $CHMOD
                 );
 
-                $response1 = AirpayEntry::where('id', $paymentData->id)->update($airpayData);
-                $userData = Cardoffer::where('id', $paymentData->userid)->first();
+                $response1 = AirpayEntry::where('id',$paymentData->id)->update($airpayData);
+                $userData = Cardoffer::where('id',$paymentData->userid)->first();
 
                 $cardno = random_code_num(16);
                 $data = array(
@@ -2727,7 +2813,7 @@ class LoanAgentController extends Controller
                 );
 
                 $response = Cardoffer::where('id', $paymentData->userid)->update($data);
-                $sent = sendPaymentGreetings($userData->first_name . ' ' . $userData->last_name, $userData->mobile, $userData->emailid);
+                $sent = sendPaymentGreetings($userData->first_name.' '.$userData->last_name, $userData->mobile, $userData->emailid);
                 return view('cardoffer-response', [
                     'meta' => $meta,
                     'response' => TRUE,
@@ -2738,15 +2824,14 @@ class LoanAgentController extends Controller
                     'response' => FALSE,
                 ]);
             }
-        } catch (\Exception $e) {
+        } catch(\Exception $e){
             Log::info($e->getMessage());
             dd('Ops! Something went wrong.');
         }
     }
 
     /* Offer 6 - zaakpay */
-    public function offer6()
-    {
+    public function offer6(){
         $meta = selfApplyMeta();
         $products = Product::where('productslug', env('LA_OFFER_6'))->first();
 
@@ -2770,9 +2855,8 @@ class LoanAgentController extends Controller
         return view('loanAgent.offers.offer-6', compact('meta', 'productData'));
     }
 
-    public function getOffer6(Request $request)
-    {
-        try {
+    public function getOffer6(Request $request){
+        try{
             $inputs = $request->all();
             $request->validate([
                 'first_name' => 'required',
@@ -2785,7 +2869,7 @@ class LoanAgentController extends Controller
             if ($profile) {
                 return response()->json($profile);
             } else {
-                $first_name = $inputs['first_name'];
+                $first_name = $inputs ['first_name'];
                 $last_name = $inputs['last_name'];
                 $mobile = $inputs['mobile'];
                 $email = $inputs['email'];
@@ -2811,7 +2895,7 @@ class LoanAgentController extends Controller
                 ['mobile' => $mobile], // Search condition
                 [ // Values to update or insert
                     'rec_date' => now(),
-                    'offerpage' => 32, //LA offer 6 or silver offer
+                    'offerpage' => 32,//LA offer 6 or silver offer
                     'first_name' => $first_name,
                     'last_name' => $last_name,
                     'emailid' => $email,
@@ -2826,13 +2910,13 @@ class LoanAgentController extends Controller
             $record = DB::table('cardoffer')->where('mobile', $mobile)->first();
             $offerId = $record->id;
 
-            $orderid = 'ZPLive_' . number_format(microtime(true) * 1000, 0, '.', '');
+            $orderid = 'ZPLive_'.number_format(microtime(true) * 1000, 0, '.', '');
             $password = trim(random_code(6));
             Session::put('orderid', $orderid);
             Session::save();
             Cache::put('user_password', $password, $this->lifetime);
 
-            $returnUrl = route('api.loan.agent.offer6Response', ['orderid' => $orderid]);
+            $returnUrl = route('api.loan.agent.offer6Response',['orderid'=>$orderid]);
 
             if (env('ZAAKPAY_ENV') == "PRODUCTION") {
                 $curlurl = "https://api.zaakpay.com/api/paymentTransact/V8";
@@ -2853,7 +2937,7 @@ class LoanAgentController extends Controller
                 "buyerCountry" => 'India',
                 "productDescription" => $products->productname,
             );
-            Log::info('zaakpay data - ' . json_encode($zaakpayPostData));
+            Log::info('zaakpay data - '. json_encode($zaakpayPostData));
 
             ksort($zaakpayPostData);
             $checksumData = "";
@@ -2863,7 +2947,7 @@ class LoanAgentController extends Controller
             }
 
             $checksum = hash_hmac('sha256', $checksumData, env('ZAAKPAY_SECRET_KEY'));
-            Log::info('checksum - ' . $checksum);
+            Log::info('checksum - '.$checksum);
 
             $zaakPayData = array(
                 'rec_date' => now(),
@@ -2876,20 +2960,19 @@ class LoanAgentController extends Controller
 
             Log::info('zaakpay entry' . json_encode($zaakPayData));
             $response = ZaakpayEntry::create($zaakPayData);
-            $html = view('pg.zaakpay-checkout-offer', compact('zaakpayPostData', 'checksum', 'curlurl'))->render();
+            $html = view('pg.zaakpay-checkout-offer',compact('zaakpayPostData','checksum','curlurl'))->render();
 
-            return response()->json(['type' => 'SUCCESS', 'message' => 'Please wait... We are redirecting to the payment page.', 'html' => $html]);
-        } catch (\Illuminate\Validation\ValidationException $e) {
-            return response()->json(['type' => 'ERROR', 'errors' => $e->errors()], 422);
-        } catch (\Exception $e) {
+            return response()->json(['type'=>'SUCCESS','message'=>'Please wait... We are redirecting to the payment page.','html'=>$html]);
+        } catch(\Illuminate\Validation\ValidationException $e){
+            return response()->json(['type'=>'ERROR','errors'=>$e->errors()], 422);
+        } catch(\Exception $e){
             Log::info($e->getMessage());
             return response()->json(array('type' => 'ERROR', 'message' => 'Oops! Something went wrong.'));
         }
     }
 
-    public function offer6Response(Request $request)
-    {
-        try {
+    public function offer6Response(Request $request){
+        try{
             $grandtotal = $netamount = $cgstamount = $sgstamount = $igstamount = 0;
             $meta = selfApplyMeta();
             $orderId = $request->input('orderId');
@@ -2927,14 +3010,14 @@ class LoanAgentController extends Controller
                 if (array_key_exists($seqvalue, $request->all())) {
                     $checksumData .= $seqvalue;
                     $checksumData .= "=";
-                    $checksumData .= $seqvalue == 'responseDescription' ? $request->input($seqvalue) . ' ' : $request->input($seqvalue);
+                    $checksumData .= $seqvalue == 'responseDescription' ? $request->input($seqvalue).' ' : $request->input($seqvalue);
                     $checksumData .= "&";
                 }
             }
-            Log::info('checksum data - ' . json_encode($checksumData));
+            Log::info('checksum data - '. json_encode($checksumData));
             $checksum = hash_hmac('sha256', $checksumData, env('ZAAKPAY_SECRET_KEY'));
-            Log::info('generated checksum - ' . $checksum);
-            Log::info('recd checksum - ' . $recd_checksum);
+            Log::info('generated checksum - '. $checksum);
+            Log::info('recd checksum - '. $recd_checksum);
             if ($checksum == $recd_checksum) {
                 $paymentData = ZaakpayEntry::where('orderid', $orderId)->first();
                 //Log::info('paymentData - '.json_encode($paymentData));
@@ -2950,7 +3033,7 @@ class LoanAgentController extends Controller
                 $response1 = ZaakpayEntry::where('id', $paymentData->id)->update($zaakPayData);
                 if ($responseCode == 100) {
                     $cardno = random_code_num(16);
-                    $userData = Cardoffer::where('id', $paymentData->userid)->first();
+                    $userData = Cardoffer::where('id',$paymentData->userid)->first();
                     $data = array(
                         'rec_date' => now(),
                         'card_number' => $cardno,
@@ -2961,7 +3044,7 @@ class LoanAgentController extends Controller
                         'isActive' => 1
                     );
                     $response = Cardoffer::where('id', $paymentData->userid)->update($data);
-                    $sent = sendPaymentGreetings($userData->first_name . ' ' . $userData->last_name, $userData->mobile, $userData->emailid);
+                    $sent = sendPaymentGreetings($userData->first_name.' '.$userData->last_name, $userData->mobile, $userData->emailid);
                     return view('cardoffer-response', [
                         'meta' => $meta,
                         'response' => TRUE,
@@ -2979,9 +3062,10 @@ class LoanAgentController extends Controller
                     'response' => FALSE,
                 ]);
             }
-        } catch (\Exception $e) {
-            Log::info('Offer la 6 response failed - ' . $e->getMessage());
+        } catch(\Exception $e){
+            Log::info('Offer la 6 response failed - '. $e->getMessage());
             dd('Oops! Something went wrong.');
         }
     }
+
 }
