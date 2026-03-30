@@ -540,23 +540,25 @@ class LoanAgentController extends Controller
             $productData = Product::where('productslug', $productslug)->first();
             $amount = ($productData->inOffer == 1) ? $productData->offeramount : $productData->amount;
             $grandAmount = $amount + ($amount * 0.18);
+            $roundAmount  = floor($grandAmount);
 
             $uatNumbers = explode(',', env('UAT_MOBILE_NUMBERS', '')); // Convert the string into an array
 
             foreach ($uatNumbers as $uatNum) {
                 if ($uatNum == Cookie::get('user_mobile')) {
-                    $grandAmount = 1;
+                    $roundAmount = 1;
                     break; // Exit the loop once a match is found
                 }
             }
 
+            Log::info($roundAmount);
             $returnUrl = $inputs['plan'] == 2 ? route('api.loan.agent.buy.digital.agent.plan') : route('api.self.apply.buy.digital.plan');
 
             $api = new Api(env('RAZOR_KEY_ID'), env('RAZOR_KEY_SECRET'));
 
             $order = $api->order->create([
                 'receipt' => 'RAZ_' . time(),
-                'amount' => $grandAmount * 100,
+                'amount' => $roundAmount * 100,
                 'currency' => 'INR'
             ]);
 
@@ -567,13 +569,13 @@ class LoanAgentController extends Controller
                 'entryfor' => $entryfor,
                 'userid' => Cookie::get('userid'),
                 'orderid' => $orderid,
-                'orderamount' => $grandAmount,
+                'orderamount' => $roundAmount,
                 'ordernote' => $productData->productname,
             ]);
 
             return view('pg.razorpay', [
                 'order_id' => $orderid,
-                'amount' => $grandAmount * 100,
+                'amount' => $roundAmount * 100,
                 'name' => Cookie::get('fullname'),
                 'email' => Cookie::get('email'),
                 'mobile' => Cookie::get('user_mobile'),
@@ -952,7 +954,7 @@ class LoanAgentController extends Controller
                 } else {
                     $igstamount = $netamount * 0.18;
                 }
-                $grandtotal = $netamount + $cgstamount + $sgstamount + $igstamount;
+                $grandtotal = floor($netamount + $cgstamount + $sgstamount + $igstamount);
                 $invoiceNo = SiteOption::where('option_key', 'newinvoiceno')
                     ->select('option_value')
                     ->first();
@@ -1128,7 +1130,7 @@ class LoanAgentController extends Controller
                 $city = strtolower(preg_replace("/[^a-zA-Z]+/", "", $userData->city));
                 $state = strtolower(getStateAbbreviation($userData->state));
                 //$orderData = orderdata($orderId,'phonepe_entry');
-                $orderData = orderdata($orderId, 'zaakpay_entry');
+                $orderData = orderdata($orderId, 'razorpayentry');
 
                 $staff = Administrations::where('id', $userData->staff_id)->first();
 
