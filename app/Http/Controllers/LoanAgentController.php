@@ -897,7 +897,7 @@ class LoanAgentController extends Controller
                     'rec_date' => now(),
                     'userid' => $userData->userid,
                     'registration_date' => now(),
-                    'expiry_date' => date('Y-m-d', strtotime('+9 months')),
+                    'expiry_date' => date('Y-m-d', strtotime('+6 months')),
                     'card_number' => $cardno,
                     'amount' => $orderAmount,
                     'paymentid' => $txnId,
