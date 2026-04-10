@@ -29,8 +29,9 @@
       "key": "{{ env('RAZOR_KEY_ID') }}",
       "amount": "{{ $amount }}",
       "currency": "INR",
-      "name": "Your Company",
+      "name": "EasyAILoans",
       "description": "Payment",
+      "image": "https://easyailoans.com/public/front/images/logo/apple-touch-icon-60x60.png",
       "order_id": "{{ $order_id }}",
 
       "handler": function(response) {
