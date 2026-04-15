@@ -18,9 +18,9 @@
                 height: 100%;
                 background-repeat: repeat;
                 background-position: center top;
-                background-image: url(https://easyailoans.com/uat/assets/images/mail-bgm.png);
+                background-image: url(https://easyailoans.com/assets/images/mail-bgm.png);
                 background-color: #f9f9f9;
-                " background="https://easyailoans.com/uat/front/images/bg-01.webp">
+                " background="https://easyailoans.com/public/front/images/bg-01.webp">
                 <tbody>
                     <tr>
                         <td class="es-m-margin" valign="top" style="padding: 0; margin: 0;">
@@ -60,9 +60,9 @@
                                                                                             class="es-m-txt-c"
                                                                                             style="padding: 0; margin: 0; padding-top: 5px; font-size: 0;">
                                                                                             <a target="_blank"
-                                                                                                href="https://easyailoans.com/uat/"
+                                                                                                href="https://easyailoans.com/"
                                                                                                 style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: underline; color: #000f26; font-size: 14px;">
-                                                                                            <img src="https://easyailoans.com/uat/front/images/logo/logo.png"
+                                                                                            <img src="https://easyailoans.com/public/front/images/logo/logo.png"
                                                                                                 alt="EasyAILoans"
                                                                                                 style="display: block; border: 0; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic;"
                                                                                                 width="190"
@@ -110,7 +110,7 @@
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td align="center"
-                                                                                            style="padding: 20px; margin: 0; line-height: 2rem;    background-color: #b4c7d5;border-top-right-radius:12px;border-top-left-radius:12px;">
+                                                                                            style="padding: 20px; margin: 0; line-height: 2rem;    background-color: #edf7f9;border-top-right-radius:12px;border-top-left-radius:12px;">
                                                                                             <p
                                                                                                 style="font-size:2.2rem;color:#0e5281;font-weight:600">
                                                                                                 Congratulations! 
@@ -154,7 +154,7 @@
                                                             style="padding: 0; margin: 0; padding-top: 10px; padding-bottom: 10px;">
                                                             <table cellpadding="0" cellspacing="0" class="es-left"
                                                                 align="left"
-                                                                style="mso-table-lspace: 0;mso-table-rspace: 0;border-collapse: collapse;border-spacing: 0;float: left;background-color: #b4c7d5;border: 1px solid #0e5281;  border-radius: 12px; display: block;">
+                                                                style="mso-table-lspace: 0;mso-table-rspace: 0;border-collapse: collapse;border-spacing: 0;float: left;background-color: #edf7f9;border: 1px solid #0e5281;  border-radius: 12px; display: block;">
                                                                 <tbody>
                                                                     <tr>
                                                                         <td class="es-m-p20b" align="left"
@@ -170,7 +170,7 @@
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td
-                                                                                            style="padding:0  20px; margin: 0; line-height: 1.5rem;background-color: #b4c7d5; color:#000;font-size:16px; border-radius: 12px;">
+                                                                                            style="padding:0  20px; margin: 0; line-height: 1.5rem;background-color: #edf7f9; color:#000;font-size:16px; border-radius: 12px;">
                                                                                             <p style="margin: 0;">Full Name :<span></span>
                                                                                             <h5 style="margin:0;">{{ $fullname }}</h5>
                                                                                             </p>
@@ -182,7 +182,7 @@
                                                                                             </p>
                                                                                         </td>
                                                                                         <td align="left"
-                                                                                            style="padding:0 20px; margin: 0; line-height: 1.5rem;background-color: #b4c7d5;  color:#000;font-size:16px;border-radius: 12px;">
+                                                                                            style="padding:0 20px; margin: 0; line-height: 1.5rem;background-color: #edf7f9;  color:#000;font-size:16px;border-radius: 12px;">
                                                                                             <p style="margin: 0;">Mobile :
                                                                                             <h5 style="margin: 0;">+91&nbsp;{{ $mobile }}</h5>
                                                                                             </p>
@@ -236,7 +236,7 @@
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td align="left"
-                                                                                            style="padding: 20px; margin: 0; line-height: 1.5rem;background-color: #b4c7d5; border-radius:12px;color:#000;font-size:16px">
+                                                                                            style="padding: 20px; margin: 0; line-height: 1.5rem;background-color: #edf7f9; border-radius:12px;color:#000;font-size:16px">
                                                                                             <p>
                                                                                                 Your Loan Consultation Details :
                                                                                             </p>
@@ -291,7 +291,7 @@
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td align="left"
-                                                                                            style="padding: 20px; margin: 0; line-height: 1.5rem;background-color: #b4c7d5; border-radius:12px;color:#000;font-size:16px">
+                                                                                            style="padding: 20px; margin: 0; line-height: 1.5rem;background-color: #edf7f9; border-radius:12px;color:#000;font-size:16px">
                                                                                             <p>As per the details you provided, we’ve found the perfect loan offers! Please access your Loan Login links to quickly apply for the loan that suits you best:</p>
                                                                                             <p><strong>Customer Portal Credentials</strong></p>
                                                                                             <p>Mobile : <strong>{{ $mobile
@@ -301,7 +301,7 @@
                                                                                                 $password }}</strong>
                                                                                             </p>
                                                                                             <p>Please visit Your Personalised Portal and login with your credentials:</p>
-                                                                                            <a href="https://easyailoans.com/uat/customer/login"
+                                                                                            <a href="https://easyailoans.com/customer/login"
                                                                                                 style="display:inline-block;background:#2c2c2c;color:#fff;font-family:Ubuntu,Helvetica,Arial,sans-serif,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;line-height:17.5px;margin:0;text-decoration:none;text-transform:none;padding:9px 26px 9px 26px; margin:auto; display:block; width: fit-content; mso-padding-alt:0;border-radius:10px"
                                                                                                 target="_blank"><span><strong><span
                                                                                                 style="font-family:Poppins,sans-serif;font-size:14px">Click
@@ -373,19 +373,19 @@
                                                                                                 ">
                                                                                                 <a target="_blank"
                                                                                                     style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;"
-                                                                                                    href="https://easyailoans.com/uat/privacy-policy">
+                                                                                                    href="https://easyailoans.com/privacy-policy">
                                                                                                 Privacy Policy
                                                                                                 </a>
                                                                                                 &nbsp; | &nbsp;
                                                                                                 <a target="_blank"
                                                                                                     style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;"
-                                                                                                    href="https://easyailoans.com/uat/terms-and-conditions">
+                                                                                                    href="https://easyailoans.com/terms-and-conditions">
                                                                                                 Terms &amp; Conditions
                                                                                                 </a>
                                                                                                 &nbsp; | &nbsp;
                                                                                                 <a target="_blank"
                                                                                                     style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: none; color: #000f26; font-size: 14px;"
-                                                                                                    href="https://easyailoans.com/uat/raise-request">
+                                                                                                    href="https://easyailoans.com/raise-request">
                                                                                                 Raise a request
                                                                                                 </a>
                                                                                                 &nbsp; | &nbsp;
