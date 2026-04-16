@@ -40,6 +40,7 @@ use Illuminate\Validation\Rule;
 
 class SelfApplyController extends Controller
 {
+    public $lifetime;
 
     public function __construct()
     {

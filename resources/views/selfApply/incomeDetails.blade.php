@@ -144,7 +144,9 @@
                         },
                         success: function (result) {
                             $(this).attr("disabled", false);
+                            console.log(result);
                             if (result.type === 'SUCCESS') {
+                                resetProcessButton();
                                 window.location.href = `{{ route('self.apply.personal.details') }}`;
                             } else {
                                 toastr.error(result.message);
@@ -166,5 +168,11 @@
                 }
             });
         })
+
+        function resetProcessButton() {
+            let $btn = $('#processNowBtn');
+            $btn.prop('disabled', false);
+            $btn.html('Process Now');
+        }
     </script>
 @endpush
