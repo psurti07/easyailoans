@@ -42,7 +42,8 @@ use Razorpay\Api\Api;
 
 class LoanAgentController extends Controller
 {
-
+    public $lifetime;
+    
     public function __construct()
     {
         $this->lifetime = config('session.lifetime');
@@ -794,7 +795,7 @@ class LoanAgentController extends Controller
                         'rec_date' => now(),
                         'entry_at' => now(),
                         'notes' => '',
-                        'staff_id' => 5
+                        'staff_id' => $staffID->id
                     ]);
 
                     if ($response2 > 0) {
