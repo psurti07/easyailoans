@@ -63,7 +63,7 @@
 </style>
 @endpush
 @section('content')
-<section id="hero-201" class="bg--white-100 bg--fixed hero-section">
+<section class="bg--white-100 bg--fixed hero-section pt-100 pb-80">
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-md-6 col-lg-6 align-items-center m-auto self-apply-form">
@@ -139,14 +139,14 @@
 </section>
 
 <!-- Affiliate NBFCs section starts -->
-<section id="integrations-2" class="pt-0 pb-40 integrations-section">
+<section id="integrations-2" class="pt-0 pb-80 integrations-section">
     <div class="container">
         <div class="r-12 text-center">
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-12">
-                    <div class="section-title mb-50">
-                        <h2 class="s-28">Our <span class="color--green-500">Lending Partners</span></h2>
-                        <p class="s-16 color--grey">Partnering with the best NBFCs to provide the best for our customers.</p>
+                    <div class="section-title mb-40">
+                        <h2 class="s-28 mb-5">Our <span class="color--green-500">Lending Partners</span></h2>
+                        <p class="s-16 color--grey mt-0">Partnering with the best NBFCs to provide the best for our customers.</p>
                     </div>
                 </div>
             </div>
@@ -167,13 +167,13 @@
 </section>
 <!-- Affiliate NBFCs section ends -->
 
-<section id="features-6" class="py-80 features-section division">
+<section id="features-6" class="pt-0 pb-80 features-section division">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-9">
-                <div class="section-title mb-50">
-                    <h2 class="s-28">Why <span class="color--green-500">Easy AI Loans</span></h2>
-                    <p class="s-16 color--grey">Here's What Sets Our Platform Apart</p>
+                <div class="section-title mb-40">
+                    <h2 class="s-28 mb-5">Why <span class="color--green-500">Easy AI Loans</span></h2>
+                    <p class="s-16 color--grey mt-0">Here's What Sets Our Platform Apart</p>
                 </div>
             </div>
         </div>
@@ -237,13 +237,13 @@
 </section>
 
 <!-- Testimonioals section starts -->
-<section id="reviews-1" class="py-80 shape--06 reviews-section">
+<section id="reviews-1" class="pt-0 pb-80 shape--06 reviews-section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-12">
-                <div class="section-title mb-50">
-                    <h2 class="s-28">What Our <span class="color--green-500">Customer Says</span></h2>
-                    <p class="s-16 color--grey">Hear directly from our customers about their experiences with us.</p>
+                <div class="section-title mb-40">
+                    <h2 class="s-28 mb-5">What Our <span class="color--green-500">Customer Says</span></h2>
+                    <p class="s-16 color--grey mt-0">Hear directly from our customers about their experiences with us.</p>
                 </div>
             </div>
         </div>

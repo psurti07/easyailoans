@@ -10,13 +10,13 @@
 @endpush
 @section('content')
 <!-- main section starts -->
-<section id="hero-7" class="hero-section bg--green-100 bg--scroll">
+<section id="hero-7" class="hero-section bg--green-100 bg--scroll pb-0">
     <!-- <div class="hero-overlay"> -->
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-md-6 col-lg-6 col-12">
                 <div class="hero-7-txt">
-                    <div class=" mt-lg-5 mb-lg-5">
+                    <div class=" mt-lg-0 mb-lg-5">
                         <h1 class="s-40 w-700">We Design Your Roadmap to <span class="color--green-500">Financial Success</span></h1>
                         <p class="mb-20">Take confident steps toward your goals with structured guidance and technology-powered loan assistance.</p>
                         <a href="{{ route('self.apply.main') }}" class="btn r-04 btn--theme hover--tra-black last-link">Self Apply</a>
@@ -26,7 +26,7 @@
             </div>
             <div class="col-md-6 col-lg-6 col-12 ">
                 <div class="hero-7-img d-flex justify-content-center align-items-start">
-                    <img src="{{ asset('front/images/home-section.png') }}" alt="easyailoans" class="img-fluid p-0">
+                    <img src="{{ asset('front/images/Who-Can-Apply.webp') }}" alt="easyailoans" class="img-fluid p-0">
                 </div>
             </div>
         </div>
@@ -41,9 +41,9 @@
         <div class="r-12 text-center">
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-10">
-                    <div class="section-title mb-50">
-                        <h2 class="s-28">Backed by Trusted <span class="color--green-500">Lending Institutions</span></h2>
-                        <p class="s-16 color--grey">We collaborate with top NBFCs to expand structured credit access across India.</p>
+                    <div class="section-title mb-40">
+                        <h2 class="s-28 mb-5">Backed by Trusted <span class="color--green-500">Lending Institutions</span></h2>
+                        <p class="s-16 color--grey mt-0">We collaborate with top NBFCs to expand structured credit access across India.</p>
                     </div>
                 </div>
             </div>
@@ -70,19 +70,19 @@
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-9">
                 <div class="section-title mb-40">
-                    <h2 class="s-28">About <span class="color--green-500">Easy AI Loans</span></h2>
-                    <p class="s-16 color--grey">Enabling Better Financial Decisions with Smart, Personalized Support</p>
+                    <h2 class="s-28 mb-5">About <span class="color--green-500">Easy AI Loans</span></h2>
+                    <p class="s-16 color--grey mt-0">Enabling Better Financial Decisions with Smart, Personalized Support</p>
                 </div>
             </div>
 
             <div class="col-lg-6 col-md-6 col-12">
-                <div class="txt-block left-column">
+                <div class="txt-block right-column bg-white p-4 r-12">
                     <p class="">Easy AI Loans is a financial consultation and services company dedicated to helping individuals choose the right loan with ease and confidence. We work closely with our clients to understand their needs and connect them with suitable options through our network of multiple NBFC partners, ensuring a smooth, transparent, and well-guided experience from start to finish.</p>
                     <p class="">Our objective is simple – remove uncertainty from borrowing and replace it with clarity, process, and informed action.</p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-12">
-                <div class="txt-block right-column">
+                <div class="txt-block right-column bg--green-400 p-4 r-12 text-white h-100">
                     <p class="w-700">Your Growth Is Our Priority</p>
                     <ul class="simple-list">
                         <li class="list-item">
@@ -105,9 +105,9 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-9">
-                <div class="section-title mb-50">
-                    <h2 class="s-28">Why <span class="color--green-500">Easy AI Loans</span></h2>
-                    <p class="s-16 color--grey">Here's What Sets Our Platform Apart</p>
+                <div class="section-title mb-40">
+                    <h2 class="s-28 mb-5">Why <span class="color--green-500">Easy AI Loans</span></h2>
+                    <p class="s-16 color--grey mt-0">Here's What Sets Our Platform Apart</p>
                 </div>
             </div>
         </div>
@@ -244,13 +244,13 @@
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-10">
                 <div class="section-title mb-40">
-                    <h2 class="s-28">Advance Your <span class="color--green-500">Financial Aspects Smartly</span></h2>
-                    <p class="s-16 color--grey">Select the option that matches your comfort level and application preference.</p>
+                    <h2 class="s-28 mb-5">Advance Your <span class="color--green-500">Financial Aspects Smartly</span></h2>
+                    <p class="s-16 color--grey mt-0">Select the option that matches your comfort level and application preference.</p>
                 </div>
             </div>
         </div>
         <div class="col-12 col-lg-10 align-items-center m-auto">
-            <div class="row fbox-wrapper text-center align-items-center m-auto border border--grey shadow rounded-3 mb-4">
+            <div class="row fbox-wrapper text-center align-items-center m-auto border border--grey shadow rounded-3  p-4 mb-4">
                 <div class="col-12 col-lg-6 order-2 order-lg-1">
                     <div class="img-block right-column text-center">
                         <img class="img-fluid light-theme-img"
@@ -272,7 +272,7 @@
                 </div>
             </div>
 
-            <div class="row fbox-wrapper text-center align-items-center m-auto border border--grey shadow rounded-3">
+            <div class="row fbox-wrapper text-center align-items-center m-auto border border--grey shadow rounded-3 p-4">
                 <div class="col-12 col-lg-6 order-2 order-lg-1">
                     <div class="txt-block left-column">
                         <h3 class="s-22 w-700 mb-2">Hire Loan Agent</h3>
@@ -306,88 +306,88 @@
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-9">
                 <div class="section-title mb-40">
-                    <h2 class="s-28">How it <span class="color--green-500">works!</span></h2>
-                    <p class="s-16 color--grey">Apply in 6 Simple Steps</p>
+                    <h2 class="s-28 mb-5">How it <span class="color--green-500">works!</span></h2>
+                    <p class="s-16 color--grey mt-0">Apply in 6 Simple Steps</p>
                 </div>
             </div>
         </div>
 
         <div class="fbox-wrapper text-center">
-            <div class="row g-4 row-cols-1 row-cols-md-3 row-cols-lg-3">
-                <div class="col d-flex">
-                    <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12 h-100 w-100">
-                        <div class="fbox-ico ico-50">
+            <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-2">
+                <div class="col">
+                    <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white p-4">
+                        <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-mobile-search"></span>
                             </div>
                         </div>
-                        <div class="fbox-txt">
-                            <p>Start by providing your mobile number and the name registered with your bank.</p>
+                        <div class="fbox-txt text-start ms-4">
+                            <p class="mt-0">Start by providing your mobile number and the name registered with your bank.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col d-flex">
-                    <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12 h-100 w-100">
-                        <div class="fbox-ico ico-50">
+                <div class="col">
+                    <div class="fbox-11  fbox--hover fb-1 r-12 h-100 w-100 bg-white p-4">
+                        <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-computer"></span>
                             </div>
                         </div>
-                        <div class="fbox-txt">
-                            <p>Complete your financial information for preliminary eligibility screening.</p>
+                        <div class="fbox-txt text-start ms-4">
+                            <p class="mt-0">Complete your financial information for preliminary eligibility screening.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col d-flex">
-                    <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12 h-100 w-100">
-                        <div class="fbox-ico ico-50">
+                <div class="col">
+                    <div class="fbox-11  fbox--hover fb-1 r-12 h-100 w-100 bg-white p-4">
+                        <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-credit-card"></span>
                             </div>
                         </div>
-                        <div class="fbox-txt">
-                            <p>Based on the details you enter, our system displays loan options that may be available to you. These are not final and will be reviewed by the lender.</p>
+                        <div class="fbox-txt text-start ms-4">
+                            <p class="mt-0">Based on the details you enter, our system displays loan options that may be available to you. These are not final and will be reviewed by the lender.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col d-flex">
-                    <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12 h-100 w-100">
-                        <div class="fbox-ico ico-50">
+                <div class="col">
+                    <div class="fbox-11  fbox--hover fb-1 r-12 h-100 w-100 bg-white p-4">
+                        <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-time"></span>
                             </div>
                         </div>
-                        <div class="fbox-txt">
-                            <p>To gain access to the pre-approved loan offers displayed, simply purchase the subscription plan that best fits your needs. </p>
+                        <div class="fbox-txt text-start ms-4">
+                            <p class="mt-0">To gain access to the pre-approved loan offers displayed, simply purchase the subscription plan that best fits your needs. </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col d-flex">
-                    <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12 h-100 w-100">
-                        <div class="fbox-ico ico-50">
+                <div class="col">
+                    <div class="fbox-11  fbox--hover fb-1 r-12 h-100 w-100 bg-white p-4">
+                        <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-check-1"></span>
                             </div>
                         </div>
-                        <div class="fbox-txt">
-                            <p>Submit required documents for profile verification and lender processing.</p>
+                        <div class="fbox-txt text-start ms-4">
+                            <p class="mt-0">Submit required documents for profile verification and lender processing.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col d-flex">
-                    <div class="fbox-7 fbox--hover bg--white-100 fb-1 r-12 h-100 w-100">
-                        <div class="fbox-ico ico-50">
+                <div class="col">
+                    <div class="fbox-11  fbox--hover fb-1 r-12 h-100 w-100 bg-white p-4">
+                        <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-profits"></span>
                             </div>
                         </div>
-                        <div class="fbox-txt">
-                            <p>The respective NBFC independently reviews the application and makes the final decision on approval and disbursement as per their policies.</p>
+                        <div class="fbox-txt text-start ms-4">
+                            <p class="mt-0">The respective NBFC independently reviews the application and makes the final decision on approval and disbursement as per their policies.</p>
                         </div>
                     </div>
                 </div>
@@ -404,8 +404,8 @@
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-10">
                 <div class="section-title mb-40">
-                    <h2 class="s-28">Calculate Your <span class="color--green-500">EMI Instantly</span></h2>
-                    <p class="s-16 color--grey">Plan repayments with clarity before proceeding.</p>
+                    <h2 class="s-28 mb-5">Calculate Your <span class="color--green-500">EMI Instantly</span></h2>
+                    <p class="s-16 color--grey mt-0">Plan repayments with clarity before proceeding.</p>
                 </div>
             </div>
         </div>
@@ -640,13 +640,13 @@
 {{--<hr class="divider">--}}
 
 <!-- Testimonioals section starts -->
-<section id="reviews-1" class="py-80 reviews-section">
+<section id="reviews-1" class="pt-0 pb-80 reviews-section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-12">
                 <div class="section-title mb-40">
-                    <h2 class="s-28">What Our <span class="color--green-500">Clients Say</span></h2>
-                    <p class="s-16 color--grey">These words motivate us to work harder.</p>
+                    <h2 class="s-28 mb-5">What Our <span class="color--green-500">Clients Say</span></h2>
+                    <p class="s-16 color--grey mt-0">These words motivate us to work harder.</p>
                 </div>
             </div>
         </div>
@@ -667,8 +667,8 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-6 md-mb-50">
                 <div class="sec-title2 mb-40">
-                    <h2 class="s-28">We’re Here to <span class="color--green-500">Assist You</span></h2>
-                    <p class="description">Drop us a message with your basic information, and our team will get back to you shortly.</p>
+                    <h2 class="s-28 mb-5">We’re Here to <span class="color--green-500">Assist You</span></h2>
+                    <p class="description mt-0">Drop us a message with your basic information, and our team will get back to you shortly.</p>
                 </div>
                 <div class="row gy-3 gx-3">
                     <div class="col-lg-6 col-md-6 col-12">
@@ -907,3 +907,5 @@
     });
 </script>
 @endpush
+
+
