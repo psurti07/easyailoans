@@ -76,7 +76,7 @@ class AuthController extends Controller
                 'password' => Session::get('user_password'),
                 'isDelete' => 0,
             ];
-    
+            log::info($credentials);
             $redirectUrl = '/loans/pre-approved-loans';
         }
     
