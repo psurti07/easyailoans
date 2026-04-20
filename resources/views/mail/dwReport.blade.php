@@ -80,7 +80,7 @@
                                                         <td align="left"
                                                             style="padding: 0; margin: 0; padding-top: 10px; padding-bottom: 10px;">
                                                             <table class="es-left" cellspacing="0" cellpadding="0"
-                                                                align="left"
+                                                                align="center"
                                                                 style="mso-table-lspace: 0; mso-table-rspace: 0; border-collapse: collapse; border-spacing: 0; float: center;">
                                                                 <tbody>
                                                                     <tr>
@@ -93,7 +93,7 @@
                                                                             <img src="https://easyailoans.com/public/front/images/logo/logo.png"
                                                                                 alt="EasyAILoans"
                                                                                 style="display: block; border: 0; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic;"
-                                                                                width="190"
+                                                                                width="150" height="50"
                                                                                 title="EasyAILoans">
                                                                             </a>
                                                                         </td>
