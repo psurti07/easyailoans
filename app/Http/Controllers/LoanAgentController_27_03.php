@@ -847,7 +847,7 @@ class LoanAgentController extends Controller
                 
                     if ($response2 > 0) {
                         $remote_data = array(
-    						'company_code' => 'KRDTP9702',
+    						'company_code' => config('constant.COMPANY_CODE'),
     						'company_local_ip' => '190.92.174.183',
     						'product_code' => 'HIRE AGENT',
     						'customer_name' => $userData->first_name.' '.$userData->last_name,
@@ -1153,7 +1153,7 @@ class LoanAgentController extends Controller
                         sendBrevoHtmlMail2($mailData, 'Congratulations! Payment for EasyAILoans Hire Agent plan has been successful.', $sendGreetings, 3, $attachments);
                         
                         $remote_data = array(
-    						'company_code' => 'KRDTP9702',
+    						'company_code' => config('constant.COMPANY_CODE'),
     						'company_local_ip' => '190.92.174.183',
     						'product_code' => 'HIRE AGENT',
     						'customer_name' => $userData->first_name.' '.$userData->last_name,

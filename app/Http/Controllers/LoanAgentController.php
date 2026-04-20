@@ -800,7 +800,7 @@ class LoanAgentController extends Controller
 
                     if ($response2 > 0) {
                         $remote_data = array(
-                            'company_code' => 'KRDTP9702',
+                            'company_code' => config('constant.COMPANY_CODE'),
                             'company_local_ip' => '190.92.174.183',
                             'product_code' => 'HIRE AGENT',
                             'customer_name' => $userData->first_name . ' ' . $userData->last_name,
@@ -1139,6 +1139,7 @@ class LoanAgentController extends Controller
                     UserRegistration::where('id', $userData->userid)->update(['process_step' => 5]);
 
                     /* application remarks entry start */
+                    $staffID = assignAgent();
                     $existingApplication = DB::table('application_remarks')->where(['service' => 5, 'subject' => 9, 'application_id' => $applyId])->first();
                     if (!$existingApplication) {
                         DB::table('application_remarks')->insert([
@@ -1148,7 +1149,7 @@ class LoanAgentController extends Controller
                             'subject' => 9,
                             'notes' => '',
                             'application_id' => $applyId,
-                            'staff_id' => 5
+                            'staff_id' => $staffID->id
                         ]);
                     }
                     /* application remarks entry ends */

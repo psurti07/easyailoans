@@ -1071,6 +1071,7 @@ class SelfApplyController extends Controller
                 sendBrevoHtmlMail2($mailData, 'Congratulations! Payment Successful for EasyAILoans Self-Apply Plan.', $sendGreetings, 3, $attachments);
 
                 // application remarks data insert
+                $staffID = assignAgentSelf();
                 DB::table('application_remarks')->updateOrInsert(
                     [
                         'application_id' => $userData->id,
@@ -1081,16 +1082,15 @@ class SelfApplyController extends Controller
                         'rec_date' => now(),
                         'entry_at' => now(),
                         'notes'    => '',
-                        'staff_id' => 5,
+                        'staff_id' => $staffID->id,
                     ]
                 );
                 
-                $staffID = assignAgentSelf();
                 UserRegistration::where('id', $userData->userid)->update(['process_step' => 5, 'staff_id' => $staffID->id]);
 
                 if ($response2 > 0) {
                     $remote_data = array(
-						'company_code' => 'KRDTP9702',
+						'company_code' => config('constant.COMPANY_CODE'),
 						'company_local_ip' => '190.92.174.183',
 						'product_code' => 'SELF APPLY',
 						'customer_name' => $userData->first_name.' '.$userData->last_name,
@@ -1155,6 +1155,7 @@ class SelfApplyController extends Controller
                     UserRegistration::where('id', $userData->userid)->update(['process_step'=>5]);
                     
                     /* application remarks entry start */
+                    $staffID = assignAgentSelf();
                     DB::table('application_remarks')->updateOrInsert(
                         [
                             'application_id' => $userData->id,
@@ -1165,7 +1166,7 @@ class SelfApplyController extends Controller
                             'rec_date' => now(),
                             'entry_at' => now(),
                             'notes'    => '',
-                            'staff_id' => 5,
+                            'staff_id' => $staffID->id,
                         ]
                     );
                     /* application remarks entry ends */
