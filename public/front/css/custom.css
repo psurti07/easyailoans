@@ -5,7 +5,7 @@
 .navbar-dark .logo-white { display: block; }
 .tra-menu.navbar-dark .scroll .logo-black { display: block; }
 .tra-menu.navbar-dark .scroll .logo-white { display: none; }
-.role-box span,.role-box p  { color: #6c757d!important }
+.role-box span,.role-box p  { color: #000!important }
 .tra-menu.navbar-dark .btn--purple-500 { border-color: #3a3189!important; background-color: #3a3189!important; }
 .tra-menu.navbar-dark .btn--purple-500:hover { color:#fff!important; border-color: #fff!important; background-color: transparent!important; }
 .tra-menu.navbar-dark .scroll .btn--purple-500 { border-color: #3a3189!important; background-color: #3a3189!important; }
@@ -127,4 +127,7 @@
  .hero-section{
 min-height: auto !important;
 } 
+}
+#join-our-team .role-box:hover span, #join-our-team .role-box:hover p, #join-our-team .role-box:hover h5{
+  color: #fff !important;
 }

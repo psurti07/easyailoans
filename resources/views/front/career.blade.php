@@ -27,7 +27,7 @@
             <div class="col-md-10 col-lg-9">
                 <div class="section-title mb-40">
                     @if($data->isNotEmpty())
-                    <h2 class="mb-5">Current Job <span class="color--green-500">Vacancies</span></h2>
+                    <h2 class="s-28 mb-5">Current Job <span class="color--green-500">Vacancies</span></h2>
                     <p class="color--grey mt-0">See where you fit in.</p>
                     @else
                     <h2 class="">Sorry!!</h2>
