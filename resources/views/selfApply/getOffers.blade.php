@@ -27,7 +27,7 @@ body {
                 <div class="txt-block left-column gr--white border border-radius-10 p-2">
                     <div class="accordion accordion-flush mb-10" id="accordionFlushExample">
                         <div class="accordion-item bg-transparent">
-                            <h2 class="accordion-header" id="flush-headingOne">
+                            <h2 class="accordion-header mb-0" id="flush-headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseOne" aria-expanded="true"
                                     aria-controls="flush-collapseOne">
@@ -114,7 +114,7 @@ body {
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <span class="badge badge-success w-100 text-start"
                                             style="border-radius: 12px 12px 0 0;">Most Recommended Offer*</span>
-                                        <div id="fb-12-3" class="fbox-12 bg--white-100 block-shadow r-12 mb-20">
+                                        <div id="fb-12-3" class="fbox-12 bg--white-100 block-shadow r-12">
                                             <!-- Icon -->
                                             <div class="fbox-ico">
                                                 <div class="shape-ico">
@@ -157,7 +157,7 @@ body {
                                         </div>
 
                                         <div id="fb-12-3"
-                                            class="fbox-12 bg--white-100 block-shadow r-12 mb-20 lockoffers">
+                                            class="fbox-12 bg--white-100 block-shadow r-12 lockoffers">
                                             <!-- Icon -->
                                             <div class="fbox-ico">
                                                 <div class="shape-ico">

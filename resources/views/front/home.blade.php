@@ -708,7 +708,7 @@
 <section id="contact" class="py-80 bg--green-100">
     <div class="container">
         <div class="row align-items-center justify-content-center">
-            <div class="col-lg-6 md-mb-50">
+            <div class="col-md-6 md-mb-50 order-md-1 order-2">
                 <div class="sec-title2 mb-40">
                     <h2 class="s-28 mb-5">We’re Here to <span class="color--green-500">Assist You</span></h2>
                     <p class="description mt-0">Drop us a message with your basic information, and our team will get
@@ -759,7 +759,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 py-md-0 py-4">
+            <div class="col-md-6 py-md-0 py-4 order-md-2 order-1">
                 <div class="h-100">
                     <div class="card shadow border h-100">
                         <div class="card-body">
