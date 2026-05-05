@@ -4650,7 +4650,7 @@ span.sm-info {
     display: flex;
     position: relative;
     flex-flow: row wrap;
-    align-items: stretch!important;
+    align-items: center!important;
     justify-content: flex-start;
 }
 

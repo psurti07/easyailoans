@@ -188,68 +188,73 @@
 <!-- why easyailoans section ends -->
 
 <!-- Trust Badges Section starts -->
-<div id="statistic-1" class=" bg--green-400 ct-03 py-50 statistic-section division">
+<div id="statistic-1" class=" ct-03 py-0 statistic-section division">
     <div class="container">
-        <div class="statistic-5-wrapper">
-            <div class="row row-cols-2 row-cols-md-4">
-                <div class="col sec-1">
-                    <div id="sb-5-1" class="text-center">
-                        <div class="statistic-block">
-                            <div class="statistic-digit">
-                                <h2 class="s-30 w-700 mb-10 text-white">
-                                    <span class="count-element">5000</span>+
-                                </h2>
+        <div class="row">
+          
+                <div class="statistic-5-wrapper">
+                    <div class="row row-cols-2 row-cols-md-4">
+                        <div class="col sec-1 py-50">
+                            <div id="sb-5-1" class="text-center">
+                                <div class="statistic-block">
+                                    <div class="statistic-digit">
+                                        <h2 class="s-30 w-700 mb-10 text-white">
+                                            <span class="count-element">5000</span>+
+                                        </h2>
+                                    </div>
+                                    <div class="statistic-txt">
+                                        <h5 class="s-16 w-500 text-white">Applicants Assisted</h5>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="statistic-txt">
-                                <h5 class="s-16 w-500 text-white">Applicants Assisted</h5>
+                        </div>
+                        <div class="col sec-2 py-50">
+                            <div id="sb-5-3" class="text-center">
+                                <div class="statistic-block">
+                                    <div class="statistic-digit">
+                                        <h2 class="s-30 w-700 mb-10 text-white">
+                                            <span class="count-element">10</span>+
+                                        </h2>
+                                    </div>
+                                    <div class="statistic-txt">
+                                        <h5 class="s-16 w-500 text-white">NBFC Partners</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col sec-3 py-50">
+                            <div id="sb-5-2" class="text-center">
+                                <div class="statistic-block">
+                                    <div class="statistic-digit">
+                                        <h2 class="s-30 w-700 mb-10 text-white">
+                                            <span class="count-element">15</span>+
+                                        </h2>
+                                    </div>
+                                    <div class="statistic-txt">
+                                        <h5 class="s-16 w-500 text-white">Operational Team Members</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col sec-4 py-50">
+                            <div id="sb-5-4" class="text-center">
+                                <div class="statistic-block">
+                                    <div class="statistic-digit">
+                                        <h2 class="s-30 w-700 mb-10 text-white">
+                                            <span class="count-element">100</span>%
+                                        </h2>
+                                    </div>
+                                    <div class="statistic-txt">
+                                        <h5 class="s-16 w-500 text-white">Digital Application Model</h5>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col sec-2">
-                    <div id="sb-5-3" class="text-center">
-                        <div class="statistic-block">
-                            <div class="statistic-digit">
-                                <h2 class="s-30 w-700 mb-10 text-white">
-                                    <span class="count-element">10</span>+
-                                </h2>
-                            </div>
-                            <div class="statistic-txt">
-                                <h5 class="s-16 w-500 text-white">NBFC Partners</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col sec-3">
-                    <div id="sb-5-2" class="text-center">
-                        <div class="statistic-block">
-                            <div class="statistic-digit">
-                                <h2 class="s-30 w-700 mb-10 text-white">
-                                    <span class="count-element">15</span>+
-                                </h2>
-                            </div>
-                            <div class="statistic-txt">
-                                <h5 class="s-16 w-500 text-white">Operational Team Members</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col sec-4">
-                    <div id="sb-5-4" class="text-center">
-                        <div class="statistic-block">
-                            <div class="statistic-digit">
-                                <h2 class="s-30 w-700 mb-10 text-white">
-                                    <span class="count-element">100</span>%
-                                </h2>
-                            </div>
-                            <div class="statistic-txt">
-                                <h5 class="s-16 w-500 text-white">Digital Application Model</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
         </div>
+
     </div>
 </div>
 <!-- Trust Badges Section ends -->
@@ -270,14 +275,14 @@
         <div class="row">
             <div class="col-12 col-lg-6 align-items-center m-auto rounded-3">
                 <div
-                    class="row fbox-wrapper text-center align-items-center m-auto border border--grey shadow rounded-3 mb-4">
+                    class="row fbox-wrapper text-center align-items-center m-auto border border--grey shadow rounded-3 mb-4 fbox-8 fbox--hover fb-1  border p-0">
                     <div class="col-12 col-lg-12">
                         <div class="img-block right-column text-center">
                             <img class="img-fluid light-theme-img"
                                 src="{{ asset('front/images/Easy-Self-Apply-ai.png') }}" alt="feature-image">
                         </div>
                     </div>
-                    <div class="col-12 col-lg-12 bg--green-100 p-4 rounded-3">
+                    <div class="col-12 col-lg-12 bg--green-100 p-4">
                         <div class="txt-block right-column">
                             <h3 class="s-22 w-700 mb-2">Quick Self-Apply</h3>
                             <p class="mb-2">
@@ -293,14 +298,14 @@
             </div>
             <div class="col-12 col-lg-6 align-items-center m-auto mt-0 rounded-3">
                 <div
-                    class="row fbox-wrapper text-center align-items-center m-auto border border--grey shadow rounded-3">
+                    class="row fbox-wrapper text-center align-items-center m-auto border border--grey shadow rounded-3 mb-4 fbox-8 fbox--hover fb-1  border p-0">
                     <div class="col-12 col-lg-12">
                         <div class="img-block right-column text-center">
                             <img class="img-fluid light-theme-img"
                                 src="{{ asset('front/images/Hire-Loan-Agent-ai.png') }}" alt="feature-image">
                         </div>
                     </div>
-                    <div class="col-12 col-lg-12 bg--green-100 p-4 rounded-3">
+                    <div class="col-12 col-lg-12 bg--green-100 p-4">
                         <div class="txt-block left-column">
                             <h3 class="s-22 w-700 mb-2">Hire Loan Agent</h3>
                             <p class="mb-2">
@@ -339,7 +344,7 @@
         <div class="fbox-wrapper text-center">
             <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-2">
                 <div class="col">
-                    <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white p-4">
+                    <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
                         <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-mobile-search"></span>
@@ -353,7 +358,7 @@
                 </div>
 
                 <div class="col">
-                    <div class="fbox-11  fbox--hover fb-1 r-12 h-100 w-100 bg-white p-4">
+                    <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
                         <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-computer"></span>
@@ -367,7 +372,7 @@
                 </div>
 
                 <div class="col">
-                    <div class="fbox-11  fbox--hover fb-1 r-12 h-100 w-100 bg-white p-4">
+                    <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
                         <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-credit-card"></span>
@@ -381,7 +386,7 @@
                 </div>
 
                 <div class="col">
-                    <div class="fbox-11  fbox--hover fb-1 r-12 h-100 w-100 bg-white p-4">
+                    <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
                         <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-time"></span>
@@ -395,7 +400,7 @@
                 </div>
 
                 <div class="col">
-                    <div class="fbox-11  fbox--hover fb-1 r-12 h-100 w-100 bg-white p-4">
+                    <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
                         <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-check-1"></span>
@@ -409,7 +414,7 @@
                 </div>
 
                 <div class="col">
-                    <div class="fbox-11  fbox--hover fb-1 r-12 h-100 w-100 bg-white p-4">
+                    <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
                         <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-profits"></span>
@@ -705,20 +710,32 @@
 <!-- Testimonioals section ends -->
 
 <!-- Contact Start -->
-<section id="contact" class="py-80 bg--green-100">
+<section id="contact" class="pt-0 pb-80">
     <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-md-6 md-mb-50 order-md-1 order-2">
-                <div class="sec-title2 mb-40">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-12">
+                <div class="section-title mb-40">
                     <h2 class="s-28 mb-5">We’re Here to <span class="color--green-500">Assist You</span></h2>
-                    <p class="description mt-0">Drop us a message with your basic information, and our team will get
+                    <p class="description mt-0 s-16 color--grey">Drop us a message with your basic information, and our team will get
                         back to you shortly.</p>
                 </div>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-5 col-12 md-mb-50 order-md-1 order-2 bg--green-100 rounded-3 p-4">
                 <div class="row gy-3 gx-3">
-                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="col-md-12 col-12">
                         <div class="address-item">
                             <div class="address-text">
-                                <h6> Customer Support </h6>
+                                <h5 class="color--green-500">Address</h5>
+                                <p class="address-txt">{{ env('COMPANY_ADDRESS') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12">
+                        <div class="address-item">
+                            <div class="address-text">
+                                <h5 class="color--green-500"> Customer Support </h5>
                                 <p class="address-txt"><a
                                         href="tel:{{ str_ireplace(" ","",env('COMPANY_MOBILE')) }}">{{ env('COMPANY_MOBILE') }}</a>
                                 </p>
@@ -726,10 +743,10 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-md-6 col-12">
+                    <div class="col-md-12 col-12">
                         <div class="address-item">
                             <div class="address-text">
-                                <h6> Mail Us </h6>
+                                <h5 class="color--green-500"> Mail Us </h5>
                                 <p class="address-txt"><a
                                         href="mailto:{{ str_ireplace(" ","",env('COMPANY_SUPPORT_MAIL')) }}">{{ env('COMPANY_SUPPORT_MAIL') }}</a>
                                 </p>
@@ -737,19 +754,12 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="address-item">
-                            <div class="address-text">
-                                <h6> Address </h6>
-                                <p class="address-txt">{{ env('COMPANY_ADDRESS') }}</p>
-                            </div>
-                        </div>
-                    </div>
+                
 
-                    <div class="col-lg-6 col-md-6 col-12">
+                    <div class="col-md-12 col-12">
                         <div class="address-item">
                             <div class="address-text">
-                                <h6> Working Hours </h6>
+                                <h5 class="color--green-500"> Working Hours </h5>
                                 <p class="address-txt">
                                     Monday to Saturday: 10:00 AM - 5:00 PM<br>
                                     Sunday: Closed</p>
@@ -758,10 +768,9 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-6 py-md-0 py-4 order-md-2 order-1">
+            <div class="col-md-7 col-12 py-md-0 py-4 order-md-2 order-1">
                 <div class="h-100">
-                    <div class="card shadow border h-100">
+                    <div class=" shadow-none h-100 border-0 rounded-0 bg-white p-4">
                         <div class="card-body">
                             <p class="w-400 mb-20">
                                 Fill out the form below and you'll hear from us soon.
@@ -810,7 +819,7 @@
                                         </div>
                                         @component('components.ajax-error',['field'=>'desc'])@endcomponent
                                     </div>
-                                    <div class="col-12 text-center">
+                                    <div class="col-12 text-start">
                                         <button type="submit" class="s-14 btn btn--green-400 hover--tra-black submit"
                                             id="submit-btn">Submit Request</button>
                                     </div>
@@ -933,7 +942,7 @@ $(document).ready(function() {
                 beforeSend: function() {
                     $("#submit-btn").html(
                         '<span class="spinner-border spinner-border-sm"></span> Submit Request '
-                        )
+                    )
                     $("#submit-btn").attr('disabled', true);
                 },
                 success: function(result) {
