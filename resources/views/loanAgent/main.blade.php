@@ -184,7 +184,8 @@
                     <div class="fbox-8 fbox--hover fb-1 r-12 border">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
-                                <span class="flaticon-layers-1"></span>
+                                  <img class="img-fluid"
+                                src="{{ asset('front/images/Strategic-Lending-Network.png') }}" alt="feature-image">
                             </div>
                         </div>
                         <div class="fbox-txt">
@@ -197,7 +198,8 @@
                     <div class="fbox-8 fbox--hover fb-2 r-12 border">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
-                                <span class="flaticon-computer-1"></span>
+                                <img class="img-fluid"
+                                src="{{ asset('front/images/Completely-Online-Process.png') }}" alt="feature-image">
                             </div>
                         </div>
                         <div class="fbox-txt">
@@ -210,7 +212,8 @@
                     <div class="fbox-8 fbox--hover fb-2 r-12 border">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
-                                <span class="flaticon-click-1"></span>
+                   <img class="img-fluid"
+                                src="{{ asset('front/images/Self-Apply-Feature.png') }}" alt="feature-image">
                             </div>
                         </div>
                         <div class="fbox-txt">
@@ -223,7 +226,8 @@
                     <div class="fbox-8 fbox--hover fb-3 r-12 border">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
-                                <span class="flaticon-tech-support"></span>
+                        <img class="img-fluid"
+                                src="{{ asset('front/images/Loan-Agent.png') }}" alt="feature-image">
                             </div>
                         </div>
                         <div class="fbox-txt">
