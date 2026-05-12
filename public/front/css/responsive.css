@@ -1644,7 +1644,7 @@
   /*   HERO
   /*------------------------------------------*/
 
-  .hero-section { margin-top: 80px; }
+ 
 
   .hero-section h2 { margin-bottom: 18px; }
   .hero-section h2.s-48, .hero-section h2.s-50 { margin-bottom: 24px; }
@@ -1723,7 +1723,11 @@
   .hero-6-txt p.p-lg { margin-bottom: 18px; }
 
   /* HERO-7 */
+<<<<<<< Updated upstream
   #hero-7 { padding-top: 80px; padding-bottom: 80px; }
+=======
+  #hero-7 { padding-bottom: 0px; }
+>>>>>>> Stashed changes
   .hero-7-txt p.p-lg { margin-bottom: 15px; }
   #hero-7 .quick-form { margin-right: 2%; }
   .hero-7-img { padding-left: 5px; }
@@ -3059,7 +3063,7 @@
   /*   HERO
   /*------------------------------------------*/
 
-  .hero-section { margin-top: 80px; }
+  .hero-section { margin-top: 80px; padding-top: 25px !important; }
 
   .hero-section h2 { margin-bottom: 15px; }
   .hero-section h2.s-48, .hero-section h2.s-50 { margin-bottom: 25px; }

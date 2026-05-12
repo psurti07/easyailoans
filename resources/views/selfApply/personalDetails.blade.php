@@ -161,7 +161,7 @@
                                     @component('components.ajax-error',['field'=>'state'])@endcomponent
                                 </div>
                                 <div class="text-start">
-                                    <button type="submit" class="s-14 btn btn--theme hover--theme submit w-100"
+                                    <button type="submit" class="s-14 btn btn--theme hover--theme submit"
                                         id="submit-btn">Continue</button>
                                 </div>
                             </div>

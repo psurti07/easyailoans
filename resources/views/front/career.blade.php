@@ -71,7 +71,7 @@
                 <div class="col">
                     <div class="fbox-11 fbox--hover fb-1 r-12 w-100 bg-white p-4 mb-0">
                         <div class="fbox-ico-wrap">
-                            <div class="fbox-ico ico-50 mb-0">
+                            <div class="fbox-ico ico-40 mb-0">
                                 <div class="shape-ico">
                                     <span class="flaticon-profits color--theme"></span>
                                 </div>
@@ -86,7 +86,7 @@
                 <div class="col">
                     <div class="fbox-11 fbox--hover fb-1 r-12 w-100 bg-white p-4 mb-0">
                         <div class="fbox-ico-wrap">
-                            <div class="fbox-ico ico-50 mb-0">
+                            <div class="fbox-ico ico-40 mb-0">
                                 <div class="shape-ico">
                                     <span class="flaticon-workflow-2 color--theme"></span>
                                 </div>
@@ -101,7 +101,7 @@
                 <div class="col">
                     <div class="fbox-11 fbox--hover fb-1 r-12 w-100 bg-white p-4 mb-0">
                         <div class="fbox-ico-wrap">
-                            <div class="fbox-ico ico-50 mb-0">
+                            <div class="fbox-ico ico-40 mb-0">
                                 <div class="shape-ico">
                                     <span class="flaticon-prioritize color--theme"></span>
                                 </div>
@@ -116,7 +116,7 @@
                 <div class="col">
                     <div class="fbox-11 fbox--hover fb-1 r-12 w-100 bg-white p-4 mb-0">
                         <div class="fbox-ico-wrap">
-                            <div class="fbox-ico ico-50 mb-0">
+                            <div class="fbox-ico ico-40 mb-0">
                                 <div class="shape-ico">
                                     <span class="flaticon-money color--theme"></span>
                                 </div>
@@ -131,7 +131,7 @@
                 <div class="col">
                     <div class="fbox-11 fbox--hover fb-1 r-12 w-100 bg-white p-4 mb-0">
                         <div class="fbox-ico-wrap">
-                            <div class="fbox-ico ico-50 mb-0">
+                            <div class="fbox-ico ico-40 mb-0">
                                 <div class="shape-ico">
                                     <span class="flaticon-fast-food color--theme"></span>
                                 </div>
@@ -146,7 +146,7 @@
                 <div class="col">
                     <div class="fbox-11 fbox--hover fb-1 r-12 w-100 bg-white p-4 mb-0">
                         <div class="fbox-ico-wrap">
-                            <div class="fbox-ico ico-50 mb-0">
+                            <div class="fbox-ico ico-40 mb-0">
                                 <div class="shape-ico">
                                     <span class="flaticon-diamond color--theme"></span>
                                 </div>

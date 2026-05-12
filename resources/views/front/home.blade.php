@@ -768,6 +768,7 @@
                     </div>
                 </div>
             </div>
+<<<<<<< Updated upstream
             <div class="col-md-7 col-12 py-md-0 py-4 order-md-2 order-1">
                 <div class="h-100">
                     <div class=" shadow-none h-100 border-0 rounded-0 bg-white p-4">
@@ -785,6 +786,22 @@
                                             <label for="firstname">Full Name *</label>
                                         </div>
                                         @component('components.ajax-error',['field'=>'fullname'])@endcomponent
+=======
+            <div class="col-md-7 col-12 py-md-0 py-0 order-md-2 order-1 mb-md-0 mb-4">
+                <div class="h-100 p-4 bg--white-100 block-shadow r-08">
+                    <div class="card-body">
+                        <p class="w-400 mb-20">
+                            Fill out the form below and you'll hear from us soon.
+                        </p>
+                        <form method="post" action="{{ route('front.contact.us.store') }}"
+                            class="contact-form career-form" enctype="multipart/form-data">
+                            <div class="row gx-2 gy-2">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="form-group form-floating s-15">
+                                        <input id="form_name" name="fullname" type="text" class="form-control name mb-0"
+                                            placeholder="">
+                                        <label for="firstname">Full Name *</label>
+>>>>>>> Stashed changes
                                     </div>
                                     <div class="col-md-6 col-sm-12">
                                         <div class="form-group form-floating">
