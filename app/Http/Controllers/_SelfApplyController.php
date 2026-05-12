@@ -31,6 +31,7 @@ use App\Http\Controllers\CipherPayController as CipherPay;
 
 class SelfApplyController extends Controller
 {
+
     public $mainurl;
     public $key;
     public $partnerid;
@@ -41,7 +42,7 @@ class SelfApplyController extends Controller
     public $aesIv;
     public $publicKeyHeader;
     public $partnerToken;
-
+    
     public function __construct()
     {
         $this->mainurl = "https://api.cipherpay.in/api/v3/";

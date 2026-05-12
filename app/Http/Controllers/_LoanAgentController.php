@@ -37,7 +37,7 @@ use App\Http\Controllers\CipherPayController as CipherPay;
 class LoanAgentController extends Controller
 {
 
-public $mainurl;
+    public $mainurl;
     public $key;
     public $partnerid;
     public $headerJson;
@@ -1742,7 +1742,7 @@ dwIDAQAB
                     'type' => "QR"
                 ]
             );
-         
+      
             Session::forget('refid');
             Session::put('refid', $refId);
             Session::save();

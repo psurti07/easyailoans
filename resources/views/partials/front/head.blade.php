@@ -52,8 +52,8 @@
   <link href="{{ asset('front/css/scrollbar.css') }}" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.css" />
   @stack('css')
-
-  <!-- Google tag (gtag.js) -->
+ 
+ <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18035211164"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -95,31 +95,20 @@
 
     gtag('config', 'G-MP9T67XK0E');
   </script>
-
-
+  
+  
   <!-- Facebook Domain + Pixel Code -->
-  <meta name="facebook-domain-verification" content="{{ getFacebookDomainVerificationId() }}" />
-  <script>
-    ! function(f, b, e, v, n, t, s) {
-      if (f.fbq) return;
-      n = f.fbq = function() {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = '2.0';
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '{{ getFacebookPixelKey() }}');
-    fbq('track', 'PageView');
-  </script>
+<meta name="facebook-domain-verification" content="{{ getFacebookDomainVerificationId() }}" /><script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '{{ getFacebookPixelKey() }}');
+  fbq('track', 'PageView');
+</script>
   @include('stacks.css.front.style')
 </head>

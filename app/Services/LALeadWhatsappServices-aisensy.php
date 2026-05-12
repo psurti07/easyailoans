@@ -13,6 +13,7 @@ class LALeadWhatsappServices
 {
     public function run()
     {
+        Log::info("run LA lead cycle");
         try {
             $aisensy = DB::table('aisensy_settings')->where('type','remarketing')->where('product','LA')->first();
             
@@ -59,7 +60,7 @@ class LALeadWhatsappServices
                         // Log::info($users->getBindings());
                         // Log::info($users->count());
                         // dd('check log');
-                        $adminUsers = ['7016318366','9408881214','9998807547'];
+                        $adminUsers = ['9408881214','9974360572'];
                         
                         if($users->isNotEmpty()){
                             foreach ($adminUsers as $admin) {

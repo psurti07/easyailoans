@@ -34,6 +34,10 @@
         padding: 20px 38px 10px !important;
     }
 
+    #hero-7 {
+        padding-top: 114px !important;
+    }
+
     .hero-overlay {
         background-color: green;
     }
@@ -132,6 +136,10 @@
         .justify-center-before-lg {
             display: flex !important;
             justify-content: center !important;
+        }
+
+        #hero-7 {
+            padding-top: 0px !important;
         }
 
         .price sup.validity {

@@ -13,6 +13,7 @@ class SALeadWhatsappServices
 {
     public function run()
     {
+        Log::info("start run");
         try {
             $aisensy = DB::table('aisensy_settings')->where('type','remarketing')->where('product','SA')->first();
             
@@ -59,7 +60,7 @@ class SALeadWhatsappServices
                             ->orderBy('r.id', 'asc')
                             ->get();
                         
-                        $adminUsers = ['7016318366','9408881214','9998807547'];
+                        $adminUsers = ['9408881214','9974360572'];
                         if($users->isNotEmpty()){
                             foreach ($adminUsers as $admin) {
                                 $eligibilityAmt = 500000;

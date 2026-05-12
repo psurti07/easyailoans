@@ -41,7 +41,6 @@ use Razorpay\Api\Api;
 
 class SelfApplyController extends Controller
 {
-
     public $lifetime;
     public function __construct()
     {
@@ -864,7 +863,7 @@ class SelfApplyController extends Controller
                 if (!$existingMembership) {
                     $membershipId = MembershipOrder::create($membershipData)->id;
                 }
-
+                
                 $passwordkey = Hash::make($password);
                 $refcode = strtolower(substr(str_replace(" ", "", $userData->fullname), 0, 3));
                 $refcode .= substr($userData->mobile, -4);
@@ -979,8 +978,8 @@ class SelfApplyController extends Controller
                 /* send email in brevo */
                 sendBrevoHtmlMail2($mailData, 'Congratulations! Payment Successful for EasyAILoans Self-Apply Plan.', $sendGreetings, 3, $attachments);
 
-                // application remarks data insert
                 $staffID = assignAgentSelf();
+                // application remarks data insert
                 DB::table('application_remarks')->updateOrInsert(
                     [
                         'application_id' => $userData->id,
@@ -994,6 +993,7 @@ class SelfApplyController extends Controller
                         'staff_id' => $staffID->id,
                     ]
                 );
+
 
                 UserRegistration::where('id', $userData->userid)->update(['process_step' => 5, 'staff_id' => $staffID->id]);
 
@@ -1153,8 +1153,6 @@ class SelfApplyController extends Controller
                     /* interakt code ends here */
                 }
             }
-            Cookie::queue('user_mobile', '9408881214');
-            Session::put('user_password', 'Office1221');
             return view('selfApply.paymentSuccess', compact('meta', 'data', 'orderData'));
         } catch (\Exception $e) {
             Log::info('catch');
@@ -2214,93 +2212,130 @@ class SelfApplyController extends Controller
         return view('selfApply.offers.offer-4', compact('meta', 'productData'));
     }
 
-    public function getOffer4(Request $request)
-    {
-        try {
-            $inputs = $request->all();
-            $request->validate([
-                'first_name' => 'required',
-                'last_name'  => 'required',
-                'email'      => 'required|email',
-                'mobile'     => ['required', 'numeric', 'regex:/^[6-9]\d{9}$/']
-            ]);
+    // public function getOffer4(Request $request)
+    // {
+    //     try {
+    //         $inputs = $request->all();
+    //         $request->validate([
+    //             'first_name' => 'required',
+    //             'last_name' => 'required',
+    //             'email' => 'required|email',
+    //             'mobile' => ['required', 'numeric', 'regex:/^[6-9]\d{9}$/']
+    //         ]);
+    //         /* first check in user registration */
+    //         $profile = $this->checkUserProcess($inputs);
+    //         if ($profile) {
+    //             return response()->json($profile);
+    //         } else {
+    //             $first_name = $inputs['first_name'];
+    //             $last_name = $inputs['last_name'];
+    //             $mobile = $inputs['mobile'];
+    //             $email = $inputs['email'];
+    //         }
+    //         /* product Data */
+    //         $products = Product::where('productslug', env('SA_OFFER_4'))->first();
+    //         // Log::info('products - '.json_encode($products));
+    //         /* set amount of offer */
+    //         $amount = ($products->inOffer == 1) ? $products->offeramount : $products->amount;
+    //         $grandAmount = $amount + ($amount * 0.18);
 
-            $profile = $this->checkUserProcess($inputs);
-            if ($profile) {
-                return response()->json($profile);
-            } else {
-                $buyerFirstName = $inputs['first_name'];
-                $buyerLastName  = $inputs['last_name'];
-                $buyerPhone     = $inputs['mobile'];
-                $buyerEmail     = $inputs['email'];
-            }
+    //         $uatNumbers = explode(',', env('UAT_MOBILE_NUMBERS', '')); // Convert the string into an array
 
-            $products = Product::where('productslug', config('constant.SA_OFFER_4'))->first();
+    //         foreach ($uatNumbers as $uatNum) {
+    //             if ($uatNum == $mobile) {
+    //                 $grandAmount = 1;
+    //                 break; // Exit the loop once a match is found
+    //             }
+    //         }
 
-            $amount = ($products->inOffer == 1) ? $products->offeramount : $products->amount;
-            $grandAmount = $amount + ($amount * 0.18);
+    //         /* insert the adta in cardoffer */
+    //         $offerId = DB::table('cardoffer')->updateOrInsert(
+    //             ['mobile' => $mobile], // Search condition
+    //             [ // Values to update or insert
+    //                 'rec_date' => date('Y-m-d H:i:s'),
+    //                 'offerpage' => 7, //sa offer 4 or star offer
+    //                 'first_name' => $first_name,
+    //                 'last_name' => $last_name,
+    //                 'emailid' => $email,
+    //                 'amount' => round($grandAmount),
+    //                 'isCustomer' => 0,
+    //                 'isActive' => 0,
+    //                 'isDelete' => 0,
+    //             ]
+    //         );
 
-            $uatNumbers = explode(',', env('UAT_MOBILE_NUMBERS', '')); // Convert the string into an array
+    //         // Get the ID of the updated or inserted record
+    //         $record = DB::table('cardoffer')->where('mobile', $mobile)->first();
+    //         $offerId = $record->id;
 
-            foreach ($uatNumbers as $uatNum) {
-                if ($uatNum == $buyerPhone) {
-                    $grandAmount = 1;
-                    break; // Exit the loop once a match is found
-                }
-            }
+    //         $orderid = number_format(microtime(true) * 1000, 0, '.', '');
+    //         $password = trim(random_code(6));
+    //         Session::put('orderid', $orderid);
+    //         Session::save();
+    //         Cache::put('user_password', $password, $this->lifetime);
+    //         //Log::info('order ID - ' .$orderid);
 
-            // Razorpay works in paise
-            $razorAmount = (int) round($grandAmount * 100);
+    //         // $returnUrl = 'https://easyailoans.com/api/self-apply/star-offer-response';
+    //         $returnUrl = route('api.self.apply.offer4Response');
 
-            // Create Razorpay Order
-            $orderData = [
-                'receipt' => 'order_' . time(),
-                'amount' => $razorAmount,
-                'currency' => 'INR'
-            ];
+    //         if (env('LYRA_MODE') == "PROD") {
+    //             $curlurl = "https://api.in.lyra.com/pg/rest/v1/charge";
+    //         } else {
+    //             $curlurl = "https://api.in.lyra.com/pg/rest/v1/charge";
+    //         }
 
-            $razor = generateRazorpayOrder($orderData);
-            $orderId = $razor->id;
-            Log::info("orderid : " . $orderId);
+    //         /* lyra post data */
+    //         $postData = array(
+    //             "orderId" => $orderid,
+    //             "currency" => 'INR',
+    //             "amount" => floor($grandAmount) * 100,
+    //             "orderInfo" => $products->productname,
+    //             "maxAgeInHours" => '240',
+    //             "customer" => array(
+    //                 "uid" => $offerId,
+    //                 "name" => $first_name . ' ' . $last_name,
+    //                 "emailId" => $email,
+    //                 "phone" => $mobile
+    //             ),
+    //             "webhook" => array(
+    //                 "url" => $returnUrl
+    //             ),
+    //             "return" => array(
+    //                 "method" => 'POST',
+    //                 "url" => $returnUrl,
+    //                 "timeout" => '0'
+    //             )
+    //         );
+    //         //Log::info('lyra entry - '. json_encode($postData));
+    //         /* generate lyra paymenturl */
+    //         $payurl = getlyrapaymenturl($curlurl, $postData);
+    //         $lyraData = array(
+    //             'rec_date' => now(),
+    //             'entryfor' => 9, //la offer 1 or great deal offer
+    //             'userid' => $offerId,
+    //             'orderid' => $orderid,
+    //             'orderamount' => floor($grandAmount),
+    //             'ordernote' => $products->productname,
+    //         );
+    //         //Log::info('Lyra insert - '. json_encode($lyraData));
+    //         $response = LyraEntry::insert($lyraData);
 
-            // Keep SAME route (IMPORTANT)
-            $returnUrl = route('api.self.apply.offer4Response', [
-                'orderId' => $orderId,
-                'token'   => 'razorpay'
-            ]);
-
-            // Save DB (same as your logic)
-            $offer = DB::table('cardoffer')->updateOrInsert(
-                ['mobile' => $buyerPhone],
-                [
-                    'rec_date'   => now(),
-                    'offerpage'  => 7,
-                    'first_name' => $buyerFirstName,
-                    'last_name'  => $buyerLastName,
-                    'emailid'    => $buyerEmail,
-                    'amount'     => $grandAmount,
-                ]
-            );
-
-            return response()->json([
-                'type' => 'SUCCESS',
-                'message' => 'Redirecting...',
-                'url' => route('razorpay.page', [
-                    'order_id' => $orderId,
-                    'amount'   => $razorAmount,
-                    'name'     => $buyerFirstName . ' ' . $buyerLastName,
-                    'email'    => $buyerEmail,
-                    'mobile'   => $buyerPhone,
-                    'returnUrl' => $returnUrl
-                ])
-            ]);
-        } catch (ValidationException $e) {
-            return response()->json(array('type' => 'ERROR', 'errors' => $e->errors()), 422);
-        } catch (\Exception $e) {
-            Log::info($e->getMessage());
-            return response()->json(['type' => 'ERROR', 'message' => 'Oops! Something went wrong.']);
-        }
-    }
+    //         if ($payurl) {
+    //             if ($payurl->paymentLink) {
+    //                 return response()->json(array('type' => 'SUCCESS', 'message' => 'Please wait... We are redirecting to the payment page.', 'url' => $payurl->paymentLink));
+    //             } else {
+    //                 return response()->json(array('type' => 'ERROR', 'url' => route('loan.agent.offer1')));
+    //             }
+    //         } else {
+    //             return response()->json(array('type' => 'ERROR', 'url' => route('loan.agent.offer1')));
+    //         }
+    //     } catch (ValidationException $e) {
+    //         return response()->json(array('type' => 'ERROR', 'errors' => $e->errors()), 422);
+    //     } catch (\Exception $e) {
+    //         Log::info($e->getMessage());
+    //         return response()->json(array('type' => 'ERROR', 'message' => 'Oops! Something went wrong.'));
+    //     }
+    // }
 
     // public function offer4Response(Request $request)
     // {
@@ -2397,58 +2432,169 @@ class SelfApplyController extends Controller
     //         dd('Ops! Something went wrong.');
     //     }
     // }
+    
+    public function getOffer4(Request $request)
+    {
+        try {
+            $inputs = $request->all();
+            $request->validate([
+                'first_name' => 'required',
+                'last_name'  => 'required',
+                'email'      => 'required|email',
+                'mobile'     => ['required', 'numeric', 'regex:/^[6-9]\d{9}$/']
+            ]);
+    
+            $profile = $this->checkUserProcess($inputs);
+            if ($profile) {
+                return response()->json($profile);
+            } else {
+                $buyerFirstName = $inputs['first_name'];
+                $buyerLastName  = $inputs['last_name'];
+                $buyerPhone     = $inputs['mobile'];
+                $buyerEmail     = $inputs['email'];
+            }
+    
+            $products = Product::where('productslug', config('constant.SA_OFFER_4'))->first();
+    
+            $amount = ($products->inOffer == 1) ? $products->offeramount : $products->amount;
+            $grandAmount = $amount + ($amount * 0.18);
+    
+            $uatNumbers = explode(',', env('UAT_MOBILE_NUMBERS', ''));
+            foreach ($uatNumbers as $uatNum) {
+                if ($uatNum == $buyerPhone) {
+                    $grandAmount = 1;
+                    break;
+                }
+            }
+    
+            $razorAmount = (int) round($grandAmount * 100);
+    
+            $orderData = [
+                'receipt' => 'order_' . time(),
+                'amount' => $razorAmount,
+                'currency' => 'INR'
+            ];
+    
+            $razor = generateRazorpayOrder($orderData);
+            $orderId = $razor->id;
 
+            $returnUrl = route('api.self.apply.offer4Response', [
+                'orderId' => $orderId,
+                'token'   => 'razorpay'
+            ]);
+    
+            // Save to cardoffer table first
+            $cardofferId = DB::table('cardoffer')->updateOrInsert(
+                ['mobile' => $buyerPhone],
+                [
+                    'rec_date'   => now(),
+                    'offerpage'  => 7,
+                    'first_name' => $buyerFirstName,
+                    'last_name'  => $buyerLastName,
+                    'emailid'    => $buyerEmail,
+                    'amount'     => $grandAmount,
+                ]
+            );
+    
+            // Get the inserted/updated record ID
+            $cardofferRecord = DB::table('cardoffer')->where('mobile', $buyerPhone)->first();
+    
+            // ✅ CREATE RAZORPAY ENTRY RECORD
+            $razorpayEntry = RazorpayEntry::create([
+                'rec_date'     => now(),
+                'entryfor'     => 11,
+                'userid'       => $cardofferRecord->id,
+                'orderid'      => $orderId,
+                'orderamount'  => $grandAmount,
+                'ordernote'    => 'Self Apply',
+                'referenceid'  => null,
+                'txstatus'     => 'PENDING',
+                'paymentmode'  => null,
+            ]);
+    
+            return response()->json([
+                'type' => 'SUCCESS',
+                'message' => 'Redirecting...',
+                'url' => route('razorpay.page', [
+                    'order_id' => $orderId,
+                    'amount'   => $razorAmount,
+                    'name'     => $buyerFirstName . ' ' . $buyerLastName,
+                    'email'    => $buyerEmail,
+                    'mobile'   => $buyerPhone,
+                    'returnUrl' => $returnUrl
+                ])
+            ]);
+        } catch (ValidationException $e) {
+            return response()->json(array('type' => 'ERROR', 'errors' => $e->errors()), 422);
+        } catch (\Exception $e) {
+            Log::info($e->getMessage());
+            return response()->json(['type' => 'ERROR', 'message' => 'Oops! Something went wrong.']);
+        }
+    }
+    
     public function offer4Response(Request $request)
     {
         try {
-
+            
             $input = $request->all();
             $meta = selfApplyMeta();
-
-            // Razorpay credentials
+    
             $api = new Api(config('services.razorpay.key'), config('services.razorpay.secret'));
-
+    
             $razorpay_payment_id = $input['razorpay_payment_id'] ?? null;
             $razorpay_order_id   = $input['razorpay_order_id'] ?? null;
             $razorpay_signature  = $input['razorpay_signature'] ?? null;
-
+    
             if (!$razorpay_payment_id || !$razorpay_order_id || !$razorpay_signature) {
-                Log::error('Missing Razorpay Data', $input);
-
                 return view('cardoffer-response', [
                     'meta' => $meta,
-                    'response' => FALSE,
+                    'response' => false,
                 ]);
             }
-
-            // ✅ Verify Signature
+    
             $attributes = [
                 'razorpay_order_id' => $razorpay_order_id,
                 'razorpay_payment_id' => $razorpay_payment_id,
                 'razorpay_signature' => $razorpay_signature
             ];
-
+    
             try {
                 $api->utility->verifyPaymentSignature($attributes);
                 $status = 'SUCCESS';
             } catch (\Exception $e) {
                 $status = 'FAILED';
             }
-
+    
+            // Check if record exists
             $paymentdata = RazorpayEntry::where('orderid', $razorpay_order_id)->first();
-
-            // Update Paygic log
+    
+            if (!$paymentdata) {
+                return view('cardoffer-response', [
+                    'meta' => $meta,
+                    'response' => false,
+                ]);
+            }
+            
+            // Update Razorpay log
             RazorpayEntry::where('id', $paymentdata->id)->update([
                 'rec_date'     => now(),
                 'referenceid'  => $razorpay_payment_id,
                 'txstatus'     => $status,
                 'paymentmode'  => '',
             ]);
-
+    
             if ($status == 'SUCCESS') {
                 $userData = Cardoffer::where('id', $paymentdata->userid)->first();
+                
+                if (!$userData) {
+                    return view('cardoffer-response', [
+                        'meta' => $meta,
+                        'response' => false,
+                    ]);
+                }
+                
                 $cardno = random_code_num(16);
-
+    
                 $data = array(
                     'rec_date' => date('Y-m-d H:i:s'),
                     'card_number' => $cardno,
@@ -2457,43 +2603,42 @@ class SelfApplyController extends Controller
                     'paymentid' => $razorpay_payment_id,
                     'isActive' => 1
                 );
-
-                $response = Cardoffer::where('id', $paymentdata->userid)->update($data);
-
-                if ($response) {
+    
+                $updateCardResponse = Cardoffer::where('id', $paymentdata->userid)->update($data);
+    
+                if ($updateCardResponse) {
                     $regUser = UserRegistration::where('mobile', $userData->mobile)
                         ->where(['isActive' => 1, 'isDelete' => 0])
                         ->first();
                     $txnId = $razorpay_payment_id;
                     
                     if ($regUser) {
-                        $converted = convertIntoCustomer($cardno, $regUser, $userData, $paymentdata->orderamount ?? 0, $txnId, 1, 'self-apply', 'SA_', 7);
-                        if (!$converted) {
-                            Log::error("Conversion to customer failed for user: " . $regUser->id);
-                            dd('check log');
-                        }
+                        convertIntoCustomer($cardno, $regUser, $userData, $paymentdata->orderamount ?? 0, $txnId, 1, 'self-apply', 'SA_', 7);
                     } else {
                         sendPaymentGreetings($userData->first_name . ' ' . $userData->last_name, $userData->mobile, $userData->emailid);
                     }
                 }
-
-                $sent = sendPaymentGreetings($userData->first_name . ' ' . $userData->last_name, $userData->mobile, $userData->emailid);
-
+    
+                sendPaymentGreetings($userData->first_name . ' ' . $userData->last_name, $userData->mobile, $userData->emailid);
+    
                 return view('cardoffer-response', [
                     'meta' => $meta,
-                    'response' => TRUE,
+                    'response' => true,
                 ]);
             } else {
                 return view('cardoffer-response', [
                     'meta' => $meta,
-                    'response' => FALSE,
+                    'response' => false,
                 ]);
             }
         } catch (\Exception $e) {
-            Log::info($e->getMessage());
-            dd('Ops! Something went wrong.');
+            return view('cardoffer-response', [
+                'meta' => $meta ?? selfApplyMeta(),
+                'response' => false,
+            ]);
         }
     }
+    
 
     /* offer 5 */
     public function offer5()

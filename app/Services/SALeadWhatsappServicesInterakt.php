@@ -14,18 +14,19 @@ class SALeadWhatsappServicesInterakt
     public function run()
     {
         try {
+            Log::info("start run SALeadWhatsappServicesInterakt");
             $configs = DB::table('interakt_settings')->where('product','SA')->where('type','remarketing')->first();
             $now = now();
             $nowFormatted = $now->format('H:i');
 
             $schedules = config('remarketing.saLeadWhatsapp');
-            Log::info($schedules);
+           
             foreach ($schedules as $daysAgo => $times) {
                 $response = $wpresponse = "";
                 $arrnumbers = 1;
                 foreach ($times as $time) {
                     $scheduledTime = Carbon::createFromFormat('H:i', $time);
-                    Log::info($scheduledTime);
+
                     if ($now->diffInMinutes($scheduledTime) == 0) {
                         $targetDate = $now->copy()->subDays($daysAgo)->toDateString();
                         
@@ -54,8 +55,7 @@ class SALeadWhatsappServicesInterakt
                             ->orderBy('r.id', 'asc')
                             ->get();
                         
-                        $adminUsers = ['9408881214','9974360572'];
-                        Log::info($adminUsers);
+                        $adminUsers = [];
                         if($users->isNotEmpty()){
                             $data1 = array(
                 				'rec_date' => date('Y-m-d H:i:s'),

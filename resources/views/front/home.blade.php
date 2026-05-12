@@ -30,7 +30,7 @@
             </div>
             <div class="col-md-6 col-lg-6 col-12 ">
                 <div class="hero-7-img d-flex justify-content-center align-items-start">
-                    <img src="{{ asset('front/images/home-image.png') }}" alt="easyailoans" class="img-fluid p-0">
+                    <img src="{{ asset('front/images/Who-Can-Apply.webp') }}" alt="easyailoans" class="img-fluid p-0">
                 </div>
             </div>
         </div>
@@ -132,8 +132,7 @@
                     <div class="fbox-8 fbox--hover fb-1 r-12 border">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
-                                <img class="img-fluid" src="{{ asset('front/images/Strategic-Lending-Network.png') }}"
-                                    alt="feature-image">
+                                <span class="flaticon-layers-1"></span>
                             </div>
                         </div>
                         <div class="fbox-txt">
@@ -146,8 +145,7 @@
                     <div class="fbox-8 fbox--hover fb-2 r-12 border">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
-                                <img class="img-fluid" src="{{ asset('front/images/Completely-Online-Process.png') }}"
-                                    alt="feature-image">
+                                <span class="flaticon-computer-1"></span>
                             </div>
                         </div>
                         <div class="fbox-txt">
@@ -160,8 +158,7 @@
                     <div class="fbox-8 fbox--hover fb-2 r-12 border">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
-                                <img class="img-fluid" src="{{ asset('front/images/Self-Apply-Feature.png') }}"
-                                    alt="feature-image">
+                                <span class="flaticon-click-1"></span>
                             </div>
                         </div>
                         <div class="fbox-txt">
@@ -174,8 +171,7 @@
                     <div class="fbox-8 fbox--hover fb-3 r-12 border">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
-                                <img class="img-fluid" src="{{ asset('front/images/Loan-Agent.png') }}"
-                                    alt="feature-image">
+                                <span class="flaticon-tech-support"></span>
                             </div>
                         </div>
                         <div class="fbox-txt">
@@ -195,67 +191,70 @@
 <div id="statistic-1" class=" ct-03 py-0 statistic-section division">
     <div class="container">
         <div class="row">
-            <div class="statistic-5-wrapper">
-                <div class="row row-cols-2 row-cols-md-4">
-                    <div class="col sec-1 py-50">
-                        <div id="sb-5-1" class="text-center">
-                            <div class="statistic-block">
-                                <div class="statistic-digit">
-                                    <h2 class="s-30 w-700 mb-10 text-white">
-                                        <span class="count-element">5000</span>+
-                                    </h2>
-                                </div>
-                                <div class="statistic-txt">
-                                    <h5 class="s-16 w-500 text-white">Applicants Assisted</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col sec-2 py-50">
-                        <div id="sb-5-3" class="text-center">
-                            <div class="statistic-block">
-                                <div class="statistic-digit">
-                                    <h2 class="s-30 w-700 mb-10 text-white">
-                                        <span class="count-element">10</span>+
-                                    </h2>
-                                </div>
-                                <div class="statistic-txt">
-                                    <h5 class="s-16 w-500 text-white">NBFC Partners</h5>
+          
+                <div class="statistic-5-wrapper">
+                    <div class="row row-cols-2 row-cols-md-4">
+                        <div class="col sec-1 py-50">
+                            <div id="sb-5-1" class="text-center">
+                                <div class="statistic-block">
+                                    <div class="statistic-digit">
+                                        <h2 class="s-30 w-700 mb-10 text-white">
+                                            <span class="count-element">5000</span>+
+                                        </h2>
+                                    </div>
+                                    <div class="statistic-txt">
+                                        <h5 class="s-16 w-500 text-white">Applicants Assisted</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col sec-3 py-50">
-                        <div id="sb-5-2" class="text-center">
-                            <div class="statistic-block">
-                                <div class="statistic-digit">
-                                    <h2 class="s-30 w-700 mb-10 text-white">
-                                        <span class="count-element">15</span>+
-                                    </h2>
-                                </div>
-                                <div class="statistic-txt">
-                                    <h5 class="s-16 w-500 text-white">Operational Team Members</h5>
+                        <div class="col sec-2 py-50">
+                            <div id="sb-5-3" class="text-center">
+                                <div class="statistic-block">
+                                    <div class="statistic-digit">
+                                        <h2 class="s-30 w-700 mb-10 text-white">
+                                            <span class="count-element">10</span>+
+                                        </h2>
+                                    </div>
+                                    <div class="statistic-txt">
+                                        <h5 class="s-16 w-500 text-white">NBFC Partners</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col sec-4 py-50">
-                        <div id="sb-5-4" class="text-center">
-                            <div class="statistic-block">
-                                <div class="statistic-digit">
-                                    <h2 class="s-30 w-700 mb-10 text-white">
-                                        <span class="count-element">100</span>%
-                                    </h2>
+                        <div class="col sec-3 py-50">
+                            <div id="sb-5-2" class="text-center">
+                                <div class="statistic-block">
+                                    <div class="statistic-digit">
+                                        <h2 class="s-30 w-700 mb-10 text-white">
+                                            <span class="count-element">15</span>+
+                                        </h2>
+                                    </div>
+                                    <div class="statistic-txt">
+                                        <h5 class="s-16 w-500 text-white">Operational Team Members</h5>
+                                    </div>
                                 </div>
-                                <div class="statistic-txt">
-                                    <h5 class="s-16 w-500 text-white">Digital Application Model</h5>
+                            </div>
+                        </div>
+                        <div class="col sec-4 py-50">
+                            <div id="sb-5-4" class="text-center">
+                                <div class="statistic-block">
+                                    <div class="statistic-digit">
+                                        <h2 class="s-30 w-700 mb-10 text-white">
+                                            <span class="count-element">100</span>%
+                                        </h2>
+                                    </div>
+                                    <div class="statistic-txt">
+                                        <h5 class="s-16 w-500 text-white">Digital Application Model</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+           
         </div>
+
     </div>
 </div>
 <!-- Trust Badges Section ends -->
@@ -277,10 +276,10 @@
             <div class="col-12 col-lg-6 align-items-center m-auto rounded-3">
                 <div
                     class="row fbox-wrapper text-center align-items-center m-auto border border--grey shadow rounded-3 mb-4 fbox-8 fbox--hover fb-1  border p-0">
-                    <div class="col-12 col-lg-12 p-0">
+                    <div class="col-12 col-lg-12">
                         <div class="img-block right-column text-center">
-                            <img class="img-fluid light-theme-img w-100"
-                                src="{{ asset('front/images/Quick-Self-Apply.jpg') }}" alt="feature-image">
+                            <img class="img-fluid light-theme-img"
+                                src="{{ asset('front/images/Easy-Self-Apply-ai.png') }}" alt="feature-image">
                         </div>
                     </div>
                     <div class="col-12 col-lg-12 bg--green-100 p-4">
@@ -300,10 +299,10 @@
             <div class="col-12 col-lg-6 align-items-center m-auto mt-0 rounded-3">
                 <div
                     class="row fbox-wrapper text-center align-items-center m-auto border border--grey shadow rounded-3 mb-4 fbox-8 fbox--hover fb-1  border p-0">
-                    <div class="col-12 col-lg-12 p-0">
+                    <div class="col-12 col-lg-12">
                         <div class="img-block right-column text-center">
-                            <img class="img-fluid light-theme-img w-100"
-                                src="{{ asset('front/images/Hire-Loan-Agent.jpg') }}" alt="feature-image">
+                            <img class="img-fluid light-theme-img"
+                                src="{{ asset('front/images/Hire-Loan-Agent-ai.png') }}" alt="feature-image">
                         </div>
                     </div>
                     <div class="col-12 col-lg-12 bg--green-100 p-4">
@@ -346,7 +345,7 @@
             <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-2">
                 <div class="col">
                     <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
-                        <div class="fbox-ico ico-40 mb-0">
+                        <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-mobile-search"></span>
                             </div>
@@ -360,7 +359,7 @@
 
                 <div class="col">
                     <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
-                        <div class="fbox-ico ico-40 mb-0">
+                        <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-computer"></span>
                             </div>
@@ -374,7 +373,7 @@
 
                 <div class="col">
                     <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
-                        <div class="fbox-ico ico-40 mb-0">
+                        <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-credit-card"></span>
                             </div>
@@ -388,7 +387,7 @@
 
                 <div class="col">
                     <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
-                        <div class="fbox-ico ico-40 mb-0">
+                        <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-time"></span>
                             </div>
@@ -402,7 +401,7 @@
 
                 <div class="col">
                     <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
-                        <div class="fbox-ico ico-40 mb-0">
+                        <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-check-1"></span>
                             </div>
@@ -416,7 +415,7 @@
 
                 <div class="col">
                     <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
-                        <div class="fbox-ico ico-40 mb-0">
+                        <div class="fbox-ico ico-50 mb-0">
                             <div class="shape-ico color--theme">
                                 <span class="flaticon-profits"></span>
                             </div>
@@ -717,19 +716,16 @@
             <div class="col-md-12 col-lg-12">
                 <div class="section-title mb-40">
                     <h2 class="s-28 mb-5">We’re Here to <span class="color--green-500">Assist You</span></h2>
-                    <p class="description mt-0 s-16 color--grey">Drop us a message with your basic information, and our
-                        team will get
+                    <p class="description mt-0 s-16 color--grey">Drop us a message with your basic information, and our team will get
                         back to you shortly.</p>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-5 col-12 md-mb-50 order-md-1 order-2">
-                <div class="p-4 bg--green-100 block-shadow r-08">
-   <div class="row gy-3 gx-3">
-                 <div class="card-body">
-                       <div class="col-md-12 col-12">
-                        <div class="address-item mb-3">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-5 col-12 md-mb-50 order-md-1 order-2 bg--green-100 rounded-3 p-4">
+                <div class="row gy-3 gx-3">
+                        <div class="col-md-12 col-12">
+                        <div class="address-item">
                             <div class="address-text">
                                 <h5 class="color--green-500">Address</h5>
                                 <p class="address-txt">{{ env('COMPANY_ADDRESS') }}</p>
@@ -737,7 +733,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 col-12">
-                        <div class="address-item mb-3">
+                        <div class="address-item">
                             <div class="address-text">
                                 <h5 class="color--green-500"> Customer Support </h5>
                                 <p class="address-txt"><a
@@ -746,8 +742,9 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-12 col-12">
-                        <div class="address-item mb-3">
+                        <div class="address-item">
                             <div class="address-text">
                                 <h5 class="color--green-500"> Mail Us </h5>
                                 <p class="address-txt"><a
@@ -756,6 +753,9 @@
                             </div>
                         </div>
                     </div>
+
+                
+
                     <div class="col-md-12 col-12">
                         <div class="address-item">
                             <div class="address-text">
@@ -766,67 +766,66 @@
                             </div>
                         </div>
                     </div>
-                 </div>
                 </div>
-                </div>
-             
             </div>
-            <div class="col-md-7 col-12 py-md-0 py-0 order-md-2 order-1">
-                <div class="h-100 p-4 bg--white-100 block-shadow r-08">
-                    <div class="card-body">
-                        <p class="w-400 mb-20">
-                            Fill out the form below and you'll hear from us soon.
-                        </p>
-                        <form method="post" action="{{ route('front.contact.us.store') }}"
-                            class="contact-form career-form" enctype="multipart/form-data">
-                            <div class="row gx-2 gy-2">
-                                <div class="col-md-6 col-sm-12">
-                                    <div class="form-group form-floating s-15">
-                                        <input id="form_name" name="fullname" type="text" class="form-control name mb-0"
-                                            placeholder="">
-                                        <label for="firstname">Full Name *</label>
+            <div class="col-md-7 col-12 py-md-0 py-4 order-md-2 order-1">
+                <div class="h-100">
+                    <div class=" shadow-none h-100 border-0 rounded-0 bg-white p-4">
+                        <div class="card-body">
+                            <p class="w-400 mb-20">
+                                Fill out the form below and you'll hear from us soon.
+                            </p>
+                            <form method="post" action="{{ route('front.contact.us.store') }}"
+                                class="contact-form career-form" enctype="multipart/form-data">
+                                <div class="row gx-2 gy-2">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group form-floating s-15">
+                                            <input id="form_name" name="fullname" type="text"
+                                                class="form-control name mb-0" placeholder="">
+                                            <label for="firstname">Full Name *</label>
+                                        </div>
+                                        @component('components.ajax-error',['field'=>'fullname'])@endcomponent
                                     </div>
-                                    @component('components.ajax-error',['field'=>'fullname'])@endcomponent
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <div class="form-group form-floating">
-                                        <input id="form_mobile" type="text" name="mobile"
-                                            class="numeric-input mb-0 form-control mobile" placeholder="" minlength="10"
-                                            maxlength="10" inputmode="numeric">
-                                        <label for="form_mobile">Mobile *</label>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group form-floating">
+                                            <input id="form_mobile" type="text" name="mobile"
+                                                class="numeric-input mb-0 form-control mobile" placeholder=""
+                                                minlength="10" maxlength="10" inputmode="numeric">
+                                            <label for="form_mobile">Mobile *</label>
+                                        </div>
+                                        @component('components.ajax-error',['field'=>'mobile'])@endcomponent
                                     </div>
-                                    @component('components.ajax-error',['field'=>'mobile'])@endcomponent
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <div class="form-group form-floating">
-                                        <input id="form_email" type="email" name="email" class="mb-0 form-control email"
-                                            placeholder="">
-                                        <label for="form_email">Email *</label>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group form-floating">
+                                            <input id="form_email" type="email" name="email"
+                                                class="mb-0 form-control email" placeholder="">
+                                            <label for="form_email">Email *</label>
+                                        </div>
+                                        @component('components.ajax-error',['field'=>'email'])@endcomponent
                                     </div>
-                                    @component('components.ajax-error',['field'=>'email'])@endcomponent
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <div class="form-group form-floating">
-                                        <input id="form_subject" type="text" name="subject"
-                                            class="mb-0 form-control subject" placeholder="">
-                                        <label for="form_subject">Subject *</label>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group form-floating">
+                                            <input id="form_subject" type="text" name="subject"
+                                                class="mb-0 form-control subject" placeholder="">
+                                            <label for="form_subject">Subject *</label>
+                                        </div>
+                                        @component('components.ajax-error',['field'=>'subject'])@endcomponent
                                     </div>
-                                    @component('components.ajax-error',['field'=>'subject'])@endcomponent
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group form-floating">
-                                        <textarea id="form_message" name="desc" class="mb-0 form-control message"
-                                            placeholder="" style="height: 150px"></textarea>
-                                        <label for="form_message">Message *</label>
+                                    <div class="col-12">
+                                        <div class="form-group form-floating">
+                                            <textarea id="form_message" name="desc" class="mb-0 form-control message"
+                                                placeholder="" style="height: 150px"></textarea>
+                                            <label for="form_message">Message *</label>
+                                        </div>
+                                        @component('components.ajax-error',['field'=>'desc'])@endcomponent
                                     </div>
-                                    @component('components.ajax-error',['field'=>'desc'])@endcomponent
+                                    <div class="col-12 text-start">
+                                        <button type="submit" class="s-14 btn btn--green-400 hover--tra-black submit"
+                                            id="submit-btn">Submit Request</button>
+                                    </div>
                                 </div>
-                                <div class="col-12 text-start">
-                                    <button type="submit" class="s-14 btn btn--green-400 hover--tra-black submit"
-                                        id="submit-btn">Submit Request</button>
-                                </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

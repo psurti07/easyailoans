@@ -373,7 +373,6 @@ if (!function_exists('cookieHelper')) {
         } else {
             $sourceId = $request->input('fbclid') ?? null;
         }
-
         // Set cookies with standard parameters
         Cookie::queue('utm_source', $utm_source, $lifetime, '/', null, false, true, false, 'lax');
         Cookie::queue('utm_medium', $utm_medium, $lifetime, '/', null, false, true, false, 'lax');
@@ -531,7 +530,7 @@ if (!function_exists('sendBrevoHtmlMail')) {
     function sendBrevoHtmlMail($maildata, $subject = '', $message = '', $sendmail = '', $attachmentPath = '')
     {
         $data['sender']['name'] = env('APP_NAME');
-        $data["sender"]["email"] = 'info@ailoans.com';
+        $data["sender"]["email"] = 'info@easyailoans.com';
 
         $user_res["name"] = $maildata["fullname"];
         $user_res["email"] = $maildata["email"];
@@ -578,7 +577,8 @@ if (!function_exists('sendBrevoHtmlMail')) {
         $response = curl_exec($curl);
 
         $err = curl_error($curl);
-
+        Log::info("response" . $response);
+        Log::info("err" . $err);
         curl_close($curl);
 
         return true;
@@ -589,7 +589,7 @@ if (!function_exists('sendBrevoHtmlMail2')) {
     function sendBrevoHtmlMail2($maildata, $subject = '', $message = '', $sendmail = '', $attachments = [])
     {
         $data['sender']['name'] = env('APP_NAME');
-        $data["sender"]["email"] = 'info@ailoans.com';
+        $data["sender"]["email"] = 'info@easyailoans.com';
 
         $user_res["name"] = $maildata["fullname"];
         $user_res["email"] = $maildata["email"];
@@ -638,7 +638,8 @@ if (!function_exists('sendBrevoHtmlMail2')) {
         $response = curl_exec($curl);
 
         $err = curl_error($curl);
-
+        Log::info("response" . $response);
+        Log::info("err" . $err);
         curl_close(handle: $curl);
 
         return true;

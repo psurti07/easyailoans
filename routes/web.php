@@ -244,5 +244,3 @@ Route::group([
 Route::get('/paytm/checkout', [PaytmController::class, 'checkout'])->name('paytm.checkout');
 Route::post('/paytm/initiate', [PaytmController::class, 'initiate'])->name('paytm.initiate');
 //Route::post('/paytm/callback', [PaytmController::class, 'callback'])->name('paytm.callback');
-
-

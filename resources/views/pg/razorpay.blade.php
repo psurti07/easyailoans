@@ -44,6 +44,7 @@
             @csrf
             <input type="hidden" name="razorpay_payment_id" value="${response.razorpay_payment_id}">
             <input type="hidden" name="razorpay_order_id" value="${response.razorpay_order_id}">
+            <input type="hidden" name="razorpay_signature" value="${response.razorpay_signature}">
             <input type="hidden" name="amount" value="{{ $amount }}">
             <input type="hidden" name="responseCode" value="100">
         `;

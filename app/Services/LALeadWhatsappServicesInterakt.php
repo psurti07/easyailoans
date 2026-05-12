@@ -14,6 +14,7 @@ class LALeadWhatsappServicesInterakt
     public function run()
     {
         try {
+            Log::info("start run LALeadWhatsappServicesInterakt");
             $configs = DB::table('interakt_settings')->where('product','LA')->where('type','remarketing')->first();
             $now = now();
             $nowFormatted = $now->format('H:i');
@@ -55,7 +56,7 @@ class LALeadWhatsappServicesInterakt
                         // Log::info('SQL Query: ' . $users->toSql());
                         //Log::info('Bindings: ', $users->getBindings());
                         $users = $users->get();
-                        $adminUsers = ['7016318366','9408881214','9998807547'];
+                        $adminUsers = [];
                         
                         if($users->isNotEmpty()){
                             Log::info('user found in interakt');

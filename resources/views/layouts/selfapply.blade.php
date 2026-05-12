@@ -2,17 +2,17 @@
 <html lang="en">
 @include('partials.selfapply.head')
 <body>
-
+    
     <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCLSJ2FC"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
- 
+    
     <!-- PRELOADER SPINNER -->	
     <div id="loading" class="loading--theme">
         <div id="loading-center"><span class="loader-img"></span></div>
     </div>
-
+    
 <!-- PAGE CONTENT -->
 <div id="page" class="page font--poppins">
     <!-- HEADER -->

@@ -1090,6 +1090,7 @@
   .contact-form textarea { min-height: 190px; }
 
   /* FOOTER */
+  .footer { padding-bottom: 30px; }
   .footer hr { margin-top: 10px; margin-bottom: 35px; }
 
   #footer-10.pt-50 { padding-top: 10px; }
@@ -1722,7 +1723,7 @@
   .hero-6-txt p.p-lg { margin-bottom: 18px; }
 
   /* HERO-7 */
-  #hero-7 { padding-top: 15px; padding-bottom: 0px; }
+  #hero-7 { padding-top: 80px; padding-bottom: 80px; }
   .hero-7-txt p.p-lg { margin-bottom: 15px; }
   #hero-7 .quick-form { margin-right: 2%; }
   .hero-7-img { padding-left: 5px; }
@@ -1732,7 +1733,7 @@
   .hero-8-txt { margin-top: -30px; }
   .hero-8-txt p, .hero-8-txt .hero-digits { padding-right: 0; }
 
-  #hero-8-form { padding: 26px 25px; margin: 25px 0 0 0; border-radius: 10px; }
+  #hero-8-form { padding: 26px 25px; margin-left: 25px; border-radius: 10px; }
   #hero-8-form h4, #hero-10-form p { margin-bottom: 15px; }
   #hero-8-form p.p-sm { padding: 0!important; }
 
@@ -2607,6 +2608,7 @@
   .contact-form .form-btn.mt-15 { margin-top: 0; }
 
   /* FOOTER */
+  .footer { padding-bottom: 25px; }
   .footer hr { margin-top: 5px; margin-bottom: 25px; }
 
   #footer-10.pt-50 { padding-top: 10px; }
@@ -3112,7 +3114,7 @@
   .hero-6-img { margin-top: 40px; }
 
   /* HERO-7 */
-  #hero-7 { padding-top: 30px; text-align: center; padding-bottom: 0;}
+  #hero-7 { padding-top: 80px; text-align: center; padding-bottom: 0;}
   #hero-7 .quick-form { margin-right: 0; }
   .hero-7-img { padding-left: 0; margin-top: 40px; }
 
@@ -3841,7 +3843,7 @@
   .hero-8-txt .hero-logo { display: none; }
   .hero-8-txt .hero-digits { padding: 0 10%; }
 
-  #hero-8-form { padding: 40px 30px; margin: 0px 5% 0; border-radius: 10px; }
+  #hero-8-form { padding: 40px 30px; margin: 40px 5% 0; border-radius: 10px; }
   #hero-8-form h4 { margin-bottom: 15px; }
   #hero-8-form p { padding: 0 3%; margin-bottom: 20px; }
   #hero-8-form p.p-sm { padding: 0 5%!important; }
@@ -4429,6 +4431,7 @@
   .contact-form .form-control, .contact-form .form-select { height: 54px; }
 
   /* FOOTER */
+  .footer { padding-bottom: 30px; }
   .footer hr { margin-top: 15px; margin-bottom: 30px; }
 
   #footer-10.pt-50 { padding-top: 5px; }
@@ -4809,7 +4812,7 @@
   .hero-6-img { margin: 35px 1% 0; }
 
   /* HERO-7 */
-  #hero-7 { padding-top: 30px; padding-bottom: 0px; }
+  #hero-7 { padding-top: 80px; padding-bottom: 0px; }
   .hero-7-txt h2 { padding: 0 6%; }
   #hero-7 .quick-form { margin-left: 3%; margin-right: 3%; }
   .hero-7-img { margin-top: 35px; }
@@ -4819,7 +4822,7 @@
   .hero-8-txt .hero-logo { display: none; }
   .hero-8-txt .hero-digits { padding: 0 3%; }
 
-  #hero-8-form { padding: 30px 20px; margin: 0px 4% 40px; border-radius: 10px; }
+  #hero-8-form { padding: 30px 20px; /* margin: 40px 4% 40px; */ margin: 0; border-radius: 10px; }
   #hero-8-form h4 { margin-bottom: 15px; }
   #hero-8-form p { font-size: 1.0625rem; margin-bottom: 16px; }
   #hero-8-form p.p-sm { font-size: 1rem; padding: 0 2%!important; }
@@ -5580,6 +5583,7 @@
   .contact-form textarea.form-control { padding: 15px; }
 
   /* FOOTER */
+  .footer { padding-bottom: 20px; }
   .footer hr { margin-top: 5px; margin-bottom: 30px; }
   .bottom-footer p.p-sm { margin-bottom: 0; }
 
@@ -5984,7 +5988,7 @@
   .hero-6-img { margin: 35px 1% 0; }
 
   /* HERO-7 */
-  #hero-7 { padding-top: 30px; padding-bottom: 0px; }
+  #hero-7 { padding-top: 80px; padding-bottom: 0px; }
   .hero-7-txt h2 { padding: 0 5%; }
   #hero-7 .quick-form { margin-left: 3%; margin-right: 3%; }
   .hero-7-img { margin-top: 35px; }
@@ -5994,7 +5998,7 @@
   .hero-8-txt .hero-logo { display: none; }
   .hero-8-txt .hero-digits { padding: 0; }
 
-  #hero-8-form { padding: 30px 18px; margin: 0px 2% 0; border-radius: 10px; }
+  #hero-8-form { padding: 30px 18px; margin: 20px 2% 0; border-radius: 10px; }
   #hero-8-form h4 { margin-bottom: 15px; }
   #hero-8-form p { font-size: 1.0625rem; margin-bottom: 16px; }
   #hero-8-form p.p-sm { font-size: 1rem; padding: 0!important; }
@@ -6750,6 +6754,7 @@
   .contact-form textarea.form-control { padding: 15px; }
 
   /* FOOTER */
+  .footer { padding-bottom: 30px; }
   .footer hr { margin-top: 20px; margin-bottom: 20px; }
   .bottom-footer p.p-sm { margin-bottom: 0; }
 
@@ -7176,7 +7181,7 @@
   .hero-6-img { margin: 35px 1% 0; }
 
   /* HERO-7 */
-  #hero-7 { padding-top: 30px; padding-bottom: 0px; }
+  #hero-7 { padding-top: 70px; padding-bottom: 0px; }
   .hero-7-txt h2 { padding: 0 4%; }
   #hero-7 .quick-form { margin-left: 3%; margin-right: 3%; }
   .hero-7-img { margin-top: 35px; }
@@ -7186,7 +7191,7 @@
   .hero-8-txt .hero-logo { display: none; }
   .hero-8-txt .hero-digits { padding: 0; }
 
-  #hero-8-form { padding: 26px 15px; margin: 0px 2% 0; border-radius: 10px; }
+  #hero-8-form { padding: 26px 15px; margin: 35px 2% 0; border-radius: 10px; }
   #hero-8-form h4 { margin-bottom: 15px; }
   #hero-8-form p { font-size: 1rem; margin-bottom: 20px; }
   #hero-8-form p.p-sm { font-size: 0.8rem; padding: 0!important; }
@@ -7979,6 +7984,7 @@
   .contact-form textarea.form-control { padding: 15px; }
 
   /* FOOTER */
+  .footer { padding-bottom: 30px; }
   .footer hr { margin-top: 5px; margin-bottom: 30px; }
 
   #footer-10.pt-50 { padding-top: 0; }
@@ -8412,7 +8418,7 @@
   .hero-6-img { margin: 30px 1% 0; }
 
   /* HERO-7 */
-  #hero-7 { padding-top: 30px; padding-bottom: 0px; }
+  #hero-7 { padding-top: 70px; padding-bottom: 0px; }
   .hero-7-txt h2 { padding: 0 3%; }
   #hero-7 .quick-form { margin-left: 3%; margin-right: 3%; }
   .hero-7-img { margin-top: 30px; }
@@ -8423,7 +8429,7 @@
   .hero-8-txt .hero-logo { display: none; }
   .hero-8-txt .hero-digits { padding: 0; }
 
-  #hero-8-form { padding: 26px 12px; margin: 0px 2% 0; border-radius: 10px; }
+  #hero-8-form { padding: 26px 12px; margin: 20px 2% 0; border-radius: 10px; }
   #hero-8-form h4 { margin-bottom: 12px; }
   #hero-8-form p { font-size: 1rem; margin-bottom: 15px; }
   #hero-8-form p.p-sm { font-size: 0.9375rem; padding: 0!important; }
@@ -9248,7 +9254,7 @@
   .contact-form textarea.form-control { padding: 15px; }
 
   /* FOOTER */
-  /* .footer { padding-bottom: 30px; } */
+  .footer { padding-bottom: 30px; }
   .footer hr { margin-top: 5px; margin-bottom: 30px; }
 
   #footer-10.pt-50 { padding-top: 0; }
