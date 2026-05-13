@@ -12,10 +12,10 @@
 <section id="hero-7" class="hero-section bg--green-100 bg--scroll">
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
-            <div class="col-md-12 col-lg-6 order-2 order-md-2 order-lg-1">
+            <div class="col-md-12 col-lg-6 order-2 order-md-2 order-lg-1 m-auto">
                 <div class="img-block">
-                    <img src="{{ asset('front/images/offer/offer-page-img-2.png') }}" alt="selfapply nbfc list"
-                        class="img-fluid">
+                    <img src="{{ asset('front/images/offer/self-apply-mega-offer.jpg') }}" alt="selfapply nbfc list"
+                        class="img-fluid rounded-3">
                 </div>
             </div>
             <div class="col-md-12 col-lg-6 self-apply-form order-1 order-md-1 order-lg-2 mb-lg-0 mb-25">

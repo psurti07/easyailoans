@@ -1722,7 +1722,7 @@
   .hero-6-txt p.p-lg { margin-bottom: 18px; }
 
   /* HERO-7 */
-  #hero-7 { padding-top: 15px; padding-bottom: 0px; }
+  #hero-7 { padding-top: 15px; padding-bottom: 30px; }
   .hero-7-txt p.p-lg { margin-bottom: 15px; }
   #hero-7 .quick-form { margin-right: 2%; }
   .hero-7-img { padding-left: 5px; }
@@ -3112,7 +3112,7 @@
   .hero-6-img { margin-top: 40px; }
 
   /* HERO-7 */
-  #hero-7 { padding-top: 30px; text-align: center; padding-bottom: 0;}
+  #hero-7 { padding-top: 30px; text-align: center; padding-bottom: 30px;}
   #hero-7 .quick-form { margin-right: 0; }
   .hero-7-img { padding-left: 0; margin-top: 40px; }
 
@@ -4809,7 +4809,7 @@
   .hero-6-img { margin: 35px 1% 0; }
 
   /* HERO-7 */
-  #hero-7 { padding-top: 30px; padding-bottom: 0px; }
+  #hero-7 { padding-top: 30px; padding-bottom: 30px; }
   .hero-7-txt h2 { padding: 0 6%; }
   #hero-7 .quick-form { margin-left: 3%; margin-right: 3%; }
   .hero-7-img { margin-top: 35px; }
@@ -5984,7 +5984,7 @@
   .hero-6-img { margin: 35px 1% 0; }
 
   /* HERO-7 */
-  #hero-7 { padding-top: 30px; padding-bottom: 0px; }
+  #hero-7 { padding-top: 30px; padding-bottom: 30px; }
   .hero-7-txt h2 { padding: 0 5%; }
   #hero-7 .quick-form { margin-left: 3%; margin-right: 3%; }
   .hero-7-img { margin-top: 35px; }
@@ -7176,7 +7176,7 @@
   .hero-6-img { margin: 35px 1% 0; }
 
   /* HERO-7 */
-  #hero-7 { padding-top: 30px; padding-bottom: 0px; }
+  #hero-7 { padding-top: 30px; padding-bottom: 30px; }
   .hero-7-txt h2 { padding: 0 4%; }
   #hero-7 .quick-form { margin-left: 3%; margin-right: 3%; }
   .hero-7-img { margin-top: 35px; }
@@ -8412,7 +8412,7 @@
   .hero-6-img { margin: 30px 1% 0; }
 
   /* HERO-7 */
-  #hero-7 { padding-top: 30px; padding-bottom: 0px; }
+  #hero-7 { padding-top: 30px; padding-bottom: 30px; }
   .hero-7-txt h2 { padding: 0 3%; }
   #hero-7 .quick-form { margin-left: 3%; margin-right: 3%; }
   .hero-7-img { margin-top: 30px; }
@@ -8502,7 +8502,6 @@
   .hero-section .hero-20-txt h2.s-48 { margin-bottom: 18px; }
 
    /* HERO-201 */
-   #hero-201 { padding-top: 70px; }
    .hero-201-txt { padding: 0 3%; }
    .hero-201-txt .hero-logo { display: none; }
    .hero-section .hero-201-txt h2.s-48 { margin-bottom: 18px; }

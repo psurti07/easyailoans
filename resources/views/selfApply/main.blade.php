@@ -63,7 +63,7 @@
 </style>
 @endpush
 @section('content')
-<section class="bg--white-100 bg--fixed hero-section pt-100 pb-80">
+<section id="hero-201" class="bg--white-100 bg--fixed">
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-md-6 col-lg-6 align-items-center m-auto self-apply-form">
