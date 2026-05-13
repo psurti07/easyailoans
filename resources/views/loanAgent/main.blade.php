@@ -63,7 +63,7 @@
 </style>
 @endpush
 @section('content')
-<section class="bg--white-100 bg--fixed pt-120 pb-80">
+<section class="bg--white-100 bg--fixed hero-section pt-100 pb-80">
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-md-6 col-lg-6 align-items-center m-auto self-apply-form">
@@ -184,7 +184,8 @@
                     <div class="fbox-8 fbox--hover fb-1 r-12 border">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
-                                <span class="flaticon-layers-1"></span>
+                                  <img class="img-fluid"
+                                src="{{ asset('front/images/Strategic-Lending-Network.png') }}" alt="feature-image">
                             </div>
                         </div>
                         <div class="fbox-txt">
@@ -197,7 +198,8 @@
                     <div class="fbox-8 fbox--hover fb-2 r-12 border">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
-                                <span class="flaticon-computer-1"></span>
+                                <img class="img-fluid"
+                                src="{{ asset('front/images/Completely-Online-Process.png') }}" alt="feature-image">
                             </div>
                         </div>
                         <div class="fbox-txt">
@@ -210,7 +212,8 @@
                     <div class="fbox-8 fbox--hover fb-2 r-12 border">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
-                                <span class="flaticon-click-1"></span>
+                   <img class="img-fluid"
+                                src="{{ asset('front/images/Self-Apply-Feature.png') }}" alt="feature-image">
                             </div>
                         </div>
                         <div class="fbox-txt">
@@ -223,7 +226,8 @@
                     <div class="fbox-8 fbox--hover fb-3 r-12 border">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
-                                <span class="flaticon-tech-support"></span>
+                        <img class="img-fluid"
+                                src="{{ asset('front/images/Loan-Agent.png') }}" alt="feature-image">
                             </div>
                         </div>
                         <div class="fbox-txt">
@@ -266,9 +270,9 @@
                 <div class="form-holder">
                     <div class="contact-form-notice">
                         <p class="s-14">
-                            <strong>Important Disclosure : </strong>The loan tenure ranges from a minimum of 6 months to a maximum of 60 months (5 years), depending on the lender’s policies. The Annual Percentage Rate (APR) will be between 11.5% to 34% per annum, inclusive of interest rate and applicable charges. Processing fees may apply up to 2% of the approved loan amount. Representative Example, for a loan amount of ₹1,00,000 at an interest rate of 11.5% per annum for a tenure of 60 months (5 years), with a processing fee of 2% (₹2,000), the approximate EMI would be ₹2,301, the total interest payable would be approximately ₹38,059, and the total repayment amount would be approximately ₹1,38,059, resulting in an APR of approximately 14.41% including applicable charges. *T&C Apply. All these numbers are tentative/indicative, the final loan specifics may vary depending upon the customer profile and NBFCs’ criteria, rules & regulations, and terms & conditions. AI Loans Private Limited does not guarantee loan approval or disbursal. Terms & Conditions apply.
+                            <strong>Important Disclosure : </strong> The loan tenure ranges from a minimum of 6 months to a maximum of 60 months (5 years), depending on the lender’s policies. The Annual Percentage Rate (APR) will be between 11.5% to 34% per annum, inclusive of interest rate and applicable charges. Processing fees may apply up to 2% of the approved loan amount. Representative Example, for a loan amount of ₹1,00,000 at an interest rate of 11.5% per annum for a tenure of 60 months (5 years), with a processing fee of 2% (₹2,000), the approximate EMI would be ₹2,301, the total interest payable would be approximately ₹38,059, and the total repayment amount would be approximately ₹1,38,059, resulting in an APR of approximately 14.41% including applicable charges. *T&C Apply. All these numbers are tentative/indicative, the final loan specifics may vary depending upon the customer profile and NBFCs’ criteria, rules & regulations, and terms & conditions. AI Loans Private Limited does not guarantee loan approval or disbursal. Terms & Conditions apply.
                         </p>
-                    
+
                         <p class="s-14">
                             <strong>Disclaimer : </strong>AI Loans Private Limited is not a lender or financial institution. We do not provide loans or make credit decisions. All loan approvals, interest rates, fees, and disbursal are handled by third-party lenders such as banks and NBFCs. We do not guarantee loan approval, disbursal, or specific loan terms. Users are advised to verify all details and read the terms and conditions of the respective lender before proceeding.
                         </p>
