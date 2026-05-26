@@ -4,13 +4,13 @@
 @endpush
 
 @section('content')
-    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <div class="content d-flex flex-column flex-column-fluid pt-5" id="kt_content">
         <div class="container-xxl " id="kt_content_container">
-            <div class="row g-3 g-xl-10 mb-xl-10 pt-10">
-                <div class="col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="row">
+                <div class="col-md-12 col-lg-6 col-xl-6 col-xxl-6 mb-10">
                     <div class="card h-md-100">
                         <div class="card-header border-0 pt-5">
-                            <h3 class="card-title align-items-start flex-column">
+                            <h3 class="card-title m-0">
                                 <span class="card-label fw-bold text-dark">Raise A Request</span>
                             </h3>
                         </div>
@@ -51,7 +51,7 @@
                 <div class="col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <div class="card h-md-100">
                         <div class="card-header border-0 pt-5">
-                            <h3 class="card-title align-items-start flex-column">
+                            <h3 class="card-title m-0">
                                 <span class="card-label fw-bold text-dark">{{ env('COMPANY_NAME') }}</span>
                             </h3>
                         </div>

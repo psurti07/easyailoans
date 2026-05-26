@@ -13,7 +13,7 @@ class LegalController extends Controller
     {
         $meta = privacyPolicyMeta();
         $mainTitle = 'Privacy Policy';
-        $subTitle = '';
+        $subTitle = 'Committed to protecting your privacy and securing your personal information.';
         $description = InfoPages::select('content')->where('slug', 'privacy-policy')->first()->content;
         return view('front.legalPages', compact('meta', 'description', 'mainTitle', 'subTitle'));
     }
@@ -22,7 +22,7 @@ class LegalController extends Controller
     {
         $meta = termsConditionsMeta();
         $mainTitle = 'Terms & Conditions';
-        $subTitle = '';
+        $subTitle = 'By accessing our website, you agree to the terms, conditions, and policies that guide our services.';
         $description = InfoPages::select('content')->where('slug', 'terms-conditions')->first()->content;
         return view('front.legalPages', compact('meta', 'description', 'mainTitle', 'subTitle'));
     }
@@ -31,7 +31,7 @@ class LegalController extends Controller
     {
         $meta = refundPolicyMeta();
         $mainTitle = 'Cancellation & Refund Policy';
-        $subTitle = '';
+        $subTitle = 'Thank you for choosing our platform. We value the opportunity to assist you and aim to maintain transparency regarding cancellations and refunds.';
         $description = InfoPages::select('content')->where('slug', 'refund-policy')->first()->content;
         return view('front.legalPages', compact('meta', 'description', 'mainTitle', 'subTitle'));
     }
@@ -40,7 +40,7 @@ class LegalController extends Controller
     {
         $meta = disclaimerMeta();
         $mainTitle = 'Disclaimer';
-        $subTitle = '';
+        $subTitle = 'Providing clear information with transparency, accuracy, and responsibility.';
         $description = InfoPages::select('content')->where('slug', 'disclaimer')->first()->content;
         return view('front.legalPages', compact('meta', 'description', 'mainTitle', 'subTitle'));
     }

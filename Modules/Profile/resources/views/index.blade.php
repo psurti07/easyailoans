@@ -4,11 +4,11 @@
 @endpush
 
 @section('content')
-    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <div class="content d-flex flex-column flex-column-fluid pt-5" id="kt_content">
         <div class="container-xxl " id="kt_content_container">
-            <div class="row g-3 g-xl-10 mb-xl-10 pt-10">
+            <div class="row">
                 <div class="col-md-6 col-lg-6 col-xl-6">
-                    <div class="card">
+                    <div class="card mb-10">
                         <div class="card-header flex-nowrap pt-5">
                             <h3 class="card-title align-items-start flex-column">
                                 <span class="card-label fw-bold text-gray-900">Registration On - {{ date('d-m-Y',strtotime($profile->rec_date)) }}</span>

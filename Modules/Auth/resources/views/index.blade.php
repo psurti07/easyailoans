@@ -62,9 +62,12 @@
 								<!-- TITLE -->
 								<div class="col-md-12">
 									<div class="register-form-title">
-                    <img src="{{ asset('front/images/logo/logo.png') }}" width="200" alt="{{ env('APP_NAME') }}">
-										<h4 class="mt-20 w-700">Log in to Portal</h4>
+                    <img src="{{ asset('front/images/logo/logo.png') }}" width="150" alt="{{ env('APP_NAME') }}">
+								
 									</div>
+                  <div class="text-center mb-20">
+              	<h3 class="s-24 mb-0">Log in to Portal</h3>
+</div>
 								</div>
 
 								<!-- LOGIN FORM -->
@@ -98,7 +101,7 @@
                     </div>
                     <!-- Sign Up Link -->
                     <div class="col-md-12">
-                      <p class="create-account text-center">
+                      <p class="create-account text-center mt-0">
                         Don't have an account? <a href="{{ route('self.apply.main') }}" class="color--theme">Sign up</a>
                       </p>
                     </div>

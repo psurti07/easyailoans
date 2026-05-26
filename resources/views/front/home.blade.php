@@ -30,7 +30,7 @@
             </div>
             <div class="col-md-6 col-lg-6 col-12 ">
                 <div class="hero-7-img d-flex justify-content-center align-items-start">
-                    <img src="{{ asset('front/images/home-image.png') }}" alt="easyailoans" class="img-fluid p-0">
+                    <img src="{{ asset('front/images/home-img.png') }}" alt="easyailoans" class="img-fluid p-0">
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
 <!-- main section ends -->
 
 <!-- Our Partners section start  -->
-<section id="integrations-2" class="py-80 integrations-section">
+<section id="integrations-2-2" class="py-80 integrations-section">
     <div class="container">
         <div class="r-12 text-center">
             <div class="row justify-content-center">
@@ -129,7 +129,7 @@
         <div class="fbox-wrapper text-center">
             <div class="row gx-3 gy-2 row-cols-1 row-cols-md-2 row-cols-lg-4">
                 <div class="col">
-                    <div class="fbox-8 fbox--hover fb-1 r-12 border">
+                    <div class="fbox-8 fbox--hover fb-1 r-12 border mb-md-0 mb-2">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
                                 <img class="img-fluid" src="{{ asset('front/images/Strategic-Lending-Network.png') }}"
@@ -143,7 +143,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="fbox-8 fbox--hover fb-2 r-12 border">
+                    <div class="fbox-8 fbox--hover fb-2 r-12 border mb-md-0 mb-2">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
                                 <img class="img-fluid" src="{{ asset('front/images/Completely-Online-Process.png') }}"
@@ -157,7 +157,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="fbox-8 fbox--hover fb-2 r-12 border">
+                    <div class="fbox-8 fbox--hover fb-2 r-12 border mb-md-0 mb-2">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
                                 <img class="img-fluid" src="{{ asset('front/images/Self-Apply-Feature.png') }}"
@@ -171,7 +171,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="fbox-8 fbox--hover fb-3 r-12 border">
+                    <div class="fbox-8 fbox--hover fb-3 r-12 border mb-md-0 mb-2">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
                                 <img class="img-fluid" src="{{ asset('front/images/Loan-Agent.png') }}"
@@ -198,7 +198,7 @@
             <div class="statistic-5-wrapper">
                 <div class="row row-cols-2 row-cols-md-4">
                     <div class="col sec-1 py-50">
-                        <div id="sb-5-1" class="text-center">
+                        <div id="sb-5-1" class="text-center mb-0">
                             <div class="statistic-block">
                                 <div class="statistic-digit">
                                     <h2 class="s-30 w-700 mb-10 text-white">
@@ -212,7 +212,7 @@
                         </div>
                     </div>
                     <div class="col sec-2 py-50">
-                        <div id="sb-5-3" class="text-center">
+                        <div id="sb-5-3" class="text-center mb-0">
                             <div class="statistic-block">
                                 <div class="statistic-digit">
                                     <h2 class="s-30 w-700 mb-10 text-white">
@@ -226,7 +226,7 @@
                         </div>
                     </div>
                     <div class="col sec-3 py-50">
-                        <div id="sb-5-2" class="text-center">
+                        <div id="sb-5-2" class="text-center mb-0">
                             <div class="statistic-block">
                                 <div class="statistic-digit">
                                     <h2 class="s-30 w-700 mb-10 text-white">
@@ -240,7 +240,7 @@
                         </div>
                     </div>
                     <div class="col sec-4 py-50">
-                        <div id="sb-5-4" class="text-center">
+                        <div id="sb-5-4" class="text-center mb-0">
                             <div class="statistic-block">
                                 <div class="statistic-digit">
                                     <h2 class="s-30 w-700 mb-10 text-white">
@@ -351,7 +351,7 @@
                                 <span class="flaticon-mobile-search"></span>
                             </div>
                         </div>
-                        <div class="fbox-txt text-start ms-4">
+                        <div class="fbox-txt text-md-start text-center ms-lg-4 ms-0">
                             <p class="mt-0">Start by providing your mobile number and the name registered with your
                                 bank.</p>
                         </div>
@@ -365,7 +365,7 @@
                                 <span class="flaticon-computer"></span>
                             </div>
                         </div>
-                        <div class="fbox-txt text-start ms-4">
+                        <div class="fbox-txt text-md-start text-center ms-lg-4 ms-0">
                             <p class="mt-0">Complete your financial information for preliminary eligibility screening.
                             </p>
                         </div>
@@ -379,7 +379,7 @@
                                 <span class="flaticon-credit-card"></span>
                             </div>
                         </div>
-                        <div class="fbox-txt text-start ms-4">
+                        <div class="fbox-txt text-md-start text-center ms-lg-4 ms-0">
                             <p class="mt-0">Based on the details you enter, our system displays loan options that may be
                                 available to you. These are not final and will be reviewed by the lender.</p>
                         </div>
@@ -393,7 +393,7 @@
                                 <span class="flaticon-time"></span>
                             </div>
                         </div>
-                        <div class="fbox-txt text-start ms-4">
+                        <div class="fbox-txt text-md-start text-center ms-lg-4 ms-0">
                             <p class="mt-0">To gain access to the pre-approved loan offers displayed, simply purchase
                                 the subscription plan that best fits your needs. </p>
                         </div>
@@ -407,7 +407,7 @@
                                 <span class="flaticon-check-1"></span>
                             </div>
                         </div>
-                        <div class="fbox-txt text-start ms-4">
+                        <div class="fbox-txt text-md-start text-center ms-lg-4 ms-0">
                             <p class="mt-0">Submit required documents for profile verification and lender processing.
                             </p>
                         </div>
@@ -421,7 +421,7 @@
                                 <span class="flaticon-profits"></span>
                             </div>
                         </div>
-                        <div class="fbox-txt text-start ms-4">
+                        <div class="fbox-txt text-md-start text-center ms-lg-4 ms-0">
                             <p class="mt-0">The respective NBFC independently reviews the application and makes the
                                 final decision on approval and disbursement as per their policies.</p>
                         </div>
@@ -446,7 +446,7 @@
             </div>
         </div>
         <div class="p-30 bg--white-100 shadow border-grey-1 r-20">
-      <div class="row">
+         <div class="row">
             <div class="col-md-7 order-first order-md-2">
                 <div id="emicalculatorinnerformwrapper">
                     <form id="emicalculatorform" class="comment-form">
@@ -685,7 +685,6 @@
             </div>
         </div>
         </div>
-  
     </div>
 </section>
 <!-- eligibility calculator ends -->
@@ -727,23 +726,23 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-5 col-12 md-mb-50 order-md-1 order-2">
+            <div class="col-md-5 col-12 md-mb-50 order-md-1 order-2 mt-md-0 mt-4">
                 <div class="p-4 bg--green-100 block-shadow r-08">
    <div class="row gy-3 gx-3">
                  <div class="card-body">
                        <div class="col-md-12 col-12">
                         <div class="address-item mb-3">
                             <div class="address-text">
-                                <h5 class="color--green-500">Address</h5>
-                                <p class="address-txt">{{ env('COMPANY_ADDRESS') }}</p>
+                                <h6 class="color--green-500 mb-1 s-16">Address</h6>
+                                <p class="address-txt mt-0">{{ env('COMPANY_ADDRESS') }}</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12 col-12">
                         <div class="address-item mb-3">
                             <div class="address-text">
-                                <h5 class="color--green-500"> Customer Support </h5>
-                                <p class="address-txt"><a
+                                <h6 class="color--green-500 mb-1 s-16"> Customer Support </h6>
+                                <p class="address-txt mt-0"><a
                                         href="tel:{{ str_ireplace(" ","",env('COMPANY_MOBILE')) }}">{{ env('COMPANY_MOBILE') }}</a>
                                 </p>
                             </div>
@@ -752,8 +751,8 @@
                     <div class="col-md-12 col-12">
                         <div class="address-item mb-3">
                             <div class="address-text">
-                                <h5 class="color--green-500"> Mail Us </h5>
-                                <p class="address-txt"><a
+                                <h6 class="color--green-500 mb-1 s-16"> Mail Us </h6>
+                                <p class="address-txt mt-0"><a
                                         href="mailto:{{ str_ireplace(" ","",env('COMPANY_SUPPORT_MAIL')) }}">{{ env('COMPANY_SUPPORT_MAIL') }}</a>
                                 </p>
                             </div>
@@ -762,8 +761,8 @@
                     <div class="col-md-12 col-12">
                         <div class="address-item">
                             <div class="address-text">
-                                <h5 class="color--green-500"> Working Hours </h5>
-                                <p class="address-txt">
+                                <h6 class="color--green-500 mb-1 s-16"> Working Hours </h6>
+                                <p class="address-txt mt-0">
                                     Monday to Saturday: 10:00 AM - 5:00 PM<br>
                                     Sunday: Closed</p>
                             </div>
@@ -777,14 +776,14 @@
             <div class="col-md-7 col-12 py-md-0 py-0 order-md-2 order-1">
                 <div class="h-100 p-4 bg--white-100 block-shadow r-08">
                     <div class="card-body">
-                        <p class="w-400 mb-20">
+                        <p class="w-400 mb-20 mt-0">
                             Fill out the form below and you'll hear from us soon.
                         </p>
                         <form method="post" action="{{ route('front.contact.us.store') }}"
                             class="contact-form career-form" enctype="multipart/form-data">
                             <div class="row gx-2 gy-2">
                                 <div class="col-md-6 col-sm-12">
-                                    <div class="form-group form-floating s-15">
+                                    <div class="form-group form-floating">
                                         <input id="form_name" name="fullname" type="text" class="form-control name mb-0"
                                             placeholder="">
                                         <label for="firstname">Full Name *</label>

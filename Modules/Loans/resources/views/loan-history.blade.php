@@ -4,9 +4,9 @@
 @endpush
 
 @section('content')
-    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <div class="content d-flex flex-column flex-column-fluid pt-5" id="kt_content">
         <div class="container-xxl " id="kt_content_container">
-            <div class="row g-3 pt-10">
+            <div class="row g-3">
                 @foreach($loanHistory as $row)
                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
                         <div class="card mb-5 mb-xl-10">

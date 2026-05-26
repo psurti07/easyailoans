@@ -52,7 +52,7 @@
                 data-kt-sticky="true"
                 data-kt-sticky-name="header"
                 data-kt-sticky-offset="{default: '200px', lg: '300px'}">
-                <div class="container-xxl d-flex align-items-center justify-content-between border-bottom" id="kt_header_container">
+                <div class="container-xxl d-flex align-items-center justify-content-between" id="kt_header_container">
                     @if(isRouteActive('customer.myloan.offers.preapproved') == 'active')
                         <div
                             class="page-title d-flex flex-column align-items-start justify-content-center flex-wrap me-lg-2 pb-5 pb-lg-0"
@@ -90,8 +90,8 @@
                         <div class="btn btn-icon btn-active-icon-primary" id="kt_aside_toggle">
                             <i class="ki-duotone ki-abstract-14 fs-2x"><span class="path1"></span><span class="path2"></span></i>
                         </div>
-                        <a href="javascript:;" class="d-flex align-items-center">
-                            <img alt="Logo" src="{{ asset('front/images/logo/apple-touch-icon-50x50.png') }}" class="h-40px"/>
+                        <a href="javascript:;" class="d-flex align-items-center ms-2">
+                            <img alt="Logo" src="{{ asset('front/images/logo/apple-touch-icon.png') }}" class="h-40px"/>
                         </a>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
     </div>
 
     <div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
-        <i cass="ki-duotone ki-arrow-up"><span class="path1"></span><span class="path2"></span></i>
+        <i class="ki-duotone ki-arrow-up"><span class="path1"></span><span class="path2"></span></i>
     </div>
 </div>
 @include('stacks.js.customer.scripts')

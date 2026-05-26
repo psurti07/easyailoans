@@ -2,15 +2,17 @@
 @push('css')
 <link href="{{ asset('front/css/custom.css') }}" rel="stylesheet" type="text/css" />
 <style>
-    .bank-crousel {
-        display: block !important;
-    }
-    .owl-carousel .owl-item img {
-        width: 80% !important;
-    }
-    .testimonials-carousel .owl-item img {
-        width: 100% !important;
-    }
+.bank-crousel {
+    display: block !important;
+}
+
+.owl-carousel .owl-item img {
+    width: 80% !important;
+}
+
+.testimonials-carousel .owl-item img {
+    width: 100% !important;
+}
 </style>
 @endpush
 @section('content')
@@ -26,7 +28,8 @@
                                     <div class="row">
                                         {{-- FIXED: Use boolean check instead of string comparison --}}
                                         <h4 class="fw-bolder text-{{ $response ? 'success' : 'danger' }} text-center">
-                                            <span class="flaticon-idea"></span>&nbsp;&nbsp;Payment {{ $response ? 'Successful' : 'Failed' }}
+                                            <span class="flaticon-idea"></span>&nbsp;&nbsp;Payment
+                                            {{ $response ? 'Successful' : 'Failed' }}
                                         </h4>
                                     </div>
                                     <div class="row mt-3">
@@ -41,7 +44,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    
+
                                     {{-- FIXED: Use boolean check instead of string comparison --}}
                                     @if($response)
                                     <div class="text-center mb-20">
@@ -89,14 +92,18 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p class="mt-20 mb-0 small text-danger">Don't worry! No amount has been deducted from your account.</p>
+                                        <p class="mt-20 mb-0 small text-danger">Don't worry! No amount has been deducted
+                                            from your account.</p>
                                     </div>
                                     @endif
 
                                     <div class="row mt-3">
-                                        <span id="timer" class="s-14 color--grey text-{{ $response ? 'success' : 'danger' }} text-center"></span>
+                                        <span id="timer"
+                                            class="s-14 color--grey text-{{ $response ? 'success' : 'danger' }} text-center"></span>
                                         <hr class="divider my-3" />
-                                        <span class="text-center s-12">If you've any queries/ issues, kindly raise a request here: <a href="{{ route('front.raise.request') }}" class="text-success fw-bold">Click Here</a></span>
+                                        <span class="text-center s-12">If you've any queries/ issues, kindly raise a
+                                            request here: <a href="{{ route('front.raise.request') }}"
+                                                class="text-success fw-bold">Click Here</a></span>
                                     </div>
                                 </div>
                             </div>
@@ -114,7 +121,8 @@
                 <div class="col-md-12 col-lg-12">
                     <div class="section-title mb-50">
                         <h2 class="s-34 w-700">Going Strong With Stronger Recommendations!</h2>
-                        <p class="s-16 color--grey">Our guidance will drive you towards the best NBFC personalized offers.</p>
+                        <p class="s-16 color--grey">Our guidance will drive you towards the best NBFC personalized
+                            offers.</p>
                     </div>
                 </div>
             </div>
@@ -136,42 +144,62 @@
 @endsection
 @push('scripts')
 <script>
-    $(document).ready(function() {
-        $(".banks-carousel").owlCarousel({
-            items: 2,
-            loop: true,
-            autoplay: true,
-            navBy: 1,
-            dots: false,
-            autoplayTimeout: 4500,
-            autoplayHoverPause: true,
-            smartSpeed: 1500,
-            responsive: {
-                0: { items: 1 },
-                767: { items: 1 },
-                768: { items: 2 },
-                991: { items: 3 },
-                1000: { items: 3 }
+$(document).ready(function() {
+    $(".banks-carousel").owlCarousel({
+        items: 2,
+        loop: true,
+        autoplay: true,
+        navBy: 1,
+        dots: false,
+        autoplayTimeout: 4500,
+        autoplayHoverPause: true,
+        smartSpeed: 1500,
+        responsive: {
+            0: {
+                items: 1
+            },
+            767: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            991: {
+                items: 3
+            },
+            1000: {
+                items: 3
             }
-        });
-
-        $(".testimonials-carousel").owlCarousel({
-            items: 2,
-            loop: true,
-            autoplay: true,
-            navBy: 1,
-            dots: false,
-            autoplayTimeout: 4500,
-            autoplayHoverPause: true,
-            smartSpeed: 1500,
-            responsive: {
-                0: { items: 1 },
-                767: { items: 1 },
-                768: { items: 2 },
-                991: { items: 3 },
-                1000: { items: 3 }
-            }
-        });
+        }
     });
+
+    $(".testimonials-carousel").owlCarousel({
+        items: 2,
+        loop: true,
+        autoplay: true,
+        navBy: 1,
+        dots: false,
+        autoplayTimeout: 4500,
+        autoplayHoverPause: true,
+        smartSpeed: 1500,
+        responsive: {
+            0: {
+                items: 1
+            },
+            767: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            991: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+});
 </script>
 @endpush

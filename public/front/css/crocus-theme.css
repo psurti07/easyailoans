@@ -2531,9 +2531,9 @@ p.video-txt-sm {
 /*------------------------------------------*/
 
 .desktoplogo img {
-    width: auto;
+    width: 150px;
     max-width: inherit;
-    max-height: 60px;
+ 
 }
 
 .blog-header .desktoplogo img {
@@ -3536,7 +3536,7 @@ span.sm-info {
 /*------------------------------------------*/
 
 #hero-7 {
-    padding-top:100px;
+    padding-top:130px;
     padding-bottom: 100px;
 }
 
@@ -3580,7 +3580,7 @@ span.sm-info {
     z-index: 999;
     background-color: #fff;
     border: 1px solid #f8f8f8;
-    padding: 45px 35px;
+    padding: 35px;
     -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, .08);
     -moz-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, .08);
     box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, .08);
@@ -3598,7 +3598,7 @@ span.sm-info {
 
 #hero-8-form p.p-sm {
     text-align: center;
-    padding: 0 5%!important;
+    padding: 0!important;
     margin-top: 5px;
     margin-bottom: 0;
 }
@@ -7724,7 +7724,6 @@ span.release-date span {
 
 .faqs-section .accordion-item {
     background-color: transparent!important;
-    border-bottom: 1px solid #e3e3e3!important;
 }
 
 #faqs-2.faqs-section .accordion-item {
@@ -7742,7 +7741,7 @@ span.release-date span {
 
 .faqs-section .accordion-thumb {
     margin: 0;
-    padding: 20px 25px;
+    padding: 20px 33px 20px 20px;
     cursor: pointer;
     position: relative;
 }
@@ -8996,6 +8995,11 @@ img.footer-logo-dark {
 .footer-socials.ico-25 a {
     margin-right: 16px;
 }
+.footer-socials.ico-20 a:hover span,
+.footer-socials.ico-25 a:hover span{
+      color: #228688 !important;
+}
+
 
 .footer-socials.ico-25 [class*="flaticon-"]:before,
 .footer-socials.ico-25 [class*="flaticon-"]:after { font-size: 1.325rem; }
@@ -9243,7 +9247,7 @@ img.footer-logo-dark {
     position: relative;
     width: 100%;
     padding-top: 150px;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
 }
 
 .page-hero-section-overlay .txt-block {
@@ -9428,6 +9432,8 @@ img.footer-logo-dark {
     min-height: 100vh;
     padding-top: 80px;
     padding-bottom: 80px;
+    display: flex;
+    align-items: center;
 }
 
 #reset-password {
@@ -9505,7 +9511,7 @@ img.footer-logo-dark {
 
 .register-form-title {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
 
 .register-form-title h3 {

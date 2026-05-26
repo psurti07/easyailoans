@@ -4,8 +4,8 @@
 @endpush
 
 @section('content')
-    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-        <div class="container-xxl pt-10" id="kt_content_container">
+    <div class="content d-flex flex-column flex-column-fluid pt-5" id="kt_content">
+        <div class="container-xxl" id="kt_content_container">
             <div class="row g-3 g-xl-10 mb-xl-10">
                 
                 @foreach($lists as $list)

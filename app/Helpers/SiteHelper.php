@@ -116,7 +116,7 @@ if (!function_exists('nbfcsList')) {
                             </a>
                         </div>';
 
-            $data['carousel'] .= '<div class="bg--white-100 r-10 mb-20">
+            $data['carousel'] .= '<div class="bg--white-100 block-shadow r-08 border">
                                     <a href="javascript:;">
                                         <img class="img-fluid" src="https://manage.easyailoans.com/upload/banks/' . $bank->bank_image . '" alt="' . $bank->bank_name . '" width="auto">
                                     </a>
@@ -133,9 +133,9 @@ if (!function_exists('raiseRequestFaqs')) {
     {
         return '
             <ul class="accordion">
-                <li class="accordion-item mb-10">
+                <li class="accordion-item mb-10 bg--white-100 block-shadow r-08">
                     <div class="accordion-thumb">
-                        <h6 class="s-16 w-500">My payment was successful, but my account has not been created yet. Why?</h6>
+                        <h6 class="s-16 w-500 mb-0">My payment was successful, but my account has not been created yet. Why?</h6>
                     </div>
                     <div class="accordion-panel">
                         <div class="accordion-panel-item">
@@ -146,9 +146,9 @@ if (!function_exists('raiseRequestFaqs')) {
                         </div>
                     </div>
                 </li>
-                <li class="accordion-item mb-10">
+                <li class="accordion-item mb-10 bg--white-100 block-shadow r-08">
                     <div class="accordion-thumb">
-                        <h6 class="s-16 w-500">I made the payment but later realized I did not fully understand the services. Can I request a refund?</h6>
+                        <h6 class="s-16 w-500 mb-0">I made the payment but later realized I did not fully understand the services. Can I request a refund?</h6>
                     </div>
                     <div class="accordion-panel">
                         <div class="accordion-panel-item">
@@ -160,9 +160,9 @@ if (!function_exists('raiseRequestFaqs')) {
                         </div>
                     </div>
                 </li>
-                <li class="accordion-item mb-10">
+                <li class="accordion-item mb-10 bg--white-100 block-shadow r-08">
                     <div class="accordion-thumb">
-                        <h6 class="s-16 w-500">I am not satisfied with the services. What should I do?</h6>
+                        <h6 class="s-16 w-500 mb-0">I am not satisfied with the services. What should I do?</h6>
                     </div>
                     <div class="accordion-panel">
                         <div class="accordion-panel-item">
@@ -174,9 +174,9 @@ if (!function_exists('raiseRequestFaqs')) {
                         </div>
                     </div>
                 </li>
-                <li class="accordion-item mb-10">
+                <li class="accordion-item mb-10 bg--white-100 block-shadow r-08">
                     <div class="accordion-thumb">
-                        <h6 class="s-16 w-500">Who is eligible for a GST refund?</h6>
+                        <h6 class="s-16 w-500 mb-0">Who is eligible for a GST refund?</h6>
                     </div>
                     <div class="accordion-panel">
                         <div class="accordion-panel-item">
@@ -188,9 +188,9 @@ if (!function_exists('raiseRequestFaqs')) {
                         </div>
                     </div>
                 </li>
-                <li class="accordion-item mb-10">
+                <li class="accordion-item mb-10 bg--white-100 block-shadow r-08">
                     <div class="accordion-thumb">
-                        <h6 class="s-16 w-500">I accidentally made multiple payments. Can I get the extra amount refunded?</h6>
+                        <h6 class="s-16 w-500 mb-0">I accidentally made multiple payments. Can I get the extra amount refunded?</h6>
                     </div>
                     <div class="accordion-panel">
                         <div class="accordion-panel-item">
@@ -202,9 +202,9 @@ if (!function_exists('raiseRequestFaqs')) {
                         </div>
                     </div>
                 </li>
-                <li class="accordion-item mb-10">
+                <li class="accordion-item mb-10 bg--white-100 block-shadow r-08">
                     <div class="accordion-thumb">
-                        <h6 class="s-16 w-500">I purchased a subscription from another company within the same group. Can I request a refund?</h6>
+                        <h6 class="s-16 w-500 mb-0">I purchased a subscription from another company within the same group. Can I request a refund?</h6>
                     </div>
                     <div class="accordion-panel">
                         <div class="accordion-panel-item">
@@ -216,9 +216,9 @@ if (!function_exists('raiseRequestFaqs')) {
                         </div>
                     </div>
                 </li>
-                <li class="accordion-item mb-10">
+                <li class="accordion-item mb-10 bg--white-100 block-shadow r-08">
                     <div class="accordion-thumb">
-                        <h6 class="s-16 w-500">I submitted a refund request but have not received the refund yet. What should I do?</h6>
+                        <h6 class="s-16 w-500 mb-0">I submitted a refund request but have not received the refund yet. What should I do?</h6>
                     </div>
                     <div class="accordion-panel">
                         <div class="accordion-panel-item">
@@ -230,9 +230,9 @@ if (!function_exists('raiseRequestFaqs')) {
                         </div>
                     </div>
                 </li>
-                <li class="accordion-item mb-10">
+                <li class="accordion-item mb-10 bg--white-100 block-shadow r-08">
                     <div class="accordion-thumb">
-                        <h6 class="s-16 w-500">I saw pre-approved loan offers on the platform but did not receive the final loan. Why?</h6>
+                        <h6 class="s-16 w-500 mb-0">I saw pre-approved loan offers on the platform but did not receive the final loan. Why?</h6>
                     </div>
                     <div class="accordion-panel">
                         <div class="accordion-panel-item">
@@ -244,9 +244,9 @@ if (!function_exists('raiseRequestFaqs')) {
                         </div>
                     </div>
                 </li>
-                <li class="accordion-item mb-10">
+                <li class="accordion-item mb-10 bg--white-100 block-shadow r-08">
                     <div class="accordion-thumb">
-                        <h6 class="s-16 w-500">I changed my mind and no longer wish to continue with the services. Can I get a refund?</h6>
+                        <h6 class="s-16 w-500 mb-0">I changed my mind and no longer wish to continue with the services. Can I get a refund?</h6>
                     </div>
                     <div class="accordion-panel">
                         <div class="accordion-panel-item">
