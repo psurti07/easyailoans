@@ -8995,11 +8995,7 @@ img.footer-logo-dark {
 .footer-socials.ico-25 a {
     margin-right: 16px;
 }
-.footer-socials.ico-20 a:hover span,
-.footer-socials.ico-25 a:hover span{
-      color: #228688 !important;
-}
-
+ 
 
 .footer-socials.ico-25 [class*="flaticon-"]:before,
 .footer-socials.ico-25 [class*="flaticon-"]:after { font-size: 1.325rem; }
