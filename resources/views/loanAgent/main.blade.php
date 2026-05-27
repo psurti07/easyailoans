@@ -181,7 +181,7 @@
         <div class="fbox-wrapper text-center">
             <div class="row gx-3 gy-2 row-cols-1 row-cols-md-2 row-cols-lg-4">
                 <div class="col">
-                    <div class="fbox-8 fbox--hover fb-1 r-12 border">
+                    <div class="fbox-8 fbox--hover fb-1 r-12 border mb-md-0 mb-2">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
                                   <img class="img-fluid"
@@ -195,7 +195,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="fbox-8 fbox--hover fb-2 r-12 border">
+                    <div class="fbox-8 fbox--hover fb-2 r-12 border mb-md-0 mb-2">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
                                 <img class="img-fluid"
@@ -209,7 +209,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="fbox-8 fbox--hover fb-2 r-12 border">
+                    <div class="fbox-8 fbox--hover fb-2 r-12 border mb-md-0 mb-2">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
                    <img class="img-fluid"
@@ -223,7 +223,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="fbox-8 fbox--hover fb-3 r-12 border">
+                    <div class="fbox-8 fbox--hover fb-3 r-12 border mb-md-0 mb-2">
                         <div class="fbox-ico ico-50">
                             <div class="shape-ico color--theme">
                         <img class="img-fluid"
