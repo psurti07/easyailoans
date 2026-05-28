@@ -30,7 +30,7 @@
                         <ul class="accordion">
                             <li class="accordion-item mb-10">
                                 <div class="accordion-thumb">
-                                    <h6 class="w-600">1. What are the basic eligibility requirements to apply for an
+                                    <h6 class="s-16 w-500 mb-0">1. What are the basic eligibility requirements to apply for an
                                         unsecured loan?</h6>
                                 </div>
                                 <div class="accordion-panel">
@@ -59,7 +59,7 @@
                             </li>
                             <li class="accordion-item mb-10">
                                 <div class="accordion-thumb">
-                                    <h6 class="w-600">2. What documents are usually required during the application
+                                    <h6 class="s-16 w-500 mb-0">2. What documents are usually required during the application
                                         process?</h6>
                                 </div>
                                 <div class="accordion-panel">
@@ -83,7 +83,7 @@
                             </li>
                             <li class="accordion-item mb-10">
                                 <div class="accordion-thumb">
-                                    <h6 class="w-600">3. Are there any tax advantages related to unsecured loans?</h6>
+                                    <h6 class="s-16 w-500 mb-0">3. Are there any tax advantages related to unsecured loans?</h6>
                                 </div>
                                 <div class="accordion-panel">
                                     <div class="accordion-panel-item">
@@ -101,7 +101,7 @@
                             </li>
                             <li class="accordion-item mb-10">
                                 <div class="accordion-thumb">
-                                    <h6 class="w-600">4. Can I apply for a loan online without visiting a bank branch?
+                                    <h6 class="s-16 w-500 mb-0">4. Can I apply for a loan online without visiting a bank branch?
                                     </h6>
                                 </div>
                                 <div class="accordion-panel">
@@ -119,7 +119,7 @@
                             </li>
                             <li class="accordion-item mb-10">
                                 <div class="accordion-thumb">
-                                    <h6 class="w-600">5. Can loan funds be used for purposes like education or personal
+                                    <h6 class="s-16 w-500 mb-0">5. Can loan funds be used for purposes like education or personal
                                         expenses?</h6>
                                 </div>
                                 <div class="accordion-panel">
@@ -143,7 +143,7 @@
 
                             <li class="accordion-item mb-10">
                                 <div class="accordion-thumb">
-                                    <h6 class="w-600">6. What factors influence loan approval?</h6>
+                                    <h6 class="s-16 w-500 mb-0">6. What factors influence loan approval?</h6>
                                 </div>
                                 <div class="accordion-panel">
                                     <div class="accordion-panel-item">
@@ -164,7 +164,7 @@
                             </li>
                             <li class="accordion-item mb-10">
                                 <div class="accordion-thumb">
-                                    <h6 class="w-600">7. What credit score is considered suitable for applying?</h6>
+                                    <h6 class="s-16 w-500 mb-0">7. What credit score is considered suitable for applying?</h6>
                                 </div>
                                 <div class="accordion-panel">
                                     <div class="accordion-panel-item">

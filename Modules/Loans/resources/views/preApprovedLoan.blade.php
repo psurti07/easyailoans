@@ -57,7 +57,7 @@ use Carbon\Carbon;
 $isExpired = Carbon::parse($membership->expiry_date)->isPast();
 
 @endphp
-<div class="content d-flex flex-column flex-column-fluid pt-5" id="kt_content">
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <div class="container-xxl " id="kt_content_container">
         <div class="row g-8 mb-10">
             @if($message!=NULL)

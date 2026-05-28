@@ -5,7 +5,7 @@
 
 @section('content')
 <!--begin::Content-->
-<div class="content d-flex flex-column flex-column-fluid pt-5" id="kt_content">
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <div class="container-xxl" id="kt_content_container">
         <div class="row mb-10">
             <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12">

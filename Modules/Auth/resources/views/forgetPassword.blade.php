@@ -66,7 +66,7 @@
                             <!-- TITLE -->
                             <div class="col-md-12">
                                 <div class="register-form-title">
-                                    <img src="{{ asset('front/images/logo/logo.png') }}" width="150"
+                                    <img src="{{ asset('front/images/logo/logo.png') }}" width="135"
                                         alt="{{ env('APP_NAME') }}">
 
                                 </div>

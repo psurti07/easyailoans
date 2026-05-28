@@ -2531,7 +2531,7 @@ p.video-txt-sm {
 /*------------------------------------------*/
 
 .desktoplogo img {
-    width: 150px;
+    width: 135px;
     max-width: inherit;
  
 }
@@ -6218,7 +6218,7 @@ p.rbox-2-txt span {
 
 .review-1 {
     padding: 25px 20px 25px;
-    margin: 10px 10px 30px;
+    margin: 10px 10px 0px 10px;
     transition: all 0.35s ease;
     position: relative;
     overflow: hidden;
@@ -7741,7 +7741,7 @@ span.release-date span {
 
 .faqs-section .accordion-thumb {
     margin: 0;
-    padding: 20px 33px 20px 20px;
+    padding: 20px 33px 20px 20px !important;
     cursor: pointer;
     position: relative;
 }
@@ -8809,9 +8809,9 @@ span.release-date span {
 
 img.footer-logo,
 img.footer-logo-dark {
-    width: auto;
+    width: 135px;
     max-width: inherit;
-    max-height: 75px;
+ 
 }
 
 #footer-10 img.footer-logo {
@@ -9507,7 +9507,7 @@ img.footer-logo-dark {
 
 .register-form-title {
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .register-form-title h3 {

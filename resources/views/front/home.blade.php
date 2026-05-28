@@ -319,16 +319,271 @@
                             </a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
-
-
-
     </div>
 </section>
 <!-- Products Intro section ends -->
+<!-- eligibility calculator starts -->
+<section id="features-21" class="pt-0 pb-80 features-section division">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-10">
+                <div class="section-title mb-40">
+                    <h2 class="s-28 mb-5">Calculate Your <span class="color--green-500">EMI Instantly</span></h2>
+                    <p class="s-16 color--grey mt-0">Plan repayments with clarity before proceeding.</p>
+                </div>
+            </div>
+        </div>
+        <div class="p-30 bg--white-100 shadow border-grey-1 r-20">
+            <div class="row">
+                <div class="col-md-7 order-first order-md-2">
+                    <div id="emicalculatorinnerformwrapper">
+                        <form id="emicalculatorform" class="comment-form">
+                            <div class="form-horizontal" id="emicalculatorinnerform">
+                                <div class="row">
+                                    <!-- Loan Amount slider section starts -->
+                                    <div class="col-md-12">
+                                        <div class="row form-group lamount flex-display align-items-center">
+                                            <label class="col-6 control-label s-18 w-500" for="loanamount">Loan
+                                                amount</label>
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text color--purple-500">₹</span>
+                                                        </div>
+                                                        <input class="form-control custm-box w-400" id="loanamount"
+                                                            name="loanamount" value="10,00,000" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="loanamountslider"></div>
+                                        <div id="loanamountsteps" class="steps">
+                                            <span class="tick" style="left: 0%;">| <br>
+                                                <span class="marker">50K</span>
+                                            </span>
+                                            <span class="tick d-none d-sm-block" style="left: 12.5%;">| <br>
+                                                <span class="marker">10L</span>
+                                            </span>
+                                            <span class=tick style="left: 25%;">| <br>
+                                                <span class=marker>20L</span>
+                                            </span>
+                                            <span class="tick d-none d-sm-block" style="left: 37.5%;">| <br>
+                                                <span class="marker">30L</span>
+                                            </span>
+                                            <span class="tick" style="left: 50%;">| <br>
+                                                <span class="marker">40L</span>
+                                            </span>
+                                            <span class="tick d-none d-sm-block" style="left: 62.5%;">| <br>
+                                                <span class="marker">50L</span>
+                                            </span>
+                                            <span class="tick" style="left: 75%;">| <br>
+                                                <span class="marker">60L</span>
+                                            </span>
+                                            <span class="tick d-none d-sm-block" style="left: 87.5%;">| <br>
+                                                <span class="marker">70L</span>
+                                            </span>
+                                            <span class="tick" style="left: 100%;">| <br>
+                                                <span class="marker">80L</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- Loan Amount slider section ends -->
+                                    <!-- Interest Rate slider section starts -->
+                                    <div class="col-md-12 mt-100">
+                                        <div class="row form-group lint flex-display align-items-center">
+                                            <label class="col-6 s-18 w-500 control-label" for="loaninterest">Interest
+                                                rate</label>
+                                            <div class="col-6">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">%</span>
+                                                    </div>
+                                                    <input class="form-control custm-box w-400" id="loaninterest"
+                                                        name="loaninterest" value="10.5" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="loaninterestslider"></div>
+                                        <div id="loanintereststeps" class="steps">
+                                            <span class="tick" style="left: 0%;">| <br>
+                                                <span class="marker">5</span>
+                                            </span>
+                                            <span class="tick" style="left: 16.67%;">| <br>
+                                                <span class="marker">7.5</span>
+                                            </span>
+                                            <span class="tick" style="left: 33.34%;">| <br>
+                                                <span class="marker">10</span>
+                                            </span>
+                                            <span class="tick" style="left: 50%;">| <br>
+                                                <span class="marker">12.5</span>
+                                            </span>
+                                            <span class="tick" style="left: 66.67%;">| <br>
+                                                <span class="marker">15</span>
+                                            </span>
+                                            <span class="tick" style="left: 83.34%;">| <br>
+                                                <span class="marker">17.5</span>
+                                            </span>
+                                            <span class="tick" style="left: 100%;">| <br>
+                                                <span class="marker">20</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- Interest Rate slider section ends -->
+                                    <!-- Loan Tenure slider section starts -->
+                                    <div class="col-md-12 mt-100">
+                                        <div class="row form-group lterm flex-display align-items-center">
+                                            <label class="col-6 s-18 w-500 control-label" for="loanterm">Select EMI
+                                                option</label>
+                                            <div class="col-6">
+                                                <div class="loantermwrapper">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend d-none">
+                                                            <label class="s-14 input-group-text">
+                                                                <input type="radio" class="mr-5" name="loantenure"
+                                                                    id="loanyears" value="loanyears" tabindex="4"
+                                                                    autocomplete="off"><span class="s-14">Yr</span>
+                                                            </label>
+                                                        </div>
+                                                        <input class="form-control custm-box-2 w-400" id="loanterm"
+                                                            name="loanterm" value="20" type="text">
+                                                        <div class="input-group-prepend">
+                                                            <label class="s-14 input-group-text months-input">
+                                                                <input type="radio" class="mr-5 d-none"
+                                                                    name="loantenure" id="loanmonths" value="loanmonths"
+                                                                    tabindex="5" autocomplete="off" checked="checked">
+                                                                <span class="s-14">Months</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="loantermslider"></div>
+                                        <div id="loantermsteps" class="steps">
+                                            <span class="tick" style="left: 0%;">| <br>
+                                                <span class="marker">0</span>
+                                            </span>
+                                            <span class="tick" style="left: 16.67%;">| <br>
+                                                <span class="marker">5</span>
+                                            </span>
+                                            <span class="tick" style="left: 33.33%;">| <br>
+                                                <span class="marker">10</span>
+                                            </span>
+                                            <span class="tick" style="left: 50%;">| <br>
+                                                <span class="marker">15</span>
+                                            </span>
+                                            <span class="tick" style="left: 66.67%;">| <br>
+                                                <span class="marker">20</span>
+                                            </span>
+                                            <span class="tick" style="left: 83.33%;">| <br>
+                                                <span class="marker">25</span>
+                                            </span>
+                                            <span class="tick" style="left: 100%;">| <br>
+                                                <span class="marker">30</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- Loan Tenure slider section ends -->
+                                </div>
+                            </div>
+                            <input id="loanproduct" name="loanproduct" value type="hidden">
+                            <input id="loanstartdate" name="loanstartdate" value type="hidden">
+                            <input id="loanyearformat" name="loanyearformat" value type="hidden">
+                            <input id="loandata" name="loandata" value type="hidden">
+                            <input id="calcversion" name="calcversion" value=4.0 type="hidden">
+                        </form>
+                        <div class="row gutter-left gutter-right d-none">
+                            <div id="emipaymentsummary" class="col-sm-5 col-md-6 no-gutter-left no-gutter-right">
+                                <div id="emiamount">
+                                    <h4>Loan EMI</h4>
+                                    <p>₹ <span>24,959</span>
+                                    </p>
+                                </div>
+                                <div id="emitotalinterest">
+                                    <h4>Total Interest Payable</h4>
+                                    <p>₹ <span>34,90,279</span>
+                                    </p>
+                                </div>
+                                <div id="emitotalamount" class="column-last">
+                                    <h4>Total Payment <br>(Principal + Interest) </h4>
+                                    <p>₹ <span>59,90,279</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="emipiechart"
+                                class="d-none no-gutter-left no-gutter-right col-sm-7 col-md-6 highcharts-container">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- display none graph and list of emi's start --}}
+                <div id="emipaymentdetails" class="d-none">
+                    <form class="gutter-left gutter-right form-horizontal">
+                        <div class="row form-group" id="emipaymentscheduleheader">
+                            <label class="col-md-4 col-lg-5 control-label" for="startmonthyear">Schedule showing EMI
+                                payments starting from</label>
+                            <div class="col-md-4 col-lg-3">
+                                <div class="input-group">
+                                    <input class="form-control" id="startmonthyear" name="startmonthyear" value
+                                        type="text">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <i class="far fa-calendar-alt"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-3 form-group lyearformat">
+                                <select class="form-control" tabindex="15" name="yearformat" id="yearformat">
+                                    <option value="calendaryear" selected="selected">Calendar Year wise</option>
+                                    <option value="financialyear">Financial Year wise</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="emibarchart" class="hidden-ts highcharts-container"></div>
+                    <div id="emipaymenttable"></div>
+                </div>
+                {{-- display none graph and list of emi's end --}}
+                <div class="col-md-5 order-last order-md-2 emi-details">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="p-4 text-center border-bottom">
+                                <h6 class="card-title mb-3">Your monthly instalment:</h6>
+                                <h2 class="mb-0 text-center s-40 color--purple-500" id="emiamount">₹<span>888</span>
+                                </h2>
+                            </div>
+                            <div class="p-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted s-15">Total interest</span>
+                                    <span id="emitotalinterest">₹<span>656</span></span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted s-15">Principal amount</span>
+                                    <span id="principalamount">₹<span>10,000</span></span>
+                                </div>
+                                <hr style="border:1px dashed grey">
+                                <div class="d-flex justify-content-between mb-4">
+                                    <span class="s-16">Total amount</span>
+                                    <span id="emitotalamount">₹<span>10,000</span></span>
+                                </div>
+                                <a href="{{ route('loan.agent.main') }}"
+                                    class="btn btn--green-400 hover--tra-black w-100">Apply for loan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- eligibility calculator ends -->
+{{--<hr class="divider">--}}
+
 
 <!-- Quick and swift steps section starts -->
 <section id="features-2" class="py-80 bg--green-100 features-section division">
@@ -341,357 +596,68 @@
                 </div>
             </div>
         </div>
-
-        <div class="fbox-wrapper text-center">
-            <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-2">
-                <div class="col">
-                    <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
-                        <div class="fbox-ico ico-40 mb-md-0 mb-3">
-                            <div class="shape-ico color--theme">
-                                <span class="flaticon-mobile-search"></span>
-                            </div>
-                        </div>
-                        <div class="fbox-txt text-md-start text-center ms-lg-4 ms-0">
+        <div class="p-30 bg--white-100 border-grey-1 r-20">
+ <div class="row align-items-center">
+            <div class="col-lg-4 col-md-4 col-12 order-md-1 order-2">
+                <div class="hero-7-img d-flex justify-content-center align-items-start mb-md-0 mb-3 ps-0 mt-0">
+                    <img src="{{ asset('front/images/how-it-works.jpg') }}" alt="easyailoans" class="img-fluid p-0">
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-12 order-md-2 order-1">
+                <div class="fbox-wrapper">
+                    <div class="col pb-3 mb-3 border-bottom">
+                        <div class="fbox-txt text-start ms-0">
+                            <h6 class="s-17 w-700 mb-5 color--green-500">1. Quick Registration</h6>
                             <p class="mt-0">Start by providing your mobile number and the name registered with your
                                 bank.</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="col">
-                    <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
-                        <div class="fbox-ico ico-40 mb-md-0 mb-3">
-                            <div class="shape-ico color--theme">
-                                <span class="flaticon-computer"></span>
-                            </div>
-                        </div>
-                        <div class="fbox-txt text-md-start text-center ms-lg-4 ms-0">
+                    <div class="col pb-3 mb-3 border-bottom">
+                        <div class="fbox-txt text-start ms-0">
+                            <h6 class="s-17 w-700 mb-5 color--green-500">2. Check Eligibility</h6>
                             <p class="mt-0">Complete your financial information for preliminary eligibility screening.
                             </p>
                         </div>
                     </div>
-                </div>
-
-                <div class="col">
-                    <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
-                        <div class="fbox-ico ico-40 mb-md-0 mb-3">
-                            <div class="shape-ico color--theme">
-                                <span class="flaticon-credit-card"></span>
-                            </div>
-                        </div>
-                        <div class="fbox-txt text-md-start text-center ms-lg-4 ms-0">
+                    <div class="col pb-3 mb-3 border-bottom">
+                        <div class="fbox-txt text-start ms-0">
+                            <h6 class="s-17 w-700 mb-5 color--green-500">3. Buy Subscription/Plan</h6>
                             <p class="mt-0">Based on the details you enter, our system displays loan options that may be
                                 available to you. These are not final and will be reviewed by the lender.</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="col">
-                    <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
-                        <div class="fbox-ico ico-40 mb-md-0 mb-3">
-                            <div class="shape-ico color--theme">
-                                <span class="flaticon-time"></span>
-                            </div>
-                        </div>
-                        <div class="fbox-txt text-md-start text-center ms-lg-4 ms-0">
+                    <div class="col pb-3 mb-3 border-bottom">
+                        <div class="fbox-txt text-start ms-0">
+                            <h6 class="s-17 w-700 mb-5 color--green-500">4. Submit Document</h6>
                             <p class="mt-0">To gain access to the pre-approved loan offers displayed, simply purchase
                                 the subscription plan that best fits your needs. </p>
                         </div>
                     </div>
-                </div>
-
-                <div class="col">
-                    <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
-                        <div class="fbox-ico ico-40 mb-md-0 mb-3">
-                            <div class="shape-ico color--theme">
-                                <span class="flaticon-check-1"></span>
-                            </div>
-                        </div>
-                        <div class="fbox-txt text-md-start text-center ms-lg-4 ms-0">
+                    <div class="col pb-3 mb-3 border-bottom">
+                        <div class="fbox-txt text-start ms-0">
+                            <h6 class="s-17 w-700 mb-5 color--green-500">5. Bank Verification</h6>
                             <p class="mt-0">Submit required documents for profile verification and lender processing.
                             </p>
                         </div>
                     </div>
-                </div>
-
-                <div class="col">
-                    <div class="fbox-11 fbox--hover fb-1 r-12 h-100 w-100 bg-white px-4 py-3 fbox-8 fbox--hover">
-                        <div class="fbox-ico ico-40 mb-md-0 mb-3">
-                            <div class="shape-ico color--theme">
-                                <span class="flaticon-profits"></span>
-                            </div>
-                        </div>
-                        <div class="fbox-txt text-md-start text-center ms-lg-4 ms-0">
+                    <div class="col">
+                        <div class="fbox-txt text-start ms-0">
+                            <h6 class="s-17 w-700 mb-5 color--green-500">6. Bank Sanction</h6>
                             <p class="mt-0">The respective NBFC independently reviews the application and makes the
                                 final decision on approval and disbursement as per their policies.</p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
+        </div>
+       
     </div>
 </section>
 <!-- Quick and swift steps section end -->
 
-<!-- eligibility calculator starts -->
-<section id="features-21" class="py-80 features-section division">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-10 col-lg-10">
-                <div class="section-title mb-40">
-                    <h2 class="s-28 mb-5">Calculate Your <span class="color--green-500">EMI Instantly</span></h2>
-                    <p class="s-16 color--grey mt-0">Plan repayments with clarity before proceeding.</p>
-                </div>
-            </div>
-        </div>
-        <div class="p-30 bg--white-100 shadow border-grey-1 r-20">
-         <div class="row">
-            <div class="col-md-7 order-first order-md-2">
-                <div id="emicalculatorinnerformwrapper">
-                    <form id="emicalculatorform" class="comment-form">
-                        <div class="form-horizontal" id="emicalculatorinnerform">
-                            <div class="row">
-                                <!-- Loan Amount slider section starts -->
-                                <div class="col-md-12">
-                                    <div class="row form-group lamount flex-display align-items-center">
-                                        <label class="col-6 control-label s-18 w-500" for="loanamount">Loan
-                                            amount</label>
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text color--purple-500">₹</span>
-                                                    </div>
-                                                    <input class="form-control custm-box w-400" id="loanamount"
-                                                        name="loanamount" value="10,00,000" type="text">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="loanamountslider"></div>
-                                    <div id="loanamountsteps" class="steps">
-                                        <span class="tick" style="left: 0%;">| <br>
-                                            <span class="marker">50K</span>
-                                        </span>
-                                        <span class="tick d-none d-sm-block" style="left: 12.5%;">| <br>
-                                            <span class="marker">10L</span>
-                                        </span>
-                                        <span class=tick style="left: 25%;">| <br>
-                                            <span class=marker>20L</span>
-                                        </span>
-                                        <span class="tick d-none d-sm-block" style="left: 37.5%;">| <br>
-                                            <span class="marker">30L</span>
-                                        </span>
-                                        <span class="tick" style="left: 50%;">| <br>
-                                            <span class="marker">40L</span>
-                                        </span>
-                                        <span class="tick d-none d-sm-block" style="left: 62.5%;">| <br>
-                                            <span class="marker">50L</span>
-                                        </span>
-                                        <span class="tick" style="left: 75%;">| <br>
-                                            <span class="marker">60L</span>
-                                        </span>
-                                        <span class="tick d-none d-sm-block" style="left: 87.5%;">| <br>
-                                            <span class="marker">70L</span>
-                                        </span>
-                                        <span class="tick" style="left: 100%;">| <br>
-                                            <span class="marker">80L</span>
-                                        </span>
-                                    </div>
-                                </div>
-                                <!-- Loan Amount slider section ends -->
-                                <!-- Interest Rate slider section starts -->
-                                <div class="col-md-12 mt-100">
-                                    <div class="row form-group lint flex-display align-items-center">
-                                        <label class="col-6 s-18 w-500 control-label" for="loaninterest">Interest
-                                            rate</label>
-                                        <div class="col-6">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">%</span>
-                                                </div>
-                                                <input class="form-control custm-box w-400" id="loaninterest"
-                                                    name="loaninterest" value="10.5" type="text">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="loaninterestslider"></div>
-                                    <div id="loanintereststeps" class="steps">
-                                        <span class="tick" style="left: 0%;">| <br>
-                                            <span class="marker">5</span>
-                                        </span>
-                                        <span class="tick" style="left: 16.67%;">| <br>
-                                            <span class="marker">7.5</span>
-                                        </span>
-                                        <span class="tick" style="left: 33.34%;">| <br>
-                                            <span class="marker">10</span>
-                                        </span>
-                                        <span class="tick" style="left: 50%;">| <br>
-                                            <span class="marker">12.5</span>
-                                        </span>
-                                        <span class="tick" style="left: 66.67%;">| <br>
-                                            <span class="marker">15</span>
-                                        </span>
-                                        <span class="tick" style="left: 83.34%;">| <br>
-                                            <span class="marker">17.5</span>
-                                        </span>
-                                        <span class="tick" style="left: 100%;">| <br>
-                                            <span class="marker">20</span>
-                                        </span>
-                                    </div>
-                                </div>
-                                <!-- Interest Rate slider section ends -->
-                                <!-- Loan Tenure slider section starts -->
-                                <div class="col-md-12 mt-100">
-                                    <div class="row form-group lterm flex-display align-items-center">
-                                        <label class="col-6 s-18 w-500 control-label" for="loanterm">Select EMI
-                                            option</label>
-                                        <div class="col-6">
-                                            <div class="loantermwrapper">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend d-none">
-                                                        <label class="s-14 input-group-text">
-                                                            <input type="radio" class="mr-5" name="loantenure"
-                                                                id="loanyears" value="loanyears" tabindex="4"
-                                                                autocomplete="off"><span class="s-14">Yr</span>
-                                                        </label>
-                                                    </div>
-                                                    <input class="form-control custm-box-2 w-400" id="loanterm"
-                                                        name="loanterm" value="20" type="text">
-                                                    <div class="input-group-prepend">
-                                                        <label class="s-14 input-group-text months-input">
-                                                            <input type="radio" class="mr-5 d-none" name="loantenure"
-                                                                id="loanmonths" value="loanmonths" tabindex="5"
-                                                                autocomplete="off" checked="checked">
-                                                            <span class="s-14">Months</span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="loantermslider"></div>
-                                    <div id="loantermsteps" class="steps">
-                                        <span class="tick" style="left: 0%;">| <br>
-                                            <span class="marker">0</span>
-                                        </span>
-                                        <span class="tick" style="left: 16.67%;">| <br>
-                                            <span class="marker">5</span>
-                                        </span>
-                                        <span class="tick" style="left: 33.33%;">| <br>
-                                            <span class="marker">10</span>
-                                        </span>
-                                        <span class="tick" style="left: 50%;">| <br>
-                                            <span class="marker">15</span>
-                                        </span>
-                                        <span class="tick" style="left: 66.67%;">| <br>
-                                            <span class="marker">20</span>
-                                        </span>
-                                        <span class="tick" style="left: 83.33%;">| <br>
-                                            <span class="marker">25</span>
-                                        </span>
-                                        <span class="tick" style="left: 100%;">| <br>
-                                            <span class="marker">30</span>
-                                        </span>
-                                    </div>
-                                </div>
-                                <!-- Loan Tenure slider section ends -->
-                            </div>
-                        </div>
-                        <input id="loanproduct" name="loanproduct" value type="hidden">
-                        <input id="loanstartdate" name="loanstartdate" value type="hidden">
-                        <input id="loanyearformat" name="loanyearformat" value type="hidden">
-                        <input id="loandata" name="loandata" value type="hidden">
-                        <input id="calcversion" name="calcversion" value=4.0 type="hidden">
-                    </form>
-                    <div class="row gutter-left gutter-right d-none">
-                        <div id="emipaymentsummary" class="col-sm-5 col-md-6 no-gutter-left no-gutter-right">
-                            <div id="emiamount">
-                                <h4>Loan EMI</h4>
-                                <p>₹ <span>24,959</span>
-                                </p>
-                            </div>
-                            <div id="emitotalinterest">
-                                <h4>Total Interest Payable</h4>
-                                <p>₹ <span>34,90,279</span>
-                                </p>
-                            </div>
-                            <div id="emitotalamount" class="column-last">
-                                <h4>Total Payment <br>(Principal + Interest) </h4>
-                                <p>₹ <span>59,90,279</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div id="emipiechart"
-                            class="d-none no-gutter-left no-gutter-right col-sm-7 col-md-6 highcharts-container"></div>
-                    </div>
-                </div>
-            </div>
-            {{-- display none graph and list of emi's start --}}
-            <div id="emipaymentdetails" class="d-none">
-                <form class="gutter-left gutter-right form-horizontal">
-                    <div class="row form-group" id="emipaymentscheduleheader">
-                        <label class="col-md-4 col-lg-5 control-label" for="startmonthyear">Schedule showing EMI
-                            payments starting from</label>
-                        <div class="col-md-4 col-lg-3">
-                            <div class="input-group">
-                                <input class="form-control" id="startmonthyear" name="startmonthyear" value type="text">
-                                <div class="input-group-append">
-                                    <span class="input-group-text">
-                                        <i class="far fa-calendar-alt"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-3 form-group lyearformat">
-                            <select class="form-control" tabindex="15" name="yearformat" id="yearformat">
-                                <option value="calendaryear" selected="selected">Calendar Year wise</option>
-                                <option value="financialyear">Financial Year wise</option>
-                            </select>
-                        </div>
-                    </div>
-                </form>
-                <div id="emibarchart" class="hidden-ts highcharts-container"></div>
-                <div id="emipaymenttable"></div>
-            </div>
-            {{-- display none graph and list of emi's end --}}
-            <div class="col-md-5 order-last order-md-2 emi-details">
-                <div class="card">
-                    <div class="card-body p-0">
-                        <div class="p-4 text-center border-bottom">
-                            <h6 class="card-title mb-3">Your monthly instalment:</h6>
-                            <h2 class="mb-0 text-center s-40 color--purple-500" id="emiamount">₹<span>888</span></h2>
-                        </div>
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-2">
-                                <span class="text-muted s-15">Total interest</span>
-                                <span id="emitotalinterest">₹<span>656</span></span>
-                            </div>
-                            <div class="d-flex justify-content-between mb-2">
-                                <span class="text-muted s-15">Principal amount</span>
-                                <span id="principalamount">₹<span>10,000</span></span>
-                            </div>
-                            <hr style="border:1px dashed grey">
-                            <div class="d-flex justify-content-between mb-4">
-                                <span class="s-16">Total amount</span>
-                                <span id="emitotalamount">₹<span>10,000</span></span>
-                            </div>
-                            <a href="{{ route('loan.agent.main') }}"
-                                class="btn btn--green-400 hover--tra-black w-100">Apply for loan</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</section>
-<!-- eligibility calculator ends -->
-{{--<hr class="divider">--}}
-
 <!-- Testimonioals section starts -->
-<section id="reviews-1" class="pt-0 pb-80 reviews-section">
+<section id="reviews-1" class="py-80 reviews-section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-12">
@@ -728,50 +694,50 @@
         <div class="row">
             <div class="col-md-5 col-12 md-mb-50 order-md-1 order-2 mt-md-0 mt-4">
                 <div class="p-4 bg--green-100 block-shadow r-08">
-   <div class="row gy-3 gx-3">
-                 <div class="card-body">
-                       <div class="col-md-12 col-12">
-                        <div class="address-item mb-3">
-                            <div class="address-text">
-                                <h6 class="color--green-500 mb-1 s-16">Address</h6>
-                                <p class="address-txt mt-0">{{ env('COMPANY_ADDRESS') }}</p>
+                    <div class="row gy-3 gx-3">
+                        <div class="card-body">
+                            <div class="col-md-12 col-12">
+                                <div class="address-item mb-3">
+                                    <div class="address-text">
+                                        <h6 class="color--green-500 mb-1 s-16">Address</h6>
+                                        <p class="address-txt mt-0">{{ env('COMPANY_ADDRESS') }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-12">
+                                <div class="address-item mb-3">
+                                    <div class="address-text">
+                                        <h6 class="color--green-500 mb-1 s-16"> Customer Support </h6>
+                                        <p class="address-txt mt-0"><a
+                                                href="tel:{{ str_ireplace(" ","",env('COMPANY_MOBILE')) }}">{{ env('COMPANY_MOBILE') }}</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-12">
+                                <div class="address-item mb-3">
+                                    <div class="address-text">
+                                        <h6 class="color--green-500 mb-1 s-16"> Mail Us </h6>
+                                        <p class="address-txt mt-0"><a
+                                                href="mailto:{{ str_ireplace(" ","",env('COMPANY_SUPPORT_MAIL')) }}">{{ env('COMPANY_SUPPORT_MAIL') }}</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-12">
+                                <div class="address-item">
+                                    <div class="address-text">
+                                        <h6 class="color--green-500 mb-1 s-16"> Working Hours </h6>
+                                        <p class="address-txt mt-0">
+                                            Monday to Saturday: 10:00 AM - 5:00 PM<br>
+                                            Sunday: Closed</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12 col-12">
-                        <div class="address-item mb-3">
-                            <div class="address-text">
-                                <h6 class="color--green-500 mb-1 s-16"> Customer Support </h6>
-                                <p class="address-txt mt-0"><a
-                                        href="tel:{{ str_ireplace(" ","",env('COMPANY_MOBILE')) }}">{{ env('COMPANY_MOBILE') }}</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-12">
-                        <div class="address-item mb-3">
-                            <div class="address-text">
-                                <h6 class="color--green-500 mb-1 s-16"> Mail Us </h6>
-                                <p class="address-txt mt-0"><a
-                                        href="mailto:{{ str_ireplace(" ","",env('COMPANY_SUPPORT_MAIL')) }}">{{ env('COMPANY_SUPPORT_MAIL') }}</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-12">
-                        <div class="address-item">
-                            <div class="address-text">
-                                <h6 class="color--green-500 mb-1 s-16"> Working Hours </h6>
-                                <p class="address-txt mt-0">
-                                    Monday to Saturday: 10:00 AM - 5:00 PM<br>
-                                    Sunday: Closed</p>
-                            </div>
-                        </div>
-                    </div>
-                 </div>
                 </div>
-                </div>
-             
+
             </div>
             <div class="col-md-7 col-12 py-md-0 py-0 order-md-2 order-1">
                 <div class="h-100 p-4 bg--white-100 block-shadow r-08">
@@ -836,6 +802,188 @@
     </div>
 </section>
 <!-- Contact End -->
+
+
+<section id="faqs-3" class="pt-0 pb-80 faqs-section">
+    <div class="container">
+        <div class="faqs-3-questions">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-12">
+                    <div class="text-center mb-40">
+
+                        <h2 class="s-28 mb-5"> Frequently Asked <span class="color--green-500">Questions</span></h2>
+                        <p class=" mt-0 s-16 color--grey">It's our fundamental trait to be transparent with
+                            our customers!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-xl-6 ">
+                    <div class="accordion-wrapper">
+                        <ul class="accordion">
+                            <li class="accordion-item border rounded-3 mb-10">
+                                <div class="accordion-thumb">
+                                    <h6 class="w-400">1. What are the basic eligibility requirements to apply for an
+                                        unsecured loan?</h6>
+                                </div>
+                                <div class="accordion-panel">
+                                    <div class="accordion-panel-item">
+                                        <div class="faqs-2-answer">
+                                            <p>Eligibility may vary depending on the lender, but the general criteria
+                                                are:</p>
+                                            <p><strong>For Salaried Applicants :</strong></p>
+                                            <div class="ps-2">
+                                                <p>• Minimum Age: 21 years</p>
+                                                <p>• Minimum Monthly Salary: ₹15,000 (income should be credited to
+                                                    a bank account)</p>
+                                                <p>• Employment Duration: At least 1 year of work history</p>
+                                            </div>
+                                            <p><strong>For Self-Employed Applicants :</strong></p>
+                                            <div class="ps-2">
+                                                <p>• Minimum Age: 21 years</p>
+                                                <p>• Income Tax Filing: At least 1 year of ITR records</p>
+                                                <p>• Business Duration: Minimum 1 year of operational history</p>
+                                            </div>
+                                            <p>Final eligibility is determined by the lending institution based on their
+                                                internal policies.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion-item border rounded-3 mb-10">
+                                <div class="accordion-thumb">
+                                    <h6 class="w-400">2. What documents are usually required during the application
+                                        process?</h6>
+                                </div>
+                                <div class="accordion-panel">
+                                    <div class="accordion-panel-item">
+                                        <div class="faqs-2-answer">
+                                            <p>Applicants may be asked to provide the following documents:</p>
+                                            <div class="ps-2">
+                                                <p>• Aadhaar Card</p>
+                                                <p>• PAN Card</p>
+                                                <p>• Proof of Income (Salary Slip or Form 16 for salaried
+                                                    individuals)</p>
+                                                <p>• Recent Bank Statements reflecting income deposits</p>
+                                                <p>• Residential Address Proof (Utility bill, rental agreement,
+                                                    etc.)</p>
+                                            </div>
+                                            <p>Depending on the applicant’s profile, lenders may request additional
+                                                documentation.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion-item border rounded-3 mb-10">
+                                <div class="accordion-thumb">
+                                    <h6 class="w-400">3. Are there any tax advantages related to unsecured loans?</h6>
+                                </div>
+                                <div class="accordion-panel">
+                                    <div class="accordion-panel-item">
+                                        <div class="faqs-2-answer">
+                                            <p>
+                                                Tax benefits generally depend on how the borrowed funds are used. For
+                                                example, benefits may apply if the funds are utilized for purposes such
+                                                as home renovation or certain business investments. For accurate
+                                                guidance, it is advisable to consult a qualified tax advisor or
+                                                chartered accountant.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion-item border rounded-3 mb-10">
+                                <div class="accordion-thumb">
+                                    <h6 class="w-400">4. Can I apply for a loan online without visiting a bank branch?
+                                    </h6>
+                                </div>
+                                <div class="accordion-panel">
+                                    <div class="accordion-panel-item">
+                                        <div class="faqs-2-answer">
+                                            <p>
+                                                Yes. EasyAILoans.com provides a digital platform where users can check
+                                                eligibility, submit documents, and initiate loan applications online
+                                                through partnered financial institutions, subject to subscription-based
+                                                service access.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-6">
+                    <div class="accordion-wrapper">
+                        <ul class="accordion">
+                            <li class="accordion-item border rounded-3 mb-10">
+                                <div class="accordion-thumb">
+                                    <h6 class="w-400">5. Can loan funds be used for purposes like education or personal
+                                        expenses?</h6>
+                                </div>
+                                <div class="accordion-panel">
+                                    <div class="accordion-panel-item">
+                                        <div class="faqs-2-answer">
+                                            <p>Unsecured loans generally offer flexible usage. Funds may be used for
+                                                various personal or financial needs such as:</p>
+                                            <div class="ps-2">
+                                                <p>• Higher education expenses</p>
+                                                <p>• Home improvements</p>
+                                                <p>• Medical bills</p>
+                                                <p>• Travel or lifestyle expenses</p>
+                                                <p>• Debt consolidation</p>
+                                            </div>
+                                            <p>However, final usage terms may vary depending on the lending institution.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="accordion-item border rounded-3 mb-10">
+                                <div class="accordion-thumb">
+                                    <h6 class="w-400">6. What factors influence loan approval?</h6>
+                                </div>
+                                <div class="accordion-panel">
+                                    <div class="accordion-panel-item">
+                                        <div class="faqs-2-answer">
+                                            <p>Loan approval decisions are primarily based on the applicant’s financial
+                                                profile. Key factors include:</p>
+                                            <div class="ps-2">
+                                                <p>• Applicant’s age</p>
+                                                <p>• Monthly income and financial stability</p>
+                                                <p>• Credit score or credit history</p>
+                                                <p>• Existing liabilities and repayment capacity</p>
+                                            </div>
+                                            <p>Lenders may also consider additional criteria based on their risk
+                                                assessment models.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion-item border rounded-3 mb-10">
+                                <div class="accordion-thumb">
+                                    <h6 class="w-400">7. What credit score is considered suitable for applying?</h6>
+                                </div>
+                                <div class="accordion-panel">
+                                    <div class="accordion-panel-item">
+                                        <div class="faqs-2-answer">
+                                            <p>While requirements may vary by lender, a credit score of around 650 or
+                                                above is generally considered favorable for loan applications. Higher
+                                                credit scores may improve the chances of approval and potentially offer
+                                                better terms.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
 
 {{-- Wlecome message modal show here --}}
 @if($msg->status == 1)

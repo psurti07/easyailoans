@@ -4809,7 +4809,7 @@
   .hero-6-img { margin: 35px 1% 0; }
 
   /* HERO-7 */
-  #hero-7 { padding-top: 30px; padding-bottom: 30px; }
+  #hero-7 { padding-top: 50px; padding-bottom: 30px; }
   .hero-7-txt h2 { padding: 0 6%; }
   #hero-7 .quick-form { margin-left: 3%; margin-right: 3%; }
   .hero-7-img { margin-top: 35px; }
@@ -7046,7 +7046,7 @@
   /* Header Logo */
   .wsmobileheader .smllogo { display: block; margin-top: 17px; padding-left: 16px; }
   .blog-header .wsmobileheader .smllogo { margin-top: 29px; }
-  .smllogo img { width: 140px; max-width: inherit; }
+  .smllogo img { width: 125px; max-width: inherit; }
   .blog-header .smllogo img { max-height: 60px; }
 
   .wsmenu > .wsmenu-list { width: 290px; margin-right: -290px; }

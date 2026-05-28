@@ -62,7 +62,7 @@
 								<!-- TITLE -->
 								<div class="col-md-12">
 									<div class="register-form-title">
-                    <img src="{{ asset('front/images/logo/logo.png') }}" width="150" alt="{{ env('APP_NAME') }}">
+                    <img src="{{ asset('front/images/logo/logo.png') }}" width="135" alt="{{ env('APP_NAME') }}">
 								
 									</div>
                   <div class="text-center mb-20">
@@ -92,7 +92,7 @@
                     <!-- Reset Password Link -->
                     <div class="col-md-12">
                       <div class="reset-password-link text-end">
-                        <p class="p-sm"><a href="{{ route('customer.forget.password') }}" class="color--theme">Forgot your password?</a></p>
+                        <p class="p-sm mb-0"><a href="{{ route('customer.forget.password') }}" class="color--theme">Forgot your password?</a></p>
                       </div>
                     </div>
                     <!-- Form Submit Button -->
