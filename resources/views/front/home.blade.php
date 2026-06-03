@@ -192,7 +192,7 @@
 <!-- why easyailoans section ends -->
 
 <!-- Trust Badges Section starts -->
-<div id="statistic-1" class=" ct-03 py-0 statistic-section division">
+<div id="statistic-1" class=" ct-03 pt-0 pb-80 statistic-section division">
     <div class="container">
         <div class="row">
             <div class="statistic-5-wrapper">
@@ -260,6 +260,76 @@
 </div>
 <!-- Trust Badges Section ends -->
 
+<section class="loan-process-section bg--green-100 py-80">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-10">
+                <div class="section-title mb-40">
+                    <h2 class="s-28 mb-5"> Get Your Loan Approved In <span class="color--green-500">5 Easy Steps</span>
+                    </h2>
+                    <p class="s-16 color--grey mt-0"> A quick and seamless journey to help you get the best loan offers
+                        without hassle.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="process-wrapper">
+
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Loan Details</h4>
+                    <p>
+                        Select your loan amount and basic requirements to begin.
+                    </p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Personal Details</h4>
+                    <p>
+                        Fill in your personal and employment information.
+                    </p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Unlock Offers</h4>
+                    <p>
+                        Instantly explore personalized loan offers matched to your profile.
+                    </p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>Purchase Plan</h4>
+                    <p>
+                        Compare available options and select the most suitable repayment plan.
+                    </p>
+                </div>
+            </div>
+
+            <div class="process-step active">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h4>Personalized Offers</h4>
+                    <p>
+                        Get fast approval and loan amount disbursed quickly.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
 <!-- Products Intro section starts -->
 <section id="products" class="py-80 features-section division">
     <div class="container">
@@ -325,6 +395,9 @@
     </div>
 </section>
 <!-- Products Intro section ends -->
+
+
+
 <!-- eligibility calculator starts -->
 <section id="features-21" class="pt-0 pb-80 features-section division">
     <div class="container">
@@ -597,61 +670,65 @@
             </div>
         </div>
         <div class="p-30 bg--white-100 border-grey-1 r-20">
- <div class="row align-items-center">
-            <div class="col-lg-4 col-md-4 col-12 order-md-1 order-2">
-                <div class="hero-7-img d-flex justify-content-center align-items-start mb-md-0 mb-3 ps-0 mt-0">
-                    <img src="{{ asset('front/images/how-it-works.jpg') }}" alt="easyailoans" class="img-fluid p-0">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-4 col-12 order-md-1 order-2">
+                    <div class="hero-7-img d-flex justify-content-center align-items-start mb-md-0 mb-3 ps-0 mt-0">
+                        <img src="{{ asset('front/images/how-it-works.jpg') }}" alt="easyailoans" class="img-fluid p-0">
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-8 col-md-8 col-12 order-md-2 order-1">
-                <div class="fbox-wrapper">
-                    <div class="col pb-3 mb-3 border-bottom">
-                        <div class="fbox-txt text-start ms-0">
-                            <h6 class="s-17 w-700 mb-5 color--green-500">1. Quick Registration</h6>
-                            <p class="mt-0">Start by providing your mobile number and the name registered with your
-                                bank.</p>
+                <div class="col-lg-8 col-md-8 col-12 order-md-2 order-1">
+                    <div class="fbox-wrapper">
+                        <div class="col pb-3 mb-3 border-bottom">
+                            <div class="fbox-txt text-start ms-0">
+                                <h6 class="s-17 w-700 mb-5 color--green-500">1. Quick Registration</h6>
+                                <p class="mt-0">Start by providing your mobile number and the name registered with your
+                                    bank.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col pb-3 mb-3 border-bottom">
-                        <div class="fbox-txt text-start ms-0">
-                            <h6 class="s-17 w-700 mb-5 color--green-500">2. Check Eligibility</h6>
-                            <p class="mt-0">Complete your financial information for preliminary eligibility screening.
-                            </p>
+                        <div class="col pb-3 mb-3 border-bottom">
+                            <div class="fbox-txt text-start ms-0">
+                                <h6 class="s-17 w-700 mb-5 color--green-500">2. Check Eligibility</h6>
+                                <p class="mt-0">Complete your financial information for preliminary eligibility
+                                    screening.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col pb-3 mb-3 border-bottom">
-                        <div class="fbox-txt text-start ms-0">
-                            <h6 class="s-17 w-700 mb-5 color--green-500">3. Buy Subscription/Plan</h6>
-                            <p class="mt-0">Based on the details you enter, our system displays loan options that may be
-                                available to you. These are not final and will be reviewed by the lender.</p>
+                        <div class="col pb-3 mb-3 border-bottom">
+                            <div class="fbox-txt text-start ms-0">
+                                <h6 class="s-17 w-700 mb-5 color--green-500">3. Buy Subscription/Plan</h6>
+                                <p class="mt-0">Based on the details you enter, our system displays loan options that
+                                    may be
+                                    available to you. These are not final and will be reviewed by the lender.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col pb-3 mb-3 border-bottom">
-                        <div class="fbox-txt text-start ms-0">
-                            <h6 class="s-17 w-700 mb-5 color--green-500">4. Submit Document</h6>
-                            <p class="mt-0">To gain access to the pre-approved loan offers displayed, simply purchase
-                                the subscription plan that best fits your needs. </p>
+                        <div class="col pb-3 mb-3 border-bottom">
+                            <div class="fbox-txt text-start ms-0">
+                                <h6 class="s-17 w-700 mb-5 color--green-500">4. Submit Document</h6>
+                                <p class="mt-0">To gain access to the pre-approved loan offers displayed, simply
+                                    purchase
+                                    the subscription plan that best fits your needs. </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col pb-3 mb-3 border-bottom">
-                        <div class="fbox-txt text-start ms-0">
-                            <h6 class="s-17 w-700 mb-5 color--green-500">5. Bank Verification</h6>
-                            <p class="mt-0">Submit required documents for profile verification and lender processing.
-                            </p>
+                        <div class="col pb-3 mb-3 border-bottom">
+                            <div class="fbox-txt text-start ms-0">
+                                <h6 class="s-17 w-700 mb-5 color--green-500">5. Bank Verification</h6>
+                                <p class="mt-0">Submit required documents for profile verification and lender
+                                    processing.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="fbox-txt text-start ms-0">
-                            <h6 class="s-17 w-700 mb-5 color--green-500">6. Bank Sanction</h6>
-                            <p class="mt-0">The respective NBFC independently reviews the application and makes the
-                                final decision on approval and disbursement as per their policies.</p>
+                        <div class="col">
+                            <div class="fbox-txt text-start ms-0">
+                                <h6 class="s-17 w-700 mb-5 color--green-500">6. Bank Sanction</h6>
+                                <p class="mt-0">The respective NBFC independently reviews the application and makes the
+                                    final decision on approval and disbursement as per their policies.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-       
+
     </div>
 </section>
 <!-- Quick and swift steps section end -->
