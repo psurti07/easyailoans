@@ -65,7 +65,7 @@
                                                                                             <img src="https://easyailoans.com/public/front/images/logo/logo.png"
                                                                                                 alt="EasyAILoans"
                                                                                                 style="display: block; border: 0; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic;"
-                                                                                                width="135"
+                                                                                                width="150"
                                                                                                 title="EasyAILoans">
                                                                                             </a>
                                                                                         </td>

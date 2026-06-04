@@ -64,10 +64,10 @@
                                                                                         <a target="_blank"
                                                                                             href="https://easyailoans.com/"
                                                                                             style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: underline; color: #000f26; font-size: 14px;">
-                                                                                            <img src="https://easyailoans.com/public/front/images/logo/logo.png"
+                                                                                            <img src="https://easyailoans.com/public/front/images/logo/logo-w.png"
                                                                                                 alt="EasyAILoans"
                                                                                                 style="display: block; border: 0; outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic;"
-                                                                                                width="135"
+                                                                                                width="150"
                                                                                                 title="EasyAILoans">
                                                                                         </a>
                                                                                     </td>
