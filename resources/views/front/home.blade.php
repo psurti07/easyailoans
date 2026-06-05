@@ -260,7 +260,7 @@
 </div>
 <!-- Trust Badges Section ends -->
 
-<section class="loan-process-section bg--green-100 py-80">
+<!-- <section class="loan-process-section bg--green-100 py-80">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-10">
@@ -328,10 +328,10 @@
         </div>
 
     </div>
-</section>
+</section> -->
 
 <!-- Products Intro section starts -->
-<section id="products" class="py-80 features-section division">
+<section id="products" class="pt-0 pb-80 features-section division">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-10">
