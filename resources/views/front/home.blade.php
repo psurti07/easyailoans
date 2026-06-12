@@ -260,27 +260,25 @@
 </div>
 <!-- Trust Badges Section ends -->
 
-<!-- <section class="loan-process-section bg--green-100 py-80">
+ <section class="loan-process-section bg--green-100 py-80">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-10">
-                <div class="section-title mb-40">
-                    <h2 class="s-28 mb-5"> Get Your Loan Approved In <span class="color--green-500">5 Easy Steps</span>
+                <div class="section-title mb-40">  
+                    <h2 class="s-28 mb-5"> Get Your Loan in <span class="color--green-500">5 Simple Steps</span>
                     </h2>
-                    <p class="s-16 color--grey mt-0"> A quick and seamless journey to help you get the best loan offers
-                        without hassle.</p>
+                    <p class="s-16 color--grey mt-0">Apply for your loan quickly and easily with a smooth process.</p>
                 </div>
             </div>
         </div>
 
         <div class="process-wrapper">
-
             <div class="process-step">
                 <div class="step-number">1</div>
                 <div class="step-content">
-                    <h4>Loan Details</h4>
-                    <p>
-                        Select your loan amount and basic requirements to begin.
+                    <h4 class="s-18 w-700">Choose Loan Amount</h4>
+                    <p class="mb-0">
+                        Select the loan amount and basic details.
                     </p>
                 </div>
             </div>
@@ -288,9 +286,10 @@
             <div class="process-step">
                 <div class="step-number">2</div>
                 <div class="step-content">
-                    <h4>Personal Details</h4>
-                    <p>
-                        Fill in your personal and employment information.
+                    <h4 class="s-18 w-700">Enter Personal Details
+</h4>
+                    <p class="mb-0">
+                    Fill in your personal and work information.
                     </p>
                 </div>
             </div>
@@ -298,9 +297,9 @@
             <div class="process-step">
                 <div class="step-number">3</div>
                 <div class="step-content">
-                    <h4>Unlock Offers</h4>
-                    <p>
-                        Instantly explore personalized loan offers matched to your profile.
+                    <h4 class="s-18 w-700">Check Loan Offers</h4>
+                    <p class="mb-0">
+                        See loan offers matched to your profile.
                     </p>
                 </div>
             </div>
@@ -308,9 +307,9 @@
             <div class="process-step">
                 <div class="step-number">4</div>
                 <div class="step-content">
-                    <h4>Purchase Plan</h4>
-                    <p>
-                        Compare available options and select the most suitable repayment plan.
+                    <h4 class="s-18 w-700">Select the Best Plan</h4>
+                    <p class="mb-0">
+                       Compare options and choose the right EMI plan.
                     </p>
                 </div>
             </div>
@@ -318,9 +317,9 @@
             <div class="process-step active">
                 <div class="step-number">5</div>
                 <div class="step-content">
-                    <h4>Personalized Offers</h4>
-                    <p>
-                        Get fast approval and loan amount disbursed quickly.
+                    <h4 class="s-18 w-700">Get Loan Approval</h4>
+                    <p class="mb-0">
+                 Complete the process and receive funds quickly.
                     </p>
                 </div>
             </div>
@@ -328,10 +327,10 @@
         </div>
 
     </div>
-</section> -->
+</section> 
 
 <!-- Products Intro section starts -->
-<section id="products" class="pt-0 pb-80 features-section division">
+<section id="products" class="py-80 features-section division">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-10">
@@ -369,7 +368,7 @@
             </div>
             <div class="col-12 col-lg-6 align-items-center m-auto mt-0 rounded-3">
                 <div
-                    class="row fbox-wrapper text-center align-items-center m-auto border border--grey shadow rounded-3 mb-4 fbox-8 fbox--hover fb-1  border p-0">
+                    class="row fbox-wrapper text-center align-items-center m-auto border border--grey shadow rounded-3 mb-0 fbox-8 fbox--hover fb-1  border p-0">
                     <div class="col-12 col-lg-12 p-0">
                         <div class="img-block right-column text-center">
                             <img class="img-fluid light-theme-img w-100"

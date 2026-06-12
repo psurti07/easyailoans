@@ -6323,6 +6323,7 @@ p.rbox-2-txt span {
     -moz-border-radius: 100%;
     -o-border-radius: 100%;
     border-radius: 100%;
+    border: 3px solid #198b8c;
 }
 
 .review-2 .review-avatar img {

@@ -354,149 +354,130 @@
   }
 
 }
-  .integrations-section .brands-carousel-6 img {
-    padding: 10px 20px !important;
+
+.integrations-section .brands-carousel-6 img {
+  padding: 10px 20px !important;
 }
 
 
 .loan-process-section .process-badge {
-    background: rgba(28, 76, 137, 0.12);
-    color: #1b4577;
-    padding: 8px 18px;
-    border-radius: 50px;
-    font-size: 14px;
-    font-weight: 600;
+  background: rgba(28, 76, 137, 0.12);
+  color: #1b4577;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .loan-process-section .process-wrapper {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    margin-top: 35px;
-    gap: 30px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 35px;
+  gap: 30px;
 }
 
 .loan-process-section .process-wrapper::before {
-    content: "";
-    position: absolute;
-    top: 45px;
-    left: 8%;
-    width: 84%;
-    height: 4px;
-    background: #d8e2f0;
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 45px;
+  left: 8%;
+  width: 84%;
+  height: 4px;
+  background: #d8e2f0;
+  z-index: 0;
 }
 
 
-.loan-process-section  .process-step {
-    position: relative;
-    background: #fff;
-    border-radius: 24px;
-    padding: 60px 20px 30px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
-    z-index: 1;
+.loan-process-section .process-step {
+  position: relative;
+  background: #fff;
+  border-radius: 24px;
+  padding: 60px 20px 20px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  z-index: 1;
 }
 
-.loan-process-section  .process-step:hover {
-    transform: translateY(-10px);
+.loan-process-section .process-step:hover {
+  transform: translateY(-10px);
 }
 
 
 .loan-process-section .step-number {
-    position: absolute;
-    top: -28px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 60px;
-    background: #228688;
-    color: #fff;
-    border-radius: 50%;
-    font-size: 24px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 5px solid #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: #228688;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
 }
 
-
-.loan-process-section .step-content h4 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
 
 .loan-process-section .step-content p {
-    color: #1e1e1e;
-    font-size: 15px;
-    line-height: 1.7;
+  color: #1e1e1e;
+}
+
+@media screen and (min-width:992px) {
+  .loan-process-section .step-content h4 {
+    height: 56px;
+  }
 }
 
 
-@media (max-width: 991px){
+@media screen and (max-width: 991px) {
 
-    .loan-process-section .process-wrapper{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .loan-process-section .process-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .loan-process-section .process-wrapper::before{
-        display: none;
-    }
+  .loan-process-section .process-wrapper::before {
+    display: none;
+  }
 
-    .loan-process-section .process-step{
-        width: calc(50% - 15px);
-        min-height: auto;
-    }
+  .loan-process-section .process-step {
+    width: calc(50% - 15px);
+    min-height: auto;
+  }
 
-    .loan-process-section .process-title{
-        font-size: 38px;
-    }
 }
 
-@media (max-width: 767px){
+@media screen and (max-width:991px) and (min-width:768px) {
+  .loan-process-section .process-wrapper {
+    gap: 40px 30px;
+  }
+}
 
-    .loan-process-section .loan-process-section{
-        padding: 60px 0;
-    }
+@media screen and (max-width: 767px) {
+  .loan-process-section .process-wrapper {
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 30px;
+  }
 
-    .loan-process-section .process-title{
-        font-size: 30px;
-    }
+  .loan-process-section .process-step {
+    width: 100%;
+    padding: 45px 20px 20px;
+    border-radius: 20px;
+  }
 
-    .loan-process-section .process-subtitle{
-        font-size: 15px;
-        padding: 0 10px;
-    }
 
-    .loan-process-section .process-wrapper{
-        flex-direction: column;
-        gap: 50px;
-        margin-top: 30px;
-    }
-
-    .loan-process-section .process-step{
-        width: 100%;
-        padding: 60px 20px 25px;
-        border-radius: 20px;
-    }
-
-    .loan-process-section .step-content h4{
-        font-size: 22px;
-    }
-
-     .loan-process-section .step-content p{
-        font-size: 14px;
-    }
-
-    .loan-process-section .step-number{
-        width: 58px;
-        height: 58px;
-        font-size: 22px;
-    }
+  .loan-process-section .step-number {
+    width: 58px;
+    height: 58px;
+    font-size: 22px;
+  }
 }
