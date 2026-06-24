@@ -275,7 +275,10 @@
                             For example, if a user takes a loan of ₹5,00,000 at an interest rate of 12% per annum for 60 months, the processing fee may be up to 2% (₹10,000), the EMI would be approximately ₹11,122, the total interest payable would be around ₹1,67,320, and the total repayment amount would be approximately ₹6,67,320. All figures are indicative. Actual loan terms may vary depending on eligibility and lender criteria.
                         </p>
                         <p class="s-14">
-                            <strong>Disclaimer : </strong>AI Loans Private Limited is not a lender or financial institution. We do not provide loans or make credit decisions. All loan approvals, interest rates, fees, and disbursal are handled by third-party lenders such as banks and NBFCs. We do not guarantee loan approval, disbursal, or specific loan terms. Users are advised to verify all details and read the terms and conditions of the respective lender before proceeding.
+                            <strong>Disclaimer : </strong>AI Loans Private Limited is not a lender or financial institution. We do not provide loans or make credit decisions. All loan approvals, interest rates, fees, and disbursal are handled by third-party lenders such as banks and NBFCs. We do not guarantee loan approval, disbursal, or specific loan terms. Users are advised to verify all details and read the terms and conditions of the respective lender before proceeding.The amount paid is only for the service charge. We are not lenders and do not guarantee any loan approval.
+                        </p>
+                        <p class="s-14">
+                            <strong>Important Note : </strong> BE AWARE! We ask our customers to make payments ONLY on our website <<WEBSITE LINK>> and NOT through any other source, directly or indirectly. Thanks!
                         </p>
                         <p class="s-14">
                             <strong>Registered Office Address:</strong> {{ env('COMPANY_ADDRESS') }} <br /> Mobile: {{ env('COMPANY_MOBILE') }} | Email: {{ env('INFO_EMAIL') }}

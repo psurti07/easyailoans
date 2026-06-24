@@ -274,7 +274,10 @@
                         </p>
 
                         <p class="s-14">
-                            <strong>Disclaimer : </strong>AI Loans Private Limited is not a lender or financial institution. We do not provide loans or make credit decisions. All loan approvals, interest rates, fees, and disbursal are handled by third-party lenders such as banks and NBFCs. We do not guarantee loan approval, disbursal, or specific loan terms. Users are advised to verify all details and read the terms and conditions of the respective lender before proceeding.
+                            <strong>Disclaimer : </strong>AI Loans Private Limited is not a lender or financial institution. We do not provide loans or make credit decisions. All loan approvals, interest rates, fees, and disbursal are handled by third-party lenders such as banks and NBFCs. We do not guarantee loan approval, disbursal, or specific loan terms. Users are advised to verify all details and read the terms and conditions of the respective lender before proceeding.The amount paid is only for the service charge. We are not lenders and do not guarantee any loan approval.
+                        </p>
+                        <p class="s-14">
+                            <strong>Important Note : </strong> BE AWARE! We ask our customers to make payments ONLY on our website <<WEBSITE LINK>> and NOT through any other source, directly or indirectly. Thanks!
                         </p>
                         <p class="s-14">
                             <strong>Registered Office Address:</strong> {{ env('COMPANY_ADDRESS') }} <br /> Mobile: {{ env('COMPANY_MOBILE') }} | Email: {{ env('INFO_EMAIL') }}
