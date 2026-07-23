@@ -168,7 +168,7 @@ if (!function_exists('raiseRequestFaqs')) {
                         <div class="accordion-panel-item">
                             <div class="faqs-2-answer">
                                 <p>
-                                    We recommend contacting our support team to discuss your concerns so that we can assist you appropriately. You may reach us at +91-{#VAR#} between 10:00 AM and 5:00 PM on working days.
+                                    We recommend contacting our support team to discuss your concerns so that we can assist you appropriately. You may reach us at +91-99839-33304 between 10:00 AM and 5:00 PM on working days.
                                 </p>
                             </div>
                         </div>
